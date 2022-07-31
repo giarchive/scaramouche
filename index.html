@@ -16,7 +16,7 @@
 			
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="language" content="Japanese" />
-			<link href="https://use.fontawesome.com/releases/v6.0.1/css/all.css" rel="stylesheet">
+			<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
 			<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ1MM27MTX"></script>
 			<script>
@@ -24,7 +24,7 @@
   				function gtag(){dataLayer.push(arguments);}
  				 gtag('js', new Date());
 				  gtag('config', 'G-QZ1MM27MTX');
-</script>
+			</script>
 			
 			<meta name="robots" content="noindex">
 			
@@ -42,14 +42,37 @@
 				</aside>
 			</article>
 			<article class="share-nav">
-				<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5%E3%81%AE%E5%85%A8%E6%83%85%E5%A0%B1%E6%9B%B8%E3%81%8D%E5%86%99%E3%81%97&url=https%3A%2F%2Fgiarchive.github.io%2Fscaramouche&via=COD_HEART" class="btn-social-square btn-social-square--twitter">
-  					<i class="fab fa-twitter"></i>
+				<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5%E3%81%AE%E5%85%A8%E6%83%85%E5%A0%B1%E6%9B%B8%E3%81%8D%E5%86%99%E3%81%97&url=https%3A%2F%2Fgiarchive.github.io%2Fscaramouche&via=COD_HEART" class="btn-social-flat">
+  					<span class="btn-social-flat-icon btn-social-flat-icon--twitter">
+    					<i class="fa-brands fa-twitter"></i>
+ 					 </span>
+  					<span class="btn-social-flat-text">ツイート</span>
 				</a>
-			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="スカラマシュの全情報書き写し" data-url="https://giarchive.github.io/scaramouche" data-via="COD_HEART" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></article>
+				
+				<a href="javascript:void(0);" onclick="javascript:clipboard();" class="btn-social-flat">
+  					<span class="btn-social-flat-icon btn-social-flat-icon--clip">
+    					<i class="fa fa-clipboard" aria-hidden="true"></i>
+ 					 </span>
+  					<span class="btn-social-flat-text">コピー</span>
+				</a>
+				
+				<script>
+					function clipboard(){
+						var text = document.getElementById('url').innerText;
+						navigator.clipboard.writeText(text);
+					}
+				</script>
+				</article>	
 			<nav>
 				<ul>
 					<li class="update"><a href="#update">更新履歴</a></li>
-					<li class="information"><a href="#information">基本情報</a></li>
+					<li class="information"><a href="#information">基本情報</a>
+						<ul>
+							<li><a href="#character-setting">キャラクター設定</a></li>
+							<li><a href="#voice-actor">声優</a></li>
+						</ul>
+					</li>
+					<li class="timeline"><a href="#timeline">時系列</a></li>
 					<li class="world-name"><a href="#world-name">各言語名</a>
 						<ul>
 						<li><a href="#jp">日本語</a></li>
@@ -170,11 +193,10 @@
 							</ul>
 						</div>
 						<h2 id="information">基本情報</h2>
+						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20211210/20211210003926.jpg">
 						<div>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20211210/20211210003926.jpg">
 							<p>
-								<b>ファトゥス第6位「散兵」スカラマシュ</b><br>
-								<b>国崩</b>
+								<b>ファトゥス第6位「散兵」スカラマシュ/国崩</b>
 							</p>
 							<p>ボス実装: 不明<br>
 							プレイアブル: 不明</p>
@@ -183,39 +205,169 @@
 							<table>
 								<tbody>
 									<tr>
-										<th>元素力</th>
+										<th class="nowrap">元素力</th>
 										<td>?</td>
 									</tr>
 									<tr>
-										<th>年齢</th>
+										<th class="nowrap">年齢</th>
 										<td>500歳未満</td>
 									</tr>
 									<tr>
-										<th>出身</th>
+										<th class="nowrap">出身</th>
 										<td>稲妻</td>
 									</tr>
 									<tr>
-										<th>種族</th>
+										<th class="nowrap">種族</th>
 										<td>人形</td>
 									</tr>
 									<tr>
-										<th>所属</th>
+										<th class="nowrap">所属</th>
 										<td>なし</td>
 									</tr>
 									<tr>
-										<th>命の星座</th>
+										<th class="nowrap">命の星座</th>
 										<td>不明</td>
 									</tr>
 									<tr>
-										<th>誕生日</th>
+										<th class="nowrap">誕生日</th>
 										<td>不明</td>
 									</tr>
 									<tr>
-										<th>状態</th>
+										<th class="nowrap">状態</th>
 										<td>行方不明(逃亡)</td>
 									</tr>
 								</tbody>
 						</table>
+						<h3 id="voice-actor">声優</h3>
+							<table>
+								<tbody>
+									<tr>
+										<th class="nowrap">日本語</th>
+										<td>柿原徹也</td>
+									</tr>
+									<tr>
+										<th class="nowrap">中国語</th>
+										<td>鹿暗</td>
+									</tr>
+									<tr>
+										<th class="nowrap">英語</th>
+										<td>?</td>
+									</tr>
+									<tr>
+										<th class="nowrap">韓国語</th>
+										<td>민승우</td>
+									</tr>
+								</tbody>
+							</table>
+					<h2 id="timeline">時系列</h2>
+						<table class="timeline-table">
+							<tr>
+								<th>時間</th>
+								<td><b>状況</b></td>
+								<td><b>場所</b></td>
+							</tr>
+							<tr>
+								<th>~500年前</th>
+								<td>誕生</td>
+								<td>稲妻</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>封印</td>
+								<td>借景の館</td>
+							</tr>
+							<tr>
+								<th>数百年前</th>
+								<td>エラーにより目覚める</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>「桂木」が見つけ保護</td>
+								<td>名椎の浜</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>刀工たちと生活</td>
+								<td>たたら砂</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>刀工たちに身分がバレ殺されかける</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>戦争に乗じ、桂木が彼を逃す</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>刀工が桂木を斬り殺す</td>
+								<td></td>
+							</tr>
+	<tr>
+		<th> </th>
+		<td>八重神子と会話する</td>
+		<td> </td>
+	</tr>
+	<tr>
+		<th> </th>
+		<td>雷電将軍を訪ねる</td>
+		<td>稲妻城・天守</td>
+	</tr>
+	<tr>
+		<th></th>
+		<td>スネージナヤに向かう</td>
+		<td>稲妻</td>
+	</tr>
+	<tr>
+		<th>300~400年前</th>
+		<td>ファデュイに加入</td>
+		<td>スネージナヤ</td>
+	</tr>
+	<tr>
+		<th> </th>
+		<td>刀工への復讐として、雷電五箇伝を滅ぼす</td>
+		<td>鳴神島</td>
+	</tr>
+	<tr>
+		<th> </th>
+		<td>「国崩」と名乗る</td>
+		<td> </td>
+	</tr>
+	<tr>
+		<th> </th>
+		<td>流浪を続ける</td>
+		<td>テイワット</td>
+	</tr>
+	<tr>
+		<th> </th>
+		<td>心を欲しがる</td>
+		<td> </td>
+	</tr>
+	<tr>
+		<th>数ヶ月前</th>
+		<td>隕石調査へと向かう</td>
+		<td>モンド</td>
+	</tr>
+	
+	<tr>
+		<th>しばらく前</th>
+		<td>任務の代理人を務める</td>
+		<td>邪眼工場</td>
+	</tr>
+	<tr>
+		<th></th>
+		<td>神の心を手に入れる</td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>最近</th>
+		<td>神の叡智を征服する</td>
+		<td>?</td>
+	</tr>
+</table>
 					<h2 id="world-name">各言語名</h2>
 							<h3 id="jp">日本語</h3>
 							<p translate="no">
@@ -1392,6 +1544,7 @@
 			<footer>
 				<address><p>Contact information of DMCA: listens.0.wrasse🌉icloud.com (🌉→@)</p></address>
 				<p>筆者は、記事内における全ての情報が正確である保証を致しません。また全てのリンク等に責任を負わず、ユーザーが不利益を被った場合でも一切の責任を負いません。</p>
+				<p id="url">https://giarchive.github.io/scaramouche</p>
 			</footer>
 		</body>
 	</html>
