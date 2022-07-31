@@ -19,12 +19,6 @@
 			<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
 			<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ1MM27MTX"></script>
-			<script>
-  				window.dataLayer = window.dataLayer || [];
-  				function gtag(){dataLayer.push(arguments);}
- 				 gtag('js', new Date());
-				  gtag('config', 'G-QZ1MM27MTX');
-			</script>
 			
 			<meta name="robots" content="noindex">
 			
@@ -41,7 +35,7 @@
 					<div><p>本サイトはスカラマシュに関する情報をまとめた有志サイトです。リーク情報は扱いません。</p></div>
 				</aside>
 			</article>
-			<article class="share-nav">
+			<div class="share-nav">
 				<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5%E3%81%AE%E5%85%A8%E6%83%85%E5%A0%B1%E6%9B%B8%E3%81%8D%E5%86%99%E3%81%97&url=https%3A%2F%2Fgiarchive.github.io%2Fscaramouche&via=COD_HEART" class="btn-social-flat">
   					<span class="btn-social-flat-icon btn-social-flat-icon--twitter">
     					<i class="fa-brands fa-twitter"></i>
@@ -55,13 +49,6 @@
  					 </span>
   					<span class="btn-social-flat-text">コピー</span>
 				</a>
-				
-				<script>
-					function clipboard(){
-						var text = document.getElementById('url').innerText;
-						navigator.clipboard.writeText(text);
-					}
-				</script>
 				</article>	
 			<nav>
 				<ul>
@@ -1539,6 +1526,12 @@
 偉「おぉ、これは注目するべきですね。」
 </p>
 </blockquote>
+					<h2 id="official-tweet">公式ツイート</h2>
+					<a href="" onclick="changeEmbeddedTweetCss()">a</a>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【声優発表】<br>メインストーリー・イベント「帰らぬ熄星」-第二段階「怪しい夢の星」にて登場する謎の少年。<br><br>謎の少年 CV 柿原徹也<br>「僕は稲妻から来た浮浪人。倒れた人を助けようとしたら、君たちが現れたんだ。」<br><br>※「怪しい夢の星」は2020/11/18 04:59より開放されます<a href="https://twitter.com/hashtag/miHoYo?src=hash&amp;ref_src=twsrc%5Etfw">#miHoYo</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/%E6%9F%BF%E5%8E%9F%E5%BE%B9%E4%B9%9F?src=hash&amp;ref_src=twsrc%5Etfw">#柿原徹也</a> <a href="https://t.co/gJgZNdbixR">pic.twitter.com/gJgZNdbixR</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1328714972008906755?ref_src=twsrc%5Etfw">November 17, 2020</a></blockquote>
+					
+					<blockquote class="twitter-tweet" data-conversation="none"><p lang="ja" dir="ltr">【キャラクター紹介】<br>外見は眉目秀麗な顔に細身の体型の浮浪人。正体は凄まじい戦闘力と頭脳を持ち合わせた愚人衆執行官。表と裏の差が激しく、予測不可能な人物である。　<br><br>ファトゥス 第6位 散兵（ざんひょう）　<br>スカラマシュ　CV：柿原徹也<br><br>「僕が、いつ勝手に判断する権利を与えた？」<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/UTfTFVa48w">pic.twitter.com/UTfTFVa48w</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1331185988857524224?ref_src=twsrc%5Etfw">November 24, 2020</a></blockquote>
 				</article>
 			</main>
 			<footer>
@@ -1546,5 +1539,29 @@
 				<p>筆者は、記事内における全ての情報が正確である保証を致しません。また全てのリンク等に責任を負わず、ユーザーが不利益を被った場合でも一切の責任を負いません。</p>
 				<p id="url">https://giarchive.github.io/scaramouche</p>
 			</footer>
+							<script>
+					  				window.dataLayer = window.dataLayer || [];
+  				function gtag(){dataLayer.push(arguments);}
+ 				 gtag('js', new Date());
+				  gtag('config', 'G-QZ1MM27MTX');
+				  
+				  function changeEmbeddedTweetCss() {
+    var selectWidgets = document.querySelectorAll('twitter-widget');
+    var shadowRootStyle;
+    selectWidgets.forEach( tw => {
+        shadowRootStyle = tw.shadowRoot.querySelector('style:last-child');
+        if ( cookieText == 'Active' ) {
+            shadowRootStyle.innerHTML = shadowRootStyle.innerHTML.replace( 'light.ltr.css', 'dark.ltr.css' );
+        } else {
+            shadowRootStyle.innerHTML = shadowRootStyle.innerHTML.replace( 'dark.ltr.css', 'light.ltr.css' );
+        }
+    });
+}
+				  
+					function clipboard(){
+						var text = document.getElementById('url').innerText;
+						navigator.clipboard.writeText(text);
+					}
+				</script>
 		</body>
 	</html>
