@@ -97,6 +97,8 @@ main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbod
 /*メニュー*/
 nav {
 	border: solid 2px var(--black4);
+	margin: 0px 10vw;
+	font-size: 1.15rem;
 }
 nav li {
 	list-style-type: none;
@@ -106,6 +108,12 @@ nav li {
 nav li a {
 	color: var(--black1);
 	text-decoration: none;
+}
+@media screen and (max-width: 680px) {
+	nav {
+		margin: 0px 0px;
+		font-size: 1rem;
+	}
 }
 /*見出し*/
 main h2 {
