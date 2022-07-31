@@ -219,7 +219,7 @@ img {
 	width: 100%;
 }
 /*引用*/
-blockquote {
+blockquote:not(.twitter-tweet) {
     box-sizing: border-box;
     border: solid 2px var(--black4);
 	position: relative;
@@ -339,8 +339,6 @@ main td {
 /*共有ボタン*/
 .share-nav {
 	font-size: 1.15rem;
-	margin: 0px 10vw;
-	padding: 0px 1rem;
 }
 .btn-social-flat { 
   color: var(--black1);
@@ -388,7 +386,7 @@ main td {
 }
 
 /*ロゴ*/
-#goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before {
+#goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before,#from-raiden-mention::before,#from-yae-mention::before,#from-tartaglia-mention::before {
 	content: '';
   display: inline-block;
   width: 1.75em;
@@ -396,7 +394,7 @@ main td {
   margin-right: 0.25em;
   background-size: contain;
   vertical-align: middle;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
 }
 #goblet-of-eonothem-surpassing-cup::before {
   background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731185801.png");
@@ -428,4 +426,13 @@ main td {
 }
 #kagotsurube-isshin::before {
   background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731191319.png");
+}
+#from-raiden-mention::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801021602.png");
+}
+#from-yae-mention::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801021606.png");
+}
+#from-tartaglia-mention::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801021610.png");
 }
