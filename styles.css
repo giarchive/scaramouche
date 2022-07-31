@@ -64,6 +64,9 @@ body {
 	padding: 0;
 }
 /*メインコンテンツ*/
+html{
+	height:100%;
+}
 body {
     color: var(--black1);
 	background: var(--white);
@@ -77,6 +80,8 @@ body {
 	width: 85vw;
 	padding-left: 7.5vw;
 	padding-right: 7.5vw;
+	height:100%;
+	background: var(--white);
 }
 @media screen and (max-width: 680px) {
     body {
@@ -87,6 +92,10 @@ body {
 		padding-left: 2.5vw;
 		padding-right: 2.5vw;
 	}
+}
+footer {
+	border-top: 1px solid var(--black1);
+	margin-top: 2%;
 }
 /* リセットCSS */
 main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbody,iframe {
@@ -109,6 +118,10 @@ nav li a {
 	color: var(--black1);
 	text-decoration: none;
 }
+.var-num {
+	font-weight: bold;
+	margin-right: 0.5em;
+} 
 @media screen and (max-width: 680px) {
 	nav {
 		margin: 0px 0px;
@@ -118,14 +131,14 @@ nav li a {
 /*見出し*/
 main h2 {
     padding: 0.5vh 2vw;
-    background-color: rgb(44,44,46);
-    color: #fff;
+    background-color: var(--white5);
+    color: var(--black1);
     font-weight: bold;
 	margin: 2vh 0vw;
 }
 main h3 {
     padding: 0.5vh 1vw;
-	border-bottom: solid 3px rgb(44,44,46);
+	border-bottom: solid 3px var(--black1);
     font-weight: bold;
     line-height: 1;
     letter-spacing: 1.4px;
@@ -136,6 +149,7 @@ main h4 {
     font-weight: bold;
     line-height: 1.4;
 	letter-spacing: 1.4px;
+	font-size: 1.2em;
 	margin: 2vh 0vw;
 }
 main h5 {
@@ -173,7 +187,7 @@ main h6 {
 }
 
 /* テキスト */
-main div:not(.youtube) {
+main div:not(.youtube),.top-text,.share-nav {
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
 }
@@ -191,6 +205,9 @@ main .ru {
 }
 main .mark {
 	color: var(--red);
+}
+main a {
+	color: var(--blue);
 }
 /*画像*/
 img {
@@ -303,4 +320,84 @@ main td {
     left: 0;
     width: 100%;
     height: 100%;
+}
+/*共有ボタン*/
+.btn-social-square {
+  display: inline-block;
+  text-decoration: none;
+  width: 50px;
+  margin:2px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 23px;
+  color:white;
+  border-radius: 12px;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .3s;
+}
+.btn-social-square i {
+  line-height:50px;
+}
+.btn-social-square:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+.btn-social-square--twitter {
+  background: #22b8ff;
+}
+.btn-social-square--facebook {
+  background: #6680d8;
+}
+.btn-social-square--hatebu {
+  background: #49a8fb;
+}
+.btn-social-square--pocket {
+  background: #ff6d82;
+}
+.btn-social-square--feedly {
+  background: #7bda72;
+}
+/*ロゴ*/
+#goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before {
+	content: '';
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: 0.25em;
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: repeat;
+}
+#goblet-of-eonothem-surpassing-cup::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731185801.png");
+}
+#bloom-times::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731184249.png");
+}
+
+#plume-of-luxury::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731185243.png");
+}
+
+#song-of-life::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731185401.png");
+}
+
+#skeletal-hat::before {
+	background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731185636.png");
+}
+
+#calabash-of-awakening::before {
+	background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731185523.png");
+}
+#katsuragikiri-nagamasa::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731191639.png");
+}
+#kaguras-verity::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731191800.png");
+}
+#kagotsurube-isshin::before {
+  background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220731/20220731191319.png");
 }
