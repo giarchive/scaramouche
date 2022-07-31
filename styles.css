@@ -83,7 +83,6 @@ body {
 	margin-left: 7.5vw;
 	margin-right: 7.5vw;
 	height:100%;
-	background: var(--white);
 	overflow-wrap: break-word;
 }
 main div:not(.youtube),.top-text,.share-nav {
@@ -344,7 +343,7 @@ main td {
 	padding: 0px 1rem;
 }
 .btn-social-flat { 
-  color: #484848;
+  color: var(--black1);
   display: inline-block;
   height: var(--shere-button-size);
   line-height: var(--shere-button-size);
@@ -372,7 +371,7 @@ main td {
   background:#1da1f3;
 }
 .btn-social-flat-icon--clip {
-  background: var(--black);
+  background: var(--white1);
 }
 .btn-social-flat-icon--facebook {
   background:#3b75d4;
