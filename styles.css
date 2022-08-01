@@ -30,6 +30,7 @@
 	--brown: rgb(162,132,94);
 	
 	--shere-button-size: 2em;
+	--content-width: 85vw;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -61,6 +62,11 @@
 	--brown: rgb(172,142,104);
 }
 }
+@media screen and (max-width: 680px) {
+	:root {
+		--content-width: 95vw;
+	}
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -68,6 +74,9 @@ body {
 /*メインコンテンツ*/
 html{
 	height:100%;
+}
+body, main {
+	width: var(--content-width);
 }
 body {
     color: var(--black1);
@@ -79,7 +88,6 @@ body {
 	text-size-adjust: 100%;
     position: relative;
     z-index: 2;
-	width: 85vw;
 	margin-left: 7.5vw;
 	margin-right: 7.5vw;
 	height:100%;
@@ -92,7 +100,6 @@ main div:not(.not-margin-div),.top-text,.share-nav {
 @media screen and (max-width: 680px) {
     body {
         font-size: 1rem;
-		width: 95vw;
 		margin-left: 2.5vw;
 		margin-right: 2.5vw;
 	}
@@ -214,6 +221,12 @@ main .mark {
 main a {
 	color: var(--blue);
 }
+main .black {
+	color: black;
+}
+main .white {
+	color: white;
+}
 /*画像*/
 img {
 	width: 100%;
@@ -261,15 +274,23 @@ blockquote .travel-log {
 	}
 }
 /*表*/
+.table {
+	overflow-x: scroll;
+}
 main table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
+	max-width: var(--content-width);
+}
+main table tr {
+	white-space: nowrap;
 }
 main th,main td {
 	border: solid 1px var(--white1);
 	padding: 2px 3px;
 	width: auto;
+	word-wrap: break-word;
 }
 
 main th {
@@ -293,11 +314,10 @@ main td {
 	}
 
 	main th {
-		width: 1%;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	main table .nowrap {
+	main table th {
 		white-space: nowrap;
 	}
 	main td {
@@ -305,13 +325,8 @@ main td {
 		padding-right: 10px;
 	}
 	.timeline-table th {
-		max-width: 5ex;
-		padding-left: 0.25ex;
-		padding-right: 0.25ex;
-	}
-	.timeline-table td {
-		padding-left: 0.75ex;
-		padding-right: 0.75ex;
+		padding-left: 1vw;
+		padding-right: 1vw;
 	}
 }
 /*Twitter*/
@@ -354,6 +369,41 @@ main td {
     left: 0;
     width: 100%;
     height: 100%;
+}
+/*Apple Music*/
+main .applemusic {
+	width: 100%;
+	height: 175px;
+}
+/*淘宝*/
+.taobao {
+	display: flex;
+	flex-wrap: wrap;
+}
+.taobao-content {
+	position: relative;
+	width: calc(30% - 2vw)!important;
+	margin: 1vh 1vw!important;
+	border: 1px solid var(--black);
+	border-radius:5px;
+	overflow: hidden;
+}
+.taobao-image {
+	width: 100%;
+	height: 100%;
+}
+.taobao-text {
+	position: absolute;
+	 bottom: 0.5rem;
+	 right: 0.5rem;
+	 margin: 0;
+	 font-weight: bold;
+}
+@media screen and (max-width: 680px) {
+	.taobao-content {
+	width: calc(100% - 1vw)!important;
+	margin: 1vw 1vw!important;
+	}
 }
 /*共有ボタン*/
 .share-nav {
