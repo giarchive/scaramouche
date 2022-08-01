@@ -85,7 +85,7 @@ body {
 	height:100%;
 	overflow-wrap: break-word;
 }
-main div:not(.youtube),.top-text,.share-nav {
+main div:not(.not-margin-div),.top-text,.share-nav {
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
 }
@@ -226,7 +226,7 @@ blockquote:not(.twitter-tweet) {
 	margin: 2vh;
 }
 
-blockquote p {
+blockquote p:not(.twitter-tweet) {
     line-height: 1.7;
 	margin-left: 5vw;
 	margin-right: 5vw;
@@ -258,12 +258,6 @@ blockquote .travel-log {
 	blockquote p {
 		margin-left: 4.5vw;
 		margin-right: 4.5vw;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	blockquote {
-		border: solid 2px #fff;
 	}
 }
 /*表*/
@@ -320,6 +314,31 @@ main td {
 		padding-right: 0.75ex;
 	}
 }
+/*Twitter*/
+.tweets {
+	display: flex;
+	flex-wrap: wrap;
+}
+.twitter-tweet {
+	width: calc(50% - 2vw)!important;
+	margin: 1vh 1vw!important;
+}
+@media (prefers-color-scheme: light) {
+.dark-oney {
+  display: none!important;
+}
+}
+@media (prefers-color-scheme: dark) {
+.light-oney {
+  display: none!important;
+}
+}
+@media screen and (max-width: 680px) {
+	.twitter-tweet {
+	width: calc(100% - 1vw)!important;
+	margin: 1vw 1vw!important;
+	}
+}
 /*YouTube*/
 .youtube {
     position: relative;
@@ -339,6 +358,8 @@ main td {
 /*共有ボタン*/
 .share-nav {
 	font-size: 1.15rem;
+	display: flex;
+	margin: 0px;
 }
 .btn-social-flat { 
   color: var(--black1);
@@ -348,6 +369,7 @@ main td {
   text-decoration: none;
   border: 1px solid var(--black1);
   cursor: pointer;
+  margin-left: 1vw;
 }
 
 .btn-social-flat-icon {
@@ -383,6 +405,11 @@ main td {
 .btn-social-flat:hover .btn-social-flat-icon i {
   -webkit-transform: rotateX(360deg);
   transform: rotateX(360deg);
+}
+@media screen and (max-width: 680px) {
+	.btn-social-flat { 
+		margin-left: 2.5vw;
+	}
 }
 
 /*ロゴ*/
