@@ -379,7 +379,6 @@ main .white {
 /*画像*/
 img {
 	width: 100%;
-	background-color:var(--white1);
 }
 /*引用*/
 blockquote:not(.twitter-tweet) {
@@ -612,7 +611,23 @@ main .applemusic {
 		margin-left: 2.5vw;
 	}
 }
-
+/*立ち絵*/
+.picture-box {
+	display: inline-block;
+	vertical-align: top;
+}
+.picture-box img {
+	width: calc(50% - 2vw)!important;
+	height: auto;
+	vertical-align: top;
+}
+@media screen and (max-width: 680px) {
+	.picture-box img {
+		width: calc(100% - 2vw)!important;
+		height: auto;
+		vertical-align: top;
+	}
+}
 /*ロゴ*/
 #goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before,#from-raiden-mention::before,#from-yae-mention::before,#from-tartaglia-mention::before,i.life-collection::before {
 	content: '';
