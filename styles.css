@@ -376,6 +376,9 @@ main .black {
 main .white {
 	color: white;
 }
+main .youtube-link {
+	color: var(--red)!important;
+}
 /*画像*/
 img {
 	width: 100%;
@@ -627,6 +630,34 @@ main .applemusic {
 		height: auto;
 		vertical-align: top;
 	}
+}
+/*手紙の位置*/
+.hidden_box-rather-aged-notes {
+    padding: 0;
+}
+
+.hidden_box-rather-aged-notes label {
+    padding: 15px;
+    font-weight: bold;
+    cursor :pointer;
+}
+
+.hidden_box-rather-aged-notes input {
+    display: none;
+}
+
+.hidden_box-rather-aged-notes .hidden_show-rather-aged-notes {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.hidden_box-rather-aged-notes input:checked ~ .hidden_show-rather-aged-notes {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
 }
 /*ロゴ*/
 #goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before,#from-raiden-mention::before,#from-yae-mention::before,#from-tartaglia-mention::before,i.life-collection::before {
