@@ -93,7 +93,7 @@ body {
 	height:100%;
 	overflow-wrap: break-word;
 }
-main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite {
+main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,twitter-trend-tag {
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
 }
@@ -376,9 +376,7 @@ main .black {
 main .white {
 	color: white;
 }
-main .youtube-link {
-	color: var(--red)!important;
-}
+
 /*画像*/
 img {
 	width: 100%;
@@ -658,6 +656,28 @@ main .applemusic {
     padding: 10px 0;
     height: auto;
     opacity: 1;
+}
+/*Twitterトレンド*/
+.twitter-trend {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.twitter-trend-tag {
+	background-color: var(--white5);
+	padding: 1em 2rem;
+	width: calc(45% - 2rem)!important;
+	margin: 0.2rem 0.2rem!important;
+	display: inline-block;
+	 white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width: 680px) {
+	.twitter-trend-tag {
+	width: calc(100% - 2vw)!important;
+	padding: 1vw 1vw;
+	}
 }
 /*ロゴ*/
 #goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before,#from-raiden-mention::before,#from-yae-mention::before,#from-tartaglia-mention::before,i.life-collection::before {
