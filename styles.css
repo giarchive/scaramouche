@@ -675,7 +675,7 @@ main .applemusic {
 }
 @media screen and (max-width: 680px) {
 	.twitter-trend-tag {
-	width: calc(100% - 2vw)!important;
+	width: calc(90% - 2vw)!important;
 	padding: 1vw 1vw;
 	}
 }
