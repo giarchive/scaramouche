@@ -525,6 +525,7 @@ main .applemusic {
 	width: 100%;
 	height: 175px;
 	background:transparent;
+	margin: 0.5em 0;
 }
 /*淘宝*/
 .taobao {
