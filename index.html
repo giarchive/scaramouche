@@ -56,50 +56,8 @@
 				</a>
 				
 			</div>
-			
-				<script type="text/javascript" async>
-searchWord = function(){
-  var searchResult,
-      searchText = $(this).val(), // 検索ボックスに入力された値
-      targetText,
-      hitNum;
- 
-  // 検索結果を格納するための配列を用意
-  searchResult = [];
- 
-  // 検索結果エリアの表示を空にする
-  $('#search-result__list').empty();
-  $('.search-result__hit-num').empty();
- 
-  // 検索ボックスに値が入ってる場合
-  if (searchText != '') {
-    $('.target-area li').each(function() {
-      targetText = $(this).text();
- 
-      // 検索対象となるリストに入力された文字列が存在するかどうかを判断
-      if (targetText.indexOf(searchText) != -1) {
-        // 存在する場合はそのリストのテキストを用意した配列に格納
-        searchResult.push(targetText);
-      }
-    });
- 
-    // 検索結果をページに出力
-    for (var i = 0; i < searchResult.length; i ++) {
-      $('<span>').text(searchResult[i]).appendTo('#search-result__list');
-    }
- 
-    // ヒットの件数をページに出力
-    hitNum = '<span>検索結果</span>：' + searchResult.length + '件見つかりました。';
-    $('.search-result__hit-num').append(hitNum);
-  }
-};
- 
-// searchWordの実行
-$('#search-text').on('input', searchWord);
-
-				</script>
 				
-<script src="jquery-3.6.1.min.js" loading="lazy"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" loading="lazy"></script>
 <script src="search.js" loading="lazy"></script>
 	  
 			<nav class="nav notspeech notprint">
@@ -2725,7 +2683,7 @@ $('#search-text').on('input', searchWord);
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.1より、魔神任務第三章第三幕「迷夢と虚幻と欺瞞」、第四幕「赤砂の王と三人の巡礼者」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/QM1d4qBqHJ">pic.twitter.com/QM1d4qBqHJ</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1570746909756895232?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote>
 						
 						</div>
-					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8" loading="lazy"></script>
 										<h2 id="interview">インタビュー</h2>
 					<h3 id="scaramouche-va-1th">1周年記念インタビュー 柿原徹也（スカラマシュ 役）</h3>
 					<div class="youtube not-margin-div">
