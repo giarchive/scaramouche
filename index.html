@@ -30,8 +30,6 @@
 		
 		<body lang="ja">
 			
-			<!-- アクセス解析研究所 -->
-			<script src="//accaii.com/codheart/script.js" async></script><noscript><img src="//accaii.com/codheart/script?guid=on"></noscript>
 			<header>
 				<h1>スカラマシュの全情報書き写し</h1>
 				<span class="printonry">http://giarchive.github.io/scaramouche/</span>
@@ -57,18 +55,79 @@
   					<span class="btn-social-flat-text">コピー</span>
 				</a>
 				
-				</div>
+			</div>
+			
+				<script type="text/javascript" async>
+searchWord = function(){
+  var searchResult,
+      searchText = $(this).val(), // 検索ボックスに入力された値
+      targetText,
+      hitNum;
+ 
+  // 検索結果を格納するための配列を用意
+  searchResult = [];
+ 
+  // 検索結果エリアの表示を空にする
+  $('#search-result__list').empty();
+  $('.search-result__hit-num').empty();
+ 
+  // 検索ボックスに値が入ってる場合
+  if (searchText != '') {
+    $('.target-area li').each(function() {
+      targetText = $(this).text();
+ 
+      // 検索対象となるリストに入力された文字列が存在するかどうかを判断
+      if (targetText.indexOf(searchText) != -1) {
+        // 存在する場合はそのリストのテキストを用意した配列に格納
+        searchResult.push(targetText);
+      }
+    });
+ 
+    // 検索結果をページに出力
+    for (var i = 0; i < searchResult.length; i ++) {
+      $('<span>').text(searchResult[i]).appendTo('#search-result__list');
+    }
+ 
+    // ヒットの件数をページに出力
+    hitNum = '<span>検索結果</span>：' + searchResult.length + '件見つかりました。';
+    $('.search-result__hit-num').append(hitNum);
+  }
+};
+ 
+// searchWordの実行
+$('#search-text').on('input', searchWord);
+
+				</script>
+				
+<script src="jquery-3.6.1.min.js" loading="lazy"></script>
+<script src="search.js" loading="lazy"></script>
+	  
 			<nav class="nav notspeech notprint">
 				<label for="nav_box"><h3 class="nav_label"><span class="nav_label_text">メニュー</span><i class="fa-solid fa-sort-down"></i></h3></label>
     			<input type="checkbox" id="nav_box"/></input>
-    			<div class="nav_hidden">
-				<ul class="list">
+    			<div class="nav_hidden wrapper">
+					<div class="search-area">
+      <form>
+        <input type="text" id="search-text" placeholder="検索" list="serchtag">
+		<datalist id="serchtag">
+<option value="任務"></option>
+<option value="PV"></option>
+<option value="聖遺物"></option>
+<option value="攻略"></option>
+</datalist>
+      </form>
+      <div class="search-result">
+        <div class="search-result__hit-num"></div>
+        <div id="search-result__list"></div>
+      </div>
+  </div>
+				<ul class="list target-area">
 					<li class="update"><a href="#update">更新履歴</a>
 					<li class="information"><a href="#information">基本情報</a>
 						<ul>
 							<li><a href="#character-setting">キャラクター設定</a></li>
 							<li><a href="#voice-actor">声優</a></li>
-							<li><a href="#model">3Dモデル</a></li>
+							<li><a href="#model">3Dモデル<span style="display: none;">3d</span></a></li>
 						</ul>
 					</li>
 					<!-- <li class="gacha"><a href="#gacha">祈願</a>
@@ -77,7 +136,7 @@
 						</ul>
 					</li>-->
 					<li class="timeline"><a href="#timeline">時系列</a>
-					<li class="world-name"><a href="#world-name">各言語名</a>
+					<li class="world-name"><a href="#world-name">各言語名<span style="display: none;">翻訳</span></a>
 						<ul>
 						<li><a href="#jp">日本語</a></li>
 						<li><a href="#ch">中国語</a></li>
@@ -89,29 +148,29 @@
 						<li><a href="#list">一覧</a></li>
 					</ul>
 					</li>
-					<li class="story"><a href="#story-text">メインストーリー</a>
+					<li class="story"><a href="#story-text">メインストーリー<span style="display: none;">(任務、ストーリー)</span></a>
 					<ul>
-					<li><a href="#unreconciled-stars">帰らぬ熄星</a>
+					<li><a href="#unreconciled-stars">帰らぬ熄星<span style="display: none;">(イベント、任務、ストーリー、モンド、璃月)</span></a></a>
 						<ul>
 							<li><a href="#unknown-star">蔓延する危機</a></li>
 							<li><a href="#star-of-deceitful-dreams">天の謎、水の解き</a></li>
 							<li><a href="#star-of-destiny">古星の運命</a></li>
 						</ul>
 					</li>
-					<li><a href="#omnipresence-over-mortals">千手百目の浮世</a>
+					<li><a href="#omnipresence-over-mortals">千手百目の浮世<span style="display: none;">(魔神任務、ストーリー、八重神子、邪眼工場、稲妻)</span></a></a>
 						<ul>
 							<li><a href="#delusion">邪眼</a></li>
 							<li><a href="#the-servants-path">眷属の践行</a></li>
 							<li><a href="#wishes">願い</a></li>
 						</ul>
 					</li>
-					<li><a href="#clean-house">戸口の掃除</a></li>
-					<li><a href="#labyrinth-warriors">謎境一騎</a>
+					<li><a href="#clean-house">戸口の掃除<span style="display: none;">(世界任務、ストーリー、稲妻)</span></a></a></li>
+					<li><a href="#labyrinth-warriors">謎境一騎<span style="display: none;">(イベント、任務、ストーリー、稲妻)</span></a></a>
 						<ul>
 							<li><a href="#away-with-obsessions-and-falsehood">執念と虚飾からの解放</a></li>
 						</ul>
 					</li>
-					<li><a href="#hues-of-the-violet-garden">華やぐ紫苑の庭</a>
+					<li><a href="#hues-of-the-violet-garden">華やぐ紫苑の庭<span style="display: none;">(イベント、任務、ストーリー、楓原万葉、稲妻、国崩)</span></a></a>
 						<ul>
 							<li><a href="#five-kasen-summary">五歌仙の資料概要</a></li>
 							<li><a href="#a-new-painting-in-pale-scarlet">薄墨淡朱の新しき絵画</a></li>
@@ -119,16 +178,16 @@
 							<li><a href="#tale-of-the-five-kasen">ストーリームービー「歌仙逸話」</a></li>
 						</ul>
 					</li>
-					<li><a href="#a-winter-nights-lazzo">PV「冬夜の戯劇」</a></li>
+					<li><a href="#a-winter-nights-lazzo">PV「冬夜の戯劇」<span style="display: none;">(博士、隊長、ストーリー、スネージナヤ、pv)</a></li>
 					
-					<li><a href="#the-morn-a-thousand-roses-brings">黎明を告げる千の薔薇</a>
+					<li><a href="#the-morn-a-thousand-roses-brings">黎明を告げる千の薔薇<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a>
 						<ul>
 							<li><a href="#unknown-voice-3-2">謎の声</a></li>
 							<li><a href="#the-coming-of-the-sabzeruz-festival">終に訪れし花神誕祭</a></li>
 							<li><a href="#the-end-of-the-sabzeruz-festival">沈黙する知の探求者</a></li>
 						</ul>
 					</li>
-					<li><a href="#Dreams-Emptiness-Deception">迷夢と虚幻と欺瞞</a></li>
+					<li><a href="#Dreams-Emptiness-Deception">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a></li>
 					<!--
 					<li><a href="#">N/A</a>
 						<ul>
@@ -144,11 +203,11 @@
 				</li>-->
 				<li class="atrifacts"><a href="#atrifacts">聖遺物</a>
 					<ul>
-						<li><a href="#pale-flame">蒼白の炎</a>
+						<li><a href="#pale-flame">蒼白の炎<span style="display: none;">(聖遺物、ファデュイ)</span></a></a>
 							<ul>
 						<li><a href="#goblet-of-eonothem-surpassing-cup">超越の盃</a></li>
 							</ul>
-							<li><a href="#pale-flame">華館夢醒形骸記</a>
+							<li><a href="#pale-flame">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩)</span></a></a>
 								<ul>
 						<li><a href="#bloom-times">栄花の期</a></li>
 						<li><a href="#plume-of-luxury">華館の羽</a></li>
@@ -161,39 +220,39 @@
 				</li>
 				<li class="weapons"><a href="#weapons">武器</a>
 					<ul>
-						<li><a href="#katsuragikiri-nagamasa">桂木斬長正</a></li>
-						<li><a href="#kaguras-verity">神楽の真意</a></li>
+						<li><a href="#katsuragikiri-nagamasa">桂木斬長正<span style="display: none;">(丹羽桂木、御輿長正、国崩)</span></a></a></li>
+						<li><a href="#kaguras-verity">神楽の真意<span style="display: none;">(八重神子)</span></a></a></li>
 						<li><a href="#kagotsurube-isshin">籠釣瓶一心</a></li>
 					</ul>
 				</li>
 				<li class="domain"><a href="#domain">秘境</a>
 					<ul>
-						<li><a href="#castle-of-scrolls">借景ノ館</a></li>
+						<li><a href="#castle-of-scrolls">借景ノ館<span style="display: none;">借景の館、国崩、秘境</span></a></li>
 					</ul>
 				</li>
 				<li class="item"><a href="#item">アイテム・掲示物</a>
 					<ul>
-						<li><a href="#rather-aged-notes">古い手帳</a></li>
-						<li><a href="#ancient-forging-blueprint">古代の鍛造図</a></li>
+						<li><a href="#rather-aged-notes">古い手帳<span style="display: none;">(古い手紙、丹羽桂木、御輿長正、国崩)</span></a></li>
+						<li><a href="#ancient-forging-blueprint">古代の鍛造図<span style="display: none;">(楓原万葉)</span></a></a></li>
 					</ul>
 				</li>
-				<li class="mention"><a href="#mention">言及</a>
+				<li class="mention"><a href="#mention">言及<span style="display: none;">ボイス</span></a>
 					<ul>
 						<li><a href="#from-character-mention">プレイアブルキャラクター</a>
 							<ul>
-						<li><a href="#from-raiden-mention">雷電将軍</a></li>
+						<li><a href="#from-raiden-mention">雷電将軍<span style="display: none;">雷電影</span></a></a></li>
 						<li><a href="#from-yae-mention">八重神子</a></li>
-						<li><a href="#from-tartaglia-mention">タルタリヤ</a></li>
+						<li><a href="#from-tartaglia-mention">タルタリヤ<span style="display: none;">(公子、ファデュイ、ファトゥス)</span></a></a></li>
 					</ul>
 				</li>
 				<li><a href="#from-npc-mention">NPC</a>
 					<ul>
-						<li><a href="#from-viktor-mention">ヴィクトル</a></li>
+						<li><a href="#from-viktor-mention">ヴィクトル<span style="display: none;">(ファデュイ)</span></a></a></li>
 					</ul>
 				</li>
 					</ul>
 				</li>
-				<li class="combat"><a href="#combat">戦闘・育成</a>
+				<li class="combat"><a href="#combat">戦闘・育成<span style="display: none;">攻略</span></a>
 						<ul>
 							<!-- <li><a href="#atack-skill">性能</a></li>
 							<li><a href="#talent">天賦</a></li>
@@ -204,7 +263,7 @@
 							<li><a href="#skill-nurturing">天賦育成素材</a></li>
 						</ul>
 					</li>
-					<li class="boss"><a href="#boss">ボス</a>
+					<li class="boss"><a href="#boss">ボス<span style="display: none;">週ボス、敵、攻略</span></a>
 						<!--
 						<ul>
 							<li><a href="#boss-story">秘境・ストーリー</a></li>
@@ -212,46 +271,46 @@
 						</ul>-->
 					</li>
 					
-					<li class="music"><a href="#music">楽曲</a>
+					<li class="music"><a href="#music">楽曲<span style="display: none;">(音楽)</span></a>
 						<ul>
-							<li><a href="#ominous-fandango">浮浪人の魂胆</a></li>
-							<li><a href="#unpredicted-conspiracy">予期せぬ陰謀</a></li>
+							<li><a href="#ominous-fandango">浮浪人の魂胆<span style="display: none;">(音楽、楽曲、BGM)</span></a></a></li>
+							<li><a href="#unpredicted-conspiracy">予期せぬ陰謀<span style="display: none;">(音楽、楽曲、BGM)</span></a></a></li>
 						</ul>
 					</li>
 			<li class="pv"><a href="#pv">PV</a>
 				<ul>
-					<li><a href="#1.1pv">Var1.1「迫る客星」</a></li>
-					<li><a href="#2.1pv">Var2.1「千手百目の浮世」</a></li>
-					<li><a href="#3.1pv">Var3.1「赤砂の王と三人の巡礼者」</a></li>
+					<li><a href="#1.1pv">Var1.1「迫る客星」<span style="display: none;">(PV、pv、バージョン1.1)</span></a></a></li>
+					<li><a href="#2.1pv">Var2.1「千手百目の浮世」<span style="display: none;">(PV、pvバージョン2.1)</span></a></a></li>
+					<li><a href="#3.1pv">Var3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、バージョン3.1)</span></a></a></li>
 				</ul>
 			</li>
-				<li class="official-tweet"><a href="#official-tweet">公式ツイート</a>
+				<li class="official-tweet"><a href="#official-tweet">公式ツイート<span style="display: none;">(Twitter、twitter)</span></a></a>
 					<ul>
 						<li class="official-tweet-jp"><a href="#official-tweet-jp">日本語</a></li>
 					</ul>
 				</li>
 				<li class="interview"><a href="#interview">インタビュー等</a>
 					<ul>
-						<li><a href="#scaramouche-va-1th">1周年記念インタビュー 柿原徹也(スカラマシュ役)</a></li>
-						<li><a href="#lumie-va-1">1周年記念インタビュー 悠木碧(蛍役)</a></li>
-						<li><a href="#var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目</a></li>
-						<li><a href="#var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組</a></li>
+						<li><a href="#scaramouche-va-1th">1周年記念インタビュー 柿原徹也(スカラマシュ役)<span style="display: none;">声優</span></a></li>
+						<li><a href="#lumie-va-1">1周年記念インタビュー 悠木碧(蛍役)<span style="display: none;">声優</span></a></li>
+						<li><a href="#var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目<span style="display: none;">(予告、バージョン2.1)</span></a></li>
+						<li><a href="#var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組<span style="display: none;">(バージョン3.1)</span></a></a></li>
 					</ul>
 				</li>
 				<li class="illustration"><a href="#illustration">イラスト</a>
 					<ul>
-						<li><a href="#star-illustration">帰らぬ熄星</a></li>
-						<li><a heef="#irodori-illustration">光華容彩祭</a></li>
-						<li><a href="#king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者</a></li>
+						<li><a href="#star-illustration">帰らぬ熄星<span style="display: none;">(イラスト)</span></a></a></li>
+						<li><a heef="#irodori-illustration">光華容彩祭<span style="display: none;">(イラスト)</span></a></a></li>
+						<li><a href="#king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者<span style="display: none;">(イラスト)</span></a></a></li>
 					</ul>
 				</li>
-				<li class="official-contents"><a href="#official-contents">商品</a>
+				<li class="official-contents"><a href="#official-contents">商品<span style="display: none;">(グッズ)</span></a></a>
 					<ul>
-						<li><a href="#book">書籍</a></li>
+						<li><a href="#book">書籍<span style="display: none;">(本)</span></a></a></li>
 						<li><a href="#goods">グッズ</a></li>
 					</ul>
 				</li>
-				<li class="supplementary"><a href="#supplementary">補足情報</a>
+				<li class="supplementary"><a href="#supplementary">補足情報<span style="display: none;">(考察)</span></a></a>
 					<ul>
 						<li><a href="#twitter-trend">Twitterトレンド</a></li>
 						<li><a href="#name-original">名前の由来</a></li>
@@ -286,8 +345,8 @@
 							</ul>
 						</div>
 						<h2 id="information">基本情報</h2>
-						<!--<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20211210/20211210003926.jpg">-->
-						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225744.jpg">
+						<!--<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20211210/20211210003926.jpg" loading="lazy">-->
+						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225744.jpg" loading="lazy">
 						<div>
 							<p>
 								<b>ファトゥス第6位「散兵」スカラマシュ/国崩/???</b>
@@ -360,7 +419,7 @@
 							</table>
 						</div>
 						<h3 id="model">3Dモデル</h3>
-						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312.jpg" alt="Scaramouche 3d Model">
+						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312.jpg" alt="Scaramouche 3d Model" loading="lazy">
 						<cite>引用: <a href="https://twitter.com/izevrente/status/1357777079404793857">Twitter</a></cite>
 					<h2 id="timeline">時系列</h2>
 					<div class="table not-margin-div">
@@ -513,7 +572,7 @@
 								</ruby>
 							</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603015353.jpg" alt="スカラマシュ"  translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603015353.jpg" alt="スカラマシュ"  translate="no" loading="lazy">
 							<h3 id="ch">中国語</h3>
 							<p translate="no" lang="zh-cmn-Hans">
 								<b>
@@ -539,14 +598,14 @@
 								</ruby>
 							</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603020629.jpg" alt="散兵" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603020629.jpg" alt="散兵" translate="no" loading="lazy">
 							<h3 id="en">英語</h3>
 							<p translate="no" lang="en-US">
 								<b>
 								Balladeer&nbsp;/&nbsp;Scaramouche&nbsp;/&nbsp;Kunikuzushi
 								</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramouche" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramouche" translate="no" loading="lazy">
 							<h3 id="kr">韓国語</h3>
 							<p translate="no" lang="kr">
 								<b>
@@ -566,21 +625,21 @@
 								</ruby>
 							</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022400.jpg" alt="스카라무슈" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022400.jpg" alt="스카라무슈" translate="no" loading="lazy">
 						<h3 id="it">イタリア語</h3>
 							<p translate="no" lang="it">
 								<b>
 								Baladista&nbsp;/&nbsp;Scaramuccia&nbsp;/&nbsp;Kunikuzushi
 								</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramuccia" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramuccia" translate="no" loading="lazy">
 							<h3 id="fr">フランス語</h3>
 							<p translate="no" lang="fr">
 								<b>
 								Le Vagabond&nbsp;/&nbsp;Scaramuccia&nbsp;/&nbsp;Kunikuzushi
 								</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801191244.jpg" alt="Scaramouche" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801191244.jpg" alt="Scaramouche" translate="no" loading="lazy">
 						<h3 id="ru">ロシア語</h3>
 							<p translate="no" lang="ru">
 								<b>
@@ -606,7 +665,7 @@
 								</ruby>
 							</b>
 							</p>
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603023410.jpg" alt="散兵" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603023410.jpg" alt="散兵" translate="no" loading="lazy">
 							<h3 id="list">一覧表</h3>
 							<div class="table not-margin-div">
 							<table class="lang-list">
@@ -1202,7 +1261,7 @@
 							<h4 id="tale-of-the-five-kasen">ストーリームービー「歌仙逸話」</h4>
 							<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-								<iframe width="1920" height="108&loop=1&playlist=sxASuK2hoZw" src="https://www.youtube.com/embed/sxASuK2hoZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+								<iframe width="1920" height="108&loop=1&playlist=sxASuK2hoZw" src="https://www.youtube.com/embed/sxASuK2hoZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 							</div>
 							<blockquote>
 								<p>
@@ -1255,7 +1314,7 @@
 							<h3 id="a-winter-nights-lazzo">PV「冬夜の戯劇」</h3>
 							<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/34jc0Y4bzT0?controls=0&amp;start=121&loop=1&playlist=34jc0Y4bzT0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/34jc0Y4bzT0?controls=0&amp;start=121&loop=1&playlist=34jc0Y4bzT0" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 							<blockquote>
 								<span class="blockquote-title">2:01</span>
@@ -1381,7 +1440,7 @@
 							<h4 id="">???</h4>
 							<blockquote>
 								<p>
-									<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225005.jpg">
+									<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225005.jpg" loading="lazy">
 									
 									</p>
 						</blockquote>
@@ -1952,7 +2011,7 @@
     						<label for="label1-rather-aged-notes"><i class="fa-solid fa-circle-plus"></i>&nbsp;手紙の位置</label>
     						<input type="checkbox" id="label1-rather-aged-notes"/>
    								 <div class="hidden_show-rather-aged-notes not-margin-div">
-									 <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220812/20220812030002.png">
+									 <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220812/20220812030002.png"  loading="lazy">
 						<div>
 							<p>◉:武器庫、⚿:鍵の場所、⌂:借景ノ館</p>
 							<p>①:借景ノ館を出てすぐの北方向にある古屋の上<br>
@@ -1966,7 +2025,7 @@
 							</div>
 			<div class="youtube not-margin-div">
 				<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/lfyzmrAi4q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/lfyzmrAi4q4" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
   								  </div>
 							</div>
@@ -1975,7 +2034,7 @@
 								<span><b>イベント「華やぐ紫苑の庭」で入手</b></span><br>
 								<span>かつて将軍はこの古代の鍛造図に基づいて「御神刀」を作るよう、楓原家に命じた。<br>
 								水に浸されたこの鍛造図は、一部の文字がぼやけてしまっている。誰かが設計図を改変したせいで鍛造は失敗し、一連の悲劇を引き起こす結果となった...</span>
-								<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220912/20220912174913.jpg">
+								<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220912/20220912174913.jpg" loading="lazy">
 								<p>
 									<font size="4"><span class="inazumafont">tanzo sekveizu</span><b>&thinsp;鍛造設計図</b></font><br>
 									<span class="inazumafont">kixsaki</span>&thinsp;切先<br>
@@ -2055,7 +2114,7 @@
 					<table>
   						<tr>
    							<th>通常攻撃・???</th>
-    						<td><img src=""></td>
+    						<td><img src="" loading="lazy"></td>
 							<td>
 								<b>通常攻撃</b><br>
 								???<br>
@@ -2067,7 +2126,7 @@
   						</tr>
 						<tr>
    							<th>元素スキル・???</th>
-    						<td><img src=""></td>
+    						<td><img src="" loading="lazy"></td>
 							<td>
 								???<br>
 								<i>元素スキルストーリー</i>
@@ -2075,7 +2134,7 @@
   						</tr>
 						<tr>
    							<th>元素爆発・???</th>
-    						<td><img src=""></td>
+    						<td><img src="" loading="lazy"></td>
 							<td>
 								???<br>
 								<i>元素爆発ストーリー</i>
@@ -2488,8 +2547,8 @@
 					</table>
 					
 					<h2 id="boss">ボス</h2>
-					<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225005.jpg">
-					<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916224958.jpg">
+					<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225005.jpg" loading="lazy">
+					<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916224958.jpg" loading="lazy">
 					<!--
 					<h3 id="boss-story">秘境・ストーリー</h3>
 						<p><b>秘境「(追憶: N/A)」(秘境入口)</b><br>
@@ -2548,14 +2607,14 @@
 				</table></div>
 				<div>
 					<p>
-				<b>「裁きは既に下りました。」</b > <img src="">
-<b>「この世はまるで影のよう…」</b><br> <img src="">
-<b>「無力なり」「滑稽です」</b><br> <img src="">
-<b>「下がりなさい！」</b><br> <img src="">
-<b>「雷電がただの人間などに、意思を変えられることはありません。」</b><br> <img src="">
-<b>「この目で俗世を見届けましょう。」</b><br> <img src="">
-<b>「雷光よ、永遠の土を照らさん。」</b><br> <img src="">
-<b>「須臾の泡影。」</b><br> <img src="">
+				<b>「裁きは既に下りました。」</b > <img src="" loading="lazy">
+<b>「この世はまるで影のよう…」</b><br> <img src="" loading="lazy">
+<b>「無力なり」「滑稽です」</b><br> <img src="" loading="lazy">
+<b>「下がりなさい！」</b><br> <img src="" loading="lazy">
+<b>「雷電がただの人間などに、意思を変えられることはありません。」</b><br> <img src="" loading="lazy">
+<b>「この目で俗世を見届けましょう。」</b><br> <img src="" loading="lazy">
+<b>「雷光よ、永遠の土を照らさん。」</b><br> <img src="" loading="lazy">
+<b>「須臾の泡影。」</b><br> <img src="" loading="lazy">
 <b>「無念無想、全てを無へ！」「無念無想、一刀断絶！」</b>
 </p>
 </div>
@@ -2588,41 +2647,41 @@
 				<div>
 <p>
 <b>「邪魔者を、断ち切りましょう。」</b><br>
-<img src="">
+<img src="" loading="lazy">
 <b>「あなたを切り裂きましょう」</b><br>
-<img src="">
+<img src="" loading="lazy">
 <b>「永劫に帰せ！」</b><br>
 <i>「追念の花蕊」に<span style="color:red;">雷元素攻撃を与え</span>、より素早くバリアを展開せよ</i><br>
-<img src="">
+<img src="" loading="lazy">
 </p>
 			</div>
 		-->
 						<h2 id="music">楽曲</h2>
 						<h3 id="ominous-fandango">浮浪人の魂胆 - Ominous Fandango</h3>
-				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto"></iframe>
+				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto" loading="lazy"></iframe>
 				<h3 id="unpredicted-conspiracy">予期せぬ陰謀 - Unpredicted Conspiracy</h3>
-				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E4%BA%88%E6%9C%9F%E3%81%9B%E3%81%AC%E9%99%B0%E8%AC%80/1638924783?i=1638925252&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write"></iframe>
+				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E4%BA%88%E6%9C%9F%E3%81%9B%E3%81%AC%E9%99%B0%E8%AC%80/1638924783?i=1638925252&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" loading="lazy"></iframe>
 			<h2 id="pv">PV</h2>
 			<h3 id="1.1pv">バージョン1.1「迫る客星」</h3>
 			<div><p>ここでビジュアルが初めて公開された</p></div>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/B07z5cbHjNQ?start=88&loop=1&playlist=B07z5cbHjNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/B07z5cbHjNQ?start=88&loop=1&playlist=B07z5cbHjNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 									<h3 id="2.1pv">バージョン2.1「千手百目の浮世」</h3>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/oGFyKyvVpb8?start=151" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/oGFyKyvVpb8?start=151" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
 				<blockquote>
 					<p>
-						スカラマシュ「永遠は、時間を非常に長く伸ばすことができる。だけど、その間にあるひとつひとつの節目は、とてつもなく脆弱なものになるのだ。ふふふふふ... ハハハハハハハ!」
+						スカラマシュ「永遠は、時間を非常に長く伸ばすことができる。だけど、その間にあるひとつひとつの節目は、とてつもなく脆弱なものになるのだ。フフフフ... ハハハハッ!」
 					</p>
 				</blockquote>
 				<h3 id="3.1pv">バージョン3.1「赤砂の王と三人の巡礼者」</h3>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4?start=179" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;allowfullscreen"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4?start=179" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
 				</p>
 				<blockquote>
@@ -2631,7 +2690,7 @@
 						
 						博士「ふふっ... 実験は成功だ」<br>
 博士「人々は今にも、自らの情熱を抑えきれなくなりそうだ」<br>
-(スカラマシュ/「I SEE YOU」)<br>
+(「I SEE YOU」)<br>
 キャサリン「あっ... あぁ...(三十三人団に襲われる)」<br>
 スカラマシュ「フフフフ... ハハハハッ!」<br>
 (スカラマシュが繋がれた大型機械が登場)<br>
@@ -2651,6 +2710,7 @@
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">トレンド入り！ <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5?src=hash&amp;ref_src=twsrc%5Etfw">#スカラマシュ</a> <a href="https://twitter.com/hashtag/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D?src=hash&amp;ref_src=twsrc%5Etfw">#雷電将軍</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/3PvWn5EI9W">pic.twitter.com/3PvWn5EI9W</a></p>&mdash; パイモン (@paimon_genshin7) <a href="https://twitter.com/paimon_genshin7/status/1428708924568440833?ref_src=twsrc%5Etfw">August 20, 2021</a></blockquote>
 					
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.1より、魔神任務第三章第三幕「迷夢と虚幻と欺瞞」、第四幕「赤砂の王と三人の巡礼者」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/QM1d4qBqHJ">pic.twitter.com/QM1d4qBqHJ</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1570746909756895232?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote>
+					
 				</div>
 				
 				
@@ -2663,13 +2723,14 @@
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">トレンド入り！ <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5?src=hash&amp;ref_src=twsrc%5Etfw">#スカラマシュ</a> <a href="https://twitter.com/hashtag/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D?src=hash&amp;ref_src=twsrc%5Etfw">#雷電将軍</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/3PvWn5EI9W">pic.twitter.com/3PvWn5EI9W</a></p>&mdash; パイモン (@paimon_genshin7) <a href="https://twitter.com/paimon_genshin7/status/1428708924568440833?ref_src=twsrc%5Etfw">August 20, 2021</a></blockquote>
 					
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.1より、魔神任務第三章第三幕「迷夢と虚幻と欺瞞」、第四幕「赤砂の王と三人の巡礼者」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/QM1d4qBqHJ">pic.twitter.com/QM1d4qBqHJ</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1570746909756895232?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote>
+						
 						</div>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 										<h2 id="interview">インタビュー</h2>
 					<h3 id="scaramouche-va-1th">1周年記念インタビュー 柿原徹也（スカラマシュ 役）</h3>
 					<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/hYciFdPdV_8&loop=1&playlist=hYciFdPdV_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/hYciFdPdV_8&loop=1&playlist=hYciFdPdV_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 					<div><p>赤字は運営による強調。敬称略。</p></div>
 					<h4 id="0-00">はじめにキャラクターのセリフをお願いします。</h4>
@@ -2760,7 +2821,7 @@
 					<h3 id="var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目</h3>
 					<div class="youtube not-margin-div">
 								<p>Bilibiliを表示できません。</p>
-							<iframe src="//player.bilibili.com/player.html?aid=847489645&bvid=BV1GL4y1v7BP&cid=393322321&page=1&t=1162" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+							<iframe src="//player.bilibili.com/player.html?aid=847489645&bvid=BV1GL4y1v7BP&cid=393322321&page=1&t=1162" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy"></iframe>
 						</div>
 						<blockquote>
 							<p>伟「散兵！他终于又出场了」<br>
@@ -2802,7 +2863,7 @@
 			<h3 id="var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組</h3>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4&loop=1&playlist=qC9wSPOExL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4&loop=1&playlist=qC9wSPOExL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 						<blockquote>
 							<p>Wei「おや? 「博士」と「散兵」はスメールで登場しますか?」<br>
@@ -2834,13 +2895,14 @@ Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
 				<div>
 					<ul>
 						<li lang="jp">『<span translate="no">Pash!</span>』 2021年12月号 , 59ページ「<span translate="no">世界に争う者たち</span>」</li>
+						<li lang="jp">『<span translate="no">原神插画集 Vol.1</span>』</li>
 					</ul>
 				</div>
 				<h3 id="goods">グッズ</h3>
 				<div class="taobao">
 					<div class="taobao-content not-margin-div">
 						<a href="https://m.tb.cn/h.fCrdm2m">
-							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220802/20220802012845.jpg" class="taobao-image" translate="no">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220802/20220802012845.jpg" class="taobao-image" translate="no" loading="lazy">
 							<p class="taobao-text black">マウスパッド 帰らぬ熄星</p>
 						</a>
 					</div>
@@ -3079,7 +3141,7 @@ Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
 			<footer>
 				<p>
 			<a href="https://twitter.com/intent/follow?screen_name=COD_HEART"><i class="fa-brands fa-twitter"></i></a><br>
-				<small>利用: <a href="https://github.com/GoodOldLandLine/GenshinFonts">GenshinFonts</a> <a href="https://accaii.com/">アクセス解析研究所</a><br>
+				<small>利用: <a href="https://github.com/GoodOldLandLine/GenshinFonts">GenshinFonts</a> <a href="https://accaii.com/">アクセス解析研究所</a> <a href="https://jquery.com/">jQuery</a><br>
 					Apple MusicおよびApp Storeは米国その他の国で登録されたApple Inc.の商標です。<br>
 				本WebサイトはmiHoYo/HoYoVerseによる提供ではありません。<br> 
 				弊サイトで引用されている原神のコンテンツの著作権は株式会社COGNOSPHERE及び上海米哈游網絡科技股份有限公司に所属します。</p>
@@ -3098,6 +3160,7 @@ Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
 					}
 				</script>
 				
-
+			<!-- アクセス解析研究所 -->
+			<script src="//accaii.com/codheart/script.js" async></script><noscript><img src="//accaii.com/codheart/script?guid=on"  loading="lazy"></noscript>
 		</body>
 	</html>
