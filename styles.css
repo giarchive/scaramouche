@@ -600,7 +600,7 @@ main .applemusic {
   text-decoration: none;
   border: 1px solid var(--black1);
   cursor: pointer;
-  margin-left: 1vw;
+  margin-left: 1.5rem;
 }
 
 .btn-social-flat-icon {

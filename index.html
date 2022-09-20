@@ -18,6 +18,11 @@
 			<meta name="language" content="Japanese" />
 			<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet">
 			
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			<script src="search.js" loading="lazy"></script>
+			
+			<script src="../load.js"></script>
+			
 			<!-- 
 				必ずサイトマップを更新する
 				▶︎ここで更新 https://www.xml-sitemaps.com
@@ -36,7 +41,7 @@
 			</header>
 			<article>
 				<aside class="top-text notprint">
-						<p><b>Var3.1予告</b><br>
+						<p><b>Var3.1</b><br>
 						本サイトはスカラマシュに関する情報をまとめた有志サイトです。リーク情報は扱いません。</p>	
 				</aside>
 			</article>
@@ -56,9 +61,6 @@
 				</a>
 				
 			</div>
-				
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" loading="lazy"></script>
-<script src="search.js" loading="lazy"></script>
 	  
 			<nav class="nav notspeech notprint">
 				<label for="nav_box"><h3 class="nav_label"><span class="nav_label_text">メニュー</span><i class="fa-solid fa-sort-down"></i></h3></label>
@@ -87,6 +89,7 @@
 						<ul>
 							<li><a href="#character-setting">キャラクター設定</a></li>
 							<li><a href="#voice-actor">声優</a></li>
+							<!--<li><a href="#gacha-Illust">立ち絵・バナー</a></li>-->
 							<li><a href="#model">3Dモデル<span style="display: none;">3d</span></a></li>
 						</ul>
 					</li>
@@ -147,13 +150,11 @@
 							<li><a href="#the-end-of-the-sabzeruz-festival">沈黙する知の探求者</a></li>
 						</ul>
 					</li>
-					<li><a href="#Dreams-Emptiness-Deception">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a></li>
-					<!--
-					<li><a href="#">N/A</a>
+					<li><a href="#Dreams-Emptiness-Deception">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a>
 						<ul>
 							<li><a href="#">N/A</a></li>
 						</ul>
-					</li>-->
+					</li>
 				</li></ul>
 				<!-- <li><a href="voice-line">ボイス・キャラストーリー</a>
 					<ul>
@@ -219,8 +220,8 @@
 							<li><a href="#collection">命の星座<span style="display: none;">攻略</span</a></li>
 							<li><a heef="#skill-details">スキル詳細<span style="display: none;">攻略</span</a></li>
 												-->
-							<li><a href="#nurturing">育成素材<span style="display: none;">攻略</span</a></li>
-							<li><a href="#skill-nurturing">天賦育成素材<span style="display: none;">攻略</span</a></li>
+							<li><a href="#nurturing">育成素材<span style="display: none;">攻略</span></a></li>
+							<li><a href="#skill-nurturing">天賦育成素材<span style="display: none;">攻略</span></a></li>
 						</ul>
 					</li>
 					<li class="boss"><a href="#boss">ボス<span style="display: none;">週ボス、敵、攻略</span></a>
@@ -235,6 +236,7 @@
 						<ul>
 							<li><a href="#ominous-fandango">浮浪人の魂胆<span style="display: none;">(音楽、楽曲、BGM)</span></a></a></li>
 							<li><a href="#unpredicted-conspiracy">予期せぬ陰謀<span style="display: none;">(音楽、楽曲、BGM)</span></a></a></li>
+							<li><a href="#floating-world-under-the-moonlight">韶光撫月の浮世<span style="display: none;">(音楽、楽曲、BGM)</span></a></a></li> 
 						</ul>
 					</li>
 			<li class="pv"><a href="#pv">PV</a>
@@ -352,7 +354,7 @@
 									</tr>
 									<tr>
 										<th>状態</th>
-										<td>行方不明(逃亡)</td>
+										<td>N/A</td>
 									</tr>
 								</tbody>
 							</table>
@@ -378,6 +380,7 @@
 								</tbody>
 							</table>
 						</div>
+						<!--<h3 id="gacha-Illust">立ち絵・バナー</h3>-->
 						<h3 id="model">3Dモデル</h3>
 						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312.jpg" alt="Scaramouche 3d Model" loading="lazy">
 						<cite>引用: <a href="https://twitter.com/izevrente/status/1357777079404793857">Twitter</a></cite>
@@ -462,7 +465,7 @@
 	<tr>
 		<th></th>
 		<td>流浪を続ける</td>
-		<td>テイワット</td>
+		<td>稲妻</td>
 	</tr>
 	<tr>
 		<th></th>
@@ -496,8 +499,23 @@
 	</tr>
 	<tr>
 		<th>魔神任務3章3幕</th>
-		<td>「博士」に機械に繋がれる</td>
+		<td>N/A</td>
 		<td>スメール</td>
+	</tr>
+	<tr>
+		<th>将来</th>
+		<td>「自分だけのもの」を手に入れる</td>
+		<td>？</td>
+	</tr>
+	<tr>
+		<th>遠い未来</th>
+		<td>人間の間で語られる物語「華館夢醒形骸記」に記される</td>
+		<td>浮世</td>
+	</tr>
+	<tr>
+		<th></th>
+		<td>地脈の記憶になる</td>
+		<td>テイワット</td>
 	</tr>
 	</table>
 </div>
@@ -1221,7 +1239,7 @@
 							<h4 id="tale-of-the-five-kasen">ストーリームービー「歌仙逸話」</h4>
 							<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-								<iframe width="1920" height="108&loop=1&playlist=sxASuK2hoZw" src="https://www.youtube.com/embed/sxASuK2hoZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+								<iframe width="1920" height="108" src="https://www.youtube.com/embed/sxASuK2hoZw&loop=1&playlist=sxASuK2hoZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 							</div>
 							<blockquote>
 								<p>
@@ -1400,9 +1418,9 @@
 							<h4 id="">???</h4>
 							<blockquote>
 								<p>
-									<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225005.jpg" loading="lazy">
-									
-									</p>
+									スカラマシュ「N/A」<br>
+									ドットーレ「N/A」
+								</p>
 						</blockquote>
 					<!--プレイアブル実装後
 							<h2 id="voice-line">ボイス・キャラストーリー</h2>
@@ -1985,7 +2003,7 @@
 							</div>
 			<div class="youtube not-margin-div">
 				<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/lfyzmrAi4q4" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/lfyzmrAi4q4?loop=1&playlist=lfyzmrAi4q4" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
   								  </div>
 							</div>
@@ -2017,6 +2035,12 @@
 							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
 						</blockquote>
 						<div><p>「気が狂った」は中国語では《失心》とあり、「精神異常」(単語)と神の心を失った(直接の意味)という２つの意味をもつ。また英語では“Eccentric”となっており、常識を逸脱したという意味を持つ。</p></div>
+						<h4>稽古·御館絵巻</h4>
+						<blockquote>
+							<p>
+								山々の深部には、この世のものとは思えない光景と、それに惹かれる野蛮な者が潜んでいる。
+							</p>
+						</blockquote>
 					<h2 id="mention">言及</h2>
 					<h3 id="from-character-mention">プレイアブルキャラクター</h3>
 					<h4 id="from-raiden-mention">雷電将軍</h4>
@@ -2620,7 +2644,11 @@
 						<h3 id="ominous-fandango">浮浪人の魂胆 - Ominous Fandango</h3>
 				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto" loading="lazy"></iframe>
 				<h3 id="unpredicted-conspiracy">予期せぬ陰謀 - Unpredicted Conspiracy</h3>
+				<div>魔神任務2章3幕 任務「邪眼」ムービー</div>
 				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E4%BA%88%E6%9C%9F%E3%81%9B%E3%81%AC%E9%99%B0%E8%AC%80/1638924783?i=1638925252&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" loading="lazy"></iframe>
+				<h3 id="floating-world-under-the-moonlight">韶光撫月の浮世 - Floating World Under the Moonlight</h3>
+				<div>Ver.2.1公式PV「韶光撫月の浮世」</div>
+				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E9%9F%B6%E5%85%89%E6%92%AB%E6%9C%88%E3%81%AE%E6%B5%AE%E4%B8%96/1641562491?i=1641563163&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" loading="lazy"></iframe>
 			<h2 id="pv">PV</h2>
 			<h3 id="1.1pv">バージョン1.1「迫る客星」</h3>
 			<div><p>ここでビジュアルが初めて公開された</p></div>
@@ -2631,7 +2659,7 @@
 									<h3 id="2.1pv">バージョン2.1「千手百目の浮世」</h3>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/oGFyKyvVpb8?start=151" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/oGFyKyvVpb8?start=151&loop=1&playlist=oGFyKyvVpb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
 				<blockquote>
 					<p>
@@ -2641,7 +2669,7 @@
 				<h3 id="3.1pv">バージョン3.1「赤砂の王と三人の巡礼者」</h3>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4?start=179" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/owxvZ9-0JE0?start=179&loop=1&playlist=owxvZ9-0JE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
 				</p>
 				<blockquote>
@@ -2650,7 +2678,7 @@
 						
 						博士「ふふっ... 実験は成功だ」<br>
 博士「人々は今にも、自らの情熱を抑えきれなくなりそうだ」<br>
-(「I SEE YOU」)<br>
+「I SEE YOU」<br>
 キャサリン「あっ... あぁ...(三十三人団に襲われる)」<br>
 スカラマシュ「フフフフ... ハハハハッ!」<br>
 (スカラマシュが繋がれた大型機械が登場)<br>
@@ -3099,14 +3127,8 @@ Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
 			</div>
 			</main>
 			<footer>
-				<p>
-			<a href="https://twitter.com/intent/follow?screen_name=COD_HEART"><i class="fa-brands fa-twitter"></i></a><br>
-				<small>利用: <a href="https://github.com/GoodOldLandLine/GenshinFonts">GenshinFonts</a> <a href="https://accaii.com/">アクセス解析研究所</a> <a href="https://jquery.com/">jQuery</a><br>
-					Apple MusicおよびApp Storeは米国その他の国で登録されたApple Inc.の商標です。<br>
-				本WebサイトはmiHoYo/HoYoVerseによる提供ではありません。<br> 
-				弊サイトで引用されている原神のコンテンツの著作権は株式会社COGNOSPHERE及び上海米哈游網絡科技股份有限公司に所属します。</p>
+				<div class="fooder"></div>
 				<p id="url" style="display: none;">https://giarchive.github.io/scaramouche</small>
-				</p>
 			</footer>
 							<script>
 					  				window.dataLayer = window.dataLayer || [];
