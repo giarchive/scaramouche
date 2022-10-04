@@ -23,9 +23,9 @@
 			<script src="search.js" loading="lazy"></script>
 			
 			<script src="../parts/load.js"></script>
-			<link rel="icon" href="https://giarchive.github.io/scaramouche/favicon.ico">
+			<!--<link rel="icon" href="https://giarchive.github.io/scaramouche/favicon.ico">
 			
-<link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/0749E3AF-8E47-42B8-A242-92F7D19A65F1.png">			
+<link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/0749E3AF-8E47-42B8-A242-92F7D19A65F1.png">	-->		
 			<!-- 
 				必ずサイトマップを更新する
 				▶︎ここで更新 https://www.xml-sitemaps.com
@@ -37,7 +37,13 @@
 		<!--https://github.com/GoodOldLandLine/GenshinFonts-->
 		
 		<body lang="ja">
-			
+			<script type="text/javascript">
+				//head要素を取得
+const head = document.head;
+
+head.insertAdjacentHTML('beforeEnd', '<link rel="icon" href="https://giarchive.github.io/signora/favicon.ico">');
+head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https://giarchive.github.io/signora/apple-touch-icon.png">');
+			</script>
 			<header>
 				<h1>スカラマシュの全情報書き写し</h1>
 				<span class="printonry">http://giarchive.github.io/scaramouche/</span>
@@ -144,7 +150,7 @@
 							<li><a href="#tale-of-the-five-kasen">ストーリームービー「歌仙逸話」</a></li>
 						</ul>
 					</li>
-					<li><a href="#a-winter-nights-lazzo">PV「冬夜の戯劇」<span style="display: none;">(博士、隊長、ストーリー、スネージナヤ、pv)</a></li>
+					<li><a href="#a-winter-nights-lazzo">PV「冬夜の戯劇」<span style="display: none;">(博士、隊長、ストーリー、スネージナヤ、pv、ムービー)</a></li>
 					
 					<li><a href="#the-morn-a-thousand-roses-brings">黎明を告げる千の薔薇<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a>
 						<ul>
@@ -157,6 +163,13 @@
 						<ul>
 							<li><a href="#like-a-triumphant-hero">凱旋した英雄のように</a></li>
 							<li><a href="#the-gaze-from-a-certain-god">とある「神」からの凝視</a></li>
+							<li><a href="#the-divine-will">ストーリームービー「『神』意」<span style="display: none;">(PV、pv、ムービー)</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#king-deshret-and-the-three-magi">赤砂の王と三人の巡礼者<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、神)</a>
+						<ul>
+							<li><a href="#cry-from-the-eleazar-hospital">魔鱗病病院の泣き声</a></li>
+							<li><a href="#secret-of-the-scorching-desert">熱砂の中の秘密</a></li>
 						</ul>
 					</li>
 				</li></ul>
@@ -172,7 +185,7 @@
 							<ul>
 						<li><a href="#goblet-of-eonothem-surpassing-cup">超越の盃</a></li>
 							</ul>
-							<li><a href="#pale-flame">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩、過去)</span></a></a>
+							<li><a href="#husk-of-opulent-dreams">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩、過去)</span></a></a>
 								<ul>
 						<li><a href="#bloom-times">栄花の期</a></li>
 						<li><a href="#plume-of-luxury">華館の羽</a></li>
@@ -228,8 +241,8 @@
 							<li><a href="#skill-nurturing">天賦育成素材<span style="display: none;">攻略</span></a></li>
 						</ul>
 					</li>
-					<li class="boss"><a href="#boss">ボス<span style="display: none;">週ボス、敵、攻略</span></a>
-						<!--
+					<!--<li class="boss"><a href="#boss">ボス<span style="display: none;">週ボス、敵、攻略</span></a>
+						
 						<ul>
 							<li><a href="#boss-story">秘境・ストーリー</a></li>
 							<li><a href="#boss">第1形態: n/a</a></li>
@@ -243,11 +256,18 @@
 							<li><a href="#floating-world-under-the-moonlight">韶光撫月の浮世<span style="display: none;">(音楽、楽曲、BGM)</span></a></a></li> 
 						</ul>
 					</li>
+					<li class="illustration"><a href="#illustration">公式イラスト<span style="display: none;">(壁紙、キービジュアル)</span></a>
+				<ul>
+					<li><a href="#star-illustration">帰らぬ熄星<span style="display: none;">(壁紙、キービジュアル、1.1)</span></a></a></li>
+					<li><a href="#irodori-illustration">光華容彩祭<span style="display: none;">(壁紙、華やぐ紫苑の庭、2.5)</span></span></a></a></li>
+					<li><a href="#king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者<span style="display: none;">(壁紙、キービジュアル、pv、3.1)</span></a></a></li>
+				</ul>
+			</li>
 			<li class="pv"><a href="#pv">PV</a>
 				<ul>
-					<li><a href="#1.1pv">Var1.1「迫る客星」<span style="display: none;">(PV、pv、バージョン1.1)</span></a></a></li>
-					<li><a href="#2.1pv">Var2.1「千手百目の浮世」<span style="display: none;">(PV、pvバージョン2.1)</span></a></a></li>
-					<li><a href="#3.1pv">Var3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、バージョン3.1)</span></a></a></li>
+					<li><a href="#1.1pv">Var1.1「迫る客星」<span style="display: none;">(PV、pv、1.1)</span></a></a></li>
+					<li><a href="#2.1pv">Var2.1「千手百目の浮世」<span style="display: none;">(PV、pv、2.1)</span></a></a></li>
+					<li><a href="#3.1pv">Var3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、3.1)</span></a></a></li>
 				</ul>
 			</li>
 				<li class="official-tweet"><a href="#official-tweet">公式ツイート<span style="display: none;">(Twitter、twitter)</span></a></a>
@@ -258,16 +278,9 @@
 				<li class="interview"><a href="#interview">インタビュー等</a>
 					<ul>
 						<li><a href="#scaramouche-va-1th">1周年記念インタビュー 柿原徹也(スカラマシュ役)<span style="display: none;">声優</span></a></li>
-						<li><a href="#lumie-va-1">1周年記念インタビュー 悠木碧(蛍役)<span style="display: none;">声優</span></a></li>
 						<li><a href="#var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目<span style="display: none;">(予告、バージョン2.1)</span></a></li>
 						<li><a href="#var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組<span style="display: none;">(バージョン3.1)</span></a></a></li>
-					</ul>
-				</li>
-				<li class="illustration"><a href="#illustration">イラスト</a>
-					<ul>
-						<li><a href="#star-illustration">帰らぬ熄星<span style="display: none;">(イラスト)</span></a></a></li>
-						<li><a heef="#irodori-illustration">光華容彩祭<span style="display: none;">(イラスト)</span></a></a></li>
-						<li><a href="#king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者<span style="display: none;">(イラスト)</span></a></a></li>
+						<li><a href="#interview-other">その他言及</a></li>
 					</ul>
 				</li>
 				<li class="official-contents"><a href="#official-contents">商品<span style="display: none;">(グッズ)</span></a></a>
@@ -307,12 +320,13 @@
 								<li><span class="var-num">2022/7/11</span>PV「冬夜の戯劇」公開</li>
 								<li><span class="var-num">Var2.8</span>「タルタリヤ」が言及、武器「『妖刀』」実装</li>
 								<li><span class="var-num">Var3.0</span>魔神任務3章2幕「黎明を告げる千の薔薇」</li>
-								<li><span class="var-num">Var3.1</span>魔神任務3章3幕「迷夢と虚幻と欺瞞」</li>
+								<li><span class="var-num">Var3.1</span>魔神任務3章3幕「迷夢と虚幻と欺瞞」、魔神任務2章4幕「赤砂の王と三人の巡礼者」</li>
+								<li><span class="var-num">2022/10/4</span>ストーリームービー「『神』意」YouTube公開</li>
 							</ul>
 						</div>
 						<h2 id="information">基本情報</h2>
 						<!--<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20211210/20211210003926.jpg" loading="lazy">-->
-						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225744.jpg" loading="lazy">
+						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221004/20221004213920.png" loading="lazy">
 
 						
 						<div>
@@ -1467,9 +1481,10 @@
 「通路」がつながり、あなたの意識はその神とやらに触れた…<br>
 </p>
 </blockquote>
+<h4 id="the-divine-will">ストーリームービー「『神』意」</h4>
 <div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/r5DI0BRdCQg?controls=1&amp;controls=0&loop=1&playlist=r5DI0BRdCQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/SrysQ0zXrC8?controls=1&amp;controls=0&loop=1&playlist=SrysQ0zXrC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 							</div>
 <blockquote>
 <p>
@@ -1547,9 +1562,9 @@
 パイモン「うぅ... 賢者たちの目的は、未だにはっきりわかってないんだよな...」
 						</p>
 					</blockquote>
-					<!--
-					<h3 id="Dreams-Emptiness-Deception">魔神任務3章4幕 赤砂の王と三人の巡礼者</h3>
-					<h4 id="like-a-triumphant-hero">魔鱗病病院の泣き声</h4>
+					
+					<h3 id="king-deshret-and-the-three-magi">魔神任務3章4幕 赤砂の王と三人の巡礼者</h3>
+					<h4 id="cry-from-the-eleazar-hospital">魔鱗病病院の泣き声</h4>
 					<blockquote>
 						<p>
 							アルハイゼン「一つの可能性として… 失踪者の頭脳は、缶詰知識の抽出に使われるのかもしれない。」<br>
@@ -1574,13 +1589,67 @@
 						</p>
 					</blockquote>
 					
-					<h4 id="like-a-triumphant-hero">魔鱗病病院の泣き声</h4>
+					<h4 id="secret-of-the-scorching-desert">熱砂の中の秘密</h4>
 					<blockquote>
 						<p>
-							
+							アルハイゼン「それで、上がこんなことをやらせた目的は何だったんだ?」<br>
+ジュダール「それは...缶詰知識の抽出だ...」<br>
+アルハイゼン「とぼけないでくれ。何が聞きたいのか分かっているはずだ。」<br>
+アルハイゼン「神の缶詰知識を抽出して——どうする気だった?」<br>
+モルギー「くぅ...どう言えばいいか...」<br>
+パイモン「おいっ!その態度を改めないと、本当にやっちゃうぞ!」<br>
+ディシア「自分たちの首を絞めたいのか?」<br>
+旅人「俺が聞いてもいい?」<br>
+セノ「ああ。」<br>
+旅人「賢者たちは神を創ろうとしてるんでしょ?」<br>
+セノ「——!」<br>
+アルハイゼン「......」<br>
+ディシア「あ?それ、比喩とかじゃなくて...本気なのか?」<br>
+モルギー「...ど、どうして...そのことを。」<br>
+ジュダール「もう隠しても無駄だ...ああ、その通りだ。」<br>
+ジュダール「教令院では、世界をも変える偉大なる計画を実施している。自らとスメールに属する、新たな神を創る気なんだ。」<br>
+ジュダール「表向きは栄えているように見えるが、マハールッカデヴァータが亡くなってから、スメールの学術が飛躍的な突破を遂げたことは一度もない...」<br>
+ジュダール「それに加え、近年は世界樹の枯凋問題が深刻化している。賢者たちもほとんど全部の方法を試したが、徒労に終わった。彼らの口癖は「もしマハールッカデヴァータがいたら」だった...」<br>
+セノ「...続けろ。」<br>
+ジュダール「そのとき、あるファデュイのメンバーが現れた。教令院の者たちは彼を『博士』と呼んでいた...『博士』は...『神の心』を一つ持ってきて、教令院内の研究環境を借りたいと言った。」<br>
+ジュダール「『博士』は昔スメール教令院から追放されていたから、賢者たちは初め、見向きもしなかった...だが、やつがあの言葉を口にしたとき、全員の表情が変わったんだ...」<br>
+ジュダール「やつは——『神を創る気はないか?』と聞いた。」<br>
+アルハイゼン「...これが学術の果てにある愚昧さと傲慢さだ。」<br>
+ジュダール「教令院はまず、精巧な人形をもとに、長い時間をかけて『神の躯体』を作った。」<br>
+ジュダール「そして『花神誕祭の輪廻』を利用して夢境を収穫し、アーカーシャの出力効率を最大化した...」<br>
+ジュダール「『博士』の助けのもと、最大出力形態のアーカーシャは「神の心」に含まれる力の抽出に成功し、それを「神のコア」にした。」<br>
+ジュダール「その後、新たな神に『神の知恵』を授けるべきだという提議があった。そのために...大量の神の缶詰知識が必要だったというわけだ。」<br>
+ディシア「...繋がったな。」<br>
+アルハイゼン「しかし、どうやってそれらが本当に神の知識であると確認するつもりだったんだ?」<br>
+モルギー「それは推測に頼る他なかった。教令院は何年もかけて研究したが、なぜ学者たちが発狂するのかは未だに解明されていない...」<br>
+モルギー「誰もこの不可思議な現象を解き明かせてないんだ。書記官なら、それが何を意味するか分かるだろう?」<br>
+モルギー「地上において誰も分からないのであれば、それは神にしか解けない知識。つまり...それは知恵の神が、全知全能である源だ。」<br>
+アルハイゼン「......」<br>
+旅人「でもそれじゃ、賢者達が作ってるのって…」」<br>
+アルハイゼン「もう分かっているかもしれないが、教令院は神が誰であるかは気にしない。やつらはただ、神が知恵をコントロールするための権能を欲しがっているだけだ。」<br>
+アルハイゼン「『全知全能』の四文字は、やつらにとって血をも燃やすような呪いと言えるだろう。」<br>
+アルハイゼン「一部の生物は『走光性』という生命現象を持ち、生涯光を求めるという。そして賢者たちは、知恵の頂点に坐する神であってこそ、希望を見いだせる——」<br>
+アルハイゼン「これもある種の走光性と言えるだろう。仮に知恵の神が存在しなければ、多くの学者は生涯暗闇の中を探索することになる。」<br>
+セノ「なら、クラクサナリデビはお前らにとってどんな存在なんだ?」<br>
+セノ「彼女は正真正銘存在している神だろう?すでに新たな神がいるというのに、なぜ別の神を創造する?」<br>
+モルギー「教令院は...一度も彼女を神として扱ったことはない。」<br>
+モルギー「当時、教令院はクラクサナリデビという新たな知恵の神を探し出した。賢者たちはみな彼女がマハールッカデヴァータのような知恵を有することを期待したんだが、実際は...」<br>
+モルギー「当時の彼女の知能は、そこらの子供とほとんど変わらなかった。そのせいで賢者たちはより一層、マハールッカデヴァータが死したことを実感したのさ。」<br>
+モルギー「それに... クラクサナリデビの『神の心』は、アーカーシャを動かすために使われている。今の彼女には、神の力もなければ、並外れた知恵もない...」<br>
+モルギー「やがて、人々は彼女を忘れるようになった。」<br>
+セノ「それが賢者たちの選択...そうだな? 」
 						</p>
 					</blockquote>
-				-->
+				<blockquote>
+					<p>
+						キャンディス「皆さん、もう答えは出たのですか?」<br>
+セノ「賢者を倒し、神を救う…それが俺たちの最終目標だ。」<br>
+旅人「全力で立ち向かう」<br>
+アルハイゼン「他にも利用できる資源がないか、詳しく考える必要があるな。」<br>
+ディシア「次の会議で、みんな答えを持ち寄ろうぜ。」<br>
+パイモン「おう!きっと大丈夫だ!」
+					</p>
+				</blockquote>
 					<!--プレイアブル実装後
 							<h2 id="voice-line">ボイス・キャラストーリー</h2>
 							<h3 id="character-voice">キャラクターボイス</h3>
@@ -2189,11 +2258,39 @@
 								<cite>翻訳引用: <a href="https://twitter.com/kagaribi_bunsyo/status/1546105089727037441">Twitter</a></cite>
 							</div>
 						<h2 id="domain">秘境</h2>
+						<h3 id="castle-of-scrolls">熟睡ノ庭</h3>
+						<blockquote>
+							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
+						</blockquote>
+						<p>
+							ムービー「『神』意」で登場した、彼が捨てられた秘境。
+						</p>
+						<h4>祈聖秘境：骸館</h4>
+						
+						<div><span class="husk-of-opulent-dreams"><b>華館夢醒形骸記</b>(<a href="#husk-of-opulent-dreams">ストーリー</a>)</span>、海染硨磲</div>
+						<blockquote>
+							<p>
+								主のいない邸宅には、獣域の魔物たちが住み着いている<br>
+								永遠の雷を駆使し、試練をクリアすることができれば、貴重な聖遺物を手に入れることができるかもしれない。
+							</p>
+						</blockquote>
+						<b>秘境詳細</b>
+								<ul>
+									<li>チーム全員の雷元素ダメージがアップ</li>
+									<li>雷元素攻撃で感電反応と地脈異常効果を発動させて、「獣域ハウンド・雷」との戦闘を有利に進めよう。</li>
+								</ul>
+								<b>地脈異常</b>
+								<ul>
+									<li>チーム全員の雷元素ダメージ+40%</li>
+									<li>フィールド上のキャラクターが敵に感電反応を起こすと、衝撃波を発動し、確定ダメージを与える。この方式での発動は3秒毎に1回のみ発動可能。</li>
+								</ul>
 					<h3 id="castle-of-scrolls">借景ノ館</h3>
 						<blockquote>
 							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
 						</blockquote>
-						<div><p>「気が狂った」は中国語では《失心》とあり、「精神異常」(単語)と神の心を失った(直接の意味)という２つの意味をもつ。また英語では“Eccentric”となっており、常識を逸脱したという意味を持つ。</p></div>
+						<div><p>「気が狂った」は中国語では《失心》とあり、「精神異常」(単語)と神の心を失った(直接の意味)という２つの意味をもつ。また英語では“Eccentric”となっており、常識を逸脱したという意味を持つ。</p>
+							<p>彼が封印された場所とは異なるが、彼と思わしき記述がある。また<b style="color:red;">華館</b>夢醒形骸記に該当しうる館もここのみである。</p>
+						</div>
 						<h4>稽古·御館絵巻</h4>
 						<blockquote>
 							<p>
@@ -2670,15 +2767,15 @@
 								<td>114個</td>
 							</tr>
 							<tr>
-								<th>精鋭魔物素材(⭐︎1)</th>
+								<th>精鋭魔物素材(⭐️1)</th>
 								<td>18個</td>
 							</tr>
 							<tr>
-								<th>精鋭魔物素材(⭐︎2)</th>
+								<th>精鋭魔物素材(⭐️2)</th>
 								<td>66個</td>
 							</tr>
 							<tr>
-								<th>精鋭魔物素材(⭐︎3)</th>
+								<th>精鋭魔物素材(⭐️3)</th>
 								<td>93個</td>
 							</tr>
 							<tr>
@@ -2689,116 +2786,8 @@
 					</div>
 					</table>
 					
-					<h2 id="boss">ボス</h2>
-					<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916225005.jpg" loading="lazy">
-					<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916224958.jpg" loading="lazy">
-					<!--
-					<h3 id="boss-story">秘境・ストーリー</h3>
-						<p><b>秘境「(追憶: N/A)」(秘境入口)</b><br>
-						魔神任務3章N幕「虚空劫灰のプラーナ」で解放</p>
-						<h4 class="add-text">秘境詳細</h4>
-					<blockquote>
-						<p>(仮データ)雷電将軍の権能を代行する人形。「永遠」を脅かす敵と対抗するための姿である。<br>
-「永遠」を遂行する雷電影の協力者として、彼女は一切の疑問や恐怖、そして雑念を抱かず、常に全力で身を尽くしてきた。<br>
-眞と影の時代において、影は自分と同じような責任を負い、惨憺たる喪失を味わったと彼女は聞いた。<br>
-二つの影が重なったとき、「彼女」の永遠の意志であったはずのものに、無数の亀裂が見えた。運命は輪廻するもの。彼女は約束通り、宣戦布告しなければならない。<br>
-<br>
-<i>「この身は、無上なる威厳を象徴し、一国を統べる権限を与えられ、『雷電将軍』の一切を凝集したもの」<br>
-「当然のことながら、影が前進する中、絶え間なく失われていく苦しみと、永遠を目指す決心も受け継いでいます」<br>
-「決心、勇猛、愛慕、憎悪…そのすべてが時間という長い川の中で歪み、変わっていくのです」<br>
-「『規則』のみが、永遠を保つことができる」</i></p></blockquote>
-
-<h4 class="add-text">戦闘情報</h4>
-					<blockquote>
-						<p>
-							<ul>
-								<li>(仮データ)</li>
-								<li>「淑女」との戦闘は、段階に応じて「極寒」または「灼熱」状態のフィールドに変化する。<br>
-フィールド上にいる時、持続的に極寒ゲージまたは灼熱ゲージを蓄積し、上限に到達するとHPが持続的に減少する。<br>
-「淑女」の攻撃を受けたり、結霜または余燼フィールドにいると、対応するゲージの蓄積がより速くなる。</li>
-<li>戦闘中に現れる「炎の心」と「霜の目」は、近くにいるキャラクターの極寒ゲージまたは灼熱ゲージを減らすことができる。<br>
-さらに、これらを破壊すると、対応するゲージを大幅に減らすことができるだけでなく、周囲の結霜または余燼フィールド効果を解消することができる。</li>
-<li>「淑女」の一度に受けたダメージが自身のHP上限の一定割合を超えた時、その超えた部分のダメージは低減される。<br>
-その後、「淑女」は寒気または熱量を放ち、キャラクターに該当温度ゲージを蓄積させ、猛烈な反撃を繰り出す。</li>
-							</ul>
-						</p></blockquote>
-							<h3 id="#boss1">第1形態: n/a</h3>
-							<div>
-								<b>耐性</b>
-								※仮データ
-								<table>
-	<tr>
-		<td>物理</td>
-		<td>炎</td>
-		<td>水</td>
-		<td>雷</td>
-		<td>氷</td>
-		<td>風</td>
-		<td>岩</td>
-		<td>草</td>
-	</tr>
-	<tr>
-		<td>10%</td>
-		<td>10%</td>
-		<td>10%</td>
-		<td>50%</td>
-		<td>10%</td>
-		<td>10%</td>
-		<td>10%</td>
-		<td>10%</td>
-	</tr>
-				</table></div>
-				<div>
-					<p>
-				<b>「裁きは既に下りました。」</b > <img src="" loading="lazy">
-<b>「この世はまるで影のよう…」</b><br> <img src="" loading="lazy">
-<b>「無力なり」「滑稽です」</b><br> <img src="" loading="lazy">
-<b>「下がりなさい！」</b><br> <img src="" loading="lazy">
-<b>「雷電がただの人間などに、意思を変えられることはありません。」</b><br> <img src="" loading="lazy">
-<b>「この目で俗世を見届けましょう。」</b><br> <img src="" loading="lazy">
-<b>「雷光よ、永遠の土を照らさん。」</b><br> <img src="" loading="lazy">
-<b>「須臾の泡影。」</b><br> <img src="" loading="lazy">
-<b>「無念無想、全てを無へ！」「無念無想、一刀断絶！」</b>
-</p>
-</div>
-<h3 id="#boss1">第2形態: n/a</h3>
-<div>
-								<b>耐性</b>
-								※仮データ
-								<table>
-	<tr>
-		<td>物理</td>
-		<td>炎</td>
-		<td>水</td>
-		<td>雷</td>
-		<td>氷</td>
-		<td>風</td>
-		<td>岩</td>
-		<td>草</td>
-	</tr>
-	<tr>
-		<td>10%</td>
-		<td>10%</td>
-		<td>10%</td>
-		<td>50%</td>
-		<td>10%</td>
-		<td>10%</td>
-		<td>10%</td>
-		<td>10%</td>
-	</tr>
-				</table></div>
-				<div>
-<p>
-<b>「邪魔者を、断ち切りましょう。」</b><br>
-<img src="" loading="lazy">
-<b>「あなたを切り裂きましょう」</b><br>
-<img src="" loading="lazy">
-<b>「永劫に帰せ！」</b><br>
-<i>「追念の花蕊」に<span style="color:red;">雷元素攻撃を与え</span>、より素早くバリアを展開せよ</i><br>
-<img src="" loading="lazy">
-</p>
-			</div>
-		-->
+					
+		
 		<h2 id="achieve">アチーブメント</h2>
 		<p>
 						<b id="rather-aged-notes">「神」もまた覗いている</b>
@@ -2817,6 +2806,21 @@
 				<h3 id="floating-world-under-the-moonlight">韶光撫月の浮世 - Floating World Under the Moonlight</h3>
 				<div>Ver.2.1公式PV「韶光撫月の浮世」</div>
 				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E9%9F%B6%E5%85%89%E6%92%AB%E6%9C%88%E3%81%AE%E6%B5%AE%E4%B8%96/1641562491?i=1641563163&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" loading="lazy"></iframe>
+				
+				<h2 id="illustration">公式イラスト</h2>
+			<h3 id="star-illustration">帰らぬ熄星</h3>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221004/20221004145700.jpg" translate="no">
+			<cite>引用: <a href="https://www.pixiv.net/artworks/86221335">Pixiv - Criinさん</a>(イラストレーター公式)</cite><br>
+			<a href="https://www.mediafire.com/file/84nx2cn46pni6lj/IMG_0104.jpeg/file" style="font-size: large;"><b>スマートフォン用壁紙</b></a>(引用:米游社)
+				
+				<h3 id="irodori-illustration">光華容彩祭</h3>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" translate="no">
+			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/20777">原神公式</a></cite>
+			
+			<h3 id="king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者</h3>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916230408.jpg">
+			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/23738">原神公式</a></cite>
+				
 			<h2 id="pv">PV</h2>
 			<h3 id="1.1pv">バージョン1.1「迫る客星」</h3>
 			<div><p>ここでビジュアルが初めて公開された</p></div>
@@ -2883,12 +2887,12 @@
 						</div>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8" loading="lazy"></script>
 										<h2 id="interview">インタビュー</h2>
+										<div><p>敬称略。赤字は運営による強調。</p></div>
 					<h3 id="scaramouche-va-1th">1周年記念インタビュー 柿原徹也（スカラマシュ 役）</h3>
 					<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
 							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/hYciFdPdV_8&loop=1&playlist=hYciFdPdV_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
-					<div><p>赤字は運営による強調。敬称略。</p></div>
 					<h4 id="0-00">はじめにキャラクターのセリフをお願いします。</h4>
 						<blockquote>
 							<span class="blockquote-title">0:00</span>
@@ -2969,51 +2973,46 @@
 							</p>
 						</blockquote>
 						<cite>引用:<a href="https://youtu.be/hYciFdPdV_8">YouTube</a></cite>
-						<h3 id="lumine-va-1">悠木碧さん(蛍役) インタビュー</h3>
-						<blockquote>
-							<p>私がずっと実装を待っているのは白朮先生とスカラマシュですね。</p>
-						</blockquote>
-						<cite>引用:<a href="https://youtu.be/51FJE7KXLm8">YouTube</a></cite>
 					<h3 id="var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目</h3>
 					<div class="youtube not-margin-div">
 								<p>Bilibiliを表示できません。</p>
 							<iframe src="//player.bilibili.com/player.html?aid=847489645&bvid=BV1GL4y1v7BP&cid=393322321&page=1&t=1162" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy"></iframe>
 						</div>
 						<blockquote>
-							<p>伟「散兵！他终于又出场了」<br>
-伟「上一次好像还是在1.1版本『未归的熄星』活动里对吧」<br>
+							<p>刘伟「散兵！他终于又出场了」<br>
+刘伟「上一次好像还是在1.1版本『未归的熄星』活动里对吧」<br>
 石头「是的」<br>
 老腰「对对对」<br>
 老腰「大家不妨猜一猜他这次出场的契机是什么。」<br>
 老腰「还有，大家之前在PV中也应该看到了。其实有女士的登场。所以说，这次稻妻的剧情。有两位执行官同时在稻妻登场。」<br>
 老腰「那也就是意味着他们的受场。肯定跟当下局势有着非常大的关联了。」<br>
 石头「不愧是散兵，这次的阵仗也是很大啊。」<br>
-伟「是啊是啊」<br>
+刘伟「是啊是啊」<br>
 老腰「毕竟散兵是我们的执行官第六席，所以需要一点牌面。」<br>
 老腰「大家其实应该也已经注意到了。主角来找散兵的时候，他是有一种非常愤怒的情绪在的。」<br>
 老腰「那么散兵之前说的「小事」究竟是什么? 就是什么样的小事，会让主角有那种非常非常愤怒的情绪。」<br>
 老腰「其实这个也要留给大家在今后稻妻的剧情中去逐步地发掘。」<br>
 老腰「对了，散兵的身世来历这一点也将在本次更新中会给大家揭露一部分。感兴趣的朋友可以稍微留意一下这部分信息。」<br>
-伟「哇，这就厉書了。」
+刘伟「哇，这就厉書了。」
 </p>
 						</blockquote>
 						<cite>引用:<a href="https://www.bilibili.com/video/BV1GL4y1v7BP">Bilibili</a></cite>
 												<blockquote>
 													<span class="blockquote-title">日本語訳</span>
 							<p>偉(Liu Wei)「散兵！彼がついに再登場します。」<br>
-偉「彼はバージョン1.1『迫る客星』で登場しましたよね?」<br>
+劉偉「彼はバージョン1.1『迫る客星』で登場しましたよね?」<br>
 石頭「はい」<br>
 老腰「はいはいはい」<br>
 老腰「皆さん彼が今回登場した理由を当ててみてください。」<br>
 老腰「そしてPVでは、淑女も登場しています。今回稲妻には二人の執行官が登場します。これは今の稲妻の状況と大きな関係があるに違いないでしょう。」<br>
 石頭「さすが散兵、今回も強気ですね。」<br>
-偉「はい、そうですね。」<br>
+劉偉「はい、そうですね。」<br>
 老腰「散兵はファトゥス第6位ですので、その登場について少し説明しましょう。」<br>
 老腰「皆さんも気づきましたよね?。主人公が散兵を探しに来た時、彼はとても怒っていました。<br>
 老腰「では散兵が言った「些細なこと」はいったい何でしょうか? 主人公は些細な事で怒ってます。」<br>
 老腰「実はこれも稲妻のストーリーでわかってきます。」<br>
 老腰「そうだ、散兵の出生についても今回少しだけ公開します。興味のある方は注目してください。」<br>
-偉「おぉ、これは注目するべきですね。」
+劉偉「おぉ、これは注目するべきですね。」
 			</p>
 			</blockquote>
 			<h3 id="var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組</h3>
@@ -3022,30 +3021,46 @@
 							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4&loop=1&playlist=qC9wSPOExL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 						<blockquote>
-							<p>Wei「おや? 「博士」と「散兵」はスメールで登場しますか?」<br>
+							<p>Liu Wei「おや? 「博士」と「散兵」はスメールで登場しますか?」<br>
 QiLi「そのようですね」<br>
 QiLi「実力ある執行官の2人がスメールに現れ、しかも雷神の「神の心」を持っています」<br>
 QiLi「旅人の皆さんの今回の冒険には、大きな試練が待ち構えているでしょう。」<br>
-Wei「どうやら、スメールを統制する教令院以外に、ファデュイとも交渉しなければなりませんね」<br>
-Wei「この状況を打破するには... やはり神の「知恵」が必要なのでしょうか?」<br>
-Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
+Liu Wei「どうやら、スメールを統制する教令院以外に、ファデュイとも交渉しなければなりませんね」<br>
+Liu Wei「この状況を打破するには... やはり神の「知恵」が必要なのでしょうか?」<br>
+Liu Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
+</blockquote>
+						<h3 id="interview-other">その他言及</h3>
+						<h4 id="en-va-16">Version 1.6 Special Program</h4>
+						<blockquote>
+							<p>
+								Stephanie Southerland「So our brand-new playable character in Version 1.6 is: Kaedehara Kazuha!」<br>
+Poonam Basu「Ooh! Such a long and lovely name! 」<br>
+Laura Stahl「And his outfit is so flowy, I love the maple leaves!」<br>
+Zach Aguilar「Yeah, right? His style reminds me of a certain Fatui Harbinger, Scaramouche.」<br>
+Stephanie Southerland「Oh... Year!」<br>
+Zach Aguilar「You know, the one we saw in the Unreconciled Stars event?」<br>
+Poonam Basu「That's right!」<br>
+Poonam Basu「The Inazuma outfit style is so awesome!」
+							</p>
 						</blockquote>
-						<cite>引用:<a href="https://youtu.be/qC9wSPOExL4">YouTube</a></cite>
-			<h2 id="illustration">公式イラスト</h2>
-			<h3 id="star-illustration">帰らぬ熄星</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428132558.jpg" translate="no">
-			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/8641">原神公式</a></cite>
-			<div class="tweets not-margin-div light-oney">
-				<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a>
-				<a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> ☄️☄️☄️A new star approaches <a href="https://t.co/fWJW6rWIVT">pic.twitter.com/fWJW6rWIVT</a></p>&mdash; Criin (@Hanasa_Criin) <a href="https://twitter.com/Hanasa_Criin/status/1337316562831720449?ref_src=twsrc%5Etfw">December 11, 2020</a></blockquote> </div>
-			<div class="tweets not-margin-div dark-oney">
-				<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> ☄️☄️☄️A new star approaches <a href="https://t.co/fWJW6rWIVT">pic.twitter.com/fWJW6rWIVT</a></p>&mdash; Criin (@Hanasa_Criin) <a href="https://twitter.com/Hanasa_Criin/status/1337316562831720449?ref_src=twsrc%5Etfw">December 11, 2020</a></blockquote> </div>
-				<h3 id="irodori-illustration">光華容彩祭</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" translate="no">
-			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/20777">原神公式</a></cite>
-			<h3 id="king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916230408.jpg">
-			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/23738">原神公式</a></cite>
+						<cite>引用:<a href="https://www.youtube.com/watch?v=cE7RW9htzQU">YouTube</a></cite>
+						<h4 id="lumine-va-1">悠木碧さん(蛍役) インタビュー</h3>
+						<blockquote>
+							<p>悠木碧「私がずっと実装を待っているのは白朮先生とスカラマシュですね。」</p>
+						</blockquote>
+						<cite>引用:<a href="https://youtu.be/51FJE7KXLm8">YouTube</a></cite>
+						<h4 id="va-tgs-2022-1">HoYoverse Special Program in TGS2022</h3>
+						<blockquote>
+							<p>前野智昭「どうですかね、このビジュアル」<br>
+前野智昭「ザ・スメールって感じですよね」<br>
+<span class="mark">堀江瞬「スカラマシュくんがちょっといるのも気になりますし」</span><br>
+前野智昭「ほんまや！」<br>
+古賀葵「どでかくいらっしゃいますし」<br>
+前野智昭「どういう感じになるのでしょうかね」<br>
+前野智昭「いよいよ核心に迫っていく感じになっていくんじゃないでしょうかね、楽しみですけど」</p>
+						</blockquote>
+						<cite>引用:<a href="https://youtu.be/ESJEvKWwmQw">YouTube</a></cite>
+						
 			<h2 id="official-contents">商品</h2>
 				<h3 id="book">書籍</h3>
 				<div>
