@@ -13,16 +13,17 @@
 			<meta property="twitter:url" content="https://giarchive.github.io/scaramouche/" />
 			<meta property="twitter:title" content="スカラマシュの全情報書き写し" />
 			<meta property="twitter:description" content="ストーリ/遺跡物/インタビュー/その他関連項目を40000字のテキストに起こしました。" /> 
-			<meta property="twitter:image" content="https://giarchive.github.io/scaramouche/IMG_9533.jpeg" />
+			<meta property="twitter:image" content="https://giarchive.github.io/scaramouche/1F8D78B5-0F37-45B6-BA8C-40B4710388C1.jpeg" />
 			
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="language" content="Japanese" />
 			<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet" loading="lazy">
 			
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-			<script src="search.js" loading="lazy"></script>
+			<script src="script.js" loading="lazy"></script>
 			
 			<script src="../parts/load.js"></script>
+			<script src="cn.js"></script>
 			<!--<link rel="icon" href="https://giarchive.github.io/scaramouche/favicon.ico">
 			
 <link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/0749E3AF-8E47-42B8-A242-92F7D19A65F1.png">	-->		
@@ -36,37 +37,33 @@
 		<!-- 稲妻フォント -->
 		<!--https://github.com/GoodOldLandLine/GenshinFonts-->
 		
+		
 		<body lang="ja">
-			<script type="text/javascript">
-				//head要素を取得
-const head = document.head;
-
-head.insertAdjacentHTML('beforeEnd', '<link rel="icon" href="https://giarchive.github.io/signora/favicon.ico">');
-head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https://giarchive.github.io/signora/apple-touch-icon.png">');
-			</script>
 			<header>
-				<h1>スカラマシュの全情報書き写し</h1>
+				<h1 class="title">スカラマシュの全情報書き写し</h1>
 				<span class="printonry">http://giarchive.github.io/scaramouche/</span>
 			</header>
 			<article>
 				<aside class="top-text notprint">
-						<p><b>Var3.1</b><br>
-						本サイトはスカラマシュに関する情報をまとめた有志サイトです。リーク情報は扱いません。</p>	
+						<p><b class="update-version">Ver3.2生放送</b><br>
+						<span class="about-this-site">本サイトはスカラマシュに関する情報をまとめた有志サイトです。リーク情報は扱いません。<br>
+						以下の内容を閲覧するにあたり、<a class="black" href="../agreement.html">利用規約</a>に同意したものとみなします。</p>
 				</aside>
+				<p><a id="chinese_button" class="button" onclick="chinese()">简体中文(开发中)</a></p>
 			</article>
 			<div class="share-nav not-margin-div notprint">
 				<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5%E3%81%AE%E5%85%A8%E6%83%85%E5%A0%B1%E6%9B%B8%E3%81%8D%E5%86%99%E3%81%97&url=https%3A%2F%2Fgiarchive.github.io%2Fscaramouche&via=COD_HEART" class="btn-social-flat">
   					<span class="btn-social-flat-icon btn-social-flat-icon--twitter notspeech">
     					<i class="fa-brands fa-twitter"></i>
  					 </span>
-  					<span class="btn-social-flat-text">ツイート</span>
+  					<span class="btn-social-flat-text tweet">ツイート</span>
 				</a><span style="text-decoration: underline;">
 				
 				<a href="javascript:void(0);" onclick="javascript:clipboard();" class="btn-social-flat">
   					<span class="btn-social-flat-icon btn-social-flat-icon--clip notspeech">
     					<i class="fa fa-clipboard" aria-hidden="true"></i>
  					 </span>
-  					<span class="btn-social-flat-text">コピー</span>
+  					<span class="btn-social-flat-text copy">コピー</span>
 				</a>
 				
 			</div>
@@ -77,13 +74,13 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
     			<div class="nav_hidden wrapper">
 					<div class="search-area">
       <form>
-        <input type="text" id="search-text" placeholder="検索" list="serchtag">
+        <input type="search" id="search-text" placeholder="検索" list="serchtag">
 		<datalist id="serchtag">
-<option value="任務"></option>
-<option value="PV"></option>
-<option value="聖遺物"></option>
-<option value="国崩"></option>
-<option value="攻略"></option>
+<option value="任務" class="story-serch"></option>
+<option value="PV" class="pv-serch"></option>
+<option value="聖遺物" class="artifact-serch"></option>
+<option value="国崩" class="kunikuzushi-serch"></option>
+<option value="攻略" class="cheats-serch"></option>
 
 </datalist>
       </form>
@@ -93,83 +90,87 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
       </div>
   </div>
 				<ul class="list target-area">
-					<li class="update"><a href="#update">更新履歴</a>
-					<li class="information"><a href="#information">基本情報</a>
-						<ul>
-							<li><a href="#character-setting">キャラクター設定</a></li>
-							<li><a href="#voice-actor">声優</a></li>
-							<!--<li><a href="#gacha-Illust">立ち絵・バナー</a></li>-->
-							<li><a href="#model">3Dモデル<span style="display: none;">3d</span></a></li>
+					<li><a href="#update" class="update">更新履歴</a>
+					<li><a href="#information" class="information">基本情報</a>
+						<ul>	
+							<li><a href="#character-setting" class="character-setting">キャラクター設定</a></li>
+							<li><a class="voice-actor" href="#voice-actor">声優</a></li>
+							<!--<li><a href="#gacha-Illust" class="gacha-Illust">立ち絵・バナー</a></li>-->
+							<li><a href="#model" class="model">3Dモデル<span style="display: none;">3d</span></a></li>
 						</ul>
 					</li>
 					<!-- <li class="gacha"><a href="#gacha">祈願</a>
 						<ul>
-							<li class="gacha-3.x"><a href="#gacha-3.x">Var3.x ガチャ名</a></li>
+							<li class="gacha-3.3"><a href="#gacha-3.3">Ver3.x ガチャ名</a></li>
 						</ul>
 					</li>-->
-					<li class="timeline"><a href="#timeline">時系列</a>
-					<li class="world-name"><a href="#world-name">各言語名<span style="display: none;">翻訳</span></a>
+					<li><a href="#timeline" class="timeline">時系列</a>
+					<li><a href="#world-name" class="world-name">各言語名<span style="display: none;">翻訳</span></a>
 						<ul>
-						<li><a href="#jp">日本語</a></li>
-						<li><a href="#ch">中国語</a></li>
-						<li><a href="#en">英語</a></li>
-						<li><a href="#kr">韓国語</a></li>
-						<li><a href="#it">イタリア語</a></li>
-						<li><a href="#fr">フランス語</a></li>
-						<li><a href="#ru">ロシア語</a></li>
-						<li><a href="#list">一覧</a></li>
+							<li><a href="#lang-tab" class="lang-tab">個別表示</a></li>
+						<li><a href="#list" class="name-list">一覧</a></li>
 					</ul>
 					</li>
-					<li class="story"><a href="#story-text">メインストーリー<span style="display: none;">(任務、ストーリー)</span></a>
+					<li><a href="#story-text" class="story-text">メインストーリー<span style="display: none;">(任務、ストーリー)</span></a>
 					<ul>
-					<li><a href="#unreconciled-stars">帰らぬ熄星<span style="display: none;">(イベント、任務、ストーリー、モンド、璃月、モナ、フィッシュル)</span></a></a>
+					<li><a href="#unreconciled-stars" class="unreconciled-stars">帰らぬ熄星<span style="display: none;">(イベント、任務、ストーリー、モンド、璃月、モナ、フィッシュル)</span></a></a>
 						<ul>
-							<li><a href="#unknown-star">蔓延する危機</a></li>
-							<li><a href="#star-of-deceitful-dreams">天の謎、水の解き</a></li>
-							<li><a href="#star-of-destiny">古星の運命</a></li>
+							<li><a href="#unknown-star" class="unknown-star">蔓延する危機</a></li>
+							<li><a href="#star-of-deceitful-dreams" class="star-of-deceitful-dreams">天の謎、水の解き</a></li>
+							<li><a href="#star-of-destiny" class="star-of-destiny">古星の運命</a></li>
 						</ul>
 					</li>
-					<li><a href="#omnipresence-over-mortals">千手百目の浮世<span style="display: none;">(魔神任務、ストーリー、八重神子、雷電将軍、邪眼工場、稲妻)</span></a></a>
+					<li><a href="#omnipresence-over-mortals" class="omnipresence-over-mortals">千手百目の浮世<span style="display: none;">(魔神任務、ストーリー、八重神子、雷電将軍、邪眼工場、稲妻)</span></a></a>
 						<ul>
-							<li><a href="#delusion">邪眼</a></li>
-							<li><a href="#the-servants-path">眷属の践行</a></li>
-							<li><a href="#wishes">願い</a></li>
+							<li><a href="#delusion" class="delusion">邪眼</a></li>
+							<li><a href="#the-servants-path" class="the-servants-path">眷属の践行</a></li>
+							<li><a href="#wishes" class="wishes">願い</a></li>
 						</ul>
 					</li>
-					<li><a href="#clean-house">戸口の掃除<span style="display: none;">(世界任務、ストーリー、稲妻)</span></a></a></li>
-					<li><a href="#labyrinth-warriors">謎境一騎<span style="display: none;">(イベント、任務、ストーリー、稲妻、タルタリヤ、公子)</span></a></a>
+					<li><a href="#clean-house" class="clean-house">戸口の掃除<span style="display: none;">(世界任務、ストーリー、稲妻)</span></a></li>
+					<li><a href="#labyrinth-warriors" class="labyrinth-warriors">謎境一騎<span style="display: none;">(イベント、任務、ストーリー、稲妻、タルタリヤ、公子)</span></a></a>
 						<ul>
-							<li><a href="#away-with-obsessions-and-falsehood">執念と虚飾からの解放</a></li>
+							<li><a href="#away-with-obsessions-and-falsehood" class="away-with-obsessions-and-falsehood">執念と虚飾からの解放</a></li>
 						</ul>
 					</li>
-					<li><a href="#hues-of-the-violet-garden">華やぐ紫苑の庭<span style="display: none;">(イベント、任務、ストーリー、楓原万葉、稲妻、国崩)</span></a></a>
+					<li><a href="#hues-of-the-violet-garden" class="hues-of-the-violet-garden">華やぐ紫苑の庭<span style="display: none;">(イベント、任務、ストーリー、楓原万葉、稲妻、国崩)</span></a></a>
 						<ul>
-							<li><a href="#five-kasen-summary">五歌仙の資料概要</a></li>
-							<li><a href="#a-new-painting-in-pale-scarlet">薄墨淡朱の新しき絵画</a></li>
-							<li><a href="#the-palace-dyed-in-blackfalsehood">黒に染まりし宵暗の御所</a></li>
-							<li><a href="#tale-of-the-five-kasen">ストーリームービー「歌仙逸話」</a></li>
+							<li><a href="#five-kasen-summary" class="five-kasen-summary">五歌仙の資料概要</a></li>
+							<li><a href="#a-new-painting-in-pale-scarlet" class="a-new-painting-in-pale-scarlet">薄墨淡朱の新しき絵画</a></li>
+							<li><a href="#the-palace-dyed-in-blackfalsehood" class="the-palace-dyed-in-blackfalsehood">黒に染まりし宵暗の御所</a></li>
+							<li><a href="#tale-of-the-five-kasen" class="tale-of-the-five-kasen">ストーリームービー「歌仙逸話」<span style="display: none;">(pv，ムービー)</span></a></li>
 						</ul>
 					</li>
-					<li><a href="#a-winter-nights-lazzo">PV「冬夜の戯劇」<span style="display: none;">(博士、隊長、ストーリー、スネージナヤ、pv、ムービー)</a></li>
+					<li><a href="#a-winter-nights-lazzo" class="a-winter-nights-lazzo">PV「冬夜の戯劇」<span style="display: none;">(博士、ドットーレ、隊長、カピターノ、ストーリー、スネージナヤ、pv、ムービー)</span></a></li>
 					
-					<li><a href="#the-morn-a-thousand-roses-brings">黎明を告げる千の薔薇<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a>
+					<li><a href="#through-mists-of-smoke-and-forests-dark" class="through-mists-of-smoke-and-forests-dark">煙霧のベールと暗き森を抜けて<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、缶詰知識)</span></a></a>
 						<ul>
-							<li><a href="#unknown-voice-3-2">謎の声</a></li>
-							<li><a href="#the-coming-of-the-sabzeruz-festival">終に訪れし花神誕祭</a></li>
-							<li><a href="#the-end-of-the-sabzeruz-festival">沈黙する知の探求者</a></li>
+							<li><a href="#ever-so-close" class="ever-so-close">間近に迫った目標</a></li>
 						</ul>
 					</li>
-					<li><a href="#Dreams-Emptiness-Deception">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、PV、神、過去、国崩)</span></a>
+					<li><a href="#the-morn-a-thousand-roses-brings" class="the-morn-a-thousand-roses-brings">黎明を告げる千の薔薇<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a>
 						<ul>
-							<li><a href="#like-a-triumphant-hero">凱旋した英雄のように</a></li>
-							<li><a href="#the-gaze-from-a-certain-god">とある「神」からの凝視</a></li>
-							<li><a href="#the-divine-will">ストーリームービー「『神』意」<span style="display: none;">(PV、pv、ムービー)</span></a></li>
+							<li><a href="#unknown-voice-3-2" class="unknown-voice-3-2">謎の声</a></li>
+							<li><a href="#the-coming-of-the-sabzeruz-festival" class="the-coming-of-the-sabzeruz-festival">終に訪れし花神誕祭</a></li>
+							<li><a href="#the-end-of-the-sabzeruz-festival" class="the-end-of-the-sabzeruz-festival">終に終りし花神誕祭</a></li>
 						</ul>
 					</li>
-					<li><a href="#king-deshret-and-the-three-magi">赤砂の王と三人の巡礼者<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、神)</a>
+					<li><a href="#Dreams-Emptiness-Deception" class="dreams-emptiness-deception">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、PV、神、過去、国崩)</span></a>
 						<ul>
-							<li><a href="#cry-from-the-eleazar-hospital">魔鱗病病院の泣き声</a></li>
-							<li><a href="#secret-of-the-scorching-desert">熱砂の中の秘密</a></li>
+							<li><a href="#like-a-triumphant-hero" class="like-a-triumphant-hero">凱旋した英雄のように</a></li>
+							<li><a href="#the-gaze-from-a-certain-god" class="the-gaze-from-a-certain-god">とある「神」からの凝視</a></li>
+							<li><a href="#the-divine-will" class="the-divine-will">ストーリームービー「『神』意」<span style="display: none;">(PV、pv、ムービー)</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#king-deshret-and-the-three-magi" class="king-deshret-and-the-three-magi">赤砂の王と三人の巡礼者<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、神)</a>
+						<ul>
+							<li><a href="#cry-from-the-eleazar-hospital" class="cry-from-the-eleazar-hospital">魔鱗病病院の泣き声</a></li>
+							<li><a href="#secret-of-the-scorching-desert" class="secret-of-the-scorching-desert">熱砂の中の秘密</a></li>
+						</ul>
+					</li>
+					<li><a href="#akasha-pulses-the-kalpa-flame-rises" class="akasha-pulses-the-kalpa-flame-rises">虚空の鼓動、熾盛の劫火<span style="display: none;">(魔神任務、ストーリー、スメール、BOSS、週ボス、虚空の鼓動、熾盛の劫火)</span></a>
+						<ul>
+							<li><a href="#unknown">???</a></li>
 						</ul>
 					</li>
 				</li></ul>
@@ -179,19 +180,19 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						<li class="character-story"><a heef="#character-story">キャラクターストーリー</a></li>
 					</ul>
 				</li>-->
-				<li class="atrifacts"><a href="#atrifacts">聖遺物</a>
+				<li class="atrifacts"><a href="#atrifacts" class="atrifacts">聖遺物</a>
 					<ul>
-						<li><a href="#pale-flame">蒼白の炎<span style="display: none;">(聖遺物、ファデュイ、過去、国崩)</span></a></a>
+						<li><a href="#pale-flame" class="pale-flame">蒼白の炎<span style="display: none;">(聖遺物、ファデュイ、過去、国崩)</span></a></a>
 							<ul>
-						<li><a href="#goblet-of-eonothem-surpassing-cup">超越の盃</a></li>
+						<li><a href="#goblet-of-eonothem-surpassing-cup" class="goblet-of-eonothem-surpassing-cup">超越の盃</a></li>
 							</ul>
-							<li><a href="#husk-of-opulent-dreams">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩、過去)</span></a></a>
+							<li><a href="#husk-of-opulent-dreams" class="husk-of-opulent-dreams">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩、過去)</span></a></a>
 								<ul>
-						<li><a href="#bloom-times">栄花の期</a></li>
-						<li><a href="#plume-of-luxury">華館の羽</a></li>
-						<li><a href="#song-of-life">衆生の歌</a></li>
-						<li><a href="#calabash-of-awakening">夢醒の瓢箪</a></li>
-						<li><a href="#skeletal-hat">形骸の笠</a></li>
+						<li><a href="#bloom-times" class="bloom-times">栄花の期</a></li>
+						<li><a href="#plume-of-luxury" class="plume-of-luxury">華館の羽</a></li>
+						<li><a href="#song-of-life" class="song-of-life">衆生の歌</a></li>
+						<li><a href="#calabash-of-awakening" class="calabash-of-awakening">夢醒の瓢箪</a></li>
+						<li><a href="#skeletal-hat" class="skeletal-hat">形骸の笠</a></li>
 					</ul>
 					</li>
 					</ul>
@@ -203,15 +204,15 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						<li><a href="#kagotsurube-isshin">籠釣瓶一心</a></li>
 					</ul>
 				</li>
-				<li class="domain"><a href="#domain">秘境</a>
-					<ul>
-						<li><a href="#castle-of-scrolls">借景ノ館<span style="display: none;">借景の館、国崩、秘境</span></a></li>
-					</ul>
-				</li>
 				<li class="item"><a href="#item">アイテム・掲示物</a>
 					<ul>
 						<li><a href="#rather-aged-notes">古い手帳<span style="display: none;">(古い手紙、丹羽桂木、御輿長正、国崩)</span></a></li>
 						<li><a href="#ancient-forging-blueprint">古代の鍛造図<span style="display: none;">(楓原万葉)</span></a></a></li>
+					</ul>
+				</li>
+				<li class="domain"><a href="#domain">秘境</a>
+					<ul>
+						<li><a href="#castle-of-scrolls">借景ノ館<span style="display: none;">借景の館、国崩、秘境</span></a></li>
 					</ul>
 				</li>
 				<li class="mention"><a href="#mention">言及<span style="display: none;">ボイス</span></a>
@@ -241,12 +242,15 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<li><a href="#skill-nurturing">天賦育成素材<span style="display: none;">攻略</span></a></li>
 						</ul>
 					</li>
-					<!--<li class="boss"><a href="#boss">ボス<span style="display: none;">週ボス、敵、攻略</span></a>
+					<li class="boss"><a href="#boss">ボス「？？？」<span style="display: none;">週ボス、敵、攻略、攻略</span></a>
 						
 						<ul>
 							<li><a href="#boss-story">秘境・ストーリー</a></li>
-							<li><a href="#boss">第1形態: n/a</a></li>
-						</ul>-->
+							<li><a href="#boss-detail">秘境詳細</a></li>
+							<li><a href="#boss-stage1">第1形態: ???</a></li>
+							<li><a href="#boss-stage2">第2形態: ???</a></li>
+							<li><a href="#boss-drop">ドロップ素材</a></li>
+						</ul>
 					</li>
 					
 					<li class="music"><a href="#music">楽曲<span style="display: none;">(音楽)</span></a>
@@ -261,13 +265,20 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 					<li><a href="#star-illustration">帰らぬ熄星<span style="display: none;">(壁紙、キービジュアル、1.1)</span></a></a></li>
 					<li><a href="#irodori-illustration">光華容彩祭<span style="display: none;">(壁紙、華やぐ紫苑の庭、2.5)</span></span></a></a></li>
 					<li><a href="#illustration-king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者<span style="display: none;">(壁紙、キービジュアル、pv、3.1)</span></a></a></li>
+					<li><a href="#akasha-pulses-the-kalpa-flame-rises-illustration">虚空の鼓動、熾盛の劫火<span style="display: none;">(壁紙、キービジュアル、pv、3.2)</span></a></a></li>
 				</ul>
 			</li>
 			<li class="pv"><a href="#pv">PV</a>
 				<ul>
-					<li><a href="#1.1pv">Var1.1「迫る客星」<span style="display: none;">(PV、pv、1.1)</span></a></a></li>
-					<li><a href="#2.1pv">Var2.1「千手百目の浮世」<span style="display: none;">(PV、pv、2.1)</span></a></a></li>
-					<li><a href="#3.1pv">Var3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、3.1)</span></a></a></li>
+					<li><a href="#1.1pv">Ver1.1「迫る客星」<span style="display: none;">(PV、pv、1.1、迫る客星、帰らぬ熄星)</span></a></a></li>
+					<li><a href="#2.1pv">Ver2.1「千手百目の浮世」<span style="display: none;">(PV、pv、2.1、千手百目の浮世)</span></a></a></li>
+					<li><a href="#3.1pv">Ver3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、3.1、赤砂の王と三人の巡礼者)</span></a></a></li>
+					<li><a href="#3.2pv">Ver3.2「虚空の鼓動、熾盛の劫火」<span style="display: none;">(PV、pv、3.2)</span></a></a></li>
+				</ul>
+			</li>
+			<li class="stamp"><a href="#stamp">スタンプ</a>
+				<ul>
+					<li><a href="#line-stamp-genshin-vol2">LINEスタンプ「原神 スタンプ Vol.2」</a></li>
 				</ul>
 			</li>
 				<li class="official-tweet"><a href="#official-tweet">公式ツイート<span style="display: none;">(Twitter、twitter)</span></a></a>
@@ -278,8 +289,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 				<li class="interview"><a href="#interview">インタビュー等</a>
 					<ul>
 						<li><a href="#scaramouche-va-1th">1周年記念インタビュー 柿原徹也(スカラマシュ役)<span style="display: none;">声優</span></a></li>
-						<li><a href="#var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目<span style="display: none;">(予告、バージョン2.1)</span></a></li>
-						<li><a href="#var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組<span style="display: none;">(バージョン3.1)</span></a></a></li>
+						<li><a href="#ver2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目<span style="display: none;">(予告、バージョン2.1)</span></a></li>
+						<li><a href="#ver3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組<span style="display: none;">(バージョン3.1、Ver3.1、ver3.1)</span></a></a></li>
+						<li><a href="#ver3-2-livestream">Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組<span style="display: none;">(バージョン3.2、Ver3.2、ver3.2)</span></a></a></li>
 						<li><a href="#interview-other">その他言及</a></li>
 					</ul>
 				</li>
@@ -298,82 +310,106 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 			</div>
 			</nav>
 			<div>
-				<p>本サイトは非公式であり，株式会社COGNOSPHERE及び上海米哈游網絡科技股份有限公司による提供・協力ではありません。</p>
-				<p>筆者は、記事内における全ての情報が正確である保証を致しません。また全てのリンク等に責任を負わず、ユーザーが不利益を被った場合でも一切の責任を負いません。</p>
-				<cite>コンテンツは「原神」(©︎COGNOSPHERE)より引用</cite>
+				<p class="not-official">本サイトは非公式であり，株式会社COGNOSPHERE及び上海米哈游網絡科技股份有限公司による提供・協力ではありません。</p>
+				<p class="not-support">筆者は、記事内における全ての情報が正確である保証を致しません。また全てのリンク等に責任を負わず、ユーザーが不利益を被った場合でも一切の責任を負いません。</p>
+				<cite class="from-genshin">コンテンツは「原神」(©︎COGNOSPHERE)より引用</cite>
 			</div>
 			<main>
 				<article>
 						<h2 id="update">更新履歴</h2>
 						<div class="updatelog">
-							<p>ゲーム内での履歴</p>
 							<ul class="nondot">
-								<li><span class="var-num">Var1.0</span>デイリー「等々交換」追加</li>
-								<li><span class="var-num">Var1.1</span>イべント「帰らぬ煌星」</li>
-								<li><span class="var-num">Var1.4</span>聖遺物「蒼白の炎」追加</li>
-								<li><span class="var-num">Var2.0</span>「古い手帳」、秘境「借景ノ館」、武器「桂木斬長正」追加</li>
-								<li><span class="var-num">Var2.1</span>魔神任務2章3幕「千手百目の浮世」、「雷電将軍」が言及</li>
-								<li><span class="var-num">Var2.2</span>イベント「秘境一揆」、世界任務「戸口の掃除」追加</li>
-								<li><span class="var-num">Var2.3</span>聖遺物「華館夢醒形骸記」追加</li>
-								<li><span class="var-num">Var2.5</span>「八重神子」が言及</li>
-								<li><span class="var-num">Var2.6</span>イベント「華やぐ紫苑の庭」</li>
-								<li><span class="var-num">2022/7/11</span>PV「冬夜の戯劇」公開</li>
-								<li><span class="var-num">Var2.8</span>「タルタリヤ」が言及、武器「『妖刀』」実装</li>
-								<li><span class="var-num">Var3.0</span>魔神任務3章2幕「黎明を告げる千の薔薇」</li>
-								<li><span class="var-num">Var3.1</span>魔神任務3章3幕「迷夢と虚幻と欺瞞」、魔神任務2章4幕「赤砂の王と三人の巡礼者」</li>
-								<li><span class="var-num">2022/10/4</span>ストーリームービー「『神』意」YouTube公開</li>
+								<li><span class="update-10"><span class="ver-num">Ver1.0</span>デイリー「等々交換」追加</span></li>
+								<li><span class="update-11"><span class="ver-num">Ver1.1</span>イべント「帰らぬ煌星」</span></li>
+								<li><span class="update-14"><span class="ver-num">Ver1.4</span>聖遺物「蒼白の炎」追加</span></li>
+								<li><span class="update-20"><span class="ver-num">Ver2.0</span>「古い手帳」、秘境「借景ノ館」、武器「桂木斬長正」追加</span></li>
+								<li><span class="update-21"><span class="ver-num">Vear2.1</span>魔神任務2章3幕「千手百目の浮世」、「雷電将軍」が言及</span></li>
+								<li><span class="update-22"><span class="ver-num">Ver2.2</span>イベント「秘境一揆」、世界任務「戸口の掃除」追加</span></li>
+								<li><span class="update-23"><span class="ver-num">Ver2.3</span>聖遺物「華館夢醒形骸記」追加</span></li>
+								<li><span class="update-25"><span class="ver-num">Ver2.5</span>「八重神子」が言及</span></li>
+								<li><span class="update-26"><span class="ver-num">Ver2.6</span>イベント「華やぐ紫苑の庭」</span></li>
+								<li><span class="update-220711"><span class="ver-num">2022/7/11</span>PV「冬夜の戯劇」公開</span></li>
+								<li><span class="update-28"><span class="ver-num">Ver2.8</span>「タルタリヤ」が言及、武器「『妖刀』」実装</span></li>
+								<li><span class="update-30"><span class="ver-num">Ver3.0</span>魔神任務3章1幕「煙霧のベールと暗き森を抜けて」、魔神任務3章2幕「黎明を告げる千の薔薇」</span></li>
+								<li><span class="update-31"><span class="ver-num">Ver3.1</span>魔神任務3章3幕「迷夢と虚幻と欺瞞」、魔神任務3章4幕「赤砂の王と三人の巡礼者」</span></li>
+								<li><span class="update-221004"><span class="ver-num">2022/10/4</span>ストーリームービー「『神』意」YouTube公開</span></li>
+								<li><span class="update-32"><span class="ver-num">Ver3.2</span>魔神任務3章5幕「虚空の鼓動、熾盛の劫火」、新ボス「？？？」</span></li>
 							</ul>
 						</div>
 						<h2 id="information">基本情報</h2>
-						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221005/20221005101226.jpg" loading="lazy">
-
 						
+						<div class="tab-wrap not-margin-div">
+    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01"><span class="top-tab-scaramouche">「散兵」</span></label>
+    <div class="tab-content not-margin-div">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220711/20220711180916.jpg" loading="lazy">
+    </div>
+    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02"><span class="top-tab-kuronushi">黒主</span></label>
+    <div class="tab-content not-margin-div">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" loading="lazy">
+    </div>
+    <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label not-margin-div" for="TAB-03"><span class="top-tab-old-style">過去</span></label>
+    <div class="tab-content">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221005/20221005101226.jpg" loading="lazy">
+    </div>
+	<input id="TAB-04" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-04"><span class="top-tab-boss">ボス</span></label>
+    <div class="tab-content not-margin-div">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221023/20221023224447.jpg" loading="lazy">
+    </div>
+</div>						
 						<div>
 							<p>
-								<b>ファトゥス第6位「散兵」スカラマシュ/国崩/???</b>
+								<b class="character-name-all"><span class="name-fatui-no6">ファトゥス第6位「散兵」スカラマシュ</span>/<span class="name-kunikuzushi">国崩</span>/<span class="gods">？？？</span>/???</b>
 							</p>
-							<p>ボス実装: Var3.2以降<br>
-							プレイアブル: Var3.3以降</p>
+							<p><span class="release-boss-version">ボス実装: Ver3.2</span><br>
+							<span class="release-playable-version">プレイアブル: Ver3.3以降</span></p>
 						</div>
 						<h3 id="character-setting">キャラクター設定</h3>
 						<div class="table not-margin-div">
 							<table>
 								<tbody>
 									<tr>
-										<th>元素力</th>
-										<td>雷</td>
+										<th class="elemental">元素力</th>
+										<td class="elemental-breakdown">雷</td>
 									</tr>
 									<tr>
-										<th>年齢</th>
-										<td>500歳未満</td>
+										<th class="elemental-robot">元素力(機械人形)</th>
+										<td class="elemental-robot-reakdown">雷、風、水、炎、氷</td>
 									</tr>
 									<tr>
-										<th>出身</th>
-										<td>稲妻</td>
+										<th class="vision">神の目</th>
+										<td class="vision-breakdown">?</td>
+									</tr>	
+									<tr>
+										<th class="age">年齢</th>
+										<td class="age-breakdown">500歳未満</td>
 									</tr>
 									<tr>
-										<th>種族</th>
-										<td>人形</td>
+										<th class="from-country">出身</th>
+										<td class="from-country-breakdown">稲妻</td>
 									</tr>
 									<tr>
-										<th>所属</th>
-										<td>?</td>
+										<th class="ethnicity">種族</th>
+										<td class="ethnicity-breakdown">人形</td>
 									</tr>
 									<tr>
-										<th>命の星座</th>
-										<td><i class="life-collection"></i>?</td>
+										<th class="affiliated">所属</th>
+										<td class="affiliated-breakdown">?</td>
 									</tr>
 									<tr>
-										<th>誕生日</th>
-										<td>?</td>
+										<th class="constellation">命の星座</th>
+										<td><span class="life-collection">?</span></td>
 									</tr>
 									<tr>
-										<th>称号</th>
-										<td>?</td>
+										<th class="birthday">誕生日</th>
+										<td class="birthday-breakdown">?</td>
 									</tr>
 									<tr>
-										<th>状態</th>
-										<td>「神の未完成品」</td>
+										<th class="character-title">称号</th>
+										<td class="character-title-breakdown">?</td>
+									</tr>
+									<tr>
+										<th class="god-name">神名</th>
+										<td class="god-name-breakdown">？？？</td>
 									</tr>
 								</tbody>
 							</table>
@@ -381,29 +417,43 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<table>
 								<tbody>
 									<tr>
-										<th class="nowrap">日本語</th>
-										<td lang="ja">柿原徹也</td>
+										<th class="nowrap"><span class="va-jp">日本語</span></th>
+										<td lang="ja"><span class="kakihara-tetuya">柿原徹也</span></td>
+										<td class="icon-button"><a href="http://zynchro.jp/talent/kakihara.html"><i class="fa-solid fa-link"></i></a>・<a href="https://instagram.com/charisma.tetsuya.days"><i class="fa-brands fa-instagram"></i></a></td>
 									</tr>
 									<tr>
-										<th class="nowrap">中国語</th>
-										<td lang="zh-cmn-Hans">鹿暗</td>
+										<th class="nowrap"><span class="va-cn">中国語</span></th>
+										<td lang="zh-cmn-Hans"><span class="lu-an">鹿暗</span></td>
+										<td class="icon-button"><a href="https://b23.tv/9H8dmwe"><i class="fa-brands fa-bilibili"></i></a>・<a href="https://weibo.com/moemoekana"><i class="fa-brands fa-weibo"></i></a>・<a href="https://twitter.com/sikana25"><i class="fa-brands fa-twitter"></i></a></td>
 									</tr>
 									<tr>
-										<th class="nowrap">英語</th>
-										<td lang="en-US">Patrick Pedraza</td>
+										<th class="nowrap"><span class="va-en">英語</span></th>
+										<td lang="en-US"><span class="patrick">Patrick Pedraza</span></td>
+										<td class="icon-button"><a href="http://zynchro.jp/talent/kakihara.html"><i class="fa-solid fa-link"></i></a>・<a href="https://www.youtube.com/channel/UCiuU9xDlXEdI1C9S5Q1Jfyg/featured"><i class="fa-brands fa-youtube"></i></a>・<a href="https://www.instagram.com/pat_pedraza/"><i class="fa-brands fa-instagram"></i></a>・<a href="https://twitter.com/Pat_Pedraza"><i class="fa-brands fa-twitter"></i></a></td>
 									</tr>
 									<tr>
-										<th class="nowrap">韓国語</th>
-										<td lang="kr">민승우</td>
+										<th class="nowrap"><span class="va-kr">韓国語</span></th>
+										<td lang="kr"><span class="min-seung-woo">민승우（閔丞釪）</span></td>
+										<td class="icon-button"><a href="https://www.instagram.com/minswoosh/"><i class="fa-brands fa-instagram"></i></a></td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 						<!--<h3 id="gacha-Illust">立ち絵・バナー</h3>-->
 						<h3 id="model">3Dモデル</h3>
-						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312.jpg" alt="Scaramouche 3d Model" loading="lazy">
-						<cite>引用: <a href="https://twitter.com/izevrente/status/1357777079404793857">Twitter</a></cite>
-					<h2 id="timeline">時系列</h2>
+						<div id="3dmodel_scaramouche" display="none">
+							<img id="3dmodel_scaramouche_hat" src=""/>
+							<img id="3dmodel_scaramouche_nohat" src=""/>
+						</div>
+						<div><a id="3dmodel_scaramouche_button" class="button" onclick="load3DModelScraamouche()">高画質画像読み込み</a></div>
+						<div class="tweets not-margin-div light-oney">
+							<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">okay so like i&#39;ve had a LOT of people ask me for reference pics of scaramouche, and idk if someone has made one already, but here&#39;s a reference sheet for scara, i tried to include everything i could think of but if there&#39;s anything else i should add pls lmk!<a href="https://twitter.com/hashtag/genshinimpact?src=hash&amp;ref_src=twsrc%5Etfw">#genshinimpact</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/fSklftMnSe">pic.twitter.com/fSklftMnSe</a></p>&mdash; ♡ caite ♡ (@izevrente) <a href="https://twitter.com/izevrente/status/1357777079404793857?ref_src=twsrc%5Etfw">February 5, 2021</a></blockquote>
+						</div>
+						<div class="tweets not-margin-div dark-oney">
+							<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">okay so like i&#39;ve had a LOT of people ask me for reference pics of scaramouche, and idk if someone has made one already, but here&#39;s a reference sheet for scara, i tried to include everything i could think of but if there&#39;s anything else i should add pls lmk!<a href="https://twitter.com/hashtag/genshinimpact?src=hash&amp;ref_src=twsrc%5Etfw">#genshinimpact</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/fSklftMnSe">pic.twitter.com/fSklftMnSe</a></p>&mdash; ♡ caite ♡ (@izevrente) <a href="https://twitter.com/izevrente/status/1357777079404793857?ref_src=twsrc%5Etfw">February 5, 2021</a></blockquote>
+						</div>
+						<span class="cant-load-twitter-photo-link">見えない場合はこちら：<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312">スカラマシュ</a></span>
+						<h2 id="timeline">時系列</h2>
 					<div class="table not-margin-div">
 						<table class="timeline-table">
 	<tr>
@@ -534,6 +584,10 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 		<td>「博士」と教令院により神として構築される</td>
 		<td></td>
 	</tr>
+		<th>魔神任務3章5幕</th>
+		<td>完全な「神」になる</td>
+		<td></td>
+	</tr>
 	<tr>
 		<th>将来</th>
 		<td>「自分だけのもの」を手に入れる</td>
@@ -552,7 +606,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 	</table>
 </div>
 					<!--<h2 id="gacha">祈願</h2>
-					<h3 id="gacha-3.x">Var3.x 祈願名</h3>
+					<h3 id="gacha-3.x">Ver3.x 祈願名</h3>
 					<img sec="">
 					<div>
 						<ul>
@@ -564,7 +618,10 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 					</div>
 				-->
 					<h2 id="world-name">各言語名</h2>
-							<h3 id="jp">日本語</h3>
+					
+											<div id="lang-tab" class="lang-tab-wrap not-margin-div">
+    <input id="TAB-lang-01" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch" checked="checked" /><label class="tab-label lang-tab-label" for="TAB-lang-01"><span id="jp">日本語</span></label>
+    <div class="tab-content not-margin-div">
 							<p translate="no" lang="jp">
 								<b>
 								<ruby>
@@ -573,7 +630,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								<rt>ざんひょう</rt>
 								<rp>)</rp>
 								</ruby>
-								/&nbsp;スカラマシュ&nbsp;/
+								/&#x20;スカラマシュ&#x20;/
 								<ruby>
 								<rb>国崩</rb>
 								<rp>(</rp>
@@ -583,7 +640,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603015353.jpg" alt="スカラマシュ"  translate="no" loading="lazy">
-							<h3 id="ch">中国語</h3>
+    </div>
+    <input id="TAB-lang-02" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-02"><span id="ch">中国語</span></label>
+    <div class="tab-content not-margin-div">
 							<p translate="no" lang="zh-cmn-Hans">
 								<b>
 								<ruby>
@@ -609,14 +668,18 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603020629.jpg" alt="散兵" translate="no" loading="lazy">
-							<h3 id="en">英語</h3>
+						</div>
+					    <input id="TAB-lang-03" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-03"><span id="en">英語</span></label>
+						<div class="tab-content not-margin-div">
 							<p translate="no" lang="en-US">
 								<b>
-								Balladeer&nbsp;/&nbsp;Scaramouche&nbsp;/&nbsp;Kunikuzushi
+								Balladeer&#x20;/&#x20;Scaramouche&#x20;/&#x20;Kunikuzushi
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramouche" translate="no" loading="lazy">
-							<h3 id="kr">韓国語</h3>
+						</div>
+					    <input id="TAB-lang-04" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-04"><span id="kr">韓国語</span></label>
+						<div class="tab-content not-margin-div">
 							<p translate="no" lang="kr">
 								<b>
 								<ruby>
@@ -636,21 +699,36 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022400.jpg" alt="스카라무슈" translate="no" loading="lazy">
-						<h3 id="it">イタリア語</h3>
+						</div>
+					    <input id="TAB-lang-05" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-05"><span id="it">イタリア語</span></label>
+						<div class="tab-content not-margin-div">
 							<p translate="no" lang="it">
 								<b>
-								Baladista&nbsp;/&nbsp;Scaramuccia&nbsp;/&nbsp;Kunikuzushi
+								Baladista&#x20;/&#x20;Scaramuccia&#x20;/&#x20;Kunikuzushi
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramuccia" translate="no" loading="lazy">
-							<h3 id="fr">フランス語</h3>
+					</div>
+					    <input id="TAB-lang-06" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-06"><span id="fr">フランス語</span></label>
+						<div class="tab-content not-margin-div">
 							<p translate="no" lang="fr">
 								<b>
 								Le Vagabond&nbsp;/&nbsp;Scaramuccia&nbsp;/&nbsp;Kunikuzushi
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801191244.jpg" alt="Scaramouche" translate="no" loading="lazy">
-						<h3 id="ru">ロシア語</h3>
+						</div>
+						<input id="TAB-lang-07" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-07"><span id="tr">トルコ語</span></label>
+						<div class="tab-content not-margin-div">
+							<p translate="no" lang="tr">
+								<b>
+								???&nbsp;/&nbsp;???&nbsp;/&nbsp;???
+								</b>
+							</p>
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220711/20220711180916.jpg" alt="Scaramouche" translate="no" loading="lazy">
+						</div>
+						<input id="TAB-lang-08" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-08"><span id="ru">ロシア語</span></label>
+						<div class="tab-content not-margin-div">	
 							<p translate="no" lang="ru">
 								<b>
 								<ruby>
@@ -676,6 +754,8 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603023410.jpg" alt="散兵" translate="no" loading="lazy">
+						</div>
+					</div>
 							<h3 id="list">一覧表</h3>
 							<div class="table not-margin-div">
 							<table class="lang-list">
@@ -684,55 +764,73 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 		<td translate="no">散兵</td>
 		<td translate="no">スカラマシュ</td>
 		<td translate="no">国崩</td>
+		<td translate="no">？？？</td>
 	</tr>
 	<tr lang="zh-cmn-Hans">
 		<th>中国語</th>
 		<td translate="no">散兵</td>
 		<td translate="no">斯卡拉姆齐</td>
 		<td translate="no">国崩</td>
+		<td translate="no">？？？</td>
 	</tr>
 	<tr lang="en-US">
 		<th>英語</th>
 		<td translate="no">Balladeer</td>
 		<td translate="no">Sacaramouche</td>
 		<td translate="no">Kunikuzushi</td>
+		<td translate="no">？？？</td>
 	</tr>
 	<tr lang="kr">
 		<th>韓国語</th>
-		<td translate="no"></td>
+		<td translate="no">-</td>
 		<td translate="no">스카라무슈</td>
 		<td translate="no">쿠니쿠즈시</td>
+		<td translate="no">？？？</td>
 	</tr>
 	<tr lang="it">
 		<th>イタリア語</th>
 		<td translate="no">Baladista</td>
 		<td translate="no">Scaramuccia</td>
 		<td translate="no">Kunikuzushi</td>
+		<td translate="no">?</td>
 	</tr>
 	<tr lang="fr">
 		<th>フランス語</th>
 		<td translate="no">Le Vagabond</td>
 		<td translate="no">Scaramuccia</td>
 		<td translate="no">Kunikuzushi</td>
+		<td translate="no">?</td>
 	</tr>
 	<tr lang="de">
 		<th>ドイツ語</th>
 		<td translate="no">Der Bänkelsänger</td>
 		<td translate="no">Scaramouche</td>
 		<td>Kunikuzushi</td>
+		<td translate="no">?</td>
 	</tr>
 	<tr lang="ru">
 		<th>ロシア語</th>
 		<td class="ru" translate="no">Cказитель</td>
 		<td class="ru" translate="no">Скарамучча</td>
 		<td class="ru" translate="no">Куникудзуси</td>
+		<td translate="no">?</td>
+	</tr>
+	<tr lang="tr">
+		<th>トルコ語</th>
+		<td translate="no">???</td>
+		<td translate="no">???</td>
+		<td translate="no">???</td>
+		<td translate="no">?</td>
+	</tr>
+	<tr lang="th">
+		<th>タイ語(非公式訳)</th>
+		<td translate="no">สการามุช</td>
+		<td translate="no">บัลลาเดียร์</td>
+		<td translate="no">คุนิคุสึชิ</td>
+		<td translate="no">?</td>
 	</tr>
 </table>
-</div>
-							<aside>
-								<p>*タイ語では非公式音訳で「<span translate="no" lang="th">สคารามุชเป็</span>」と表記されることがある。</p>
-							</aside>
-						
+</div>			
 							
 					<!--<h2 id="motion">モーション</h2>
 					<h3 id="motion-nomal-atack">通常攻撃・重激</h3>
@@ -746,18 +844,18 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								<p>期間限定イベント <time datetime="2020-11-16 5:00">2020年11月16日</time>~<time datetime="2020-11-30 4:59">2020年11月30日</time></p>
 							</div>
 							<h4 id="unknown-star">蔓延する危機</h4>
-							<blockquote>
+							<blockquote class="unknown-star-text">
 								<p>パイモン「眠ってるのか?」<br>
 ???(スカラマシュ)「おそらく。いろいろ試したが眠ったままだ。」<br>
 パイモン「こいつも隕石に触れたんだな...」<br>
 ???「馬車にあった石のことか? 心配ない、術で処分した。」<br>
-???「ところで、こいつ『も』ってことは... 他に同じ状況の人がいるのか?」<br>
+???「ところで、こいつ「も」ってことは...&nbsp;他に同じ状況の人がいるのか?」<br>
 フィッシュル「この断罪の目は夢魔が魔骸の谷から湧き出すのを見たわ。清泉町の民は今も苦しんでる。」<br>
 オズ「ええ、モンドにも深い眠りに落ちて目覚めない方々がいます。この方と同じように。」<br>
-???「そうか... 隕石による影響は結構大きいんだな。」<br>
+???「そうか...&nbsp;隕石による影響は結構大きいんだな。」<br>
 パイモン「この恰好、アカツキワイナリーの人で間違いなさそうだ... きっと彼がフリッツだな?」<br>
 オズ「特徴的な服ではないのに、パイモン様は観察力が鋭いのですね。」<br>
-パイモン「オイラの記憶力はもっといいぞ! でも... この人と比べたら確かに特徴的じゃないもんな。」<br>
+パイモン「オイラの記憶力はもっといいぞ!&nbsp;でも...&nbsp;この人と比べたら確かに特徴的じゃないもんな。」<br>
 ???「ハハッ、僕?」<br>
 パイモン「おう、そういう格好は初めて見たな。」<br>
 旅人「個性的な帽子だね。」<br>
@@ -767,10 +865,10 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 フィッシュル「我が名は断罪の皇女フィッシュル、人々の呼びかけに応じて参上したわ!」<br>
 オズ「お嬢様の眷属の鴉、オズです。」<br>
 パイモン「西風騎士団栄誉騎士の大親友のパイモンだ!」<br>
-???「へえ?では君が西風騎士団の栄誉騎士なんだな。」<br>
+???「へえ?&nbsp;では君が西風騎士団の栄誉騎士なんだな。」<br>
 旅人「一応ね。」<br>
 フィッシュル「皇女は出征した。運命を告げる聖裁の雷が悪夢の種に粛清をもたらすことを期待しなさい!」<br>
-???「な... なんだい...?」<br>
+???「な...&nbsp;なんだい...?」<br>
 パイモン「こういうやつなんだ、気にするな。」<br>
 旅人「フィッシュルは熱心でいい人だから。」<br>
 千岩軍「おや、何かあったのか?」<br>
@@ -783,11 +881,11 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<h4 id="star-of-deceitful-dreams">天の謎、水の解き</h4>
 							<blockquote>
 							<p>
-								スカラマシュ「ハァーイ! お話し中? 僕も参加していいかな?」<br>
-								フィッシュル「あら、また会ったわね。稲妻の浮浪人! わたくしは眷属...」(モナと共にワープ)<br>
+								スカラマシュ「ハァーイ!&nbsp;お話し中?&nbsp;僕も参加していいかな?」<br>
+								フィッシュル「あら、また会ったわね。稲妻の浮浪人!&nbsp;わたくしは眷属...」(モナと共にワープ)<br>
 								スカラマシュ「前回は千岩軍もいたから、隣国を救った英雄に手は出せなかった。せっかく再会したし、ついでにやろうかと思ったが...」<br>
 								<i><b>ファトゥス第6位「散兵」スカラマシュ</b></i><br>
-								スカラマシュ「(さっきの術師は何者だ? 僕のことは知らないはずだが... 何かを「見る」能力があるのか?)」<br>
+								スカラマシュ「(さっきの術師は何者だ?&nbsp;僕のことは知らないはずだが...&nbsp;何かを「見る」能力があるのか?)」<br>
 								スカラマシュ「お前たち!」<br>
 								男性部下、デットエージェント、雷蛍術師「はい!」<br>
 								スカラマシュ「行け、さっきの...」<br>
@@ -795,7 +893,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								スカラマシュ「またか...」<br>
 								女性部下「長官!」<br>
 								女性部下「またも異変が! 今回の隕石は今までで一番大きい...」<br>
-								スカラマシュ「キリがないなぁ。まあいい、行こう。目標変更だ! 優先すべきは... 隕石の収集と研究」<br>
+								スカラマシュ「キリがないなぁ。まあいい、行こう。目標変更だ!&nbsp;優先すべきは...&nbsp;隕石の収集と研究」<br>
 								男性部下「長官、あの3人はお任せください!」<br>
 								スカラマシュ「僕の話を聞いてなかった?」<br>
 								スカラマシュ「僕が、いつ勝手に判断する権利を与えた?」<br>
@@ -806,44 +904,44 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<p>
 									モナ「一番簡単な占いを使ってたとしても、あの人が『ファデュイの執行官』だってことは分かります！」<br>
 									モナ「危険すぎます、どこで知り合ったんですか?」<br>
-									オズ「あの少年がファデュイの執行官!? なんという危険人物...!」<br>
+									オズ「あの少年がファデュイの執行官!?&nbsp;なんという危険人物...!」<br>
 									旅人「まさか執行官だったとは。」<br>
 									モナ「近付いてきたのは何か目的があるはずです。それに彼は強い!」<br>
 									モナ「想像以上の実力者だってことは、一目見れば分かります。認めたくありませんが...」<br>
 									オズ「占星術の天才、モナ様よりもお強いと?」<br>
-									モナ「ま、まさか! 実力では負けるかもしれませんが、占星術なら私の圧勝ですよ!」<br>
+									モナ「ま、まさか!&nbsp;実力では負けるかもしれませんが、占星術なら私の圧勝ですよ!」<br>
 								</p>
 							</blockquote>
 							<h4 id="star-of-destiny">古星の運命</h4>
-							<blockquote>
+							<blockquote class="star-of-destiny-text">
 								<p>
-									モナ「へえ? これがとんがり帽子山ですか? 小さくなりましたね。」<br>
-パイモン「先客がいるみたいだぞ? ここは観光名所なのか?」<br>
+									モナ「へえ?&nbsp;これがとんがり帽子山ですか?&nbsp;小さくなりましたね。」<br>
+パイモン「先客がいるみたいだぞ?&nbsp;ここは観光名所なのか?」<br>
 パイモン「あっ! おまえ!」<br>
-スカラマシュ「う... うん? 君たちか?」<br>
+スカラマシュ「う...&nbsp;うん? 君たちか?」<br>
 旅人「今まで寝てたの?」<br>
 パイモン「あの様子、まさか夢から覚めたばかりか?」<br>
-モナ「自力で目覚めるなんて... ありえないです。」<br>
+モナ「自力で目覚めるなんて...&nbsp;ありえないです。」<br>
 スカラマシュ「フン、君たちにできないことが、僕までできないとは限らない。」<br>
 スカラマシュ「一歩遅かったな、僕の『研究』はもう終わった。」<br>
 パイモン「やっぱりファデュイの仕業だったのか!?」<br>
 スカラマシュ「そうカリカリするな、今日は時間がない。また今度にさせてもらうよ。」<br>
-旅人「待て! 何が目的だ?」<br>
-モナ「今まで雪山の夢の中にいましたよね? レーナルトのことは、どれくらい知っているんですか?」<br>
-スカラマシュ「レーナルト? 何のことだ... まあいい、今は雑魚を気にしている場合じゃない。」<br>
-スカラマシュ「気付いてしまったんだ... 恐ろしい、重大なことに。」<br>
+旅人「待て!&nbsp;何が目的だ?」<br>
+モナ「今まで雪山の夢の中にいましたよね?&nbsp;レーナルトのことは、どれくらい知っているんですか?」<br>
+スカラマシュ「レーナルト? 何のことだ...&nbsp;まあいい、今は雑魚を気にしている場合じゃない。」<br>
+スカラマシュ「気付いてしまったんだ...&nbsp;恐ろしい、重大なことに。」<br>
 パイモン「ん?」<br>
 旅人「何のこと?」<br>
 スカラマシュ「<span class="mark">星空自体、巨大な嘘なんだ。</span>」<br>
-モナ「星空が... 嘘? どういう意味ですか?」<br>
-パイモン「モナの占星術を否定する気か?でも、そこまで言わなくてもいいだろ。」<br>
+モナ「星空が...&nbsp;嘘?&nbsp;どういう意味ですか?」<br>
+パイモン「モナの占星術を否定する気か?&nbsp;でも、そこまで言わなくてもいいだろ。」<br>
 パイモン「それに夜に空を見上げれば、星が見えるじゃんかよ。それが嘘なわけないだろ...」<br>
-スカラマシュ「ハハッ... ハハハハハッ! 甘い、甘すぎるよ! 」<br>
+スカラマシュ「ハハッ...&nbsp;ハハハハハッ!&nbsp;甘い、甘すぎるよ! 」<br>
 スカラマシュ「まあ、君のせいじゃない。少し前まで僕もそう信じてたから...」<br>
-モナ「少し前まで? それって...」<br>
+モナ「少し前まで?&nbsp;それって...」<br>
 スカラマシュ「フン、君たちの話に付き合ってる暇はない。」<br>
-スカラマシュ「『道化』のやつ... こんな任務を僕に任せて、事前に『発見』の可能性を教えないとは... 僕を驚かしたかったのか?」<br>
-スカラマシュ「今から『真相』を確かめなければならない。失礼するよ、青二才ども! 」
+スカラマシュ「「道化」のやつ...&nbsp;こんな任務を僕に任せて、事前に「発見」の可能性を教えないとは...&nbsp;僕を驚かしたかったのか?」<br>
+スカラマシュ「今から「真相」を確かめなければならない。失礼するよ、青二才ども! 」
 </p>
 <p>
 (スカラマシュの手下を倒す)
@@ -851,9 +949,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 パイモン「すごい戦いぶりだったな!」<br>
 モナ「私を怒らせた罰です!」<br>
 旅人「モナは強いね。」<br>
-モナ「当然です! パイモンもそう思ってますよね?ねっ?」<br>
+モナ「当然です!&nbsp;パイモンもそう思ってますよね?&nbsp;ねっ?」<br>
 パイモン「そうだな、モナがいなかったらもっと大変な目に遭ってたかもしれないしな。」<br>
-モナ「フン、聞こえてますか! ファデュイの執行官! 悪者めっ!」<br>
+モナ「フン、聞こえてますか!&nbsp;ファデュイの執行官! 悪者めっ!」<br>
 モナ「でも、先ほどの彼は嘘をついているように見えませんでした。師匠が占星術を教えてくれた時に言っていた『偽りの空』には他の意味があるのでしょうか?」<br>
 モナ「...オホン、少し考え事をしてました。さあ、仕事しましょう。」
 								</p>
@@ -862,8 +960,8 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<h3 id="omnipresence-over-mortals">魔神任務 2章3幕「千手百目の浮世」</h3>
 							<h4 id="delusion">邪眼</h4>
 								<blockquote class="hall-notice">
-									<span class="blockquote-title">殿中監指示</span>
-									<p>稲妻内戦の情勢は良いものとは言えない。だが戦争が長引けば長引くほど、我々の有利になる...<br>
+									<span class="blockquote-title hall-notice-title">殿中監指示</span>
+									<p class="hall-notice-text">稲妻内戦の情勢は良いものとは言えない。だが戦争が長引けば長引くほど、我々の有利になる...<br>
 抵抗軍に「邪眼」を広めるため、戦争を煽り、両指揮官に戦争継続の意志を促す...<br>
 皆の衆には、ネイサン閣下を補佐し、珊瑚宮軍の勝利の希望を打ち砕いてもらいたい...<br>
 想定外のことがあった場合、ネイサン閣下の脱出を手助けすること。「ファデュイ」の件は決して露見してはならない!<br>
@@ -886,49 +984,49 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								</blockquote>
 							<h5 id="talk-scaraouche-delusion">スカラマシュと会話する</h5>
 								<blockquote>
-									<span class="blockquote-title">帰らぬ熄星に参加した場合</span>
-									<p>
+									<span class="blockquote-title talk-scaraouche-delusion-unknown-star-title">帰らぬ熄星に参加した場合</span>
+									<p class="talk-scaraouche-delusion-unknown-star-text">
 										スカラマシュ「まさか君たちがここまで辿り着くなんてね。やるじゃないか。」<br>
 										スカラマシュ「面白い。久しぶりに再開したというのに、今すぐにでも命のやり取りをしたそうな勢いだ。」<br>
 										旅人「邪眼を製造するなんて...」<br>
 										スカラマシュ「あぁ、その事だったのか。」<br>
 										スカラマシュ「一つ間違えていることがある。<span class="mark">確かに僕はここにいるが、計画を執行するにあたり、ただその代理人をしているに過ぎない。</span>」<br>
 										スカラマシュ「<span class="mark">首謀者はもちろん他にいる。</span>ほら、凄腕なんだろう? 頑張って探してきなよ!」<br>
-										スカラマシュ「あらら、こんな『些細なこと』で怒っちゃったの?」<br>
-										スカラマシュ 「どうやら変わっちゃったみたいだね... 情けなくて、小胆なへなちょこに。」<br>
+										スカラマシュ「あらら、こんな「些細なこと」で怒っちゃったの?」<br>
+										スカラマシュ 「どうやら変わっちゃったみたいだね...&nbsp;情けなくて、小胆なへなちょこに。」<br>
 										パイモン「些細なことだって!」<br>
-										スカラマシュ「間違ったこと言ったかな?浮世では、人の命なんて雑草と同じなのさ。」<br>
+										スカラマシュ「間違ったこと言ったかな?&nbsp;浮世では、人の命なんて雑草と同じなのさ。」<br>
 										スカラマシュ「邪眼がなくても彼らは死んでいただろう。少なくとも、邪眼は彼らの願いを叶える機会を授けたんだ。」<br>
-										スカラマシュ「目狩り令がどんな価値を持っているのか、君たちにわかるかい? これを実現するのに、かなりの力を費やしたのは、僕たちにとって有益なことだからさ。」<br>
+										スカラマシュ「目狩り令がどんな価値を持っているのか、君たちにわかるかい?&nbsp;これを実現するのに、かなりの力を費やしたのは、僕たちにとって有益なことだからさ。」<br>
 										スカラマシュ「そして今その結果を見てみると、すべて価値のある物だということが改めてわかる。邪眼を広めるため道を開き、力を追い求める弱者を惹きつける...」<br>
 										スカラマシュ「ほんの少しの代価で、世界を掌握するかのような感覚が得られるんだ。生命を引き換えに力を手に入れるなんて、お得だと思わない?」<br>
-										パイモン「目狩り令はお前たちがけしかけたのか? まさか、初めから...」<br>
-										スカラマシュ「稲妻の外側はとても強固に見えるけど、内側は... 僕たちが利用できるほど綻びに満ちていたよ。ほんの少し手間をかけるだけで、内部から攻め落とせるほどにね。」<br>
-										スカラマシュ「「永遠」は、時間を非常に長く伸ばすことができる。だけど、その間にあるひとつひとつの節目はとてつもなく脆弱なものになるんだ。」<br>
+										パイモン「目狩り令はお前たちがけしかけたのか?&nbsp;まさか、初めから...」<br>
+										スカラマシュ「稲妻の外側はとても強固に見えるけど、内側は...&nbsp;僕たちが利用できるほど綻びに満ちていたよ。ほんの少し手間をかけるだけで、内部から攻め落とせるほどにね。」<br>
+										スカラマシュ「『永遠』は、時間を非常に長く伸ばすことができる。だけど、その間にあるひとつひとつの節目はとてつもなく脆弱なものになるんだ。」<br>
 										スカラマシュ「抵抗軍にいる君の友達のように、どんなに努力しても、無駄なのさ。」<br>
 										スカラマシュ「水中の泡のように、美しさを放った後は、破滅が待っている。」<br>
-										スカラマシュ「失えば失うほど手にしたいと思い、無能であればあるほどそれに抗う! アッハハハ、こういう茶番は、見ていて滑稽で実に楽しい物だね。」<br>
+										スカラマシュ「失えば失うほど手にしたいと思い、無能であればあるほどそれに抗う!&nbsp;アッハハハ、こういう茶番は、見ていて滑稽で実に楽しい物だね。」<br>
 										旅人「哲平は...」<br>
 										パイモン「おい、落ち着け!」<br>
 										パイモン「あっ...この!」<br>
 										旅人「あぁっ...(倒れ込む)」<br>
 										スカラマシュ「...フフフフフッ、ハハハハハッ。」<br>
-										スカラマシュ「そう、それだ!怒れ... 憤怒しろ...」<br>
+										スカラマシュ「そう、それだ!&nbsp;怒れ...&nbsp;憤怒しろ...」<br>
 										スカラマシュ「この工場にある魔神の怨嗟にとって、憤怒は最高のエサ...」<br>
-										パイモン「どうしたんだよ？しっかりしろ...!」<br>
+										パイモン「どうしたんだよ?&nbsp;しっかりしろ...!」<br>
 										(スカラマシュと八重神子が接触)<br>
 										(旅人は意識を失う)<br>
 									</p>
-									<p class="travel-log">
+									<p class="travel-log talk-scaraouche-delusion-log-unknown-star">
 								怒りに満ち溢れ、「散兵」に突進したが、彼はとっくに待ち伏せをしていたようだ。手を出す前に、罠にはまり、あなたは気を失った…
 							</p>
 								</blockquote>
 							<blockquote>
-								<span class="blockquote-title">帰らぬ熄星に参加していない場合</span>
-								<p>
+								<span class="blockquote-title talk-scaraouche-delusion-title">帰らぬ熄星に参加していない場合</span>
+								<p class="talk-scaraouche-delusion-text">
 									スカラマシュ「まさか君たちがここまで辿り着くなんてね。やるじゃないか。」<br>
-									パイモン「お前はファデュイの執行官... 『淑女』や『公子』と同じやつか?」<br>
-									スカラマシュ「『淑女』?『公子』?ふむ...まさか君がすでに、僕たちの中で最も頼りない二人の執行官に会っているとはね。」<br>
+									パイモン「お前はファデュイの執行官...&nbsp;「淑女」や「公子」と同じやつか?」<br>
+									スカラマシュ「「淑女」?&nbsp;「公子」?&nbsp;ふむ...まさか君がすでに、僕たちの中で最も頼りない二人の執行官に会っているとはね。」<br>
 									スカラマシュ「僕はファトゥス第6位、『散兵』だ。」<br>
 									<b><i>ファトゥス第6位「散兵」スカラマシュ</i></b><br>
 									スカラマシュ「あえて嬉しいよ、名高い旅人さん。」<br>
@@ -936,8 +1034,8 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									旅人「邪眼を製造するなんて...」<br>
 									スカラマシュ「あぁ、その事だったのか。」<br>
 									スカラマシュ「一つ間違えていることがある。<span class="mark">確かに僕はここにいるが、計画を執行するにあたり、ただその代理人をしているに過ぎない。</span>」<br>
-									スカラマシュ「<span class="mark">首謀者はもちろん他にいる。</span>ほら、凄腕なんだろう? 頑張って探してきなよ!」<br>
-									スカラマシュ「あらら、こんな『些細なこと』で怒っちゃったの?」<br>
+									スカラマシュ「<span class="mark">首謀者はもちろん他にいる。</span>ほら、凄腕なんだろう?&nbsp;頑張って探してきなよ!」<br>
+									スカラマシュ「あらら、こんな「些細なこと」で怒っちゃったの?」<br>
 									スカラマシュ「まさか、こんな情けなくて、小胆なへなちょこだったなんてね。」<br>
 									パイモン「些細なことだって!」<br>
 									スカラマシュ「間違ったこと言ったかな?浮世では、人の命なんて雑草と同じなのさ。」<br>
@@ -945,8 +1043,8 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									スカラマシュ「目狩り令がどんな価値を持っているのか、君たちにわかるかい? これを実現するのに、かなりの力を費やしたのは、僕たちにとって有益なことだからさ。」<br>
 									スカラマシュ「そして今その結果を見てみると、すべて価値のある物だということが改めてわかる。邪眼を広めるため道を開き、力を追い求める弱者を惹きつける...」<br>
 									スカラマシュ「ほんの少しの代価で、世界を掌握するかのような感覚が得られるんだ。生命を引き換えに力を手に入れるなんて、お得だと思わない?」<br>
-									パイモン「目狩り令はお前たちがけしかけたのか? まさか、初めから...」<br>
-									スカラマシュ「稲妻の外側はとても強固に見えるけど、内側は... 僕たちが利用できるほど綻びに満ちていたよ。ほんの少し手間をかけるだけで、内部から攻め落とせるほどにね。」<br>
+									パイモン「目狩り令はお前たちがけしかけたのか?&nbsp;まさか、初めから...」<br>
+									スカラマシュ「稲妻の外側はとても強固に見えるけど、内側は...&nbsp;僕たちが利用できるほど綻びに満ちていたよ。ほんの少し手間をかけるだけで、内部から攻め落とせるほどにね。」<br>
 									スカラマシュ「『永遠』は、時間を非常に長く伸ばすことができる。だけど、その間にあるひとつひとつの節目はとてつもなく脆弱なものになるんだ。」<br>
 									スカラマシュ「抵抗軍にいる君の友達のように、どんなに努力しても、無駄なのさ。」<br>
 									スカラマシュ「水中の泡のように、美しさを放った後は、破滅が待っている。」<br>
@@ -955,27 +1053,27 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									パイモン「おい、落ち着け!」<br>
 									パイモン「あっ...この!」<br>
 									旅人「あぁっ...(倒れ込む)」<br>
-									スカラマシュ「フフフフフッ... アハハハハッ。そう、それだ! 怒れ...憤怒しろ...」<br>
+									スカラマシュ「フフフフフッ...&nbsp;アハハハハッ。そう、それだ!&nbsp;怒れ...&nbsp;憤怒しろ...」<br>
 									スカラマシュ「この工場にある魔人の怨嗟にとって、憤怒は最高のエサ...」<br>
-									パイモン「どうしたんだよ... しっかりしろ...!」<br>
+									パイモン「どうしたんだよ...&nbsp;しっかりしろ...!」<br>
 									(スカラマシュと八重神子が接触)<br>
 									(旅人は意識を失う)<br>
 								</p>
-								<p class="travel-log">
+								<p class="travel-log talk-scaraouche-delusion-log">
 								怒りに満ち溢れ、「散兵」に突進したが、彼はとっくに待ち伏せをしていたようだ。手を出す前に、罠にはまり、あなたは気を失った...
 								</p>
 							</blockquote>
 							<h4 id="the-servants-path">眷属の践行</h4>
 							<blockquote>
-								<p class="travel-log">
+								<p class="travel-log the-servants-path-log">
 									怒りで理性を失ったあなたは「散兵」の罠にはまった。気を失いかけた時、八重神子が姿を現した...
 								</p>
-								<p>
-									八重神子「妾の後に繰り返すんじゃ。『あーん』、ほれはやく。」<br>
+								<p class="the-servants-path-text">
+									八重神子「妾の後に繰り返すんじゃ。「あーん」、ほれはやく。」<br>
 									旅人「あーん」<br>
 									八重神子「うむ、なるほど。少なくとも脳に支障はきたしていないようじゃな。ふむ...」<br>
 									八重神子「やっとのことで、地面に埋もれておるような童を運んできたのじゃ。そうまでしたのに再起不能となっておっては、残念すぎるじゃろう?」<br>
-									パイモン「うぅ、さっきから聞きたかったんだけど... なんかおまえの話し方とか雰囲気とか、オイラたちと最初に会った時とだいぶ違うような...」<br>
+									パイモン「うぅ、さっきから聞きたかったんだけど...&nbsp;なんかおまえの話し方とか雰囲気とか、オイラたちと最初に会った時とだいぶ違うような...」<br>
 									八重神子「そうか?おそらく、あの巫女どもを下がらせたからじゃろう。それに、妾はずっとこんな感じじゃぞ?」<br>
 									八重神子人々が見せるのは、常に自分が見せたい姿だけなんじゃ。妾はその点についてよく知っておる。」<br>
 									八重神子「じゃから、どの一面であろうとすべて本物の「自我」。ただ、人とはそれらを無意味に定義したがるものなんじゃ。」<br>
@@ -983,85 +1081,98 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									パイモン「えっと、全然わからない...」<br>
 									八重神子「ふふ、もっと人間というものを研究するんじゃな、小さいの。汝にも分かる日が来るじゃろう。」<br>
 									旅人「いったいどうやって...」<br>
-									パイモン「オイラも気になるぞ!オイラあの時、旅人のことばっか見てたから、おまえがなにをしたのか全然わからなかった...」<br>
+									パイモン「オイラも気になるぞ!&nbsp;オイラあの時、旅人のことばっか見てたから、おまえがなにをしたのか全然わからなかった...」<br>
 									八重神子「『鳴神大社の秘法』じゃ。あの散兵という者が一瞬にして地面に跪き、命乞いをしてきたと妾が言ったら、信じるか?」<br>
 									旅人「...」<br>
-									八重神子「ふふ、そのようなことを考えるより、どう妾に恩を返すか考える方が重要じゃぞ...そうは思わぬか?」<br>
+									八重神子「ふふ、そのようなことを考えるより、どう妾に恩を返すか考える方が重要じゃぞ...&nbsp;そうは思わぬか?」<br>
 									八重神子「でなければ、やはり頭になんらかの支障をきたしているかもしれぬな...」<br>
 									旅人「誠に感謝申し上げます。八重神子様。」<br>
 									八重神子「とは言っても、それほど畏まる必要はない。妾が欲しいのは汝の行動じゃ。ふふ。」<br>
-									八重神子「汝は今...まだ「邪眼」のことについて考えている、そうじゃな?」<br>
+									八重神子「汝は今...&nbsp;まだ「邪眼」のことについて考えている、そうじゃな?」<br>
 									旅人「うん...」<br>
 									八重神子「安心せい。すでにあの海祇島の指揮官が手下を率いて掃討に出向いた。それに邪眼の使用を禁ずる重大な軍令も発せられておる。」<br>
 									八重神子「あの散兵という者も、拠点が露呈している状態で自らの同僚のため、無駄な抵抗をすることもないじゃろう。」<br>
 									八重神子「はぁ、時間があったら、あのファデュイどもの苦しむ姿をぜひ見てみたかったんじゃが...」<br>
 									八重神子「珊瑚宮心海という女、実にやりおる。彼女に会ってきちんと話をしてみたいものじゃが...信仰の違いとは厄介なものじゃな。」<br>
-									パイモン「厄介?おまえは鳴神大社の宮司だろ!」<br>
-									八重神子「これを汝に伝えたのは安心させるため以外にも...汝に頼み事があったからなんじゃ。」<br>
+									パイモン「厄介?&nbsp;おまえは鳴神大社の宮司だろ!」<br>
+									八重神子「これを汝に伝えたのは安心させるため以外にも...&nbsp;汝に頼み事があったからなんじゃ。」<br>
 									旅人「何をやればいいの?」<br>
-									八重神子「汝...あやつに会ったな?」<br>
+									八重神子「汝...&nbsp;あやつに会ったな?」<br>
 									旅人「雷電将軍のこと?」<br>
-									八重神子「妾が言っているのは、その『人形』ではなく...『彼女』に会ったのかと聞いておる。」<br>
+									八重神子「妾が言っているのは、その「人形」ではなく...&nbsp;「彼女」に会ったのかと聞いておる。」<br>
 									旅人「それって...」<br>
-									八重神子「そう。『自我』を維持するため、『一心浄土』で無限の冥想を続けている、本物の雷電将軍...」<br>
+									八重神子「そう。『自我』を維持するため、「一心浄土」で無限の冥想を続けている、本物の雷電将軍...」<br>
 									八重神子「——その名は、『影』」<br>
 									パイモン「それって、儀式にいたのは人形で、本物の雷電将軍はそのあとに会ったやつだったってことか?」<br>
-									パイモン「つまり、あのとき変わったのは『戦場』だけじゃなくて、『相手』も違ってたと?」<br>
+									パイモン「つまり、あのとき変わったのは「戦場」だけじゃなくて、「相手」も違ってたと?」<br>
 									旅人「確かに微妙な差には気づいてた...」<br>
-									八重神子「あれこそ雷電将軍の『永遠』だからじゃ。」<br>
+									八重神子「あれこそ雷電将軍の「永遠」だからじゃ。」<br>
 									八重神子「この国の永遠を追い求めるには、まずは己が永遠に触れねばならぬ。」<br>
-									八重神子「肉体はやがて土に還り、『人形』がそれに代わる。」<br>
+									八重神子「肉体はやがて土に還り、「人形」がそれに代わる。」<br>
 									八重神子「精神は摩耗からは逃れられぬ。あやつは自らの意識をその刀に宿し、冥想を用いてすべての障害を回避しているんじゃ。」<br>
 									パイモン「じゃあ、あの刀で斬り開かれた空間が...」<br>
-									八重神子「『一心浄土』、あやつの『心の世界』のようなもの。基本的には『自我』の存在のみを許す空間じゃ。」<br>
+									八重神子「「一心浄土」、あやつの「心の世界」のようなもの。基本的には「自我」の存在のみを許す空間じゃ。」<br>
 									八重神子「自我の世界に閉じこもり、外の雑務はすべて、ただひたすら永遠へと突き進む人形に任せておる...」<br>
 									八重神子「...それが、影が模索した永遠への道じゃ。」<br>
 								</p>
 							</blockquote>
 							<h4 id="wishes">願い</h4>
 								<blockquote>
-									<p>
-										八重神子「ところで... その後聞いたんじゃが、まさかファデュイの執行官と御前試合をしたとはな。その度胸は賞賛に値するぞ。」<br>
-										旅人「あの時はつい勢い任せで。」<br>
-										八重神子「正面から『淑女』を倒すとは、汝の実力は妾の予想を超えておる。」<br>
-										八重神子「まあともかく、勝ったならそれでよい。めでたしめでたしじゃ。」<br>
-										パイモン「やっとファデュイの計画を一旦組織できたな。えへへ。」<br>
-										パイモン「少なくとも今回は、神の心を奪われなかった。」<br>
-										八重神子「待て、『神の心』と言ったか?　それは、駒のようなものでは?」<br>
-										パイモン「そうだぞ。神子も見たことがあるのか? 七神が持ってて、天空の島と繋がっている『神の心』だ!」<br>
-										八重神子「ふむ...」<br>
-										パイモン「どうしたんだ?」<br>
-										八重神子「あれなら、妾が差し出した。」<br>
-										旅人「ん?」<br>
-										パイモン「えっ?」<br>
-										八重神子「そうでなければ...如何にして『散兵』から汝の命を救ったと思う?」<br>
-										旅人「あの時もう渡してたの...」<br>
-										八重神子「『散兵』は今やファトゥスの第六位、実力においては『淑女』よりも上じゃ。」<br>
-										八重神子「妾は自らの命を掛けて戦うような性格ではないぞ。」<br>
-										パイモン「もう、何を言ったらいいのかわからない...」<br>
-										旅人「でも、なんで神子が『神の心』を?」<br>
-										八重神子「影が人形を作ってから、『神の心』を置ける場所がなくなった。」<br>
-										八重神子「かつて影と最も親しくしていた友である妾に... 影はその『神の心』を渡したんじゃ、鳴神大社に保管させるためにな。」<br>
-										八重神子「あやつは元々もう、『神の心』の力を必要としておらんかった。あやつによれば、もう天空の島とは連絡を絶っているそうじゃぞ。」<br>
-									</p>
-									<p>(中略)</p>
-									<p>
-										八重神子「お礼として、この先の道のことでも、今までの疑問のことでも、妾が汝らに答えようぞ。」<br>
-										八重神子「何か聞きたいことはあるか?<br>
-										旅人「『人形』の将軍について...」<br>
-										八重神子「『人形』の将軍を作った技術は、今では失われている知識からきたものじゃ。神であるあやつにしか分からぬことなのかもしれぬな...」<br>
-										八重神子「じゃが...汝らが興味を持ちそうなことは、なくもない。」<br>
-										八重神子「影が自身の神の体を改造する前、『原型の人形』を創造したことがある...」<br>
-										パイモン「じゃ、じゃあ雷電将軍は3人いるのか?」<br>
-										八重神子「いや、あの原型はただ実現性を確認するためのもので、見た目も知能も影自身を設計して作られたものではない。言わば試作品じゃな。 」<br>
-										八重神子「当時の計画では、それを直ちに廃棄する予定じゃった。しかし影はそれを残酷と思ったのか、それの体内にある力のみ封印することを選んだんじゃ。」<br>
-										八重神子「その後、あれはただの人のように、己の意志を頼りに稲妻の土地を彷徨い続けた...ファデュイに目をつけられるまでは。」<br>
-										パイモン「ファデュイ!」<br>
-										八重神子「そしてその原型の人形は、ファデュイたちに調整され、力の封印が解かれたんじゃ。いや、封印前よりも強大になっているかもしれぬな。」<br>
-										旅人「まさか...」<br>
-										八重神子「うむ、神の造物であり、神の心を奪った者... <span class="mark">原型の人形とは『散兵』</span>のことじゃ。」<br>
-										パイモン「そ、そんなことがあったなんて!」<br>
-										八重神子「そうじゃな、偶然というべきか、運命というべきか。」
+									<p class="wishes-text">
+										八重神子「これはこれは、名誉の凱旋を果たした旅人ではないか。神社へは願解きに？」<br>
+パイモン「おまえが呼んだんだろ! 」<br>
+八重神子「ふふっ... 冗談じゃ、待っておったぞ。」<br>
+パイモン「神子も気分がいいみたいだな。」<br>
+八重神子「そうじゃ、長年会っていなかった旧友と話せたのじゃ、嬉しいに決まっておるじゃろ。」<br>
+八重神子「ところで... その後聞いたんじゃが、まさかファデュイの執行官と御前試合をしたとはな。その度胸は称賛に値するぞ。」<br>
+旅人「あの時はつい勢い任せで。」<br>
+八重神子「正面から「淑女」を倒すとは、汝の実力は妾の予測を超えておる。」<br>
+八重神子「まあともかく、勝ったならそれでよい。めでたしめでたしじゃ。」<br>
+パイモン「やっとファデュイの計画を一回阻止できたな。えへへ。」<br>
+パイモン「少なくとも今回は、「神の心」を奪われなかった! 」<br>
+八重神子「待て、「神の心」と言ったか？」<br>
+八重神子「それは、駒のようなものでは？」<br>
+パイモン「そうだぞ、神子も見たことがあるのか？七神が持ってて、天空の島と繋がってる「神の心」だ! 」<br>
+八重神子「ふむ... 」<br>
+パイモン「どうしたんだ？」<br>
+八重神子「あれなら、妾が差し出した。」<br>
+旅人「ん？」<br>
+パイモン「えっ？」<br>
+八重神子「そうでなければ... 如何にして「散兵」から汝の命を救ったと思う？」<br>
+旅人「「... ... あの時もう渡してたの... 」」<br>
+八重神子「「散兵」は今やファトゥスの第六位、実力においては「淑女」よりも上じゃ。」<br>
+八重神子「妾は自らの命を賭けて戦うような性格ではないぞ。」<br>
+パイモン「もう、なにを言ったらいいのかわからない... 」<br>
+旅人「でも、なんで神子が「神の心」を？」<br>
+八重神子「影が人形を作ってから、「神の心」を置いておける場所がなくなった。」<br>
+八重神子「かつて影と最も親しくしていた友である妾に... 影はその「神の心」を渡したんじゃ、鳴神大社に保管させるためにな。」<br>
+八重神子「あやつは元々もう「神の心」の力を必要としておらんかった。あやつによれば、もう天空の島とは連絡を絶っているそうじゃぞ。」<br>
+八重神子「であれば、「神の心」は争いを招く無用な物にすぎぬ。」<br>
+八重神子「そんな物と「計画」の核心となる人物を引き換えることができるのなら、割のいい取引だと思わぬか？」<br>
+八重神子「結果から見れば、妾の儲けじゃな。ふふ。」<br>
+パイモン「そう言われると、そうだな... オイラも、旅人は神の心よりも大事だ... 」<br>
+旅人「どうりでその後「散兵」を見なかったわけだ。」<br>
+パイモン「はぁ、仕方ないな。もう今さら取り戻せないみたいだし、過ぎたことを考えても意味ない。」<br>
+パイモン「そういえば、神子、まだオイラたちを呼んだ理由を聞いてなかったよな。」<br>
+八重神子「ふふ、お礼のためじゃ。」<br>
+パイモン「本当か! ？」<br>
+八重神子「汝らがテイワット全土を旅するというのなら、稲妻の旅も一段落ついたことじゃろ？」<br>
+八重神子「お礼として、この先の道のことでも、今までの疑問のことでも、妾が汝らに答えようぞ。」<br>
+八重神子「何か聞きたいことはあるか？」<br>
+旅人「「人形」の将軍について... 」<br>
+八重神子「「人形」の将軍を作った技術は、今では失われている知識からきたものじゃ。神であるあやつにしか分からぬことなのかもしれぬな... 」<br>
+八重神子「じゃが... 汝らが興味を持ちそうなことは、なくもない。」<br>
+八重神子「影が自身の神の体を改造する前、「原型の人形」を創造したことがある... 」<br>
+パイモン「じゃ、じゃあ雷電将軍は3人いるのか？」<br>
+八重神子「いや、あの原型はただ実現性を確認するためのもので、見た目も知能も影自身を設計に作られたものではない。言わば試作品じゃな。」<br>
+八重神子「当時の計画では、それを直ちに廃棄する予定じゃった。しかし影はそれを残酷と思ったのか、それの体内にある力のみ封印することを選んだんじゃ。」<br>
+八重神子「その後、あれはただの人のように、己の意志を頼りに稲妻の土地を彷徨い続けた... ファデュイに目をつけられるまでは。」<br>
+パイモン「ファデュイ! 」<br>
+八重神子「そしてその原型の人形は、ファデュイたちに調整され、力の封印が解かれたんじゃ。いや、封印前よりも強大になっているかもしれぬな。」<br>
+旅人「まさか... 」<br>
+八重神子「うむ、神の造物であり、神の心を奪った者... 原型の人形とは「散兵」のことじゃ。」<br>
+パイモン「そ、そんなことがあったなんて! 」<br>
+八重神子「そうじゃな、偶然と言うべきか、運命と言うべきか。」<br>
 									</p>
 								</blockquote>
 								<h3 id="clean-house">戸口の掃除</h3>
@@ -1079,9 +1190,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									タルタリヤ「旅人、俺が調査していたことを君に教える時が来たね。」<br>
 									旅人「......」<br>
 									タルタリヤ「やっぱり鋭いね。君の目は人の心を見透かしてるんじゃないかって、時々疑ってしまうよ。」<br>
-									タルタルヤ「今回はすごく楽しかった。正直、稲妻はかなり好きだよ... 些細な厄介毎... そして、それがもたらす影響を考えなければね。」<br>
-									タルタリヤ「元々は、この秘境が『散兵』と関係していると思い、ここへ来たのさ。だけど、彼はいなかった。」<br>
-									タルタリヤ「『神の心』を持った『散兵』は俺たちと連絡を絶った... これにはおそらく何か裏がある。」<br>
+									タルタルヤ「今回はすごく楽しかった。正直、稲妻はかなり好きだよ...&nbsp;些細な厄介毎...&nbsp;そして、それがもたらす影響を考えなければね。」<br>
+									タルタリヤ「元々は、この秘境が「散兵」と関係していると思い、ここへ来たのさ。だけど、彼はいなかった。」<br>
+									タルタリヤ「『神の心』を持った「散兵」は俺たちと連絡を絶った...&nbsp;これにはおそらく何か裏がある。」<br>
 									タルタリヤ「だが『散兵』がこんなことをするのも、俺は全く予想していなかったわけじゃないよ。俺が戦いを求めてファトゥスになったのと同じように、ファトゥスの多くは自分の目的を持っている。」<br>
 									タルタリヤ「あの『心』は、もう少し泳がせておこう。いつか、どこにいったのかが分かる。その時は、君ならどう選択する?」<br>
 								</p>
@@ -1092,7 +1203,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</div>
 							<blockquote id="five-kasen-summary">
 								<span class="blockquote-title">五歌仙の資料概要</span>
-								<p>
+								<p >
 									「五歌仙」について<br>
 									五歌仙とは、かつて稲妻にいた伝説の人物の事である。詩歌を読むのが達者であることから「五歌仙」という美名を授かった。伝説では、将軍様が彼らの作品を好んでいたという。<br>
 									そのため、毎年五人の新作を一冊の詩集にまとめた後、一人を天守閣へ向かわせ、それを将軍様に献上していたそうだ。五歌仙の名はそれぞれ「翠光」、「葵の翁」、「赤人」、「墨染」、「黒主」である。<br>
@@ -1105,11 +1216,11 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									五歌仙物語は、ここに至るまで数多く伝わってきた。しかし今となっては、その具体的な内容の正確さを知ることは不可能である。おそらく、五百年前の大災の際に失われてしまったのだろう。<br>
 									現存する資料によれば、五歌仙物語の創作全盛期、その作品は基本的に全て同じ形式で作られていたようだ。四つの詩を一組とし、それぞれの歌仙の視点で描かれている。ただ興味深いことに、これらの物語に「黒主」視点の独立した章はない。<br></p>
 									<p>五歌仙の個人資料まとめ<br>
-										翠光: 酒飲み、平民出身、自由奔放な性格。ある説では、住んでいた草庵の名が「翠光堂」であったためつけられた名だという。<br>
-										葵の翁: 奕棋を得意とした老人。詩歌以外にも、小説という形で作品を世に残している。ある説では、彼が名声を得たのは比較的晩年で、その正体は幕府の役人だったという。また彼は人間ではなく、長寿の妖狐が化けた姿だという説もある。<br>
-										赤人:剣術に長けており、武人の出身である可能性が高い。ある説では、赤人の名の由来は自分の作品に朱色の印をつけることを好んでいたからだと言われている。<br>
-										墨染: かつては巫女であり、華道、舞踊に長け、後に将軍の侍女を務めた。墨染は有名になったあと官職を辞任し、創作に専念したという説があるが、晩年まで将軍の側近として仕えていたという説もある。<br>
-										黒主: 情報が少なく、正体不明。そのためか、物語における黒主の身分や人物像は、他のものより多種多様である。<br>
+										翠光:&nbsp;酒飲み、平民出身、自由奔放な性格。ある説では、住んでいた草庵の名が「翠光堂」であったためつけられた名だという。<br>
+										葵の翁:&nbsp;奕棋を得意とした老人。詩歌以外にも、小説という形で作品を世に残している。ある説では、彼が名声を得たのは比較的晩年で、その正体は幕府の役人だったという。また彼は人間ではなく、長寿の妖狐が化けた姿だという説もある。<br>
+										赤人:&nbsp;剣術に長けており、武人の出身である可能性が高い。ある説では、赤人の名の由来は自分の作品に朱色の印をつけることを好んでいたからだと言われている。<br>
+										墨染:&nbsp;かつては巫女であり、華道、舞踊に長け、後に将軍の侍女を務めた。墨染は有名になったあと官職を辞任し、創作に専念したという説があるが、晩年まで将軍の側近として仕えていたという説もある。<br>
+										黒主:&nbsp;情報が少なく、正体不明。そのためか、物語における黒主の身分や人物像は、他のものより多種多様である。<br>
 									</p>
 							</blockquote>
 							<h4 id="a-new-painting-in-pale-scarlet">薄墨淡朱の新しき絵画</h4>
@@ -1118,7 +1229,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									神里綾華「『雷電五箇伝』とは、かつて稲妻の最上位にあった五つの鍛造流派なのです。この五つの家系は刀鍛冶の名家でありながら、社奉行においても重要な官職についていました。」<br>
 									神里綾華「しかし残念ながら、雷電五箇伝において、現在に至って受け継がれているのは「天目流」のみ。そして『一心伝』は、技法は失われてしまったものの、その末裔はまだ存続しております。」<br>
 									神里綾華「楓原家こそが、『一心』流派の末裔なのです。」<br>
-									パイモン「万葉の家が、身分の高い武家だって言うのは知ってたけど...まさか社奉行や刀鍛冶とも関係してたなんてな。」<br>
+									パイモン「万葉の家が、身分の高い武家だって言うのは知ってたけど...&nbsp;まさか社奉行や刀鍛冶とも関係してたなんてな。」<br>
 									楓原万葉「うむ、されど遥か昔のことに過ぎぬ。『一心伝』は拙者の曽祖父の代には、すでに没落していた。」
 								</p>
 								<p>(中略)</p>
@@ -1129,7 +1240,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 									楓原万葉「しかし拙者は、曽祖父が若い頃に経験した、ある『大事』を知っているでござる。」<br>
 									楓原万葉「その一件は、拙者たち楓原一族だけでなく、神里家の社奉行における地位さえも揺るがしかねぬものであった。」<br>
 									楓原万葉「五歌仙物語は、まるであの一件の真相を暗示しているように思えたのでござる。」<br>
-									パイモン「万葉、あの一件って...当時なにが起きたんだよ?」<br>
+									パイモン「万葉、あの一件って...&nbsp;当時なにが起きたんだよ?」<br>
 									楓原万葉「あの一件の確証を得るためには、まだ詳しく調査する必要がある。明日の昼、またここで落ち合うのはどうであろうか?」<br>
 									楓原万葉「そのとき、拙者の知るすべてをお主らに話そう。」
 								</p>
@@ -1160,7 +1271,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 										鍛造図を水の中に浸した。数十分後… <br>
 										アルベド「はっきりとした変化はないけど、それでもいくつかの字がかすれているのが分かる。 」<br>
 										アルベド「万葉、この鍛造図は確かに改ざんされたものだよ。当時、誰かが楓原家を陥れようとしたのだろう。 」<br>
-										楓原万葉「ふぅ...この真相を知るには、少し遅すぎたかもしれぬ。 」<br>
+										楓原万葉「ふぅ...&nbsp;この真相を知るには、少し遅すぎたかもしれぬ。 」<br>
 										楓原万葉「実は祖父が若かった頃、何度も曽祖父に「一心伝」の再興を申し出たが、その度、曽祖父に力をわきまえておらぬと叱責を受けていたらしい。 」<br>
 										楓原万葉「使用人の話では、曽祖父は社奉行まで出向き、この鍛造図を祖父に見せて刀を鍛造させるように、神里家当主に頼んだこともあったようでござる。 」<br>
 										楓原万葉「そして何の疑問も抱かずに祖父は失敗した。曽祖父曰く——「その中の秘密に気付けぬのであれば、一心伝の消滅も当然のこと」と。 」<br>
@@ -1227,9 +1338,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<blockquote>
 								<p>
 									平山「只今より、モンドからお招きした画家、白亜先生による五歌仙最後の肖像画———『黒主』を公開いたします。」<br>
-									パイモン「き、緊張するな...なにを描いたんだろう...」<br>
+									パイモン「き、緊張するな...&nbsp;なにを描いたんだろう...」<br>
 									平山「それではご一緒に、三、二、一!」<br>
-									平山「これはいったい...どうして背景しかないのでしょう...?」<br>
+									平山「これはいったい...&nbsp;どうして背景しかないのでしょう...?」<br>
 									平山「白亜先生に限って、描き忘れはあり得ないでしょうし...」<br>
 									平山「この絵の創作理念について、先生ご自身にお聞きしてみましょう。」<br>
 									アルベド「この度は、五歌仙の肖像画を描かせていただくことになり、とても嬉しく思う。」<br>
@@ -1249,7 +1360,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 										神里綾人「それにこの答えは、あの『黒主』の肖像画に隠されていますよ。」<br>
 									神里綾人「肖像画の近くに人がいなくなったら、ご自分の目で見てきてください。」</p>
 									<p>(中略)</p>
-									<p>パイモン「あっ!これ...散兵だ!」<br>
+									<p>パイモン「あっ!&nbsp;これ...&nbsp;散兵だ!」<br>
 										パイモン「まさかとは思ったけど、こいつが当時の黒幕だったのか!」<br>
 									</p>
 									<p>(中略)</p>
@@ -1334,21 +1445,21 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								</p>
 							</span>
 							</blockquote>
-							<h3 id="the-morn-a-thousand-roses-brings">魔神任務3章2幕 黎明を告げる千の薔薇</h3>
-							<h4 id="unknown-voice-3-2">沈黙する知の探求者</h4>
+							<h3 id="through-mists-of-smoke-and-forests-dark">煙霧のベールと暗き森を抜けて</h3>
+							<h4 id="ever-so-close">間近に迫った目標</h4>
 							<blockquote>
 								<p>
-									パイモン「いったいなにが起こったんだ? あのデカいやつ、どうして急にあんな姿に…」<br>
+									パイモン「いったいなにが起こったんだ?&nbsp;あのデカいやつ、どうして急にあんな姿に...」<br>
 									アルハイゼン「どうやら、彼は神の缶詰知識を使ったらしい。」<br>
 									パイモン「ああなったのは、神の缶詰知識による影響ってことか?」<br>
 									旅人「そういえば、ハイパシアが言ってた...」<br>
 									パイモン「それって、世界樹の知識を得るとき、学者たちは神の知識に触れて発狂するって話のことか?」<br>
 									アルハイゼン「俺の知る限りでも、『サティアワダライフ』の学者が発狂した例はかなり多い。あいつらの様子は、同じような状況に見える。」<br>
 									アルハイゼン「どうやら神の缶詰知識は確かに神と関係があるようだ。だが、本当に噂通り、これを所有して神の知恵や力が得られるものだろうか。」<br>
-									アルハイゼン「あいつの言ってた言葉を聞いたか?『世界が私を忘れて』っていったいどういう意味なんだ…」<br>
-									旅人「(あれは以前世界樹で聞いた言葉とまったく同じだった…もしかして、彼もあの光景を見た?)」<br>
-									パイモン「そいつがマハマトラに連れ去られたんだったら、持っていた神の缶詰知識も教令院に持ってかれるよな?こんなに近くまで来てたのに残念だぜ。」<br>
-									パイモン「でも、神の缶詰知識があんなに危険だなんて思わなかったぞ。むやみに試したりしてたら、オイラたちもああなってたかも…」<br>
+									アルハイゼン「あいつの言ってた言葉を聞いたか?&nbsp;『世界が私を忘れて』っていったいどういう意味なんだ...」<br>
+									旅人「(あれは以前世界樹で聞いた言葉とまったく同じだった...&nbsp;もしかして、彼もあの光景を見た?)」<br>
+									パイモン「そいつがマハマトラに連れ去られたんだったら、持っていた神の缶詰知識も教令院に持ってかれるよな?&nbsp;こんなに近くまで来てたのに残念だぜ。」<br>
+									パイモン「でも、神の缶詰知識があんなに危険だなんて思わなかったぞ。むやみに試したりしてたら、オイラたちもああなってたかも...」<br>
 									アルハイゼン「こうなると、もうオルモス港に留まる理由はない。俺たちの協力関係もこれで終わりだ。」
 								</p>
 							</blockquote>
@@ -1370,7 +1481,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								</p>
 								<p>
 									???「段階の時間が予想を超えとる。このままじゃ、犠牲者が出てしまうぞ...」<br>
-									???「だが我々はもう...これまでの努力や苦労が水の泡になることを受け入れられはしない。」
+									???「だが我々はもう...&nbsp;これまでの努力や苦労が水の泡になることを受け入れられはしない。」
 								</p>
 								<p>???「『ピ——』」<br>
 									???「『収穫』を続行する。結果と比べれば、これらは些細な代価に過ぎない。」
@@ -1380,14 +1491,14 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						<h4 id="the-coming-of-the-sabzeruz-festival">終に訪れし花神誕祭</h4>
 						<blockquote>
 							<p>
-								アザール「芸術... ダンス... この知恵と理性の国で、こんなにも薄っぺらく、意味のないものを追い求めるなど、恥を知らんのか?」<br>
-アザール「すべての真実と真理を求める学者たちのために、神はスメールシティという楽園を創った… しかし君らのような人間は、それに泥を塗ろうとしている。」<br>
-ニィロウ「そんなことない。花神様が我々の神に舞を捧げたように、神も芸術を蔑ろにすることはないはず…」<br>
-アザール「お前のような学のないやつに、この私と議論する資格があると思っているのか? 今お前がすべきことは、一刻も早くこの馬鹿げた舞台を撤去することだ。」<br>
+								アザール「芸術...&nbsp;ダンス...&nbsp;この知恵と理性の国で、こんなにも薄っぺらく、意味のないものを追い求めるなど、恥を知らんのか?」<br>
+アザール「すべての真実と真理を求める学者たちのために、神はスメールシティという楽園を創った...&nbsp;しかし君らのような人間は、それに泥を塗ろうとしている。」<br>
+ニィロウ「そんなことない。花神様が我々の神に舞を捧げたように、神も芸術を蔑ろにすることはないはず...」<br>
+アザール「お前のような学のないやつに、この私と議論する資格があると思っているのか?&nbsp;今お前がすべきことは、一刻も早くこの馬鹿げた舞台を撤去することだ。」<br>
 アザール「帰ったら、次の『ジュニャーナガルバの日』までにこのような公演を禁止する法令を書記官に作成させる。アーカーシャを通じて、民衆に通達しておけ。」<br>
 セタレ「はい、すぐ手配いたします。」<br>
-アザール「……」<br>
-アザール「<span class="mark">花神誕祭で... せいぜい神の生誕を祝うがいい。</span>」
+アザール「......」<br>
+アザール「<span class="mark">花神誕祭で...&nbsp;せいぜい神の生誕を祝うがいい。</span>」
 							</p>
 						</blockquote>
 						<h4 id="the-end-of-the-sabzeruz-festival">沈黙する知の探求者</h4>
@@ -1395,7 +1506,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							<p>
 								ナヒーダ「この『花神誕祭の夢』は、アーカーシャによってコントロールされているわ。けど、<span class="mark">『夢を見る』能力は人間にしかない</span>の。アーカーシャでも、無から夢を作ることはできない。」<br>
 ナヒーダ「つまり、ここには『夢の主』となる存在がいる。ここは、その人が作り出した夢ということよ。」<br>
-パイモン「そうなのか…じゃあ、どうやってそいつを探し出せばいいんだ?」<br>
+パイモン「そうなのか...&nbsp;じゃあ、どうやってそいつを探し出せばいいんだ?」<br>
 ナヒーダ「ここがその人の夢だとしたら、ここにあるすべては、その脳の深い意識から来るもの...」<br>
 ナヒーダ「だったら、その人は『想像』を通して、この夢にあるすべてを思うままに変えることができるはず。」
 							</p>
@@ -1413,20 +1524,20 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</p>
 							</blockquote>
 						
-							<h3 id="Dreams-Emptiness-Deception">魔神任務3章3幕 迷夢と虚幻と欺瞞</h3>
+							<h3 id="dreams-emptiness-deception">魔神任務3章3幕 迷夢と虚幻と欺瞞</h3>
 							<h4 id="like-a-triumphant-hero">凱旋した英雄のように</h4>
 							<blockquote>
 								<p>
 									セタレ「私はただ『夢境量産』過程の設計者の一人に過ぎない…そう、あの花神誕祭の時に起きた出来事のことよ。」<br>
-セタレ「『プロジェクト』の全容については知らないわ。恐らく核心に近い人員しかあれの『機密ファイル』には接触できないのでしょう…」<br>
+セタレ「『プロジェクト』の全容については知らないわ。恐らく核心に近い人員しかあれの『機密ファイル』には接触できないのでしょう...」<br>
 セタレ「私は大賢者の要求に従って、手元の仕事を終わらせていただけよ。」<br>
-セタレ「でも…確かに気になることはあったわ。聞くところによると、教令院に追放されたある学者が戻ってきたらしいの。しかも賢者たちは彼を恐れているようだった…」<br>
-旅人「(賢者たちでさえ恐れる追放者…?)」<br>
+セタレ「でも...&nbsp;確かに気になることはあったわ。聞くところによると、教令院に追放されたある学者が戻ってきたらしいの。しかも賢者たちは彼を恐れているようだった...」<br>
+旅人「(賢者たちでさえ恐れる追放者...?)」<br>
 リマ「教令院に対抗するため、私たちは彼らが何をしているのか具体的に知る必要があります。先ほど言った『機密ファイル』について、手に入れる方法はありませんか?」<br>
 セタレ「リスクを冒してもいいなら、チャンスはあるわ。私はこれでも大賢者の助手だから、プロジェクト以外のことは私が処理することも多いの。」<br>
 セタレ「ただ、機密ファイルを手に入れても、それをアーカーシャを通して君たちに送ることはできない。賢者たちはアーカーシャの内部を常に監視しているから。」<br>
 セタレ「そうね、一番原始的な方法を使いましょう。明日の夜、教令院の入り口に人を送って、取りに来て。」<br>
-リマ「教令院の入り口… それはいくらなんでも目立ち過ぎでは？」<br>
+リマ「教令院の入り口...&nbsp;それはいくらなんでも目立ち過ぎでは？」<br>
 セタレ「安心して。罠じゃないかと心配しているのなら、考え過ぎよ。」<br>
 セタレ「こっそり抜け出したりしたら、それこそ疑われる可能性が高くなるでしょう。だから、少しのあいだ衛兵の気を逸らして、引き渡しを一刻も早く終わらせることが一番リスクの低いやり方なの。」<br>
 リマ「分かりました、信じましょう。」
@@ -1434,50 +1545,50 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						</blockquote>
 						<blockquote>
 							<p>
-								パイモン「まさか、こんな所で今まで会ったこともないファデュイの執行官に会うなんてな... しかも順位も第二位って... かなり高いぞ。」<br>
-パイモン「『博士』…名前は前に聞いたことあるよな。セタレも、かつて追放された学者が教令院に帰ってきたって言ってたし…」<br>
+								パイモン「まさか、こんな所で今まで会ったこともないファデュイの執行官に会うなんてな...&nbsp;しかも順位も第二位って...&nbsp;かなり高いぞ。」<br>
+パイモン「『博士』...&nbsp;名前は前に聞いたことあるよな。セタレも、かつて追放された学者が教令院に帰ってきたって言ってたし...」<br>
 パイモン「賢者たちですら恐れるっていうのは、どうやら『博士』のことを言ってたみたいだな。」<br>
 旅人「この件の複雑性を甘く見てたかも。」<br>
 パイモン「そうだな。こうなると、スメール教令院が単体でなにかを計画してるって言うより、ファデュイと教令院が手を組んでなにか悪いことをしようとしてるってことか?」<br>
-パイモン「でも、今度はいったいなにをしようとしてるんだ？やっぱり、また神の心か…?」<br>
+パイモン「でも、今度はいったいなにをしようとしてるんだ?&nbsp;やっぱり、また神の心か...?」<br>
 旅人「ナヒーダと合流しないと。」
 							</p>
 						</blockquote>
 						<h4 id="the-gaze-from-a-certain-god">とある「神」からの凝視</h4>
 						<blockquote>
 							<p>
-						ハイパシア「旅人?旅人ではありませんか!<br>
-パイモン「あっ!おまえは…ハイパシア!<br>
+						ハイパシア「旅人?旅人ではありませんか!」<br>
+パイモン「あっ!おまえは...&nbsp;ハイパシア!」<br>
 旅人「まさかここで会えるなんて」<br>
 ハイパシア「本当ですわ。なんて嬉しいことでしょう、あなたたちに会えるなんてとっても幸運ですわ!」<br>
-ナヒーダ「この人は…?」<br>
-パイモン「オイラたちがアビディアの森にいたときに会った、修行中の学者なんだ。あの時は…『サティアワダライフ』の段階にいたんだ。<br>
+ナヒーダ「この人は...?」<br>
+パイモン「オイラたちがアビディアの森にいたときに会った、修行中の学者なんだ。あの時は...『サティアワダライフ』の段階にいたんだ。」<br>
 ナヒーダ「そうなの。」<br>
-ハイパシア「ええ、よく知っているお友達です。ここに来てからというもの、私と話をして下さる方はほとんどいませんでしたわ… 本当に、ちょうどいいところに来て下さいました。」<br>
+ハイパシア「ええ、よく知っているお友達です。ここに来てからというもの、私と話をして下さる方はほとんどいませんでしたわ...&nbsp;本当に、ちょうどいいところに来て下さいました。」<br>
 パイモン「ハイパシア、喜びすぎだぞ。ところで、アビディアの森を離れるなんて、もう森で修行しなくてもいいのか?」<br>
-パイモン「いや、待てよ…もしかして、修行が終わって、もう『パリプーナライフ』に入ったのか?」<br>
-ハイパシア「ふふっ…どうでしょうね?」<br>
-ハイパシア「私… 意識の中で神に会いましたの。」<br>
-ナヒーダ「…ん?」<br>
-パイモン「えっ?本当か!?よかったじゃないか!」<br>
+パイモン「いや、待てよ...&nbsp;もしかして、修行が終わって、もう『パリプーナライフ』に入ったのか?」<br>
+ハイパシア「ふふっ...&nbsp;どうでしょうね?」<br>
+ハイパシア「私...&nbsp;意識の中で神に会いましたの。」<br>
+ナヒーダ「...ん?」<br>
+パイモン「えっ?本当か!?&nbsp;よかったじゃないか!」<br>
 旅人「自分のことみたいに嬉しいよ」<br>
-ハイパシア「ふふふっ… あなたたちとこの崇高な喜びを分かち合うことができるなんて、なんと素晴らしいのでしょう!」<br>
-ハイパシア「神と意識を交わすことができたあの瞬間は、比類なき至高の体験でした…」<br>
-パイモン「そんなにすごかったのか…」<br>
+ハイパシア「ふふふっ...&nbsp;あなたたちとこの崇高な喜びを分かち合うことができるなんて、なんと素晴らしいのでしょう!」<br>
+ハイパシア「神と意識を交わすことができたあの瞬間は、比類なき至高の体験でした...」<br>
+パイモン「そんなにすごかったのか...」<br>
 旅人「実はティナリを探しに来た」<br>
-ハイパシア「そうなんですの…あっ、少し待って下さいな。あなたたちとの約束を忘れていなくてよ。」<br>
+ハイパシア「そうなんですの...&nbsp;あっ、少し待って下さいな。あなたたちとの約束を忘れていなくてよ。」<br>
 ハイパシア「あのとき、もし私が真の知恵を手に入れたら、あなたたちがかつて世界樹で見たものを説明できるかも、と言いましたでしょう。」<br>
 ハイパシア「今の私は、知恵を手に入れただけではございません。あなたたちの意識と神の意識を繋げるお手伝いだってできますのよ?」<br>
 パイモン「そ、そんなことができるのか?」<br>
 旅人「ナヒーダ、信じてもいいと思う?」<br>
-ナヒーダ「聞いたことはないわ。でも… 試してみたいのなら、私はあなたの意識を全力で守る。」<br>
+ナヒーダ「聞いたことはないわ。でも...&nbsp;試してみたいのなら、私はあなたの意識を全力で守る。」<br>
 ハイパシア「少し待っていて下さいな、パラハァムを少々持ってきますから。これは必要不可欠な『儀式』なんですの。」<br>
 パイモン「またあのお香か?」<br>
-ハイパシア「さて、では… 私の手を握って下さいませ。意識を繋ぐ『通路』を作ります。<br>
+ハイパシア「さて、では...&nbsp;私の手を握って下さいませ。意識を繋ぐ『通路』を作ります。」<br>
 ナヒーダ「ええ。」<br>
 ハイパシア「準備はよろしいかしら?」<br>
 <p class="travel-log">
-「通路」がつながり、あなたの意識はその神とやらに触れた…<br>
+「通路」がつながり、あなたの意識はその神とやらに触れた...<br>
 </p>
 </blockquote>
 <h4 id="the-divine-will">ストーリームービー「『神』意」</h4>
@@ -1486,7 +1597,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/SrysQ0zXrC8?controls=1&amp;controls=0&loop=1&playlist=SrysQ0zXrC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 							</div>
 <blockquote>
-<p>
+<p class="the-divine-will-text">
 「かつて三度も裏切られ、この世は欺瞞に満ちたまやかしに過ぎないと知った。」<br>
 「僕の怒りが鎮まることはない。」<br>
 「一度目が神。僕の創造者、僕の『母』。」<br>
@@ -1505,22 +1616,22 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 <blockquote>
 <p>
 パイモン「これは…!」<br>
-旅人「マハールッカデヴァタの意識じゃない…」<br>
+旅人「マハールッカデヴァタの意識じゃない...」<br>
 パイモン「オイラたちが見たのって、『散兵』の過去なのか!? 色んな情報が重なったぞ!」<br>
 パイモン「でも、ハイパシアの言う『神』が「散兵』なんかとなんの関係があるんだよ?」<br>
 ハイパシア「ご覧になりましたか、感じましたか? 崇高なる神、崇高なる意志、崇高なる感情を!」<br>
-ハイパシア「はぁ…残念です、本当に残念です…」<br>
-ハイパシア「私のこの胸の中で鼓動しているのは、ただの汚い人間の心… 神よ、どうか私に慈悲を、私に救済を…」<br>
+ハイパシア「はぁ...&nbsp;残念です、本当に残念です...」<br>
+ハイパシア「私のこの胸の中で鼓動しているのは、ただの汚い人間の心...&nbsp;神よ、どうか私に慈悲を、私に救済を...」<br>
 ナヒーダ「気づいているかしら? これは『パリプーナライフ』なんかじゃないわ。おそらく…<br>
 旅人「しっかりして、ハイパシア!」<br>
-ハイパシア「あっ…!」<br>
-ハイパシア「ど… どうして怒鳴りつけるのですか? どうしてあの方たちは私を避けるのです?<br>
+ハイパシア「あっ...!」<br>
+ハイパシア「ど...&nbsp;どうして怒鳴りつけるのですか? どうしてあの方たちは私を避けるのです?<br>
 ハイパシア「私は神の知恵を手に入れたのですわ。褒められるべきではありませんか。暗闇の中で探索を続け、光を見つけたのですよ!」<br>
-パイモン「ハイパシア…」<br>
-ハイパシア「そうあるべきですのに…」<br>
-ハイパシア「いえ、お待ちを…」<br>
-ハイパシア「まさか… 私は気が狂ったのですか?」<br>
-旅人「……」<br>
+パイモン「ハイパシア...」<br>
+ハイパシア「そうあるべきですのに...」<br>
+ハイパシア「いえ、お待ちを...」<br>
+ハイパシア「まさか...&nbsp;私は気が狂ったのですか?」<br>
+旅人「......」<br>
 ナヒーダ「待って、辺りがおかしいわ!」<br>
 <br>
 <b>「見えたぞ」</b>
@@ -1533,11 +1644,11 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</div>
 					<blockquote>
 						<p>
-ティナリ「パイモン、今<span class="mark">『スラサタンナ聖処』</span>って言った?君たちの言う『ナヒーダ』…つまり旅人の身体の中にいた意識は…もしかして、草神様なわけ?」<br>
-パイモン「えっと…たしかにあってるけど、今は複雑な状況で、ちょっと説明するのが難しくて…」<br>
+ティナリ「パイモン、今『スラサタンナ聖処』って言った?&nbsp;君たちの言う『ナヒーダ』…つまり旅人の身体の中にいた意識は...&nbsp;もしかして、草神様なわけ?」<br>
+パイモン「えっと...&nbsp;たしかにあってるけど、今は複雑な状況で、ちょっと説明するのが難しくて…」<br>
 ティナリ「いや、大丈夫。学者の好奇心は何も、時と場所を完全に選ばないわけじゃない。状況がどれほど複雑なのかは、丁度さっきこの目で見てるしね。」<br>
-ティナリ「君たちとはひとときを共に過ごした仲だし、クラクサナリデビ様も君たちの味方みたいだから…僕は君たちを信じるよ。」<br>
-パイモン「おう!ありがとな、ティナリ。そうだ、オイラたち前から聞きたかったんだけど、賢者たちの進めてる『プロジェクト』についてなにか知らないか?」<br>
+ティナリ「君たちとはひとときを共に過ごした仲だし、クラクサナリデビ様も君たちの味方みたいだから...&nbsp;僕は君たちを信じるよ。」<br>
+パイモン「おう!&nbsp;ありがとな、ティナリ。そうだ、オイラたち前から聞きたかったんだけど、賢者たちの進めてる『プロジェクト』についてなにか知らないか?」<br>
 ティナリ「それが…僕は確かにプロジェクトに参加しろって誘われたけど、賢者たちは一切その詳細を話してくれなかった。だから断ったんだ。」<br>
 ティナリ「僕が知っているのは、プロジェクトが『世界樹の修復』と関係してるかもってことだけ。」<br>
 旅人「さっき新たな情報を手に入れた。」<br>
@@ -1580,11 +1691,10 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 旅人「（それに…その知識は、博士や散兵…ファデュイとも関係してる。これを利用すれば、散兵を『神』にすることができる。」<br>
 アルハイゼン「その表情からして、思いついたようだな。」<br>
 旅人「教令院は『神の意識』に触れた人を探してた。」<br>
-アルハイゼンいかにも。一部の学者にとって、神の知識に触れることは生涯の目標だ。缶詰知識の抽出は、その過激な手段の一つに過ぎない。」<br>
-アルハイゼン俺が知りたいのは、神に関する知識が一体何をもたらすのかだ。」<br>
-アルハイゼン教令院がいかなる代償を払ってでも追い求めようとしている、禁忌とも呼べる『それ』は、最終的に何に使われる…?」<br>
+アルハイゼン「いかにも。一部の学者にとって、神の知識に触れることは生涯の目標だ。缶詰知識の抽出は、その過激な手段の一つに過ぎない。」<br>
+アルハイゼン「俺が知りたいのは、神に関する知識が一体何をもたらすのかだ。」<br>
+アルハイゼン「教令院がいかなる代償を払ってでも追い求めようとしている、禁忌とも呼べる『それ』は、最終的に何に使われる…?」<br>
 アルハイゼン「俺も神の缶詰知識の内容分析にはかなりの労力を費やしたが、大きな収穫は得られなかった… どうやら、俺はやつらと思考がだいぶ違っているらしい。」<br>
-
 						</p>
 					</blockquote>
 					
@@ -1606,17 +1716,17 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 ディシア「あ?それ、比喩とかじゃなくて...本気なのか?」<br>
 モルギー「...ど、どうして...そのことを。」<br>
 ジュダール「もう隠しても無駄だ...ああ、その通りだ。」<br>
-ジュダール「教令院では、世界をも変える偉大なる計画を実施している。自らとスメールに属する、新たな神を創る気なんだ。」<br>
+ジュダール「<span class="mark">教令院では、世界をも変える偉大なる計画を実施している。自らとスメールに属する、新たな神を創る気なんだ。</span>」<br>
 ジュダール「表向きは栄えているように見えるが、マハールッカデヴァータが亡くなってから、スメールの学術が飛躍的な突破を遂げたことは一度もない...」<br>
 ジュダール「それに加え、近年は世界樹の枯凋問題が深刻化している。賢者たちもほとんど全部の方法を試したが、徒労に終わった。彼らの口癖は「もしマハールッカデヴァータがいたら」だった...」<br>
 セノ「...続けろ。」<br>
-ジュダール「そのとき、あるファデュイのメンバーが現れた。教令院の者たちは彼を『博士』と呼んでいた...『博士』は...『神の心』を一つ持ってきて、教令院内の研究環境を借りたいと言った。」<br>
+ジュダール「そのとき、あるファデュイのメンバーが現れた。教<span class="mark">令院の者たちは彼を『博士』と呼んでいた...『博士』は...『神の心』を一つ持ってきて、教令院内の研究環境を借りたいと言った。</span>」<br>
 ジュダール「『博士』は昔スメール教令院から追放されていたから、賢者たちは初め、見向きもしなかった...だが、やつがあの言葉を口にしたとき、全員の表情が変わったんだ...」<br>
-ジュダール「やつは——『神を創る気はないか?』と聞いた。」<br>
+ジュダール「やつは——<span class="mark">『神を創る気はないか?』</span>と聞いた。」<br>
 アルハイゼン「...これが学術の果てにある愚昧さと傲慢さだ。」<br>
-ジュダール「教令院はまず、精巧な人形をもとに、長い時間をかけて『神の躯体』を作った。」<br>
+ジュダール「教令院はまず<span class="mark">、精巧な人形をもとに、長い時間をかけて『神の躯体』を作った。</span>」<br>
 ジュダール「そして『花神誕祭の輪廻』を利用して夢境を収穫し、アーカーシャの出力効率を最大化した...」<br>
-ジュダール「『博士』の助けのもと、最大出力形態のアーカーシャは「神の心」に含まれる力の抽出に成功し、それを「神のコア」にした。」<br>
+ジュダール「『博士』の助けのもと、最大出力形態のアーカーシャは<span class="mark">「神の心」に含まれる力の抽出に成功し、それを「神のコア」にした。</span>」<br>
 ジュダール「その後、新たな神に『神の知恵』を授けるべきだという提議があった。そのために...大量の神の缶詰知識が必要だったというわけだ。」<br>
 ディシア「...繋がったな。」<br>
 アルハイゼン「しかし、どうやってそれらが本当に神の知識であると確認するつもりだったんだ?」<br>
@@ -1624,7 +1734,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 モルギー「誰もこの不可思議な現象を解き明かせてないんだ。書記官なら、それが何を意味するか分かるだろう?」<br>
 モルギー「地上において誰も分からないのであれば、それは神にしか解けない知識。つまり...それは知恵の神が、全知全能である源だ。」<br>
 アルハイゼン「......」<br>
-旅人「でもそれじゃ、賢者達が作ってるのって…」」<br>
+旅人「でもそれじゃ、賢者達が作ってるのって…」<br>
 アルハイゼン「もう分かっているかもしれないが、教令院は神が誰であるかは気にしない。やつらはただ、神が知恵をコントロールするための権能を欲しがっているだけだ。」<br>
 アルハイゼン「『全知全能』の四文字は、やつらにとって血をも燃やすような呪いと言えるだろう。」<br>
 アルハイゼン「一部の生物は『走光性』という生命現象を持ち、生涯光を求めるという。そして賢者たちは、知恵の頂点に坐する神であってこそ、希望を見いだせる——」<br>
@@ -1649,6 +1759,16 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 パイモン「おう!きっと大丈夫だ!」
 					</p>
 				</blockquote>
+				
+			<h3 id="akasha-pulses-the-kalpa-flame-rises">虚空の鼓動、熾盛の劫火</h3>
+					<h4 id="unknown">???</h4>
+					<blockquote>
+						<p>
+							???
+						</p>
+					</blockquote>
+				
+				
 					<!--プレイアブル実装後
 							<h2 id="voice-line">ボイス・キャラストーリー</h2>
 							<h3 id="character-voice">キャラクターボイス</h3>
@@ -1921,11 +2041,11 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</blockquote>
 							-->
 							<h2 id="atrifacts">聖遺物</h2>
-					<h3 id="pale-flame">蒼白の炎</h3>
+					<h3 id="pale-flame" class="pale-flame">蒼白の炎</h3>
 					<h4 id="goblet-of-eonothem-surpassing-cup" class="add-text">超越の盃</h4>
-						<div><span>“何年もの歳月を経たか見た目からは全く見当がつかない精巧な盃。”</span></div>
+						<div><span class="goblet-of-eonothem-surpassing-cup-about">“何年もの歳月を経たか見た目からは全く見当がつかない精巧な盃。”</span></div>
 						<blockquote>
-								<p>
+								<p class="goblet-of-eonothem-surpassing-cup-text">
 								誕生の時すでに至高の美を有していた「彼」は、<br>
 長い「時間」と空っぽの「意志」を持つ運命にあった。<br>
 <br>
@@ -1947,9 +2067,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						</blockquote>
 						<h3 id="husk-of-opulent-dreams">華館夢醒形骸記</h3>
 						<h4 id="bloom-times" class="add-text">栄花の期</h4>
-						<div><span>“六枚の花びらを模した小さな金の飾り。枯れることのないその姿は、世の儚い栄華を知り尽くしているようだ。”</span></div>
+						<div><span class="bloom-times-about">“六枚の花びらを模した小さな金の飾り。枯れることのないその姿は、世の儚い栄華を知り尽くしているようだ。”</span></div>
 						<blockquote>
- <p>
+ <p class="bloom-times-text">
 夢で見たのは、月明かりの下で歌に合わせて踊り出した幻影。<br>
 まるで遠い昔の白紙のような少年である。<br>
 また、恨みや苦しみがすべて解消された後、<br>
@@ -1972,9 +2092,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</p>
 						</blockquote>
 						<h4 id="plume-of-luxury" class="add-text">華館の羽</h4>
-						<div><span>“俗世間より切り離されし館から持ち出された矢羽状の物証。作り手の憐憫により、眠りについたある亡き骸と共に館へと置かれた。”</span></div>
+						<div><span class="plume-of-luxury-about">“俗世間より切り離されし館から持ち出された矢羽状の物証。作り手の憐憫により、眠りについたある亡き骸と共に館へと置かれた。”</span></div>
 						<blockquote>
- <p>
+ <p class="plume-of-luxury-text">
 長年流浪してきた傾奇者は、もうそのことを思い出さないだろう。<br>
 しかし目を閉じると、たたら砂の月夜や炉火が見える。<br>
 若く、心優しい副官が言った。<br>
@@ -1982,9 +2102,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 「世を渡り歩く時、やむを得ない場合を除き、」<br>
 「身分を決して他人に明かしてはならない。」<br>
 剛直な目付は言った。<br>
-「この金の飾りは、将軍から授かった身分の証。<br>
-だが、あなたは人間でも器物でもない。<br>
-このような処遇となり心苦しいが、どうか恨まないでいただきたい!」<br>
+「この金の飾りは、将軍から授かった身分の証。」<br>
+「だが、あなたは人間でも器物でもない。」<br>
+「このような処遇となり心苦しいが、どうか恨まないでいただきたい!」<br>
 <br>
 昨日を捨てた傾奇者は、もうそのことを思い出しはしないだろう。<br>
 しかし耳を塞いでも、その時の豪雨や嵐は聞こえてくる。<br>
@@ -2002,9 +2122,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</p>
 						</blockquote>
 					<h4 id="song-of-life" class="add-text">衆生の歌</h4>	
-					<div><span>“稲妻にとって舶来の小物。芯部は既に取り外されており、針も回っていない。”</span></div>
+					<div><span class="song-of-life-about">“稲妻にとって舶来の小物。芯部は既に取り外されており、針も回っていない。”</span></div>
 						<blockquote>
-							<p>
+							<p class="song-of-life-text">
 彼は最初、「心」の容器として生まれた。<br>
 しかし、夢の中で涙がこぼれた。<br>
 創造者は認めたくなかったが、それに気づいてしまったのだ。<br>
@@ -2033,9 +2153,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</p>
 						</blockquote>
 						<h4 id="calabash-of-awakening" class="add-text">夢醒の瓢箪</h4>
-						<div><span>“黒漆と金粉で彩られたひょうたん。本来どのような色だったのかは、もはや知るすべはない。主に演劇の小道具として使われていたようだ。”</span></div>
+						<div><span class="calabash-of-awakening-about">“黒漆と金粉で彩られたひょうたん。本来どのような色だったのかは、もはや知るすべはない。主に演劇の小道具として使われていたようだ。”</span></div>
 						<blockquote>
- <p>
+ <p class="calabash-of-awakening-text">
 天目、経津、一心、百目、千手、<br>
 それは、かつて「雷電五箇伝」と呼ばれたもの。<br>
 しかし、今は「天目」だけが伝承されている。<br>
@@ -2064,9 +2184,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						</p>
 					</blockquote>
 					<h4 id="skeletal-hat" class="add-text">形骸の笠</h4>
-						<div><span>“かつて流浪者を日の光や雨から守った笠。後に顔や表情を隠すのに役立つ道具となった。”</span></div>
+						<div><span class="skeletal-hat-about">“かつて流浪者を日の光や雨から守った笠。後に顔や表情を隠すのに役立つ道具となった。”</span></div>
 					<blockquote>
- <p>
+ <p class="skeletal-hat-text">
 「流浪者、流浪者、どこ行くの?」<br>
 流浪の少年は子供の声を聴いて立ち止まった。<br>
 彼はたたら砂の労働者の子供、病気をしていても、澄んだ目をしていた。<br>
@@ -2182,12 +2302,12 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						<blockquote>
 							<p>
 								(最近、ファデュイから取り上げた手帳のようだ。時間の経過により、ほとんどの字が読めなくなってる。)</p>
-<p class="no1">「僭越ながら小生は、長正様が刀鍛冶をするのは彼の心境に良い影響を与えると考える...」<br>
-「...『御輿』の汚名をそそぐことに執着するのは、実に気力を消耗する...」<br>
-<span class="mark">「...それと、桂木様が名椎の浜を見回りしていた時、名無しのかぶき者を見つけた...」</span></p>
-<p class="no2">
+<p class="no1">
 「...目付様は玉鋼錠をいくつか買った...」<br>
 「...造兵司佑様、そして桂木様と夜通し鍛冶の心得を話していた。」</p>
+<p class="no2">「僭越ながら小生は、長正様が刀鍛冶をするのは彼の心境に良い影響を与えると考える...」<br>
+「...『御輿』の汚名をそそぐことに執着するのは、実に気力を消耗する...」<br>
+<span class="mark">「...それと、桂木様が名椎の浜を見回りしていた時、名無しのかぶき者を見つけた...」</span></p>
 <p class="no3">
 「...やっと長巻の一振りを造り出せた。その名は『大たたら長正』...」<br>
 「...目付様も非常に喜んでいる、造兵司佑様と...」<br>
@@ -2257,7 +2377,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								<cite>翻訳引用: <a href="https://twitter.com/kagaribi_bunsyo/status/1546105089727037441">Twitter</a></cite>
 							</div>
 						<h2 id="domain">秘境</h2>
-						<h3 id="castle-of-scrolls">熟睡ノ庭</h3>
+						<!--<h3 id="castle-of-scrolls">熟睡ノ庭</h3>
 						<blockquote>
 							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
 						</blockquote>
@@ -2282,13 +2402,13 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								<ul>
 									<li>チーム全員の雷元素ダメージ+40%</li>
 									<li>フィールド上のキャラクターが敵に感電反応を起こすと、衝撃波を発動し、確定ダメージを与える。この方式での発動は3秒毎に1回のみ発動可能。</li>
-								</ul>
+								</ul>-->
 					<h3 id="castle-of-scrolls">借景ノ館</h3>
 						<blockquote>
 							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
 						</blockquote>
 						<div><p>「気が狂った」は中国語では《失心》とあり、「精神異常」(単語)と神の心を失った(直接の意味)という２つの意味をもつ。また英語では“Eccentric”となっており、常識を逸脱したという意味を持つ。</p>
-							<p>彼が封印された場所とは異なるが、彼と思わしき記述がある。また<b style="color:red;">華館</b>夢醒形骸記に該当しうる館もここのみである。</p>
+							<p>スカラマシュが封印されたと思わしき場所。</p>
 						</div>
 						<h4>稽古·御館絵巻</h4>
 						<blockquote>
@@ -2296,6 +2416,8 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 								山々の深部には、この世のものとは思えない光景と、それに惹かれる野蛮な者が潜んでいる。
 							</p>
 						</blockquote>
+						<div><p><b>報酬</b>：風雅の導き、無常の面、原石、モラ、大英雄の経験、仕上げ用魔鉱<br>
+						<b>敵</b>：野伏・陣刀番 ×2、野伏・火付番 ×2、デットエージェント・炎、ミラーメイデン</p></div>
 					<h2 id="mention">言及</h2>
 					<h3 id="from-character-mention">プレイアブルキャラクター</h3>
 					<h4 id="from-raiden-mention">雷電将軍</h4>
@@ -2796,6 +2918,24 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 						<b id="rather-aged-notes">大たたら長正</b>
 						過去のある武器の絵を獲得する。
 					</p>
+					<h2 id="boss">ボス「？？？」</h2>
+					<div class="youtube not-margin-div">
+						<p>Youtubeを表示できません。</p>
+					<iframe width="1920" height="1080" src="https://www.youtube.com/embed/GtR_JiHlvBM?start=565"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+				</div>
+					<h3 id="boss-story">秘境・ストーリー</a></li>
+						<h4>秘境名</h4>
+						<blockquote>
+							<p>秘境ストーリー</p>
+						</blockquote>
+					<h3 id="boss-detail">秘境詳細</h3>
+					<blockquote>
+							<p>地脈異常</p>
+					</blockquote>
+					<h3 id="boss-stage1">第1形態: ???</h3>
+					<h3 id="boss-stage2">第2形態: ???</h3>
+					<h3 id="boss-drop">ドロップ素材</h3>
+					
 						<h2 id="music">楽曲</h2>
 						<h3 id="ominous-fandango">浮浪人の魂胆 - Ominous Fandango</h3>
 				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto" loading="lazy"></iframe>
@@ -2809,18 +2949,22 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 				<h2 id="illustration">公式イラスト</h2>
 			<h3 id="star-illustration">帰らぬ熄星</h3>
 			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221004/20221004145700.jpg" translate="no">
-			<cite>引用: <a href="https://www.pixiv.net/artworks/86221335">Pixiv - Criinさん</a>(イラストレーター公式)</cite><br>
-			<a href="https://www.mediafire.com/file/84nx2cn46pni6lj/IMG_0104.jpeg/file" style="font-size: large;"><b>スマートフォン用壁紙</b></a>(引用:米游社)
+			<div><a href="https://download1501.mediafire.com/94yiqu9bpopg/84nx2cn46pni6lj/IMG_0104.jpeg" style="font-size: large;" class="button">スマートフォン用壁紙</a></div>
+			<cite>引用: <a href="https://www.pixiv.net/artworks/86221335">Criin(Pixiv)</a>、米游社</cite>
 				
 				<h3 id="irodori-illustration">光華容彩祭</h3>
 			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" translate="no">
 			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/20777">原神公式</a></cite>
 			
 			<h3 id="illustration-king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220916/20220916230408.jpg">
-			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/23738">原神公式</a></cite><br>
-		<a href="https://www.mediafire.com/view/70er1oubhe80mz1/91eda062b0740110c93d60106ec3899f_4664901277630104194.jpeg/file" style="font-size: large;"><b>スマートフォン用壁紙</b></a>(引用:HoYoVerse)
-				
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221021/20221021163905.jpg">
+			<div><a href="https://www.mediafire.com/file/6c701bmw5f7r4w3/IMG_3313.JPG/file" style="font-size: large;" class="button">スマートフォン用壁紙</a></div>
+		<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/23738">原神公式</a></cite><br>
+		
+		<h3 id="akasha-pulses-the-kalpa-flame-rises-illustration">虚空の鼓動、熾盛の劫火</h3>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024005102.jpg" translate="no">
+			<cite>引用:<a href="https://www.hoyolab.com/article/12926539/?lang=ja-jp">HoYoLab</a></cite>		
+		
 			<h2 id="pv">PV</h2>
 			<h3 id="1.1pv">バージョン1.1「迫る客星」</h3>
 			<div><p>ここでビジュアルが初めて公開された</p></div>
@@ -2845,12 +2989,10 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 				</div>
 				</p>
 				<blockquote>
-					<p>
-						
-						
-						博士「ふふっ... 実験は成功だ」<br>
-博士「人々は今にも、自らの情熱を抑えきれなくなりそうだ」<br>
-「I SEE YOU」<br>
+					<p>	
+						ドットーレ「ふふっ... 実験は成功だ」<br>
+ドットーレ「人々は今にも、自らの情熱を抑えきれなくなりそうだ」<br>
+「見えたぞ」（スメール文字)<br>
 キャサリン「あっ... あぁ...(三十三人団に襲われる)」<br>
 スカラマシュ「フフフフ... ハハハハッ!」<br>
 (スカラマシュが繋がれた大型機械が登場)<br>
@@ -2858,6 +3000,40 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 スカラマシュ「君たちの時代は... 今終わる」
 					</p>
 				</blockquote>
+				
+				<h3 id="3.2pv">バージョン3.2「虚空の鼓動、熾盛の劫火」</h3>
+				<div><p>週ボスの実装バージョン</p></div>
+			<div class="youtube not-margin-div">
+								<p>Youtubeを表示できません。</p>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/gnPNEUfT3b8?start=79&loop=1&playlist=gnPNEUfT3b8"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+				</div>
+				</p>
+				<blockquote>
+					<p>	
+						ドットーレ「幸い、まだ少し時間が残っている。全てを片付ける余裕ができた。」<br>
+スカラマシュ「あらら、これで終わりだと思ちゃった?」<br>
+ナヒーダ「待って... 違う... そんなの... 違うわ...」<br>
+ドットーレ「それは世界樹によって隠された、世界全体に関する真実の秘密。」<br>
+パイモン「完全に神になった「散兵」...」<br>
+スカラマシュ(エフェクト有)「知恵を司る神、どうりで自らの民にさえ見捨てられるわけだ。」<br>
+スカラマシュ(エフェクト有)「君は居場所を失う」<br>
+スカラマシュ(エフェクト有)「輪轉百動!」<br>
+大賢者アザール「ここで旅人を犠牲にするのが、お前たちの計画じゃないのか?」<br>
+???「ニィロウ、本当にやるつもりか? あいつらのためにこんなリスクを犯すなど。」<br>
+ニィロウ「正直に言うと、ちょっとだけ怖い気持ちもあるの。でも、クラクサナリデビ様のために、私、やってみたい」<br>
+セノ「アルハイゼンの計画は、俺が思っている以上に過激だ。」<br>
+エルマイト旅団「野郎ども！エルマイト旅団がどれほど手強いか、思い知らせてやれ！」<br>
+アルハイゼン「アザール、君はこのスメールを裏切り、神に背いたものだろう！」<br>
+アザール「神を造る。我々は人類を持ってして、神を造っているんだ。」<br>
+スカラマシュ(エフェクト有)「今ここに、魔神戦争の一角を再現しよう。」<br>
+スカラマシュ(エフェクト有)「僕の神としての誕生を証明しよう。」
+					</p>
+				</blockquote>			
+				
+				<h2 id="stamp">スタンプ</h2>
+				<h3 id="line-stamp-genshin-vol2">LINEスタンプ「原神 スタンプ Vol.2」</h3>
+				<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221018/20221018211141.png" style="max-width: 200px;"><br>
+				<cite>引用: <a href="https://store.line.me/stickershop/product/14369332/ja">LINE STORE</a></cite>
 			<h2 id="official-tweet">公式ツイート</h2>
 			<!--  Dark/Lightをどちらも貼る-->
 			<!-- JS削除 -->
@@ -2865,12 +3041,14 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 			<div class="tweets not-margin-div light-oney">
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【声優発表】<br>メインストーリー・イベント「帰らぬ熄星」-第二段階「怪しい夢の星」にて登場する謎の少年。<br><br>謎の少年 CV 柿原徹也<br>「僕は稲妻から来た浮浪人。倒れた人を助けようとしたら、君たちが現れたんだ。」<br><br>※「怪しい夢の星」は2020/11/18 04:59より開放されます<a href="https://twitter.com/hashtag/miHoYo?src=hash&amp;ref_src=twsrc%5Etfw">#miHoYo</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/%E6%9F%BF%E5%8E%9F%E5%BE%B9%E4%B9%9F?src=hash&amp;ref_src=twsrc%5Etfw">#柿原徹也</a> <a href="https://t.co/gJgZNdbixR">pic.twitter.com/gJgZNdbixR</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1328714972008906755?ref_src=twsrc%5Etfw">November 17, 2020</a></blockquote>
 					
-					<blockquote class="twitter-tweet" data-conversation="none"  data-theme="light"><p lang="ja" dir="ltr">【キャラクター紹介】<br>外見は眉目秀麗な顔に細身の体型の浮浪人。正体は凄まじい戦闘力と頭脳を持ち合わせた愚人衆執行官。表と裏の差が激しく、予測不可能な人物である。　<br><br>ファトゥス 第6位 散兵（ざんひょう）　<br>スカラマシュ　CV：柿原徹也<br><br>「僕が、いつ勝手に判断する権利を与えた？」<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/UTfTFVa48w">pic.twitter.com/UTfTFVa48w</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1331185988857524224?ref_src=twsrc%5Etfw">November 24, 2020</a></blockquote>
+					<blockquote class="twitter-tweet" data-conversation="none" data-theme="light"><p lang="ja" dir="ltr">【キャラクター紹介】<br>外見は眉目秀麗な顔に細身の体型の浮浪人。正体は凄まじい戦闘力と頭脳を持ち合わせた愚人衆執行官。表と裏の差が激しく、予測不可能な人物である。　<br><br>ファトゥス 第6位 散兵（ざんひょう）　<br>スカラマシュ　CV：柿原徹也<br><br>「僕が、いつ勝手に判断する権利を与えた？」<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/UTfTFVa48w">pic.twitter.com/UTfTFVa48w</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1331185988857524224?ref_src=twsrc%5Etfw">November 24, 2020</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新魔神任務】<br>魔神任務第二章・第三幕「千手百目の浮世」のストーリー中のシーンを一部先出し公開！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/hCajXrS82W">pic.twitter.com/hCajXrS82W</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1428707429320073220?ref_src=twsrc%5Etfw">August 20, 2021</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">トレンド入り！ <a href="https://twitter.com/hashtag/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5?src=hash&amp;ref_src=twsrc%5Etfw">#スカラマシュ</a> <a href="https://twitter.com/hashtag/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D?src=hash&amp;ref_src=twsrc%5Etfw">#雷電将軍</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/3PvWn5EI9W">pic.twitter.com/3PvWn5EI9W</a></p>&mdash; パイモン (@paimon_genshin7) <a href="https://twitter.com/paimon_genshin7/status/1428708924568440833?ref_src=twsrc%5Etfw">August 20, 2021</a></blockquote>
 					
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.1より、魔神任務第三章第三幕「迷夢と虚幻と欺瞞」、第四幕「赤砂の王と三人の巡礼者」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/QM1d4qBqHJ">pic.twitter.com/QM1d4qBqHJ</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1570746909756895232?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote>
-					
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【Ver.3.2最新情報】<br>まもなく10月23日(日)21:00より、Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組が原神公式YouTubeチャンネルにて放送されます！<br>ぜひご期待ください！<br><br>▼視聴はこちらから<a href="https://t.co/YNli4XapSX">https://t.co/YNli4XapSX</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/XYyKmTEBsb">pic.twitter.com/XYyKmTEBsb</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584150140511625217?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.2より、魔神任務第三章第五幕「虚空の鼓動、熾盛の劫火」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/7b5qniZTYV">pic.twitter.com/7b5qniZTYV</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584154169560035328?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【Ver.3.2公式PV】<br>「虚空の鼓動、熾盛の劫火」<br>教令院六大学派の力を結集した極秘プロジェクトは、まもなく最も重要な終盤を迎えようとしている。<br>きっと、何らかの収穫は得られるだろう——これだけの時間と労力を費やしたのだから。<br><br>▼YouTube版（日本語字幕付き）<a href="https://t.co/2AD6P9UtUk">https://t.co/2AD6P9UtUk</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/Kr6fV7loOW">pic.twitter.com/Kr6fV7loOW</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584163981647745024?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
 				</div>
 				
 				
@@ -2884,6 +3062,9 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 					
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.1より、魔神任務第三章第三幕「迷夢と虚幻と欺瞞」、第四幕「赤砂の王と三人の巡礼者」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/QM1d4qBqHJ">pic.twitter.com/QM1d4qBqHJ</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1570746909756895232?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote>
 						
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【Ver.3.2最新情報】<br>まもなく10月23日(日)21:00より、Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組が原神公式YouTubeチャンネルにて放送されます！<br>ぜひご期待ください！<br><br>▼視聴はこちらから<a href="https://t.co/YNli4XapSX">https://t.co/YNli4XapSX</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/XYyKmTEBsb">pic.twitter.com/XYyKmTEBsb</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584150140511625217?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.2より、魔神任務第三章第五幕「虚空の鼓動、熾盛の劫火」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/7b5qniZTYV">pic.twitter.com/7b5qniZTYV</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584154169560035328?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【Ver.3.2公式PV】<br>「虚空の鼓動、熾盛の劫火」<br>教令院六大学派の力を結集した極秘プロジェクトは、まもなく最も重要な終盤を迎えようとしている。<br>きっと、何らかの収穫は得られるだろう——これだけの時間と労力を費やしたのだから。<br><br>▼YouTube版（日本語字幕付き）<a href="https://t.co/2AD6P9UtUk">https://t.co/2AD6P9UtUk</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/Kr6fV7loOW">pic.twitter.com/Kr6fV7loOW</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584163981647745024?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
 						</div>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8" loading="lazy"></script>
 										<h2 id="interview">インタビュー</h2>
@@ -2973,7 +3154,7 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 							</p>
 						</blockquote>
 						<cite>引用:<a href="https://youtu.be/hYciFdPdV_8">YouTube</a></cite>
-					<h3 id="var2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目</h3>
+					<h3 id="ver2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目</h3>
 					<div class="youtube not-margin-div">
 								<p>Bilibiliを表示できません。</p>
 							<iframe src="//player.bilibili.com/player.html?aid=847489645&bvid=BV1GL4y1v7BP&cid=393322321&page=1&t=1162" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy"></iframe>
@@ -3015,10 +3196,10 @@ head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https:/
 劉偉「おぉ、これは注目するべきですね。」
 			</p>
 			</blockquote>
-			<h3 id="var3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組</h3>
+			<h3 id="ver3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組</h3>
 			<div class="youtube not-margin-div">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4&loop=1&playlist=qC9wSPOExL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/qC9wSPOExL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 						<blockquote>
 							<p>Liu Wei「おや? 「博士」と「散兵」はスメールで登場しますか?」<br>
@@ -3028,6 +3209,31 @@ QiLi「旅人の皆さんの今回の冒険には、大きな試練が待ち構�
 Liu Wei「どうやら、スメールを統制する教令院以外に、ファデュイとも交渉しなければなりませんね」<br>
 Liu Wei「この状況を打破するには... やはり神の「知恵」が必要なのでしょうか?」<br>
 Liu Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」</p>
+</blockquote>
+
+<h3 id="ver3-2-livestream">Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組</h3>
+			<div class="youtube not-margin-div">
+				<p>Youtubeを表示できません。</p>
+				<iframe width="1920" height="1080" src="https://www.youtube.com/embed/GtR_JiHlvBM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+						</div>
+						<blockquote>
+							<p>空「じゃあ次は、この巨大な機械人形について見ていこう。」<br>
+空「これは、教令院の草神計画の産物なんだよね。」<br>
+セノ「そうだ。この威圧感は、もはや神と言っていいレベルだろう。「博士」もこの実験に大分力を入れていたようだ。敵とはいえ、息を飲むほどの見事な造形といえる。」<br>
+空「この形態の「散兵」には、俺も驚きを隠せないよ。なんていうか言葉が見つからないなぁ」<br>
+セノ「さて、そろそろ50万モラ相当の情報を教えて貰おうか。」<br>
+パイモン「ご、50万モラ?! どんな情報だ?!」<br>
+空「まぁ焦らないで。動画が届いてるから、まずは一緒に見てみよう。」<br>
+(ボス動画)<br>
+空「機械人形というと、要はロボットみたいなものだ。つまり、強靭な機械のアームと、かっこいい変形は外せないよね。」<br>
+空「第一段階では、「散兵」がこの機械のアームを操作して、俺たちを攻撃してくる。これら機械のアームは異なる幾つもの元素力を持っていて、スキルも様々。地面に熱いエリアや寒いエリアを形成することもできるんだ。」<br>
+セノ「こいつも遺跡シリーズ同様、ダウンさせる必要があるようだな。」<br>
+空「地面にある元素呪法陣を起動させることで、何か効果があるかもしれないね。」<br>
+パイモン「1番気になるのは... 横で浮いているやつだよな。少しナヒーダに似てないか? えへっ... なんか可愛いな」<br>
+空「ナヒーダではないけど、かなり頼もしい存在だ。戦闘時、この小さな助っ人にエネルギーを補充することで、特殊なスキルを放ってくれる。そうすることで、ボスの様々な仕組みに対処できるんだ。それだけじゃない。「散兵」がこの巨大な機械になると、通常の攻撃が通らなくなる。基本的に、この小さいやつの攻撃でしか、ボスのシールドを削れない。場合によっては、照準モードでボスの弱点を狙う必要もある。」<br>
+パイモン「おぉ、かなり楽しそうだぞ! レーザーと光弾の撃ち合いみたいで、面白そうだな。」<br>
+セノ「スキルも目を見張るものがある。エフェクトは、まるで広大な星空で対戦をしているような、独特なロマンを感じるな。」<br>
+空「そうだね、見ているだけでかっこいいんだ。実際に戦うときは、もっと迫力を感じるかもしれない。もう待ちきれないよ!」</p>
 </blockquote>
 						<h3 id="interview-other">その他言及</h3>
 						<h4 id="en-va-16">Version 1.6 Special Program</h4>
@@ -3061,12 +3267,22 @@ Poonam Basu「The Inazuma outfit style is so awesome!」
 						</blockquote>
 						<cite>引用:<a href="https://youtu.be/ESJEvKWwmQw">YouTube</a></cite>
 						
+			<h2 id="official-a">広告</h2>
+			<h3 id="a-3.1">Ver3.1広告</h3>
+			<h4 id="a-tokyo-jr-ikebukuro">東京都 JR池袋</h4>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221013/20221013184755.jpg" translate="no" loading="lazy">
+			<cite>引用: <a href="https://twitter.com/paimon_genshin7/status/1580488918549397504">Twitter(パイモン)</a></cite>
+			
+			<h4 id="a-hangzhou-yintai-commercial-street">杭州 杭州湖滨银泰商业街</h4>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221013/20221013190116.jpg" translate="no" loading="lazy">
+			<cite>引用: <a href="https://b23.tv/N2BlY8o">哔哩哔哩(派蒙的工作笔记)</a></cite>
 			<h2 id="official-contents">商品</h2>
 				<h3 id="book">書籍</h3>
 				<div>
 					<ul>
 						<li lang="jp">『<span translate="no">Pash!</span>』 2021年12月号 , 59ページ「<span translate="no">世界に争う者たち</span>」</li>
 						<li lang="jp">『<span translate="no">原神插画集 Vol.1</span>』</li>
+						<li lang="jp"><span translate="no">週刊ファミ通</span>2022年10月13日号</li>
 					</ul>
 				</div>
 				<h3 id="goods">グッズ</h3>
@@ -3291,6 +3507,9 @@ Poonam Basu「The Inazuma outfit style is so awesome!」
 			</blockquote>
 			<div><p>Leは男性の冠詞です。</p></div>
 			<cite>参考: <a href="https://kotobank.jp/frjaword/vagabond" translate="no" lang="ja">コトバンク</a></cite>
+			
+			<div><p><span translate="no" lang="en">Balladeer</span>の妙訳だと思われます。</p></div>
+			<cite>参考: <a href="https://kotobank.jp/word/%E6%AD%A3%E6%A9%9F-530982" translate="no" lang="ja">コトバンク</a></cite>
 			<h3 id="colorcode">カラーコード</h3>
 			<div>
 				<p>
@@ -3327,5 +3546,12 @@ Poonam Basu「The Inazuma outfit style is so awesome!」
 				
 			<!-- アクセス解析研究所 -->
 			<script src="//accaii.com/codheart/script.js" async></script><noscript><img src="//accaii.com/codheart/script?guid=on"  loading="lazy"></noscript>
+						<script type="text/javascript">
+				//head要素を取得
+const head = document.head;
+
+head.insertAdjacentHTML('beforeEnd', '<link rel="icon" href="https://giarchive.github.io/signora/favicon.ico">');
+head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https://giarchive.github.io/signora/apple-touch-icon.png">');
+</script>
 		</body>
 	</html>

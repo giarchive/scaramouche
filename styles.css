@@ -67,7 +67,30 @@
 	}
 }
 
-
+table .icon-button {
+	font-size: 1.5em;
+}
+table .fa-bilibili {
+	color:#ee7198;
+}
+table .fa-weibo {
+	color: var(--red);
+	font-size: 1.05em;
+}
+table .fa-twitter {
+	color: #00ACEE;
+}
+table .fa-youtube {
+	color: #FF0000;
+}
+table .fa-link {
+	color: var(--blue);
+	font-size: 0.9em;
+}
+.table fa-instagram {
+	color: var(--blue);
+	font-size: 1.1em;
+}
 
 /*フォント設定*/
 @font-face {
@@ -133,34 +156,60 @@ main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,tw
 		display: none;
 	}
 }
-/*印刷用*/
-@media print {
-	.notprint {
-		display: none!important;
-	}
-	.printonry {
-		display: inline-block;
-	}
-	body {
-		margin-left: 2.5vw;
-		margin-right: 2.5vw;
-		margin-top: 0vw;
-		margin-bottom: 0vw;
-	}
-}
-footer {
-	border-top: 1px solid var(--black1);
-	margin-top: 2%;
-}
 /* リセットCSS */
 input{
     -webkit-appearance: none;
 }
-main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbody,iframe {
+main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbody,iframe,cite {
 	margin: 0;
 	padding: 0;
 }
+button, input[type="button"] {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+	font-size: 1em;
+	color: none;
+}
+cite {
+	margin: 1rem;
+}
 
+/* テキスト */
+main .event-time {
+	color: var(--cyan);
+}
+main .info-scaramouche-name {
+	font-weight: bold;
+}
+main .info-kunikuzushi-name {
+	font-weight: bold;
+}
+main .ru {
+	font-family: -apple-system, Arial, Helvetica, Gothic, sans-serif;
+}
+main .mark {
+	color: var(--red);
+}
+main a:not(.not-linkhighright), aside a:not(.black) {
+	color: var(--blue);
+	text-decoration: none;
+}
+article .black {
+	color: var(--black);
+}
+main .black {
+	color: black;
+}
+main .white {
+	color: white;
+}
+main .inazumafont {
+	font-family: 'InazumaFont', sans-serif;
+}
 /*メニュー*/
 .nav .nav_hidden {
   margin: 0vw 4vw;
@@ -227,7 +276,7 @@ ul.list ul li ul li a {
 	font-size: 1em;
 	margin-left: 20px;
 }
-.var-num {
+.ver-num {
 	font-weight: bold;
 	margin-right: 0.5em;
 } 
@@ -305,6 +354,51 @@ nav i {
     	opacity: 1;
 	}
 }
+/*トップ画像のタブ*/
+.tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.tab-label {
+	font-weight: bold;
+    color: var(--white);
+    background: var(--black2);
+	border-radius: 4px;
+    margin-right: 5px;
+    padding: 3px 12px;
+    order: -1;
+}
+.tab-content {
+    width: 100%;
+    display: none;
+	margin: 0.5rem;
+}
+.tab-switch:checked+.tab-label {
+    background: var(--orange);
+}
+.tab-switch:checked+.tab-label+.tab-content {
+     display: block;
+}
+.tab-switch {
+    display: none;
+}
+/*言語タブ*/
+.lang-tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.lang-tab-label {
+	font-weight: bold;
+    color: var(--white);
+    background: var(--black2);
+	border-radius: 4px;
+    margin-right: 5px;
+    padding: 3px 12px;
+    order: -1;
+}
+.lang-tab-switch:checked+.lang-tab-label {
+    background: var(--cyan);
+}
 /*見出し*/
 main h2,nav h2 {
     padding: 0.5vh 2vw;
@@ -365,34 +459,16 @@ main h6,nav h6  {
     }
 }
 
-/* テキスト */
-main .event-time {
-	color: var(--cyan);
-}
-main .info-scaramouche-name {
-	font-weight: bold;
-}
-main .info-kunikuzushi-name {
-	font-weight: bold;
-}
-main .ru {
-	font-family: -apple-system, Arial, Helvetica, Gothic, sans-serif;
-}
-main .mark {
-	color: var(--red);
-}
-main a:not(.not-linkhighright) {
-	color: var(--blue);
-	text-decoration: none;
-}
-main .black {
-	color: black;
-}
-main .white {
-	color: white;
-}
-main .inazumafont {
-	font-family: 'InazumaFont', sans-serif;
+/*ボタン*/
+.button {
+	padding: 0.5rem 0.8rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-radius: 6px;
+	background-color: var(--green);
+	border: solid 1px white;
+	color: white!important;
+	font-weight: 600;
 }
 /*フッダー*/
 footer a {
@@ -409,6 +485,7 @@ footer {
 /*画像*/
 img {
 	width: 100%;
+	margin-bottom: 0.5em;
 }
 /*引用*/
 blockquote:not(.twitter-tweet) {
@@ -710,39 +787,5 @@ main .applemusic {
 	.twitter-trend-tag {
 	width: calc(90% - 2vw)!important;
 	padding: 1vw 1vw;
-	}
-}
-
-/*画像スライダー*/
-.slider {
-	width: 100%;
-　　overflow: hidden;
-　　margin: 0 auto;
-
-}
-.slider-item {
-  width: 100vw;
-  float: left;
-}
-.slider-item img {
-  width:100%;
-}
-.slider-inner {
-  width: 300%;
-  animation: slider 10s infinite ease;
-}
-
-@keyframes slider {
-	0% {
-		transform: translateX(0);
-	}
-	33% {
-		transform: translateX(-300px);
-	}
-	66% {
-		transform: translateX(-600px);
-	}
-	100% {
-		transform: translateX(0);
 	}
 }
