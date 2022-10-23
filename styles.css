@@ -367,6 +367,7 @@ nav i {
     margin-right: 5px;
     padding: 3px 12px;
     order: -1;
+	margin: 0.2rem;
 }
 .tab-content {
     width: 100%;
@@ -395,6 +396,7 @@ nav i {
     margin-right: 5px;
     padding: 3px 12px;
     order: -1;
+	margin: 0.2rem;
 }
 .lang-tab-switch:checked+.lang-tab-label {
     background: var(--cyan);
