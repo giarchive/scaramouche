@@ -97,6 +97,8 @@ function chinese() {
 	//document.getElementsByClassName('truth-amongst-the-pages-of-purana')[0].innerHTML = '虚空劫灰往世书<span style="display: none;">(魔神任务，故事，虚空，须弥，虚空鼓动，劫火高扬)</span>';
 	document.getElementsByClassName('akasha-pulses-the-kalpa-flame-rises')[0].innerHTML = '虚空鼓动，劫火高扬<span style="display: none;">(魔神任务，故事，虚空，须弥，BOSS，週本，虚空鼓动，劫火高扬)</span>';
 	
+	document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」<span style="display: none;">BOSS，敌人，攻略</span>';
+	
 	
 	//タイトル
 	document.getElementById('update').innerHTML = '更新记录';
@@ -173,6 +175,14 @@ function chinese() {
 	document.getElementById('song-of-life').innerHTML = '众生之谣';
 	document.getElementById('calabash-of-awakening').innerHTML = '梦醒之瓢';
 	document.getElementById('skeletal-hat').innerHTML = '形骸之笠';
+	
+	
+	document.getElementById('boss').innerHTML = '週本「？？？」';
+	document.getElementById('boss-story').innerHTML = '秘境・故事';
+	document.getElementById('boss-detail').innerHTML = '秘境详情';
+	document.getElementById('boss-stage1').innerHTML = '第一形态: ？？？';
+	document.getElementById('boss-stage2').innerHTML = '第ニ形态: ？？？';
+	document.getElementById('boss-drop').innerHTML = '素材';
 	
 	//タブ
 	document.getElementsByClassName('top-tab-scaramouche')[0].innerHTML = '「散兵」';
@@ -263,9 +273,18 @@ function chinese() {
 		
 		//華やぐ紫苑の庭
 		document.getElementById('five-kasen-summary').innerHTML = '<p>关于「五歌仙」：<br>五歌仙是稻妻古代的传说人物，因为能歌善赋而得到「五歌仙」的美名。据说他们的作品深得将军大人喜爱，每年五人将新作集结成册后，都会派出一人前往天守阁，将诗集献给将军品鉴。<br>五歌仙分别名为「翠光」、「葵之翁」、「赤人」、「墨染」与「黑主」。<br>五人真名现已不可考，一种流传较广的说法是：因为五歌仙故事曾被大量搬上舞台，为方便观众辨认角色，便以绿蓝红白黑五色戏服加以区分，久而久之，观众便以角色的代表色为歌仙命名。不过也同样找到了「翠光因其草庵名『翠光堂』而得名」、「赤人因喜爱在作品上加盖朱印而得名」之类的说法。</p><p>五歌仙个人资料汇总：<br>翠光：爱饮酒，平民出身，性格洒脱不羁。一说翠光因为居住的草庵名为「翠光堂」而得名。<br>葵之翁：擅长弈棋的老者，除诗歌外，也有小说作品传世。一说他成名较晚，真实身份是幕府官员；另一说他并非人类，而是长寿的妖狐所化。<br>赤人：擅长剑术，极有可能是武人出身。一说赤人因为喜爱在作品上加盖朱印而得名。<br>墨染：曾是巫女，擅花艺、舞蹈，后担任将军身边侍女。一说墨染在成名后辞去官职，专心创作，另一说墨染直到晚年依旧陪伴在将军身侧服侍。<br>黑主：信息较少，真实身份不详。或许正因为此，黑主在故事中的身份和性格设定，比其他人都要更丰富多样。</p>';
+		document.getElementsByClassName('tale-of-the-five-kasen-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=468168491&bvid=BV1M5411S7Lg&cid=574322944&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"></iframe>';
+		//冬夜の戯劇
+		document.getElementsByClassName('a-winter-nights-lazzo-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=598329615&bvid=BV1mB4y1e7Lh&cid=769751352&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"></iframe>';
 		
 		//迷夢と虚幻と欺瞞
 		document.getElementsByClassName('the-divine-will-text')[0].innerHTML = '「我曾三度遭到背叛，因而懂得世间万物不过是欺瞒的幌子。」<br>「我的愤怒，绝不平息。」<br>「其一为神。我的创造者，我的『母亲』。」<br>「其为力量所左右，舍弃无用的我。」<br>「其二为人。我的家人，我的朋友。」<br>「其为恐惧所困缚，视我为可憎恶之物。」<br>「其三为同类。我的期盼，羽翼尚未丰满的鸟雀。」<br>「其为寿限所控制，违背与我的约定。」<br>「人绝不可信，神亦令我憎恨。我舍弃所有，否定并嗤笑人间一切。」<br>「我的胸膛不会再被世俗染指，摒弃掉人类低劣的情感。」<br>「我空洞的部分，将如诞生之刻的纯白卷轴那般，以满载神性的至高神明之心来填满。」<br>「呵呵呵…哈哈哈哈！无需恐惧，疼痛只是一瞬。」<br>「你们的时代…就要结束了。」';
+		document.getElementsByClassName('the-gaze-from-a-certain-god-text')[0].innerHTML = '海芭夏 : 旅行者？是旅行者吗！<br>派蒙 : 啊！你是…海芭夏！<br>旅行者 : 好久不见！<br>海芭夏 : 天啊，可真是令人开心，能见到你们真是太好了。<br>纳西妲 : 这位是…？<br>派蒙 : 是我们在道成林时候遇见的修行学者，当时正在那什么…「林居狂语期」。<br>纳西妲 : 唔…这样吗。<br>海芭夏 : 是啊，我们可是老朋友了。正巧我来这边之后，没什么人愿意跟我讲话，你们来得正是时候。<br>派蒙 : 海芭夏，你开心过头啦。话说你居然已经离开道成林了吗，不继续在森林里修行啦？<br>派蒙 : 等等，不对…难道说，你已经修行结束，进入「寂静圆满期」了？<br>海芭夏 : 哼哼…你说呢？<br>海芭夏 : 我之前…已经在意识中见过神明了。<br>纳西妲 : …嗯？<br>派蒙 : 啊？真的吗！恭喜恭喜！<br>旅行者 : 真为你高兴。<br>海芭夏 : 哈哈…能跟你们分享这份崇高的喜悦，可真是让人快慰啊！<br>海芭夏 : 与神明意识相通的一刻，那简直是无与伦比的至高体验…<br>派蒙 : 那么厉害…<br>旅行者 : 其实我们是来找提纳里的。<br>海芭夏 : 这样啊…哦对了，请等一下，我可没有忘记跟你们的约定哦。<br>海芭夏 : 当时我说，等我获得了真正的智慧，也许就能帮你们解释曾经在世界树那里看到的东西。<br>海芭夏 : 而现在的我呢，不仅拥有了智慧，甚至还能帮助你们自行与神明的意识进行连接哦？<br>派蒙 : 这、这也能做得到吗？<br>旅行者 : 你觉得可信吗，纳西妲？<br>纳西妲 : 我闻所未闻，不过…如果你想尝试，我会全力保护你的意识。<br>海芭夏 : 等一下哦，我带了些灵酚香来，这依旧是必不可少的「仪式」。<br>派蒙 : 又是那种熏香吗？<br>海芭夏 : 好了，现在…握住我的手，我会帮你们建立意识连接的「通道」。<br>纳西妲 : 嗯。<br>海芭夏 : 准备好了吗？';
+		document.getElementsByClassName('the-gaze-from-a-certain-god-log')[0].innerHTML = '「通道」成功建立，你的意识触及了所谓的神明…';
+		
+		document.getElementsByClassName('the-divine-will-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=943683198&bvid=BV1hW4y1e7Kx&cid=851080800&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"></iframe>';
+		
+		document.getElementsByClassName('the-gaze-from-a-certain-god-text2')[0].innerHTML = '派蒙 : 这是…！<br>旅行者 : 并非是大慈树王的意识…<br>派蒙 : 我们看到的，是「散兵」的过去吗！？很多信息都重合上了！<br>派蒙 : 可是海芭夏口中的神明又怎么跟「散兵」联系在一起的？<br>海芭夏 : 看到了吧，感受到了吧，崇高的神明，崇高的意志，崇高的情感！<br>海芭夏 : 唉…可惜啊，可惜…<br>海芭夏 : 可惜我的胸腔里跳动的，却是一颗肮脏的、人类的心…神明大人啊，可否宽恕我，可否救赎我呢…<br>纳西妲 : 看出来了吗，这可不是什么「寂静圆满期」，恐怕她是…<br>旅行者 : 你清醒一点，海芭夏！<br>海芭夏 : 啊…！<br>海芭夏 : 你…你为什么对我这么凶呢？为什么那些人都在躲着我呢？<br>海芭夏 : 我找到了神明的智慧啊，我应该被夸奖才对啊，我成为了那个在黑暗里探索又找到了光明的人啊！<br>派蒙 : 海芭夏…<br>海芭夏 : 明明应该是这样啊…<br>海芭夏 : …等等…<br>海芭夏 : 难道说…是我已经疯了吗？<br>旅行者 : ……<br>纳西妲 : 等一下，周围不对劲！<br><br><b><i class="i-see-you"></i>「我看到你了」</b>';
 		
 		//聖遺物
 		document.getElementsByClassName('pale-flame')[0].innerHTML = '苍白之火';
@@ -294,5 +313,12 @@ function chinese() {
 		
 		document.getElementsByClassName('skeletal-hat-about')[0].innerHTML = '“流浪者在旅途中遮光避雨的斗笠，但后来却成为了遮挡面目、隐藏表情的便利道具。”';
 		document.getElementsByClassName('skeletal-hat-text')[0].innerHTML = '「流浪者，流浪者，你要去哪里啊？」<br>流浪的少年被孩子喊住。<br>他是踏鞴砂工匠的孩子，虽然生了病，却仍有清澈的双眼。<br>少年告诉孩子，自己必须去稻妻城。<br>「可现在好大的雨，他们说之前离开的人也都没有回来！」<br>少年张了张嘴，最后只好对孩子微笑。<br>等他再次踏上这座岛屿，孩子已经不见影踪。<br><br>「稻妻人，你要去哪？这可不是你能坐的船！」<br>流浪的少年被港口的船夫拦下。<br>在少年拔刀之前，同行的男人伸手止住了他。<br>男人告知船夫，这个异国的少年将与自己同行。<br>「原来是大人的客人，是我冒昧了。」<br>男人递给少年御寒的外套，但少年摇了摇头。<br>现在他只想知道，此次远行能见到什么有趣的东西。<br><br>「执行官大人，你要去哪里？」<br>少年最讨厌聒噪的人类，他反手打了部下的脸。<br>但少年也最喜欢观察人类的惊恐与无助，<br>或许正因为表情丰富，这个愚蠢的部下才会被他留在身边。<br>他告诉跪在地上战战兢兢的人，这次东去蒙德。<br>「属下明白了，这就让直属护卫们准备！」<br>护卫并无必要，但他已懒得再与蠢材废话。<br>他再度戴上了流浪人的斗笠，只身向东行去。<br><br>「孩子，你要去哪儿啊？」<br>归国的少年在路边被名老妪喊住。<br>他告知老妪，自己准备向西去。<br>「要去八酝岛吗，是去做什么啊？」<br>老妪并没有多想，只是最近很不太平。<br>少年带着真诚的笑容谢过她的关心，说自己与人有约在先。<br>小船缓缓靠岸，一个异国装束的女人站在岸边，<br>远远地向少年抛出一枚小小的晶球。<br>少年轻松接住了晶球，将它对准了如血残阳。';
-		
+	//ボス
+document.getElementsByClassName('boss-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=859296635&bvid=BV1sV4y1576g&cid=869759578&t=709&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>';
+document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」';
+	document.getElementsByClassName('boss-story')[0].innerHTML = '秘境・故事';
+	document.getElementsByClassName('boss-detail')[0].innerHTML = '秘境详情';
+	document.getElementsByClassName('boss-stage1')[0].innerHTML = '第一形态: ？？？';
+	document.getElementsByClassName('boss-stage2')[0].innerHTML = '第ニ形态: ？？？';
+	document.getElementsByClassName('boss-drop')[0].innerHTML = '素材';
 	}
