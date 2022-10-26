@@ -9,6 +9,11 @@ function chinese() {
 	ru = '俄语';
 	tr = '土耳其语';
 	
+	eleven = '迫近的客星';
+	twentyone = '韶光抚月，天下人间';
+	thirtyone = '赤土之王与三朝圣者';
+	thirtytwo = '虚空鼓动，劫火高扬';
+	
 	button.style.display = "none";
 	document.title = '散兵相关全收集网站'
 	//記事トップ
@@ -97,10 +102,28 @@ function chinese() {
 	document.getElementsByClassName('secret-of-the-scorching-desert')[0].innerHTML = '热沙中的秘密';
 	
 	//document.getElementsByClassName('truth-amongst-the-pages-of-purana')[0].innerHTML = '虚空劫灰往世书<span style="display: none;">(魔神任务，故事，虚空，须弥，虚空鼓动，劫火高扬)</span>';
-	document.getElementsByClassName('akasha-pulses-the-kalpa-flame-rises')[0].innerHTML = '虚空鼓动，劫火高扬<span style="display: none;">(魔神任务，故事，虚空，须弥，BOSS，週本，虚空鼓动，劫火高扬)</span>';
+	
+	document.getElementsByClassName('item')[0].innerHTML = '物品・招牌';
+	document.getElementsByClassName('rather-aged-notes')[0].innerHTML = '有相当年头的记事';
+	document.getElementsByClassName('ancient-forging-blueprint')[0].innerHTML = '古老的锻造图谱';
 	
 	document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」<span style="display: none;">BOSS，敌人，攻略</span>';
 	
+	document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」<span style="display: none;">BOSS，敌人，攻略</span>';
+	
+		document.getElementsByClassName('1.1pv')[0].innerHTML = '1.1版本「' + eleven + '」';
+	document.getElementsByClassName('2.1pv')[0].innerHTML = '2.1版本「' + twentyone + '」';
+	document.getElementsByClassName('3.1pv')[0].innerHTML = '3.1版本「' + thirtyone + '」';
+	document.getElementsByClassName('3.2pv')[0].innerHTML = '3.2版本	「' + thirtytwo + '」';
+	
+	document.getElementsByClassName('music')[0].innerHTML = '音乐';
+	document.getElementsByClassName('ominous-fandango')[0].innerHTML = '浮浪人的心机';
+	document.getElementsByClassName('unpredicted-conspiracy')[0].innerHTML = '未料的密谋';
+	document.getElementsByClassName('floating-world-under-the-moonlight')[0].innerHTML = twentyone;
+	document.getElementsByClassName('music-king-deshret-and-the-three-magi')[0].innerHTML = thirtyone;
+	document.getElementsByClassName('music-akasha-pulses-the-kalpa-flame-rises')[0].innerHTML = thirtytwo;
+	
+	document.getElementsByClassName('floating-world-under-the-moonlight')[0].innerHTML = '推特热门';	
 	
 	//タイトル
 	document.getElementById('update').innerHTML = '更新记录';
@@ -179,6 +202,9 @@ function chinese() {
 	document.getElementById('calabash-of-awakening').innerHTML = '梦醒之瓢';
 	document.getElementById('skeletal-hat').innerHTML = '形骸之笠';
 	
+	document.getElementById('item').innerHTML = '物品・招牌';
+	document.getElementById('rather-aged-notes').innerHTML = '有相当年头的记事';
+	document.getElementById('ancient-forging-blueprint').innerHTML = '古老的锻造图谱';
 	
 	document.getElementById('boss').innerHTML = '週本「？？？」';
 	document.getElementById('boss-story').innerHTML = '秘境・故事';
@@ -186,6 +212,11 @@ function chinese() {
 	document.getElementById('boss-stage1').innerHTML = '第一形态: ？？？';
 	document.getElementById('boss-stage2').innerHTML = '第ニ形态: ？？？';
 	document.getElementById('boss-drop').innerHTML = '素材';
+	
+	document.getElementById('1.1pv').innerHTML = '1.1版本「' + eleven + '」';
+	document.getElementById('2.1pv').innerHTML = '2.1版本「' + twentyone + '」';
+	document.getElementById('3.1pv').innerHTML = '3.1版本「' + thirtyone + '」';
+	document.getElementById('3.2pv').innerHTML = '3.2版本「' + thirtytwo + '」';
 	
 	//タブ
 	document.getElementsByClassName('top-tab-scaramouche')[0].innerHTML = '「散兵」';
@@ -303,11 +334,12 @@ function chinese() {
 		document.getElementsByClassName('a-winter-nights-lazzo-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=598329615&bvid=BV1mB4y1e7Lh&cid=769751352&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"></iframe>';
 		
 		//迷夢と虚幻と欺瞞
-		document.getElementsByClassName('the-divine-will-text')[0].innerHTML = '「我曾三度遭到背叛，因而懂得世间万物不过是欺瞒的幌子。」<br>「我的愤怒，绝不平息。」<br>「其一为神。我的创造者，我的『母亲』。」<br>「其为力量所左右，舍弃无用的我。」<br>「其二为人。我的家人，我的朋友。」<br>「其为恐惧所困缚，视我为可憎恶之物。」<br>「其三为同类。我的期盼，羽翼尚未丰满的鸟雀。」<br>「其为寿限所控制，违背与我的约定。」<br>「人绝不可信，神亦令我憎恨。我舍弃所有，否定并嗤笑人间一切。」<br>「我的胸膛不会再被世俗染指，摒弃掉人类低劣的情感。」<br>「我空洞的部分，将如诞生之刻的纯白卷轴那般，以满载神性的至高神明之心来填满。」<br>「呵呵呵…哈哈哈哈！无需恐惧，疼痛只是一瞬。」<br>「你们的时代…就要结束了。」';
 		document.getElementsByClassName('the-gaze-from-a-certain-god-text')[0].innerHTML = '海芭夏 : 旅行者？是旅行者吗！<br>派蒙 : 啊！你是…海芭夏！<br>旅行者 : 好久不见！<br>海芭夏 : 天啊，可真是令人开心，能见到你们真是太好了。<br>纳西妲 : 这位是…？<br>派蒙 : 是我们在道成林时候遇见的修行学者，当时正在那什么…「林居狂语期」。<br>纳西妲 : 唔…这样吗。<br>海芭夏 : 是啊，我们可是老朋友了。正巧我来这边之后，没什么人愿意跟我讲话，你们来得正是时候。<br>派蒙 : 海芭夏，你开心过头啦。话说你居然已经离开道成林了吗，不继续在森林里修行啦？<br>派蒙 : 等等，不对…难道说，你已经修行结束，进入「寂静圆满期」了？<br>海芭夏 : 哼哼…你说呢？<br>海芭夏 : 我之前…已经在意识中见过神明了。<br>纳西妲 : …嗯？<br>派蒙 : 啊？真的吗！恭喜恭喜！<br>旅行者 : 真为你高兴。<br>海芭夏 : 哈哈…能跟你们分享这份崇高的喜悦，可真是让人快慰啊！<br>海芭夏 : 与神明意识相通的一刻，那简直是无与伦比的至高体验…<br>派蒙 : 那么厉害…<br>旅行者 : 其实我们是来找提纳里的。<br>海芭夏 : 这样啊…哦对了，请等一下，我可没有忘记跟你们的约定哦。<br>海芭夏 : 当时我说，等我获得了真正的智慧，也许就能帮你们解释曾经在世界树那里看到的东西。<br>海芭夏 : 而现在的我呢，不仅拥有了智慧，甚至还能帮助你们自行与神明的意识进行连接哦？<br>派蒙 : 这、这也能做得到吗？<br>旅行者 : 你觉得可信吗，纳西妲？<br>纳西妲 : 我闻所未闻，不过…如果你想尝试，我会全力保护你的意识。<br>海芭夏 : 等一下哦，我带了些灵酚香来，这依旧是必不可少的「仪式」。<br>派蒙 : 又是那种熏香吗？<br>海芭夏 : 好了，现在…握住我的手，我会帮你们建立意识连接的「通道」。<br>纳西妲 : 嗯。<br>海芭夏 : 准备好了吗？';
 		document.getElementsByClassName('the-gaze-from-a-certain-god-log')[0].innerHTML = '「通道」成功建立，你的意识触及了所谓的神明…';
 		
 		document.getElementsByClassName('the-divine-will-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=943683198&bvid=BV1hW4y1e7Kx&cid=851080800&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"></iframe>';
+		
+		document.getElementsByClassName('the-divine-will-text')[0].innerHTML = '「我曾三度遭到背叛，因而懂得世间万物不过是欺瞒的幌子。」<br>「我的愤怒，绝不平息。」<br>「其一为神。我的创造者，我的『母亲』。」<br>「其为力量所左右，舍弃无用的我。」<br>「其二为人。我的家人，我的朋友。」<br>「其为恐惧所困缚，视我为可憎恶之物。」<br>「其三为同类。我的期盼，羽翼尚未丰满的鸟雀。」<br>「其为寿限所控制，违背与我的约定。」<br>「人绝不可信，神亦令我憎恨。我舍弃所有，否定并嗤笑人间一切。」<br>「我的胸膛不会再被世俗染指，摒弃掉人类低劣的情感。」<br>「我空洞的部分，将如诞生之刻的纯白卷轴那般，以满载神性的至高神明之心来填满。」<br>「呵呵呵…哈哈哈哈！无需恐惧，疼痛只是一瞬。」<br>「你们的时代…就要结束了。」';
 		
 		document.getElementsByClassName('the-gaze-from-a-certain-god-text2')[0].innerHTML = '派蒙 : 这是…！<br>旅行者 : 并非是大慈树王的意识…<br>派蒙 : 我们看到的，是「散兵」的过去吗！？很多信息都重合上了！<br>派蒙 : 可是海芭夏口中的神明又怎么跟「散兵」联系在一起的？<br>海芭夏 : 看到了吧，感受到了吧，崇高的神明，崇高的意志，崇高的情感！<br>海芭夏 : 唉…可惜啊，可惜…<br>海芭夏 : 可惜我的胸腔里跳动的，却是一颗肮脏的、人类的心…神明大人啊，可否宽恕我，可否救赎我呢…<br>纳西妲 : 看出来了吗，这可不是什么「寂静圆满期」，恐怕她是…<br>旅行者 : 你清醒一点，海芭夏！<br>海芭夏 : 啊…！<br>海芭夏 : 你…你为什么对我这么凶呢？为什么那些人都在躲着我呢？<br>海芭夏 : 我找到了神明的智慧啊，我应该被夸奖才对啊，我成为了那个在黑暗里探索又找到了光明的人啊！<br>派蒙 : 海芭夏…<br>海芭夏 : 明明应该是这样啊…<br>海芭夏 : …等等…<br>海芭夏 : 难道说…是我已经疯了吗？<br>旅行者 : ……<br>纳西妲 : 等一下，周围不对劲！<br><br>派蒙：纳西妲！<br>（纳西妲控制的凯瑟琳被镀金旅团刺伤）<br>（发生意识交换，旅行者的意识转移到净善宫的纳西妲。）<br><br><b><i class="i-see-you"></i>「我看到你了」</b>';
 		
@@ -338,6 +370,19 @@ function chinese() {
 		
 		document.getElementsByClassName('skeletal-hat-about')[0].innerHTML = '“流浪者在旅途中遮光避雨的斗笠，但后来却成为了遮挡面目、隐藏表情的便利道具。”';
 		document.getElementsByClassName('skeletal-hat-text')[0].innerHTML = '「流浪者，流浪者，你要去哪里啊？」<br>流浪的少年被孩子喊住。<br>他是踏鞴砂工匠的孩子，虽然生了病，却仍有清澈的双眼。<br>少年告诉孩子，自己必须去稻妻城。<br>「可现在好大的雨，他们说之前离开的人也都没有回来！」<br>少年张了张嘴，最后只好对孩子微笑。<br>等他再次踏上这座岛屿，孩子已经不见影踪。<br><br>「稻妻人，你要去哪？这可不是你能坐的船！」<br>流浪的少年被港口的船夫拦下。<br>在少年拔刀之前，同行的男人伸手止住了他。<br>男人告知船夫，这个异国的少年将与自己同行。<br>「原来是大人的客人，是我冒昧了。」<br>男人递给少年御寒的外套，但少年摇了摇头。<br>现在他只想知道，此次远行能见到什么有趣的东西。<br><br>「执行官大人，你要去哪里？」<br>少年最讨厌聒噪的人类，他反手打了部下的脸。<br>但少年也最喜欢观察人类的惊恐与无助，<br>或许正因为表情丰富，这个愚蠢的部下才会被他留在身边。<br>他告诉跪在地上战战兢兢的人，这次东去蒙德。<br>「属下明白了，这就让直属护卫们准备！」<br>护卫并无必要，但他已懒得再与蠢材废话。<br>他再度戴上了流浪人的斗笠，只身向东行去。<br><br>「孩子，你要去哪儿啊？」<br>归国的少年在路边被名老妪喊住。<br>他告知老妪，自己准备向西去。<br>「要去八酝岛吗，是去做什么啊？」<br>老妪并没有多想，只是最近很不太平。<br>少年带着真诚的笑容谢过她的关心，说自己与人有约在先。<br>小船缓缓靠岸，一个异国装束的女人站在岸边，<br>远远地向少年抛出一枚小小的晶球。<br>少年轻松接住了晶球，将它对准了如血残阳。';
+		
+		//アイテム
+		document.getElementsByClassName('rather-aged-notes-text1')[0].innerHTML = '（似乎是最近被搜刮的愚人众翻出来的记事。因为年岁，大部分文本已经无法辨识了。）';
+		document.getElementsByClassName('rather-aged-notes-text2')[0].innerHTML = '「…小人斗胆僭越，认为长正大人铸刀对他的心境颇有好处…」<br>「…对清洗『御舆』污名之执着，实在是损心耗力…」<br><span class="mark">「…另，桂木大人于名椎滩巡视时，发现无名倾奇者…」</span>';
+		document.getElementsByClassName('rather-aged-notes-text3')[0].innerHTML = '「…目付大人购买玉钢锭若干…」<br>「…与造兵司佑大人、桂木大人彻夜讨论锻冶心得。」';
+		document.getElementsByClassName('rather-aged-notes-text4')[0].innerHTML = '「…终于造出长卷一柄。名之曰『大踏鞴长正』…」<br>「…目付大人兴致相当高昂，与造兵司佑大人…」<br>「…阿望为『大踏鞴长正』之美所服，为之绘制图画…」<br><span class="mark">「…同浮浪倾奇者剑舞…」</span>';
+		document.getElementsByClassName('rather-aged-notes-text5')[0].innerHTML = '「…撤离时，原本应当将兵库钥匙分为三片，一片交予目付大人、一片交予造兵司正大人、一片留在踏鞴砂中，以防贼人侵入。」<br>「然而实在太过匆忙，无法找到目付大人与造兵司正大人，小人斗胆将三片钥匙藏在踏鞴砂内三处宝箱中…」';
+		document.getElementsByClassName('rather-aged-notes-text6')[0].innerHTML = '<span class="mark">「…而倾奇者也不知所踪…」</span><br>「…目付大人震怒，斩桂木。入胴之深，此物是为大业物…并将亲造之长卷弃于踏鞴炉中…」<br>「…阿望实在不平、不忍，将全然熔毁的刀取出…严重烧伤…」';
+		document.getElementsByClassName('rather-aged-notes-text7')[0].innerHTML = '「…阿望于当夜殁…小人斗胆以为，桂木大人却有渎职，但所作所为均出自善心…」';
+		document.getElementsByClassName('rather-aged-notes-text8')[0].innerHTML = '「…小人斗胆将熔毁长卷废渣与阿望所描画之图藏于兵库中…」<br>「…只期望目付大人有朝一日，能想起斩桂木大人前，为亲手锻成之刀欣喜的心情…」';
+		document.getElementsByClassName('rather-aged-notes-text9')[0].innerHTML = '「…金次郎将长卷与阿望的图画藏于兵库中…」<br>「…长正虽严苛，却清明无比。虽清明，却同等不近人情。于氏名清白之爱执…然而之于我与踏鞴砂众杂户均不为其母千代之事所蔽，信赖长正…」<br><span class="mark">「…而我也不愿忘记与他一同造出『大踏鞴长正』之乐，与那夜无名倾奇者与桂木一同舞剑的快乐…」</span>';
+		document.getElementsByClassName('ancient-forging-blueprint-text')[0].innerHTML = '一卷古老的锻造图谱，将军曾命令枫原家依照它锻造御神刀。<br>经过浸泡后，图谱上有一些文字变得模糊了——有人通过篡改它，导致了锻刀失败，并引发了后续的一系列惨剧…';
+		document.getElementsByClassName('ancient-forging-blueprint-text-translation')[0].innerHTML = '<p><font size="4"><span class="inazumafont">tanzo sekveizu</span><b>&thinsp;锻造设计図</b></font><br><span class="inazumafont">kixsaki</span>&thinsp;切先<br><span class="inazumafont">abiay</span>&thinsp;刃<br><span class="inazumafont">hira</span>&thinsp;平<br><span class="inazumafont">shinogichi</span>&thinsp;镐地</p><p><font size="4"><span class="inazumafont">zairyou</span><b>&thinsp;材料</b></font><br><span class="inazumafont">hakutetsy</span>&thinsp;白铁块<br><span class="inazumafont">shoukakotsuzui</span>&thinsp;晶化骨髓<br><span class="mark"><span class="inazumafont">kesekika</span>&thinsp;血斛<br><span class="inazumafont">murasakisuisho</span>&thinsp;紫晶</span></ul></p><cite>翻訳引用: <a href="https://ngabbs.com/read.php?tid=31458467">NGA</a></cite>';
 	//ボス
 document.getElementsByClassName('boss-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=859296635&bvid=BV1sV4y1576g&cid=869759578&t=709&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>';
 document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」';
@@ -346,4 +391,15 @@ document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」';
 	document.getElementsByClassName('boss-stage1')[0].innerHTML = '第一形态: ？？？';
 	document.getElementsByClassName('boss-stage2')[0].innerHTML = '第ニ形态: ？？？';
 	document.getElementsByClassName('boss-drop')[0].innerHTML = '素材';
+	
+	//PV
+	document.getElementsByClassName('11pv-video')[0].innerHTML = '<iframe src="//player.bilibili.com/player.html?aid=287558357&bvid=BV1ff4y1B7Wb&cid=253066883&page=1&t=90" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>';
+	document.getElementsByClassName('21pv-video')[0].innerHTML = '<iframe src="//player.bilibili.com/player.html?aid=717493272&bvid=BV1XQ4y1y7Wk&cid=392594699&page=1&t=156" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>';
+	document.getElementsByClassName('21pv-text')[0].innerHTML = '散兵 : 永恒可以把时间拉得很长，然而，其间每一个节点都会变得无比脆弱。<br>散兵：呵呵呵…哈哈哈哈！';
+		document.getElementsByClassName('31pv-video')[0].innerHTML = '<iframe src="//player.bilibili.com/player.html?aid=345579580&bvid=BV1yd4y1u7ef&cid=834743462&page=1&t=194" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>';
+		document.getElementsByClassName('31pv-text')[0].innerHTML = '<i class="i-see-you"></i><br>散兵：呵呵呵…哈哈哈哈！无需恐惧，疼痛只是一瞬。<br>散兵：你们的时代…就要结束了。';
+		
+		
+		document.getElementsByClassName('32pv-video')[0].innerHTML = '<iframe src="//player.bilibili.com/player.html?aid=901868956&bvid=BV1QP4y1U7D2&cid=869665626&page=1&t=84" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>';
+		document.getElementsByClassName('32pv-text')[0].innerHTML = '散兵：所以，你们觉得事情结束了？<br>纳西妲：…等等，不对…不…这样不对。<br>博士：那是被世界树所藏匿起来的，有关整个世界「真相」的 秘密。<br>派蒙：已经完全成为了神明的…「散兵」<br>散兵（BOSS）：司掌智慧的神，怪不得就连你的人民都会将你背弃。<br>散兵（BOSS）：你也将…无处立足！<br>散兵（BOSS）：轮转百劫！<br>阿扎尔：在这里「牺牲」掉旅行者，难道不是你们的计划？<br>MOB：妮露，你真打算那么干？为了他们而冒这种风险。<br>妮露：…我…必须承认，我有一点害怕。<br>妮露：但为了小吉祥草王大人，我愿意尝试。<br>赛诺：艾尔海森的计划比想的还狠。<br>镀金旅团：兄弟们！让他们知道镀金旅团不是好惹的！<br>艾尔海森：阿扎尔，你是背叛了整个须弥，背叛了神明的家伙。<br>阿扎尔：创造神明…我们可是在以人类的智慧创造神明<br>散兵（BOSS）：此刻，重现魔神战争的一角。<br>散兵（BOSS）：来为我作为神明的诞生而「正名」吧。';
 	}
