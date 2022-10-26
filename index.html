@@ -25,8 +25,7 @@
 			<script src="../parts/load.js"></script>
 			<script src="cn.js"></script>
 			<link rel="icon" href="https://giarchive.github.io/scaramouche/favicon.ico">
-			
-<link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/0749E3AF-8E47-42B8-A242-92F7D19A65F1.png">	
+			<link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/0749E3AF-8E47-42B8-A242-92F7D19A65F1.png">
 			<!-- 
 				必ずサイトマップを更新する
 				▶︎ここで更新 https://www.xml-sitemaps.com
@@ -3602,9 +3601,16 @@ Poonam Basu「The Inazuma outfit style is so awesome!」
 						<script type="text/javascript">
 				//head要素を取得
 const head = document.head;
-
-//head.insertAdjacentHTML('beforeEnd', '<link rel="icon" href="https://giarchive.github.io/signora/favicon.ico">');
-//head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https://giarchive.github.io/signora/apple-touch-icon.png">');
+rand = 1
+/*rand = Math.floor(Math.random()*1);
+	if (rand == 0) {
+		head.insertAdjacentHTML('beforeEnd', '<link rel="icon" href="https://giarchive.github.io/scaramouche/favicon.ico">');
+		head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/0749E3AF-8E47-42B8-A242-92F7D19A65F1.png">');
+	}*/
+	if (rand == 1) {
+		head.insertAdjacentHTML('beforeEnd', '<link rel="icon" href="https://giarchive.github.io/scaramouche/favicon-uri.ico">');
+		head.insertAdjacentHTML('beforeEnd', '<link rel="apple-touch-icon" href="https://giarchive.github.io/scaramouche/apple-touch-icon-uri.png">');
+	}
 </script>
 		</body>
 	</html>
