@@ -1,0 +1,249 @@
+
+<script src="script.js" loading="lazy"></script>
+    			<input type="checkbox" id="nav_box"/></input>
+    			<div class="nav_hidden wrapper">
+					<div class="search-area">
+      <form>
+		  <span class="menu-title"><a href="../">GIArchive</a></span>
+        <input type="search" id="search-text" placeholder="検索" list="serchtag">
+		<datalist id="serchtag">
+<option value="任務" class="story-serch"></option>
+<option value="PV" class="pv-serch"></option>
+<option value="聖遺物" class="artifact-serch"></option>
+<option value="国崩" class="kunikuzushi-serch"></option>
+<option value="攻略" class="cheats-serch"></option>
+
+</datalist>
+      </form>
+      <div class="search-result">
+        <div class="search-result__hit-num"></div>
+        <div id="search-result__list"></div>
+      </div>
+  </div> 
+				<ul class="list target-area">
+					<li><a href="#update" class="update" onclick="document.getElementById('drawer_input').checked = false;">更新履歴</a>
+					<li><a href="#information" class="information" onclick="document.getElementById('drawer_input').checked = false;">基本情報</a>
+						<ul>	
+							<li><a href="#visual" class="visual" onclick="document.getElementById('drawer_input').checked = false;">ビジュアル</a></li>
+							<li><a href="#character-setting" class="character-setting" onclick="document.getElementById('drawer_input').checked = false;">キャラクター設定</a></li>
+							<li><a class="voice-actor" href="#voice-actor" onclick="document.getElementById('drawer_input').checked = false;">声優</a></li>
+							<!--<li><a href="#gacha-Illust" class="gacha-Illust" onclick="document.getElementById('drawer_input').checked = false;">立ち絵</a></li>-->
+							<li><a href="#model" class="model" onclick="document.getElementById('drawer_input').checked = false;">3Dモデル<span style="display: none;">3d</span></a></li>
+						</ul>
+					</li>
+					<!--<li class="gacha"><a href="#gacha" onclick="document.getElementById('drawer_input').checked = false;">祈願</a>
+						<ul>
+							<li class="gacha-3.3"><a href="#gacha-3.3" onclick="document.getElementById('drawer_input').checked = false;">Ver3.x ガチャ名</a></li>
+						</ul>
+					</li>-->
+					<li><a href="#timeline" class="timeline" onclick="document.getElementById('drawer_input').checked = false;">時系列</a>
+					<li><a href="#world-name" class="world-name" onclick="document.getElementById('drawer_input').checked = false;">各言語名<span style="display: none;">翻訳</span></a>
+						<ul>
+							<li><a href="#lang-tab" class="lang-tab" onclick="document.getElementById('drawer_input').checked = false;">個別表示</a></li>
+						<li><a href="#list" class="name-list" onclick="document.getElementById('drawer_input').checked = false;">一覧</a></li>
+					</ul>
+					</li>
+					<li><a href="#story-text" class="story-text" onclick="document.getElementById('drawer_input').checked = false;">ストーリー<span style="display: none;">(任務、ストーリー)</span></a>
+					<ul>
+					<li><a href="#unreconciled-stars" class="unreconciled-stars" onclick="document.getElementById('drawer_input').checked = false;">帰らぬ熄星<span style="display: none;">(イベント、任務、ストーリー、モンド、璃月、モナ、フィッシュル)</span></a></a>
+						<ul>
+							<li><a href="#unknown-star" class="unknown-star" onclick="document.getElementById('drawer_input').checked = false;">蔓延する危機</a></li>
+							<li><a href="#star-of-deceitful-dreams" class="star-of-deceitful-dreams" onclick="document.getElementById('drawer_input').checked = false;">天の謎、水の解き</a></li>
+							<li><a href="#star-of-destiny" class="star-of-destiny" onclick="document.getElementById('drawer_input').checked = false;">古星の運命</a></li>
+						</ul>
+					</li>
+					<li><a href="#omnipresence-over-mortals" class="omnipresence-over-mortals" onclick="document.getElementById('drawer_input').checked = false;">千手百目の浮世<span style="display: none;">(魔神任務、ストーリー、八重神子、雷電将軍、邪眼工場、稲妻)</span></a></a>
+						<ul>
+							<li><a href="#delusion" class="delusion" onclick="document.getElementById('drawer_input').checked = false;">邪眼</a></li>
+							<li><a href="#the-servants-path" class="the-servants-path" onclick="document.getElementById('drawer_input').checked = false;">眷属の践行</a></li>
+							<li><a href="#wishes" class="wishes" onclick="document.getElementById('drawer_input').checked = false;">願い</a></li>
+						</ul>
+					</li>
+					<li><a href="#clean-house" class="clean-house" onclick="document.getElementById('drawer_input').checked = false;">戸口の掃除<span style="display: none;">(世界任務、ストーリー、稲妻)</span></a></li>
+					<li><a href="#labyrinth-warriors" class="labyrinth-warriors" onclick="document.getElementById('drawer_input').checked = false;">謎境一騎<span style="display: none;">(イベント、任務、ストーリー、稲妻、タルタリヤ、公子)</span></a></a>
+						<ul>
+							<li><a href="#away-with-obsessions-and-falsehood" class="away-with-obsessions-and-falsehood" onclick="document.getElementById('drawer_input').checked = false;">執念と虚飾からの解放</a></li>
+						</ul>
+					</li>
+					<li><a href="#hues-of-the-violet-garden" class="hues-of-the-violet-garden" onclick="document.getElementById('drawer_input').checked = false;">華やぐ紫苑の庭<span style="display: none;">(イベント、任務、ストーリー、楓原万葉、稲妻、国崩)</span></a></a>
+						<ul>
+							<li><a href="#five-kasen-summary" class="five-kasen-summary" onclick="document.getElementById('drawer_input').checked = false;">五歌仙の資料概要</a></li>
+							<li><a href="#a-new-painting-in-pale-scarlet" class="a-new-painting-in-pale-scarlet" onclick="document.getElementById('drawer_input').checked = false;">薄墨淡朱の新しき絵画</a></li>
+							<li><a href="#the-palace-dyed-in-blackfalsehood" class="the-palace-dyed-in-blackfalsehood" onclick="document.getElementById('drawer_input').checked = false;">黒に染まりし宵暗の御所</a></li>
+							<li><a href="#the-five-colors-true-form" class="the-five-colors-true-form" onclick="document.getElementById('drawer_input').checked = false;">五彩光華に隠されし真相</a></li>
+							<li><a href="#tale-of-the-five-kasen" class="tale-of-the-five-kasen" onclick="document.getElementById('drawer_input').checked = false;">ストーリームービー「歌仙逸話」<span style="display: none;">(pv，ムービー)</span></a></li>
+							<li><a href="#kuronushi-illustration-event" class="kuronushi-illustration-event" onclick="document.getElementById('drawer_input').checked = false;">黒主の姿絵</a></li>
+						</ul>
+					</li>
+					<li><a href="#a-winter-nights-lazzo" class="a-winter-nights-lazzo" onclick="document.getElementById('drawer_input').checked = false;">PV「冬夜の戯劇」<span style="display: none;">(博士、ドットーレ、隊長、カピターノ、ストーリー、スネージナヤ、pv、ムービー)</span></a></li>
+					
+					<li><a href="#through-mists-of-smoke-and-forests-dark" class="through-mists-of-smoke-and-forests-dark" onclick="document.getElementById('drawer_input').checked = false;">煙霧のベールと暗き森を抜けて<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、缶詰知識)</span></a></a>
+						<ul>
+							<li><a href="#ever-so-close" class="ever-so-close" onclick="document.getElementById('drawer_input').checked = false;">間近に迫った目標</a></li>
+						</ul>
+					</li>
+					<li><a href="#the-morn-a-thousand-roses-brings" class="the-morn-a-thousand-roses-brings" onclick="document.getElementById('drawer_input').checked = false;">黎明を告げる千の薔薇<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a>
+						<ul>
+							<li><a href="#unknown-voice-3-2" class="unknown-voice-3-2" onclick="document.getElementById('drawer_input').checked = false;">謎の声</a></li>
+							<li><a href="#the-coming-of-the-sabzeruz-festival" class="the-coming-of-the-sabzeruz-festival" onclick="document.getElementById('drawer_input').checked = false;">終に訪れし花神誕祭</a></li>
+							<li><a href="#the-end-of-the-sabzeruz-festival" class="the-end-of-the-sabzeruz-festival" onclick="document.getElementById('drawer_input').checked = false;">終に終りし花神誕祭</a></li>
+						</ul>
+					</li>
+					<li><a href="#Dreams-Emptiness-Deception" class="dreams-emptiness-deception" onclick="document.getElementById('drawer_input').checked = false;">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、PV、神、過去、国崩)</span></a>
+						<ul>
+							<li><a href="#like-a-triumphant-hero" class="like-a-triumphant-hero" onclick="document.getElementById('drawer_input').checked = false;">凱旋した英雄のように</a></li>
+							<li><a href="#the-gaze-from-a-certain-god" class="the-gaze-from-a-certain-god" onclick="document.getElementById('drawer_input').checked = false;">とある「神」からの凝視</a>
+								<ul><li><a href="#the-divine-will" class="the-divine-will" onclick="document.getElementById('drawer_input').checked = false;">ストーリームービー「『神』意」<span style="display: none;">(PV、pv、ムービー)</span></a></li></ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#king-deshret-and-the-three-magi" class="king-deshret-and-the-three-magi" onclick="document.getElementById('drawer_input').checked = false;">赤砂の王と三人の巡礼者<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、神)</a>
+						<ul>
+							<li><a href="#cry-from-the-eleazar-hospital" class="cry-from-the-eleazar-hospital" onclick="document.getElementById('drawer_input').checked = false;">魔鱗病病院の泣き声</a></li>
+							<li><a href="#secret-of-the-scorching-desert" class="secret-of-the-scorching-desert" onclick="document.getElementById('drawer_input').checked = false;">熱砂の中の秘密</a></li>
+						</ul>
+					</li>
+					<li><a href="#akasha-pulses-the-kalpa-flame-rises" class="akasha-pulses-the-kalpa-flame-rises" onclick="document.getElementById('drawer_input').checked = false;">虚空の鼓動、熾盛の劫火<span style="display: none;">(魔神任務、ストーリー、スメール、BOSS、週ボス、虚空の鼓動、熾盛の劫火)</span></a>
+						<ul>
+							<li><a href="#unknown" onclick="document.getElementById('drawer_input').checked = false;">???</a></li>
+						</ul>
+					</li>
+				</li></ul>
+				<!-- <li><a href="voice-line" onclick="document.getElementById('drawer_input').checked = false;">ボイス・キャラストーリー</a>
+					<ul>
+						<li class="character-voice"><a href="#character-voice" onclick="document.getElementById('drawer_input').checked = false;">キャラクターボイス</a></li>
+						<li class="character-story"><a heef="#character-story" onclick="document.getElementById('drawer_input').checked = false;">キャラクターストーリー</a></li>
+					</ul>
+				</li>-->
+				<li class="atrifacts"><a href="#atrifacts" class="atrifacts" onclick="document.getElementById('drawer_input').checked = false;">聖遺物</a>
+					<ul>
+						<li><a href="#pale-flame" class="pale-flame" onclick="document.getElementById('drawer_input').checked = false;">蒼白の炎<span style="display: none;">(聖遺物、ファデュイ、過去、国崩)</span></a></a>
+							<ul>
+						<li><a href="#goblet-of-eonothem-surpassing-cup" class="goblet-of-eonothem-surpassing-cup" onclick="document.getElementById('drawer_input').checked = false;">超越の盃</a></li>
+							</ul>
+							<li><a href="#husk-of-opulent-dreams" class="husk-of-opulent-dreams" onclick="document.getElementById('drawer_input').checked = false;">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩、過去)</span></a></a>
+								<ul>
+						<li><a href="#bloom-times" class="bloom-times" onclick="document.getElementById('drawer_input').checked = false;">栄花の期</a></li>
+						<li><a href="#plume-of-luxury" class="plume-of-luxury" onclick="document.getElementById('drawer_input').checked = false;">華館の羽</a></li>
+						<li><a href="#song-of-life" class="song-of-life" onclick="document.getElementById('drawer_input').checked = false;">衆生の歌</a></li>
+						<li><a href="#calabash-of-awakening" class="calabash-of-awakening" onclick="document.getElementById('drawer_input').checked = false;">夢醒の瓢箪</a></li>
+						<li><a href="#skeletal-hat" class="skeletal-hat" onclick="document.getElementById('drawer_input').checked = false;">形骸の笠</a></li>
+					</ul>
+					</li>
+					</ul>
+				</li>
+				<li class="weapons"><a href="#weapons" onclick="document.getElementById('drawer_input').checked = false;">武器</a>
+					<ul>
+						<li><a href="#katsuragikiri-nagamasa" onclick="document.getElementById('drawer_input').checked = false;">桂木斬長正<span style="display: none;">(丹羽桂木、御輿長正、国崩)</span></a></a></li>
+						<li><a href="#kaguras-verity" onclick="document.getElementById('drawer_input').checked = false;">神楽の真意<span style="display: none;">(八重神子)</span></a></a></li>
+						<li><a href="#kagotsurube-isshin" onclick="document.getElementById('drawer_input').checked = false;">籠釣瓶一心</a></li>
+					</ul>
+				</li>
+				<li><a href="#item" class="item" onclick="document.getElementById('drawer_input').checked = false;">アイテム・掲示物</a>
+					<ul>
+						<li><a href="#rather-aged-notes" class="rather-aged-notes" onclick="document.getElementById('drawer_input').checked = false;">古い手帳<span style="display: none;">(古い手紙、丹羽桂木、御輿長正、国崩)</span></a></li>
+						<li><a href="#ancient-forging-blueprint" class="ancient-forging-blueprint" onclick="document.getElementById('drawer_input').checked = false;">古代の鍛造図<span style="display: none;">(楓原万葉)</span></a></a></li>
+					</ul>
+				</li>
+				<li class="domain"><a href="#domain" onclick="document.getElementById('drawer_input').checked = false;">秘境</a>
+					<ul>
+						<li><a href="#castle-of-scrolls" onclick="document.getElementById('drawer_input').checked = false;">借景ノ館<span style="display: none;">借景の館、国崩、秘境</span></a></li>
+					</ul>
+				</li>
+				<li class="mention"><a href="#mention" onclick="document.getElementById('drawer_input').checked = false;">言及<span style="display: none;">ボイス</span></a>
+					<ul>
+						<li><a href="#from-character-mention" onclick="document.getElementById('drawer_input').checked = false;">プレイアブルキャラクター</a>
+							<ul>
+						<li><a href="#from-raiden-mention" onclick="document.getElementById('drawer_input').checked = false;">雷電将軍<span style="display: none;">雷電影、国崩</span></a></a></li>
+						<li><a href="#from-yae-mention" onclick="document.getElementById('drawer_input').checked = false;">八重神子<span style="display: none;">(国崩)</span></a></li>
+						<li><a href="#from-tartaglia-mention" onclick="document.getElementById('drawer_input').checked = false;">タルタリヤ<span style="display: none;">(公子、ファデュイ、ファトゥス)</span></a></a></li>
+						<!--<li><a href="#from-nahida-mention" onclick="document.getElementById('drawer_input').checked = false;">ナヒーダ<span style="display: none;">(スメール、ブエル)</span></a></a></li>-->
+					</ul>
+				</li>
+				<li><a href="#from-npc-mention" onclick="document.getElementById('drawer_input').checked = false;">NPC</a>
+					<ul>
+						<li><a href="#from-viktor-mention" onclick="document.getElementById('drawer_input').checked = false;">ヴィクトル<span style="display: none;">(ファデュイ)</span></a></a></li>
+					</ul>
+				</li>
+					</ul>
+				</li>
+				<li class="combat"><a href="#combat" onclick="document.getElementById('drawer_input').checked = false;">戦闘・育成<span style="display: none;">攻略</span></a>
+						<ul>
+							<!-- <li><a href="#atack-skill" onclick="document.getElementById('drawer_input').checked = false;">性能<span style="display: none;">攻略</span</a></li>
+							<li><a href="#talent" onclick="document.getElementById('drawer_input').checked = false;">天賦<span style="display: none;">攻略</span</a></li>
+							<li><a href="#collection" onclick="document.getElementById('drawer_input').checked = false;">命の星座<span style="display: none;">攻略</span</a></li>
+							<li><a heef="#skill-details" onclick="document.getElementById('drawer_input').checked = false;">スキル詳細<span style="display: none;">攻略</span</a></li>
+												-->
+							<li><a href="#nurturing" onclick="document.getElementById('drawer_input').checked = false;">育成素材<span style="display: none;">攻略</span></a></li>
+							<li><a href="#skill-nurturing" onclick="document.getElementById('drawer_input').checked = false;">天賦育成素材<span style="display: none;">攻略</span></a></li>
+						</ul>
+					</li>
+					<li><a href="#boss" class="boss" onclick="document.getElementById('drawer_input').checked = false;">ボス「？？？」<span style="display: none;">週ボス、敵、攻略</span></a>		
+						<ul>
+							<li><a href="#boss-story" class="boss-story" onclick="document.getElementById('drawer_input').checked = false;">秘境・ストーリー</a></li>
+							<li><a href="#boss-detail" class="boss-detail" onclick="document.getElementById('drawer_input').checked = false;">秘境詳細</a></li>
+							<li><a href="#boss-stage1" class="boss-stage1" onclick="document.getElementById('drawer_input').checked = false;">第1形態: ???</a></li>
+							<li><a href="#boss-stage2" class="boss-stage2" onclick="document.getElementById('drawer_input').checked = false;">第2形態: ???</a></li>
+							<li><a href="#boss-drop" class="boss-drop" onclick="document.getElementById('drawer_input').checked = false;">ドロップ素材</a></li>
+						</ul>
+					</li>
+					
+					<li><a href="#music" class="music" onclick="document.getElementById('drawer_input').checked = false;">楽曲<span style="display: none;">(音楽)</span></a>
+						<ul>
+							<li><a href="#ominous-fandango" class="ominous-fandango" onclick="document.getElementById('drawer_input').checked = false;">浮浪人の魂胆<span style="display: none;">(音楽、楽曲、BGM)</span></a></li>
+							<li><a href="#unpredicted-conspiracy" class="unpredicted-conspiracy" onclick="document.getElementById('drawer_input').checked = false;">予期せぬ陰謀<span style="display: none;">(音楽、楽曲、BGM)</span></a></li>
+							<li><a href="#floating-world-under-the-moonlight" class="floating-world-under-the-moonlight" onclick="document.getElementById('drawer_input').checked = false;">韶光撫月の浮世<span style="display: none;">(音楽、楽曲、BGM)</span></a></li> 
+							<li><a href="#music-king-deshret-and-the-three-magi" class="music-king-deshret-and-the-three-magi" onclick="document.getElementById('drawer_input').checked = false;">赤砂の王と三人の巡礼者<span style="display: none;">(音楽、楽曲、BGM)</span></a></li> 
+							<li><a href="#music-akasha-pulses-the-kalpa-flame-rises" class="music-akasha-pulses-the-kalpa-flame-rises" onclick="document.getElementById('drawer_input').checked = false;">虚空の鼓動、熾盛の劫火<span style="display: none;">(音楽、楽曲、BGM)</span></a></li> 
+						</ul>
+					</li>
+					<li class="illustration"><a href="#illustration" onclick="document.getElementById('drawer_input').checked = false;">公式イラスト<span style="display: none;">(壁紙、キービジュアル)</span></a>
+				<ul>
+					<li><a href="#star-illustration" onclick="document.getElementById('drawer_input').checked = false;">帰らぬ熄星<span style="display: none;">(壁紙、キービジュアル、1.1)</span></a></a></li>
+					<li><a href="#irodori-illustration" onclick="document.getElementById('drawer_input').checked = false;">光華容彩祭<span style="display: none;">(壁紙、華やぐ紫苑の庭、2.5)</span></span></a></a></li>
+					<li><a href="#illustration-king-deshret-and-the-three-magi" onclick="document.getElementById('drawer_input').checked = false;">赤王の砂と三人の巡礼者<span style="display: none;">(壁紙、キービジュアル、pv、3.1)</span></a></a></li>
+					<li><a href="#akasha-pulses-the-kalpa-flame-rises-illustration" onclick="document.getElementById('drawer_input').checked = false;">虚空の鼓動、熾盛の劫火<span style="display: none;">(壁紙、キービジュアル、pv、3.2)</span></a></a></li>
+				</ul>
+			</li>
+			<li class="pv"><a href="#pv" onclick="document.getElementById('drawer_input').checked = false;">PV</a>
+				<ul>
+					<li><a href="#1.1pv" class="1.1pv" onclick="document.getElementById('drawer_input').checked = false;">Ver1.1「迫る客星」<span style="display: none;">(PV、pv、1.1、迫る客星、帰らぬ熄星)</span></a></a></li>
+					<li><a href="#2.1pv" class="2.1pv" onclick="document.getElementById('drawer_input').checked = false;">Ver2.1「千手百目の浮世」<span style="display: none;">(PV、pv、2.1、千手百目の浮世)</span></a></a></li>
+					<li><a href="#3.1pv" class="3.1pv" onclick="document.getElementById('drawer_input').checked = false;">Ver3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、3.1、赤砂の王と三人の巡礼者)</span></a></a></li>
+					<li><a href="#3.2pv" class="3.2pv" onclick="document.getElementById('drawer_input').checked = false;">Ver3.2「虚空の鼓動、熾盛の劫火」<span style="display: none;">(PV、pv、3.2)</span></a></a></li>
+				</ul>
+			</li>
+			<li class="stamp"><a href="#stamp" onclick="document.getElementById('drawer_input').checked = false;">スタンプ</a>
+				<ul>
+					<li><a href="#line-stamp-genshin-vol2" onclick="document.getElementById('drawer_input').checked = false;">LINEスタンプ「原神 スタンプ Vol.2」</a></li>
+				</ul>
+			</li>
+				<li class="official-tweet"><a href="#official-tweet" onclick="document.getElementById('drawer_input').checked = false;">公式ツイート<span style="display: none;">(Twitter、twitter)</span></a></a>
+					<ul>
+						<li class="official-tweet-jp"><a href="#official-tweet-jp" onclick="document.getElementById('drawer_input').checked = false;">日本語</a></li>
+					</ul>
+				</li>
+				<li class="interview"><a href="#interview" onclick="document.getElementById('drawer_input').checked = false;">インタビュー等</a>
+					<ul>
+						<li><a href="#scaramouche-va-1th" onclick="document.getElementById('drawer_input').checked = false;">1周年記念インタビュー 柿原徹也(スカラマシュ役)<span style="display: none;">声優</span></a></li>
+						<li><a href="#ver2-1-livestream" onclick="document.getElementById('drawer_input').checked = false;">2.1版本「韶光抚月，天下人问」前瞻特别节目<span style="display: none;">(予告、バージョン2.1)</span></a></li>
+						<li><a href="#ver3-1-livestream" onclick="document.getElementById('drawer_input').checked = false;">Ver.3.1「赤砂の王と三人の巡礼者」予告番組<span style="display: none;">(バージョン3.1、Ver3.1、ver3.1)</span></a></a></li>
+						<li><a href="#ver3-2-livestream" onclick="document.getElementById('drawer_input').checked = false;">Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組<span style="display: none;">(バージョン3.2、Ver3.2、ver3.2)</span></a></a></li>
+						<li><a href="#interview-other" onclick="document.getElementById('drawer_input').checked = false;">その他言及</a></li>
+					</ul>
+				</li>
+				<li class="official-contents"><a href="#official-contents" onclick="document.getElementById('drawer_input').checked = false;">商品<span style="display: none;">(グッズ)</span></a></a>
+					<ul>
+						<li><a href="#book" onclick="document.getElementById('drawer_input').checked = false;">書籍<span style="display: none;">(本)</span></a></a></li>
+						<li><a href="#goods" onclick="document.getElementById('drawer_input').checked = false;">グッズ</a></li>
+					</ul>
+				</li>
+				<li class="supplementary"><a href="#supplementary" onclick="document.getElementById('drawer_input').checked = false;">補足情報<span style="display: none;">(考察)</span></a></a>
+					<ul>
+						<li><a href="#twitter-trend" class="twitter-trend" onclick="document.getElementById('drawer_input').checked = false;">Twitterトレンド</a></li>
+						<li><a href="#name-original" onclick="document.getElementById('drawer_input').checked = false;">名前の由来</a></li>
+					</ul>
+				</li>
+				<li><a href="../agreement.html" class="menu-statutes">利用規約</a></li>
+			</div>
+			

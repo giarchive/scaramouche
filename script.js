@@ -1,12 +1,12 @@
+
+//検索
 $(function () {
   searchWord = function(){
-    var searchText = $(this).val(), // 検索ボックスに入力された値
+    var searchText = $(this).val(),
         targetText;
 
     $('.target-area li').each(function() {
       targetText = $(this).text();
-
-      // 検索対象となるリストに入力された文字列が存在するかどうかを判断
       if (targetText.indexOf(searchText) != -1) {
         $(this).removeClass('hidden');
       } else {
@@ -14,10 +14,9 @@ $(function () {
       }
     });
   };
-
-  // searchWordの実行
   $('#search-text').on('input', searchWord);
 });
+
 
 //画像読み込み
 var loadingmoucheimageHat;
