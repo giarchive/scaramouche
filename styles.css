@@ -98,14 +98,13 @@ table .fa-link {
   src: url('https://giarchive.github.io/GenshinFonts/GenshinInazuma-Regular.ttf') format('truetype');
 }
 
-
-body {
+body,header {
 	margin: 0;
 	padding: 0;
 }
 /*メインコンテンツ*/
 html{
-	height:100%;
+	height: -webkit-fill-available;
 }
 body, main {
 	width: var(--content-width);
@@ -113,6 +112,7 @@ body, main {
 body {
     color: var(--black1);
 	background: var(--white);
+	background-attachment: fixed;
     font-family: 游ゴシック, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
     font-size: 16px;
     -ms-text-size-adjust: 100%;
@@ -122,7 +122,8 @@ body {
     z-index: 2;
 	margin-left: 7.5vw;
 	margin-right: 7.5vw;
-	height:100%;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 	overflow-wrap: break-word;
 }
 main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,twitter-trend-tag {
@@ -160,7 +161,7 @@ main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,tw
 input{
     -webkit-appearance: none;
 }
-main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbody,iframe,cite {
+main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbody,iframe,cite,video {
 	margin: 0;
 	padding: 0;
 }
@@ -211,8 +212,150 @@ main .inazumafont {
 	font-family: 'InazumaFont', sans-serif;
 }
 /*メニュー*/
+@keyframes hideop {
+  0% {
+    opacity: 0;
+    display:none;
+  }
+
+  100% {
+	opacity: 1;
+    display: inline-block;
+  }
+}
+.drawer_hidden {
+  display: none;
+}
+.menu { 
+	padding-bottom: env(safe-area-inset-bottom);
+	margin-bottom: 2.5vh;
+}
+.menu-title a,.menu-title a:link,.menu-title a:visited, .menu-title a:hover, .menu-title a:active {
+	font-size: xx-large;
+	color: var(--black1);
+	font-weight: bold;
+	text-decoration: none;
+}
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 2.5vh;
+  right: 2vw;
+  z-index: 100;
+  cursor: pointer;
+  position: fixed;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: var(--black2);
+  transition: 0.5s;
+  position: absolute;
+}
+.drawer_open span:before {
+  bottom: 8px;
+}
+.drawer_open span:after {
+  top: 8px;
+}
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition: all .3s linear;
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+  transition: all .3s linear;
+}
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 98;
+  opacity: 0;
+} 
+.nav_content .nav_content_main {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  overflow-y: scroll;
+	background-attachment: fixed;
+	background: var(--white6);
+}
+.nav_contrnt_cover {
+	background-color: black;
+	opacity: 0.5;
+	 display: inline-block;
+	height: 100%;
+	width: 60%;
+	  position: fixed;
+	  top: 0;
+}
+
+#drawer_input:checked ~ .nav_content,#drawer_input:checked ~ .nav_title {
+	right: 0;
+	animation: hideop 0.25s linear 0s;
+	animation-fill-mode: forwards;
+}
+@media screen and (max-width: 680px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		background-color: var(--white6);
+		height: 7vh;
+	}
+	.nav_content .nav_content_main {
+		width: 100%;
+	}
+	.nav_contrnt_cover {
+		width: 0%;
+		}
+	header .title {
+		font-size: 1.25em;
+		position: fixed;
+		top: 0;
+  		margin-left: 0.5em;
+	}
+	.drawer_open {
+		position: fixed;
+  top: 0;
+}
+	article {
+		padding-top: 7vh;
+	}
+	.top-nav {
+		display: none;
+	}
+}
+/*メニュー本体*/
+.top-nav {
+	margin-top: 5vh;
+}
 .nav .nav_hidden {
-  margin: 0vw 4vw;
+  margin-left: 2.5vw;
   min-height: auto;
 }
 
@@ -290,12 +433,7 @@ ul.list ul li ul li a {
 	}
 }
 /*メニューボタン*/
-.nav {
-	margin-top: 2.5vh;
-	display:flex;
-	flex-direction: column;
-}
-.nav label {
+.nav-menu label {
     font-weight: bold;
     cursor :pointer;
 	display:flex;
@@ -303,31 +441,31 @@ ul.list ul li ul li a {
 }
 
 /*チェックは見えなくする*/
-.nav input#nav_box {
+.nav-menu input#nav_box {
     display: none;
 }
 
 /*中身を表示にしておく*/
-.nav .nav_hidden {
+.nav-menu .nav_hidden {
     height: auto;
     opacity: 1;
 }
-nav h3 {
+.nav-menu h3 {
     margin: 0vh!important;
 	padding: 0vw!important;
 	width: 100%;
 }
-nav .nav_label_text {
+.nav-menu .nav_label_text {
 	padding: 0vh 1vw;
 }
-nav i {
+.nav-menu i {
 	font-size: 1.25em;
 	float: right;
 	margin: 0vw;
 	padding: 0vw;
 	padding-bottom: 0.3rem;
 }
-.nav .nav_hidden {
+.nav-menu .nav_hidden {
 	padding: 10px 0;
     height: auto;
     opacity: 1;
@@ -338,22 +476,21 @@ nav i {
     overflow: hidden;
     opacity: 0;
 }
-@media screen and (max-width: 680px) {
-	.nav {
+/*@media screen and (max-width: 680px) {
+	.nav-menu {
 		margin-top: 2.5vh;
 	}
-	.nav .nav_hidden {
+	.nav-menu .nav_hidden {
     	height: 0;
     	padding: 0;
     	overflow: hidden;
     	opacity: 0;
 	}
-	.nav input:checked ~ .nav_hidden {
-		padding: 10px 0;
+	.nav-menu input:checked ~ .nav_hidden {
     	height: auto;
     	opacity: 1;
 	}
-}
+}*/
 /*トップ画像のタブ*/
 .tab-wrap {
     display: flex;
@@ -484,10 +621,14 @@ footer {
 	text-align: center;
 	padding-bottom: env(safe-area-inset-bottom);
 }
-/*画像*/
-img {
+/*画像、動画*/
+img,video {
 	width: 100%;
 	margin-bottom: 0.5em;
+}
+img.card-illustration {
+	width: 45%;
+	vertical-align: top;
 }
 /*引用*/
 blockquote:not(.twitter-tweet) {
@@ -532,22 +673,26 @@ blockquote .travel-log {
 	}
 }
 /*表*/
-.table {
-	overflow-x: scroll;
-}
 main table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	width: 100%;
 	max-width: var(--content-width);
+	margin-bottom: 0.5em;
+	white-space: nowrap;
+	display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  table-layout: auto;
 }
 main table tr {
 	white-space: nowrap;
+	width: 100%;
 }
 main th,main td {
 	border: solid 1px var(--white1);
 	padding: 2px 3px;
-	width: auto;
+	width: 100vw;
 	word-wrap: break-word;
 }
 
@@ -585,6 +730,46 @@ main td {
 	.timeline-table th {
 		padding-left: 1vw;
 		padding-right: 1vw;
+	}
+}
+/*立ち絵*/
+.gacha-picture-box {
+	display: inline-block;
+	vertical-align: top;
+	margin: 2vw;
+	width: calc(100% - 2vw);
+}
+.gacha-picture-box .gacha-box-contents {
+	margin-left: 0.25vw;
+	margin-right: 0.25vw;
+	width: calc(50% - 3vw);
+	vertical-align: top;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	float:left;
+}
+.gacha-Illust-text-about {
+	padding: 0 2.5rem;
+}
+.character-name-gacha-Illust {
+	font-size: x-large;
+	font-weight: bold;
+	padding: 0 2rem;
+}
+.gacha-picture-box blockquote {
+	margin: 0px 1em!important;
+	margin-top: 0.5em!important;
+}
+.gacha-picture-box blockquote p {
+	margin: 1.5em!important;
+}
+@media screen and (max-width: 680px) {
+	.gacha-picture-box .gacha-box-contents {
+		width: calc(100% - 2vw)!important;
+		height: auto;
+		vertical-align: top;
+		float: bottom;
 	}
 }
 /*Twitter*/
@@ -627,6 +812,16 @@ main td {
     left: 0;
     width: 100%;
     height: 100%;
+}
+/*楽曲バッジ*/
+.music-badge a {
+	height: 5vh;
+	width: auto;
+	display: inline-block;
+}
+.music-badge img {
+	height: 5vh;
+	width: auto;
 }
 /*Apple Music*/
 main .applemusic {
