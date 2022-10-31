@@ -742,7 +742,7 @@ main td {
 .gacha-picture-box .gacha-box-contents {
 	margin-left: 0.25vw;
 	margin-right: 0.25vw;
-	width: calc(50% - 5vw);
+	width: calc(50% - 1vw);
 	vertical-align: top;
 	display: flex;
     justify-content: center;
