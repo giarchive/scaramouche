@@ -2,7 +2,7 @@
 	<html lang="ja">
 		<head>
 			<meta charset="UTF-8">
-			<title>スカラマシュの全情報書き写し</title>
+			<title>スカラマシュ・放浪者の全情報書き写し</title>
 			<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 			<meta name="format-detection" content="telephone=no">
 			<link rel="stylesheet" href="styles.css">
@@ -18,8 +18,7 @@
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="language" content="Japanese" />
 			<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet" loading="lazy">
-			
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" loading="lazy"></script>
 			<script src="script.js" loading="lazy"></script>
 			
 			<script src="../parts/load.js"></script>
@@ -39,16 +38,36 @@
 		
 		<body lang="ja">
 			<header>
-				<h1 class="title">スカラマシュの全情報書き写し</h1>
-				<span class="printonry">http://giarchive.github.io/scaramouche/</span>
+				<h1 class="title">スカラマシュ(放浪者)の全情報書き写し</h1>
+							<div class="nav">
+				
+        	<input id="drawer_input" class="drawer_hidden" type="checkbox">
+        	<label for="drawer_input" class="drawer_open"><span></span></label>
+			<div class="nav_content">
+				<div class="nav_content_main">
+					<nav class="nav notspeech notprint">
+					<div class="menu"></div>
+				</nav>
+	  		</div>
+			<a onclick="document.getElementById('drawer_input').checked = false;" class="nav_contrnt_cover"></a>
+			<script type="text/javascript">
+				//メニュー読み込み
+$(document).ready(function(){
+	$.ajaxSetup({cache:false});
+	$(".menu").load("menu.html");
+});
+			</script>
+		</div>
 			</header>
 			<article>
 				<aside class="top-text notprint">
-						<p><b class="update-version">Ver3.2生放送</b><br>
-						<span class="about-this-site">本サイトはスカラマシュに関する情報をまとめた有志サイトです。リーク情報は扱いません。<br>
+						<p><b class="update-version">2022/10/31</b><br>
+						<span class="about-this-site">本サイトはスカラマシュ(放浪者)に関する情報をまとめた有志サイトです。リーク情報は扱いません。<br>
 						以下の内容を閲覧するにあたり、<a class="black" href="../agreement.html">利用規約</a>に同意したものとみなします。</p>
 				</aside>
-				<p><a id="chinese_button" class="button" onclick="chinese()">简体中文(开发中)</a></p>
+				<p>
+				<a id="chinese_button" class="button" onclick="chinese()">简体中文(开发中)</a>
+				</p>
 			</article>
 			<div class="share-nav not-margin-div notprint">
 				<a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Flocalhost%3A8080%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&text=%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%9E%E3%82%B7%E3%83%A5%E3%81%AE%E5%85%A8%E6%83%85%E5%A0%B1%E6%9B%B8%E3%81%8D%E5%86%99%E3%81%97&url=https%3A%2F%2Fgiarchive.github.io%2Fscaramouche&via=COD_HEART" class="btn-social-flat">
@@ -66,258 +85,27 @@
 				</a>
 				
 			</div>
-	  
-			<nav class="nav notspeech notprint">
-				<label for="nav_box"><h3 class="nav_label"><span class="nav_label_text">メニュー</span><i class="fa-solid fa-sort-down"></i></h3></label>
-    			<input type="checkbox" id="nav_box"/></input>
-    			<div class="nav_hidden wrapper">
-					<div class="search-area">
-      <form>
-        <input type="search" id="search-text" placeholder="検索" list="serchtag">
-		<datalist id="serchtag">
-<option value="任務" class="story-serch"></option>
-<option value="PV" class="pv-serch"></option>
-<option value="聖遺物" class="artifact-serch"></option>
-<option value="国崩" class="kunikuzushi-serch"></option>
-<option value="攻略" class="cheats-serch"></option>
-
-</datalist>
-      </form>
-      <div class="search-result">
-        <div class="search-result__hit-num"></div>
-        <div id="search-result__list"></div>
-      </div>
-  </div>
-				<ul class="list target-area">
-					<li><a href="#update" class="update">更新履歴</a>
-					<li><a href="#information" class="information">基本情報</a>
-						<ul>	
-							<li><a href="#character-setting" class="character-setting">キャラクター設定</a></li>
-							<li><a class="voice-actor" href="#voice-actor">声優</a></li>
-							<!--<li><a href="#gacha-Illust" class="gacha-Illust">立ち絵・バナー</a></li>-->
-							<li><a href="#model" class="model">3Dモデル<span style="display: none;">3d</span></a></li>
-						</ul>
-					</li>
-					<!-- <li class="gacha"><a href="#gacha">祈願</a>
-						<ul>
-							<li class="gacha-3.3"><a href="#gacha-3.3">Ver3.x ガチャ名</a></li>
-						</ul>
-					</li>-->
-					<li><a href="#timeline" class="timeline">時系列</a>
-					<li><a href="#world-name" class="world-name">各言語名<span style="display: none;">翻訳</span></a>
-						<ul>
-							<li><a href="#lang-tab" class="lang-tab">個別表示</a></li>
-						<li><a href="#list" class="name-list">一覧</a></li>
-					</ul>
-					</li>
-					<li><a href="#story-text" class="story-text">ストーリー<span style="display: none;">(任務、ストーリー)</span></a>
-					<ul>
-					<li><a href="#unreconciled-stars" class="unreconciled-stars">帰らぬ熄星<span style="display: none;">(イベント、任務、ストーリー、モンド、璃月、モナ、フィッシュル)</span></a></a>
-						<ul>
-							<li><a href="#unknown-star" class="unknown-star">蔓延する危機</a></li>
-							<li><a href="#star-of-deceitful-dreams" class="star-of-deceitful-dreams">天の謎、水の解き</a></li>
-							<li><a href="#star-of-destiny" class="star-of-destiny">古星の運命</a></li>
-						</ul>
-					</li>
-					<li><a href="#omnipresence-over-mortals" class="omnipresence-over-mortals">千手百目の浮世<span style="display: none;">(魔神任務、ストーリー、八重神子、雷電将軍、邪眼工場、稲妻)</span></a></a>
-						<ul>
-							<li><a href="#delusion" class="delusion">邪眼</a></li>
-							<li><a href="#the-servants-path" class="the-servants-path">眷属の践行</a></li>
-							<li><a href="#wishes" class="wishes">願い</a></li>
-						</ul>
-					</li>
-					<li><a href="#clean-house" class="clean-house">戸口の掃除<span style="display: none;">(世界任務、ストーリー、稲妻)</span></a></li>
-					<li><a href="#labyrinth-warriors" class="labyrinth-warriors">謎境一騎<span style="display: none;">(イベント、任務、ストーリー、稲妻、タルタリヤ、公子)</span></a></a>
-						<ul>
-							<li><a href="#away-with-obsessions-and-falsehood" class="away-with-obsessions-and-falsehood">執念と虚飾からの解放</a></li>
-						</ul>
-					</li>
-					<li><a href="#hues-of-the-violet-garden" class="hues-of-the-violet-garden">華やぐ紫苑の庭<span style="display: none;">(イベント、任務、ストーリー、楓原万葉、稲妻、国崩)</span></a></a>
-						<ul>
-							<li><a href="#five-kasen-summary" class="five-kasen-summary">五歌仙の資料概要</a></li>
-							<li><a href="#a-new-painting-in-pale-scarlet" class="a-new-painting-in-pale-scarlet">薄墨淡朱の新しき絵画</a></li>
-							<li><a href="#the-palace-dyed-in-blackfalsehood" class="the-palace-dyed-in-blackfalsehood">黒に染まりし宵暗の御所</a></li>
-							<li><a href="#the-five-colors-true-form" class="the-five-colors-true-form">五彩光華に隠されし真相</a></li>
-							<li><a href="#tale-of-the-five-kasen" class="tale-of-the-five-kasen">ストーリームービー「歌仙逸話」<span style="display: none;">(pv，ムービー)</span></a></li>
-							<li><a href="#kuronushi-illustration-event" class="kuronushi-illustration-event">黒主の姿絵</a></li>
-						</ul>
-					</li>
-					<li><a href="#a-winter-nights-lazzo" class="a-winter-nights-lazzo">PV「冬夜の戯劇」<span style="display: none;">(博士、ドットーレ、隊長、カピターノ、ストーリー、スネージナヤ、pv、ムービー)</span></a></li>
-					
-					<li><a href="#through-mists-of-smoke-and-forests-dark" class="through-mists-of-smoke-and-forests-dark">煙霧のベールと暗き森を抜けて<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、缶詰知識)</span></a></a>
-						<ul>
-							<li><a href="#ever-so-close" class="ever-so-close">間近に迫った目標</a></li>
-						</ul>
-					</li>
-					<li><a href="#the-morn-a-thousand-roses-brings" class="the-morn-a-thousand-roses-brings">黎明を告げる千の薔薇<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ)</span></a></a>
-						<ul>
-							<li><a href="#unknown-voice-3-2" class="unknown-voice-3-2">謎の声</a></li>
-							<li><a href="#the-coming-of-the-sabzeruz-festival" class="the-coming-of-the-sabzeruz-festival">終に訪れし花神誕祭</a></li>
-							<li><a href="#the-end-of-the-sabzeruz-festival" class="the-end-of-the-sabzeruz-festival">終に終りし花神誕祭</a></li>
-						</ul>
-					</li>
-					<li><a href="#Dreams-Emptiness-Deception" class="dreams-emptiness-deception">迷夢と虚幻と欺瞞<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、PV、神、過去、国崩)</span></a>
-						<ul>
-							<li><a href="#like-a-triumphant-hero" class="like-a-triumphant-hero">凱旋した英雄のように</a></li>
-							<li><a href="#the-gaze-from-a-certain-god" class="the-gaze-from-a-certain-god">とある「神」からの凝視</a>
-								<ul><li><a href="#the-divine-will" class="the-divine-will">ストーリームービー「『神』意」<span style="display: none;">(PV、pv、ムービー)</span></a></li></ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="#king-deshret-and-the-three-magi" class="king-deshret-and-the-three-magi">赤砂の王と三人の巡礼者<span style="display: none;">(魔神任務、ストーリー、スメール、アーカーシャ、神)</a>
-						<ul>
-							<li><a href="#cry-from-the-eleazar-hospital" class="cry-from-the-eleazar-hospital">魔鱗病病院の泣き声</a></li>
-							<li><a href="#secret-of-the-scorching-desert" class="secret-of-the-scorching-desert">熱砂の中の秘密</a></li>
-						</ul>
-					</li>
-					<li><a href="#akasha-pulses-the-kalpa-flame-rises" class="akasha-pulses-the-kalpa-flame-rises">虚空の鼓動、熾盛の劫火<span style="display: none;">(魔神任務、ストーリー、スメール、BOSS、週ボス、虚空の鼓動、熾盛の劫火)</span></a>
-						<ul>
-							<li><a href="#unknown">???</a></li>
-						</ul>
-					</li>
-				</li></ul>
-				<!-- <li><a href="voice-line">ボイス・キャラストーリー</a>
-					<ul>
-						<li class="character-voice"><a href="#character-voice">キャラクターボイス</a></li>
-						<li class="character-story"><a heef="#character-story">キャラクターストーリー</a></li>
-					</ul>
-				</li>-->
-				<li class="atrifacts"><a href="#atrifacts" class="atrifacts">聖遺物</a>
-					<ul>
-						<li><a href="#pale-flame" class="pale-flame">蒼白の炎<span style="display: none;">(聖遺物、ファデュイ、過去、国崩)</span></a></a>
-							<ul>
-						<li><a href="#goblet-of-eonothem-surpassing-cup" class="goblet-of-eonothem-surpassing-cup">超越の盃</a></li>
-							</ul>
-							<li><a href="#husk-of-opulent-dreams" class="husk-of-opulent-dreams">華館夢醒形骸記<span style="display: none;">(聖遺物、国崩、過去)</span></a></a>
-								<ul>
-						<li><a href="#bloom-times" class="bloom-times">栄花の期</a></li>
-						<li><a href="#plume-of-luxury" class="plume-of-luxury">華館の羽</a></li>
-						<li><a href="#song-of-life" class="song-of-life">衆生の歌</a></li>
-						<li><a href="#calabash-of-awakening" class="calabash-of-awakening">夢醒の瓢箪</a></li>
-						<li><a href="#skeletal-hat" class="skeletal-hat">形骸の笠</a></li>
-					</ul>
-					</li>
-					</ul>
-				</li>
-				<li class="weapons"><a href="#weapons">武器</a>
-					<ul>
-						<li><a href="#katsuragikiri-nagamasa">桂木斬長正<span style="display: none;">(丹羽桂木、御輿長正、国崩)</span></a></a></li>
-						<li><a href="#kaguras-verity">神楽の真意<span style="display: none;">(八重神子)</span></a></a></li>
-						<li><a href="#kagotsurube-isshin">籠釣瓶一心</a></li>
-					</ul>
-				</li>
-				<li><a href="#item" class="item">アイテム・掲示物</a>
-					<ul>
-						<li><a href="#rather-aged-notes" class="rather-aged-notes">古い手帳<span style="display: none;">(古い手紙、丹羽桂木、御輿長正、国崩)</span></a></li>
-						<li><a href="#ancient-forging-blueprint" class="ancient-forging-blueprint">古代の鍛造図<span style="display: none;">(楓原万葉)</span></a></a></li>
-					</ul>
-				</li>
-				<li class="domain"><a href="#domain">秘境</a>
-					<ul>
-						<li><a href="#castle-of-scrolls">借景ノ館<span style="display: none;">借景の館、国崩、秘境</span></a></li>
-					</ul>
-				</li>
-				<li class="mention"><a href="#mention">言及<span style="display: none;">ボイス</span></a>
-					<ul>
-						<li><a href="#from-character-mention">プレイアブルキャラクター</a>
-							<ul>
-						<li><a href="#from-raiden-mention">雷電将軍<span style="display: none;">雷電影、国崩</span></a></a></li>
-						<li><a href="#from-yae-mention">八重神子<span style="display: none;">(国崩)</span></a></li>
-						<li><a href="#from-tartaglia-mention">タルタリヤ<span style="display: none;">(公子、ファデュイ、ファトゥス)</span></a></a></li>
-					</ul>
-				</li>
-				<li><a href="#from-npc-mention">NPC</a>
-					<ul>
-						<li><a href="#from-viktor-mention">ヴィクトル<span style="display: none;">(ファデュイ)</span></a></a></li>
-					</ul>
-				</li>
-					</ul>
-				</li>
-				<li class="combat"><a href="#combat">戦闘・育成<span style="display: none;">攻略</span></a>
-						<ul>
-							<!-- <li><a href="#atack-skill">性能<span style="display: none;">攻略</span</a></li>
-							<li><a href="#talent">天賦<span style="display: none;">攻略</span</a></li>
-							<li><a href="#collection">命の星座<span style="display: none;">攻略</span</a></li>
-							<li><a heef="#skill-details">スキル詳細<span style="display: none;">攻略</span</a></li>
-												-->
-							<li><a href="#nurturing">育成素材<span style="display: none;">攻略</span></a></li>
-							<li><a href="#skill-nurturing">天賦育成素材<span style="display: none;">攻略</span></a></li>
-						</ul>
-					</li>
-					<li><a href="#boss" class="boss">ボス「？？？」<span style="display: none;">週ボス、敵、攻略</span></a>		
-						<ul>
-							<li><a href="#boss-story" class="boss-story">秘境・ストーリー</a></li>
-							<li><a href="#boss-detail" class="boss-detail">秘境詳細</a></li>
-							<li><a href="#boss-stage1" class="boss-stage1">第1形態: ???</a></li>
-							<li><a href="#boss-stage2" class="boss-stage2">第2形態: ???</a></li>
-							<li><a href="#boss-drop" class="boss-drop">ドロップ素材</a></li>
-						</ul>
-					</li>
-					
-					<li><a href="#music" class="music">楽曲<span style="display: none;">(音楽)</span></a>
-						<ul>
-							<li><a href="#ominous-fandango" class="ominous-fandango">浮浪人の魂胆<span style="display: none;">(音楽、楽曲、BGM)</span></a></li>
-							<li><a href="#unpredicted-conspiracy" class="unpredicted-conspiracy">予期せぬ陰謀<span style="display: none;">(音楽、楽曲、BGM)</span></a></li>
-							<li><a href="#floating-world-under-the-moonlight" class="floating-world-under-the-moonlight">韶光撫月の浮世<span style="display: none;">(音楽、楽曲、BGM)</span></a></li> 
-							<li><a href="#music-king-deshret-and-the-three-magi" class="music-king-deshret-and-the-three-magi">赤砂の王と三人の巡礼者<span style="display: none;">(音楽、楽曲、BGM)</span></a></li> 
-							<li><a href="#music-akasha-pulses-the-kalpa-flame-rises" class="music-akasha-pulses-the-kalpa-flame-rises">虚空の鼓動、熾盛の劫火<span style="display: none;">(音楽、楽曲、BGM)</span></a></li> 
-						</ul>
-					</li>
-					<li class="illustration"><a href="#illustration">公式イラスト<span style="display: none;">(壁紙、キービジュアル)</span></a>
-				<ul>
-					<li><a href="#star-illustration">帰らぬ熄星<span style="display: none;">(壁紙、キービジュアル、1.1)</span></a></a></li>
-					<li><a href="#irodori-illustration">光華容彩祭<span style="display: none;">(壁紙、華やぐ紫苑の庭、2.5)</span></span></a></a></li>
-					<li><a href="#illustration-king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者<span style="display: none;">(壁紙、キービジュアル、pv、3.1)</span></a></a></li>
-					<li><a href="#akasha-pulses-the-kalpa-flame-rises-illustration">虚空の鼓動、熾盛の劫火<span style="display: none;">(壁紙、キービジュアル、pv、3.2)</span></a></a></li>
-				</ul>
-			</li>
-			<li class="pv"><a href="#pv">PV</a>
-				<ul>
-					<li><a href="#1.1pv" class="1.1pv">Ver1.1「迫る客星」<span style="display: none;">(PV、pv、1.1、迫る客星、帰らぬ熄星)</span></a></a></li>
-					<li><a href="#2.1pv" class="2.1pv">Ver2.1「千手百目の浮世」<span style="display: none;">(PV、pv、2.1、千手百目の浮世)</span></a></a></li>
-					<li><a href="#3.1pv" class="3.1pv">Ver3.1「赤砂の王と三人の巡礼者」<span style="display: none;">(PV、pv、3.1、赤砂の王と三人の巡礼者)</span></a></a></li>
-					<li><a href="#3.2pv" class="3.2pv">Ver3.2「虚空の鼓動、熾盛の劫火」<span style="display: none;">(PV、pv、3.2)</span></a></a></li>
-				</ul>
-			</li>
-			<li class="stamp"><a href="#stamp">スタンプ</a>
-				<ul>
-					<li><a href="#line-stamp-genshin-vol2">LINEスタンプ「原神 スタンプ Vol.2」</a></li>
-				</ul>
-			</li>
-				<li class="official-tweet"><a href="#official-tweet">公式ツイート<span style="display: none;">(Twitter、twitter)</span></a></a>
-					<ul>
-						<li class="official-tweet-jp"><a href="#official-tweet-jp">日本語</a></li>
-					</ul>
-				</li>
-				<li class="interview"><a href="#interview">インタビュー等</a>
-					<ul>
-						<li><a href="#scaramouche-va-1th">1周年記念インタビュー 柿原徹也(スカラマシュ役)<span style="display: none;">声優</span></a></li>
-						<li><a href="#ver2-1-livestream">2.1版本「韶光抚月，天下人问」前瞻特别节目<span style="display: none;">(予告、バージョン2.1)</span></a></li>
-						<li><a href="#ver3-1-livestream">Ver.3.1「赤砂の王と三人の巡礼者」予告番組<span style="display: none;">(バージョン3.1、Ver3.1、ver3.1)</span></a></a></li>
-						<li><a href="#ver3-2-livestream">Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組<span style="display: none;">(バージョン3.2、Ver3.2、ver3.2)</span></a></a></li>
-						<li><a href="#interview-other">その他言及</a></li>
-					</ul>
-				</li>
-				<li class="official-contents"><a href="#official-contents">商品<span style="display: none;">(グッズ)</span></a></a>
-					<ul>
-						<li><a href="#book">書籍<span style="display: none;">(本)</span></a></a></li>
-						<li><a href="#goods">グッズ</a></li>
-					</ul>
-				</li>
-				<li class="supplementary"><a href="#supplementary">補足情報<span style="display: none;">(考察)</span></a></a>
-					<ul>
-						<li><a href="#twitter-trend" class="twitter-trend">Twitterトレンド</a></li>
-						<li><a href="#name-original">名前の由来</a></li>
-					</ul>
-				</li>
+				<!--<nav class="nav top-nav notspeech notprint">
+							<div class="nav-menu not-margin-div">
+				<label for="label1"><h3 class="nav_label"><span class="nav_label_text">メニュー</span><i class="fa-solid fa-sort-down"></i></h3></label>
+				<input type="checkbox" id="label1"/>
+			<div class="nav_hidden not-margin-div">
+				<div class="menu not-margin-div"></div>
 			</div>
-			</nav>
+		</div>
+	</nav>
+	<script type="text/javascript">
+				//メニュー読み込み
+				$(document).ready(function(){
+		document.getElementById('label1').checked = true;
+	});
+		</script>-->
 			<div>
 				<p class="not-official">本サイトは非公式であり，株式会社COGNOSPHERE及び上海米哈游網絡科技股份有限公司による提供・協力ではありません。</p>
 				<p class="not-support">筆者は、記事内における全ての情報が正確である保証を致しません。また全てのリンク等に責任を負わず、ユーザーが不利益を被った場合でも一切の責任を負いません。</p>
 				<cite class="from-genshin">コンテンツは「原神」(©︎COGNOSPHERE)より引用</cite>
 			</div>
-			<main>
+			<main class="main">
 				<article>
 						<h2 id="update">更新履歴</h2>
 						<div class="updatelog">
@@ -337,38 +125,49 @@
 								<li><span class="update-31"><span class="ver-num">Ver3.1</span>魔神任務3章3幕「迷夢と虚幻と欺瞞」、魔神任務3章4幕「赤砂の王と三人の巡礼者」</span></li>
 								<li><span class="update-221004"><span class="ver-num">2022/10/4</span>ストーリームービー「『神』意」YouTube公開</span></li>
 								<li><span class="update-32"><span class="ver-num">Ver3.2</span>魔神任務3章5幕「虚空の鼓動、熾盛の劫火」、新ボス「？？？」</span></li>
+								<li><span class="update-221031"><span class="ver-num">2022/10/31</span>キャラクター紹介</span></li>
+								<li><span class="update-32"><span class="ver-num">Ver3.2</span><b>プレイアブル</b></li>
 							</ul>
 						</div>
 						<h2 id="information">基本情報</h2>
-						
+						<h3 id="visual">ビジュアル</h3>
 						<div class="tab-wrap not-margin-div">
     <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01"><span class="top-tab-scaramouche">「散兵」</span></label>
     <div class="tab-content not-margin-div">
-        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220711/20220711180916.jpg" loading="lazy">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220711/20220711180916.jpg" loading="lazy" alt="邪眼工場にいる散兵の画像">
     </div>
     <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02"><span class="top-tab-kuronushi">黒主</span></label>
     <div class="tab-content not-margin-div">
-        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" loading="lazy">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" loading="lazy" alt="光華容彩祭の五歌仙のイラスト">
+		<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/20777">原神公式</a></cite>
     </div>
     <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label not-margin-div" for="TAB-03"><span class="top-tab-old-style">過去</span></label>
     <div class="tab-content">
-        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221005/20221005101226.jpg" loading="lazy">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221005/20221005101226.jpg" loading="lazy" alt="過去のスカラマシュの画像">
+		<cite>引用:<a href="https://www.youtube.com/watch?v=SrysQ0zXrC8">【原神】ストーリームービー「『神』意」　- YouTube</a></cite>
     </div>
 	<input id="TAB-04" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-04"><span class="top-tab-boss">ボス</span></label>
     <div class="tab-content not-margin-div">
-        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024032055.jpg" loading="lazy">
-        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024032100.jpg" loading="lazy">
- </div>
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024032055.jpg" loading="lazy" alt="第1形態のボスの画像">
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024032100.jpg" loading="lazy" alt="第2形態のボスの画像">
+		<cite>引用:<a href="https://www.youtube.com/watch?v=GtR_JiHlvBM">Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組　- YouTube</a></cite>
+	</div>
+	<input id="TAB-05" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-05"><span class="top-tab-card">立ち絵</span></label>
+    <div class="tab-content not-margin-div">
+		<cite>画像引用:<a href="https://www.hoyolab.com/article/13254885">HoYoLAB</a>、<a href="https://twitter.com/GenshinImpact/status/1587021567124307971/">Twitter</a></cite><br>
+        <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221031/20221031195459.jpg" loading="lazy" alt="立ち絵" class="card-illustration"> 
+		 	<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221031/20221031195716.jpg" loading="lazy" alt="海外の正方形立ち絵" class="card-illustration">
+	</div>
 </div>						
 						<div>
 							<p>
-								<b class="character-name-all"><span class="name-fatui-no6">ファトゥス第6位「散兵」スカラマシュ</span>/<span class="name-kunikuzushi">国崩</span>/<span class="gods">？？？</span>/???</b>
+								<b class="character-name-all"><span class="name-fatui-no6">ファトゥス第6位「散兵」スカラマシュ</span>/<span class="name-kunikuzushi">国崩</span>/<span class="name-playable">放浪者</span></b>
 							</p>
 							<p><span class="release-boss-version">ボス実装: Ver3.2</span><br>
-							<span class="release-playable-version">プレイアブル: Ver3.3以降</span></p>
+							<span class="release-playable-version">プレイアブル: Ver3.3</span></p>
 						</div>
 						<h3 id="character-setting">キャラクター設定</h3>
-						<div class="table not-margin-div">
+						<div class="not-margin-div">
 							<table>
 								<tbody>
 									<tr>
@@ -381,7 +180,7 @@
 									</tr>
 									<tr>
 										<th class="vision">神の目</th>
-										<td class="vision-breakdown">?</td>
+										<td class="vision-breakdown"><span class="character-setting-anemo">風</span></td>
 									</tr>	
 									<tr>
 										<th class="age">年齢</th>
@@ -397,11 +196,11 @@
 									</tr>
 									<tr>
 										<th class="affiliated">所属</th>
-										<td class="affiliated-breakdown">?</td>
+										<td class="affiliated-breakdown">スメール?</td>
 									</tr>
 									<tr>
 										<th class="constellation">命の星座</th>
-										<td><span class="life-collection">?</span></td>
+										<td><span class="life-collection">浪客座</span></td>
 									</tr>
 									<tr>
 										<th class="birthday">誕生日</th>
@@ -409,11 +208,11 @@
 									</tr>
 									<tr>
 										<th class="character-title">称号</th>
-										<td class="character-title-breakdown">?</td>
+										<td class="character-title-breakdown">久世浮傾</td>
 									</tr>
 									<tr>
 										<th class="god-name">神名</th>
-										<td class="god-name-breakdown">？？？</td>
+										<td class="god-name-breakdown">?</td>
 									</tr>
 								</tbody>
 							</table>
@@ -443,7 +242,33 @@
 								</tbody>
 							</table>
 						</div>
-						<!--<h3 id="gacha-Illust">立ち絵・バナー</h3>-->
+						<h3 id="gacha-Illust">立ち絵・説明文</h3>
+						<div class="gacha-picture-box">
+							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221031/20221031195459.jpg" alt="スカラマシュの立ち絵" class="gacha-box-contents">
+							<span class="character-name-gacha-Illust">放浪者</span><br>
+							<span class="gacha-Illust-text-about"><b>一処より心を知りて、一切処の心を悟らん</b></span>
+							<span class="gacha-box-contents"><blockquote><p class="gacha-Illust-text-twitter">心ある者が人ならば、彼は人とは呼べぬ者である。<br>
+							心なき者にも悲しみと喜び、苦しみと愉悦があるならば、彼はもっとも人に似た人形である。</p>
+							<p>
+								<i>「信仰者は神の栄光を築き、裏切者は神の化度を見届ける。でもこの者について、私はどちらにも彼を位置付けするつもりはないわ。いかなる不確定要素も、彼がこれから歩む道の礎なのだから。」</i><br>
+								——摩訶善法マハークサナリ知恵の主 ブエル<br>
+							</p><p>
+<br>
+その夜、ある黒い影が大雨に乗じてたたら砂の旧跡にやって来た。付近の住民はとうの昔にいなくなっていたが、今日に限ってとある農夫が生計のため鳴草を採りに来ていた。農夫は夜の微かな明かりを頼りに、崖のそばに鬼魅のような人影が立っているのを見た。<br>
+その者は大きな笠をかぶっており、顔を見ることができない。息の音が雨の幕を突き通り、農夫の耳にまで届く。<br>
+刹那、その者は言う——人はこうやって息をするんだ、と。<br>
+農夫は怪異にでも出くわしたのかと不安になり、慌てて岩の陰に隠れた。その者はさらに続ける——何を恐れている？互いに見知らぬ通行人だろう、まさか危害を加えるとでも思ったのか？僕はただこの地に立ち寄って、友の墓参りに来ただけさ。<br>
+その者が言い終わるや否や、農夫は顔を出して辺りを見回す。しかし、黒い影はいなくなっていた。地面には一枚の紙が落ちており、それは瞬く間に雨水に浸食されていく。紙には三つの質問と、それに対する書きかけの回答が記されていた——<br>
+人は心を持つのに、なぜ他者の心は恐れない？<br>
+なぜなら人は未熟で完璧ではないからだ。<br>
+人の未熟さを知る上で、如何にしてそれに向き合う？<br>
+……<br>
+心なき者は如何にして人となる？<br>
+心なき者は人に成り難し。<br>
+それを見た農夫は、背筋が凍る思いをした。たたら砂は荒れ果ててから何年も経っており、墓参りに来る者などとっくにいなかったからだ。たとえいたとしても、なぜこのような夜に限って現れたのだろうか。<br>
+<cite>引用:<a href="https://twitter.com/Genshin_7/status/1587021570475806722">Twitter</a>、<a href="https://www.hoyolab.com/article/13254885">HoYoLAB</a></cite>
+</p></blockquote></div></span>
+						</div>
 						<h3 id="model">3Dモデル</h3>
 						<div id="3dmodel_scaramouche" display="none">
 							<img id="3dmodel_scaramouche_hat" src=""/>
@@ -456,9 +281,9 @@
 						<div class="tweets not-margin-div dark-oney">
 							<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">okay so like i&#39;ve had a LOT of people ask me for reference pics of scaramouche, and idk if someone has made one already, but here&#39;s a reference sheet for scara, i tried to include everything i could think of but if there&#39;s anything else i should add pls lmk!<a href="https://twitter.com/hashtag/genshinimpact?src=hash&amp;ref_src=twsrc%5Etfw">#genshinimpact</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/fSklftMnSe">pic.twitter.com/fSklftMnSe</a></p>&mdash; ♡ caite ♡ (@izevrente) <a href="https://twitter.com/izevrente/status/1357777079404793857?ref_src=twsrc%5Etfw">February 5, 2021</a></blockquote>
 						</div>
-						<span class="cant-load-twitter-photo-link">見えない場合はこちら：<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312">スカラマシュ</a></span>
+						<span class="cant-load-twitter-photo-link">見えない場合はこちら：<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312">スカラマシュ</a></span><br>
 						<h2 id="timeline">時系列</h2>
-					<div class="table not-margin-div">
+					<div class="not-margin-div">
 						<table class="timeline-table">
 	<tr>
 		<th>時間</th>
@@ -641,6 +466,7 @@
 								<rt>くにくずし</rt>
 								<rp>)</rp>
 								</ruby>
+								/&#x20;放浪者
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603015353.jpg" alt="スカラマシュ"  translate="no" loading="lazy">
@@ -669,6 +495,7 @@
 								<rt>guó bēng</rt>
 								<rp>)</rp>
 								</ruby>
+								/&#x20;流浪者
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603020629.jpg" alt="散兵" translate="no" loading="lazy">
@@ -677,7 +504,7 @@
 						<div class="tab-content not-margin-div">
 							<p translate="no" lang="en-US">
 								<b>
-								Balladeer&#x20;/&#x20;Scaramouche&#x20;/&#x20;Kunikuzushi
+								Balladeer&#x20;/&#x20;Scaramouche&#x20;/&#x20;Kunikuzushi/&#x20;Wanderer
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramouche" translate="no" loading="lazy">
@@ -700,15 +527,16 @@
 								<rt>ku ni ku jeu si</rt>
 								<rp>)</rp>
 								</ruby>
+								/&#x20;방랑자
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022400.jpg" alt="스카라무슈" translate="no" loading="lazy">
 						</div>
-					    <input id="TAB-lang-05" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-05"><span id="it">イタリア語</span></label>
+					    <input id="TAB-lang-05" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-05"><span id="sp">スペイン語</span></label>
 						<div class="tab-content not-margin-div">
 							<p translate="no" lang="it">
 								<b>
-								Baladista&#x20;/&#x20;Scaramuccia&#x20;/&#x20;Kunikuzushi
+								Baladista&#x20;/&#x20;Scaramuccia&#x20;/&#x20;Kunikuzushi/&#x20;Trotamundos
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603022020.jpg" alt="Scaramuccia" translate="no" loading="lazy">
@@ -717,20 +545,20 @@
 						<div class="tab-content not-margin-div">
 							<p translate="no" lang="fr">
 								<b>
-								Le Vagabond&nbsp;/&nbsp;Scaramuccia&nbsp;/&nbsp;Kunikuzushi
+								Le Vagabond&nbsp;/&nbsp;Scaramuccia&nbsp;/&nbsp;Kunikuzushi/&#x20;Nomade
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220801/20220801191244.jpg" alt="Scaramouche" translate="no" loading="lazy">
 						</div>
-						<input id="TAB-lang-07" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-07"><span id="tr">トルコ語</span></label>
+						<!--<input id="TAB-lang-07" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-07"><span id="tr">トルコ語</span></label>
 						<div class="tab-content not-margin-div">
 							<p translate="no" lang="tr">
 								<b>
-								???&nbsp;/&nbsp;???&nbsp;/&nbsp;???
+								???&nbsp;/&nbsp;???&nbsp;/&nbsp;???/&#x20;???
 								</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220711/20220711180916.jpg" alt="Scaramouche" translate="no" loading="lazy">
-						</div>
+						</div>-->
 						<input id="TAB-lang-08" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-08"><span id="ru">ロシア語</span></label>
 						<div class="tab-content not-margin-div">	
 							<p translate="no" lang="ru">
@@ -755,69 +583,70 @@
 								<rt>Kunikudzusi</rt>
 								<rp>)</rp>
 								</ruby>
+								&#x20;<rb class="ru">Странник</rb>
 							</b>
 							</p>
 							<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220603/20220603023410.jpg" alt="散兵" translate="no" loading="lazy">
 						</div>
 					</div>
 							<h3 id="list">一覧表</h3>
-							<div class="table not-margin-div">
+							<div class="not-margin-div">
 							<table class="lang-list">
 	<tr lang="ja">
 		<th>日本語</th>
 		<td translate="no">散兵</td>
 		<td translate="no">スカラマシュ</td>
 		<td translate="no">国崩</td>
-		<td translate="no">？？？</td>
+		<td translate="no">放浪者</td>
 	</tr>
 	<tr lang="zh-cmn-Hans">
 		<th>中国語</th>
 		<td translate="no">散兵</td>
 		<td translate="no">斯卡拉姆齐</td>
 		<td translate="no">国崩</td>
-		<td translate="no">？？？</td>
+		<td translate="no">流浪者</td>
 	</tr>
 	<tr lang="en-US">
 		<th>英語</th>
 		<td translate="no">Balladeer</td>
 		<td translate="no">Sacaramouche</td>
 		<td translate="no">Kunikuzushi</td>
-		<td translate="no">？？？</td>
+		<td translate="no">Wanderer</td>
 	</tr>
 	<tr lang="kr">
 		<th>韓国語</th>
 		<td translate="no">-</td>
 		<td translate="no">스카라무슈</td>
 		<td translate="no">쿠니쿠즈시</td>
-		<td translate="no">？？？</td>
+		<td translate="no">방랑자</td>
 	</tr>
-	<tr lang="it">
-		<th>イタリア語</th>
+	<tr lang="sp">
+		<th>スペイン語</th>
 		<td translate="no">Baladista</td>
 		<td translate="no">Scaramuccia</td>
 		<td translate="no">Kunikuzushi</td>
-		<td translate="no">?</td>
+		<td translate="no">Trotamundos</td>
 	</tr>
 	<tr lang="fr">
 		<th>フランス語</th>
 		<td translate="no">Le Vagabond</td>
 		<td translate="no">Scaramuccia</td>
 		<td translate="no">Kunikuzushi</td>
-		<td translate="no">?</td>
+		<td translate="no">Nomade</td>
 	</tr>
 	<tr lang="de">
 		<th>ドイツ語</th>
 		<td translate="no">Der Bänkelsänger</td>
 		<td translate="no">Scaramouche</td>
 		<td>Kunikuzushi</td>
-		<td translate="no">?</td>
+		<td translate="no">Wanderer</td>
 	</tr>
 	<tr lang="ru">
 		<th>ロシア語</th>
 		<td class="ru" translate="no">Cказитель</td>
 		<td class="ru" translate="no">Скарамучча</td>
 		<td class="ru" translate="no">Куникудзуси</td>
-		<td translate="no">?</td>
+		<td class="ru translate="no">Странник</td>
 	</tr>
 	<tr lang="tr">
 		<th>トルコ語</th>
@@ -827,12 +656,34 @@
 		<td translate="no">?</td>
 	</tr>
 	<tr lang="th">
-		<th>タイ語(非公式訳)</th>
+		<th>タイ語</th>
 		<td translate="no">สการามุช</td>
 		<td translate="no">บัลลาเดียร์</td>
 		<td translate="no">คุนิคุสึชิ</td>
-		<td translate="no">?</td>
+		<td translate="no">ผู้พเนจร</td>
 	</tr>
+	<tr lang="vi">
+		<th>ベトナム語</th>
+		<td translate="no">?</td>
+		<td translate="no">?</td>
+		<td translate="no">?</td>
+		<td translate="no">Kẻ Lang Thang</td>
+		</tr>
+		<tr lang="vi">
+		<th>ポルトガル語</th>
+		<td translate="no">?</td>
+		<td translate="no">?</td>
+		<td translate="no">?</td>
+		<td translate="no">Andarilho</td>
+		</tr>
+		
+	<tr lang="id">
+		<th>インドネシア語</th>
+		<td translate="no">?</td>
+		<td translate="no">?</td>
+		<td translate="no">?</td>
+		<td translate="no">Wanderer</td>
+		</tr>
 </table>
 </div>			
 							
@@ -1419,7 +1270,7 @@
 							<h4 id="tale-of-the-five-kasen">ストーリームービー「歌仙逸話」</h4>
 							<div class="youtube not-margin-div tale-of-the-five-kasen-video">
 								<p>Youtubeを表示できません。</p>
-								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/sxASuK2hoZw?controls=1&amp;controls=0&loop=1&playlist=sxASuK2hoZw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/sxASuK2hoZw?controls=1&amp;controls=0&loop=1&playlist=sxASuK2hoZw" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 							</div>
 							<blockquote>
 								<p>
@@ -1472,7 +1323,7 @@
 							<h3 id="a-winter-nights-lazzo">PV「冬夜の戯劇」</h3>
 							<div class="youtube not-margin-div a-winter-nights-lazzo-video">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/34jc0Y4bzT0?controls=1&amp;start=121&loop=1&playlist=34jc0Y4bzT0" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/34jc0Y4bzT0?controls=1&amp;start=121&loop=1&playlist=34jc0Y4bzT0" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 							<blockquote>
 								<span class="blockquote-title">2:01</span>
@@ -1631,7 +1482,7 @@
 <h5 id="the-divine-will">ストーリームービー「『神』意」</h5>
 <div class="youtube not-margin-div the-divine-will-video">
 								<p>Youtubeを表示できません。</p>
-								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/SrysQ0zXrC8?controls=1&amp;controls=0&loop=1&playlist=SrysQ0zXrC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/SrysQ0zXrC8?controls=1&amp;controls=0&loop=1&playlist=SrysQ0zXrC8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 							</div>
 <blockquote>
 <p class="the-divine-will-text">
@@ -1680,7 +1531,7 @@
 <div class="youtube not-margin-div">
 	<p>Youtubeを表示できません。</p>
 								
-								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/VDKRwbcM8q4?controls=1&amp;controls=0&loop=1&playlist=VDKRwbcM8q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/VDKRwbcM8q4?controls=1&amp;controls=0&loop=1&playlist=VDKRwbcM8q4" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"  loading="lazy"></iframe>
 							</div>
 					<blockquote>
 						<p>
@@ -2390,7 +2241,7 @@
 							</div>
 			<div class="youtube not-margin-div">
 				<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/lfyzmrAi4q4?loop=1&playlist=lfyzmrAi4q4" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/lfyzmrAi4q4?loop=1&playlist=lfyzmrAi4q4" loading="lazy" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
   								  </div>
 							</div>
@@ -2418,33 +2269,7 @@
 								<cite>翻訳引用: <a href="https://ngabbs.com/read.php?tid=31458467">NGA</a></cite>
 							</div>
 							</div>
-						<h2 id="domain">秘境</h2>
-						<!--<h3 id="castle-of-scrolls">熟睡ノ庭</h3>
-						<blockquote>
-							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
-						</blockquote>
-						<p>
-							ムービー「『神』意」で登場した、彼が捨てられた秘境。
-						</p>
-						<h4>祈聖秘境：骸館</h4>
-						
-						<div><span class="husk-of-opulent-dreams"><b>華館夢醒形骸記</b>(<a href="#husk-of-opulent-dreams">ストーリー</a>)</span>、海染硨磲</div>
-						<blockquote>
-							<p>
-								主のいない邸宅には、獣域の魔物たちが住み着いている<br>
-								永遠の雷を駆使し、試練をクリアすることができれば、貴重な聖遺物を手に入れることができるかもしれない。
-							</p>
-						</blockquote>
-						<b>秘境詳細</b>
-								<ul>
-									<li>チーム全員の雷元素ダメージがアップ</li>
-									<li>雷元素攻撃で感電反応と地脈異常効果を発動させて、「獣域ハウンド・雷」との戦闘を有利に進めよう。</li>
-								</ul>
-								<b>地脈異常</b>
-								<ul>
-									<li>チーム全員の雷元素ダメージ+40%</li>
-									<li>フィールド上のキャラクターが敵に感電反応を起こすと、衝撃波を発動し、確定ダメージを与える。この方式での発動は3秒毎に1回のみ発動可能。</li>
-								</ul>-->
+							<h2 id="domain">秘境</h2>
 					<h3 id="castle-of-scrolls">借景ノ館</h3>
 						<blockquote>
 							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
@@ -2513,7 +2338,7 @@
 						<h2 id="combat">戦闘・育成</h2>
 					<!--<h3 id="atack-skill">性能</h3>
 					
-					<div class="table not-margin-div">
+					<div class="not-margin-div">
 					<table>
   						<tr>
    							<th>通常攻撃・???</th>
@@ -2545,7 +2370,7 @@
   						</tr>
 					</table>
 					</div>
-					<div class="table not-margin-div">
+					<div class="not-margin-div">
 					<h3 id="talent">天賦</h3>
 					<table>
   						<tr>
@@ -2571,14 +2396,14 @@
   						</tr>
 					</table>
 				</div>
-				<div class="table not-margin-div">
+				<div class="not-margin-div">
 					<h3 id="collection">命の星座</h3>
 						<table>
 							<tr>
 								<th><img src=""></th>
 								<td>
 									<b>第一重・???</b><br>
-									???のスキルLv.+3。<br>
+									???<br>
 									最大Lv.15まで。
 								</td>
 							</tr>
@@ -2593,7 +2418,8 @@
 								<th><img src=""></th>
 								<td>
 									<b>第三重・???</b><br>
-									???
+									元素スキルスキルLv.+3。<br>
+									最大Lv.15まで。
 								</td>
 							</tr>
 							<tr>
@@ -2607,7 +2433,7 @@
 								<th><img src=""></th>
 								<td>
 									<b>第五重・???</b><br>
-									???のスキルLv.+3。<br>
+									元素爆発Lv.+3。<br>
 									最大Lv.15まで。
 								</td>
 							</tr>
@@ -2621,244 +2447,317 @@
 						</table>
 					</div>
 					
-					<div class="table not-margin-div">
+					<div class="not-margin-div">
 						<h3 id="skill-details">スキル詳細</h3>
 						<h4>通常攻撃</h4>
 						<table>
-							<tr>
-								<th>レベル</th>
-								<td><b>一段ダメージ</td>
-								<td><b>重激ダメージ</td>
-								<td><b>落下中ダメージ</td>
-								<td><b>落下ダメージ</td>
-								<td><b>重激スタミナ</td>
-								<td><b>付着元素量</b></td>
-							<tr>
-								<th>Lv.1</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td rowspan="10" style="text-align: center;">0</td>
-								<td rowspan="10" style="text-align: center;">0U</td>
-							</tr>
-							<tr>
-								<th>Lv.2</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.3</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.4</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.5</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.6</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.7</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.8</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.9</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.10</th>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</table>
-						</div>
-						
-						<div class="table not-margin-div">
-						<h4>元素スキル</h4>
-						<table>
-							<tr>
-								<th>レベル</th>
-								<td><b>ダメージ</td>
-								<td><b>クールタイム</td>
-								<td><b>生成粒子量</b></td>
-								<td><b>付着元素量</b></td>
-							<tr>
-								<th>Lv.1</th>
-								<td></td>
-								<td rowspan="15" style="text-align: center;">0秒</td>
-								<td rowspan="15" style="text-align: center;">0</td>
-								<td rowspan="15" style="text-align: center;">0U</td>
-							</tr>
-							<tr>
-								<th>Lv.2</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.3</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.4</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.5</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.6</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.7</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.8</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.9</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.10</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.11</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.12</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.13</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.14</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.15</th>
-								<td></td>
-							</tr>
-						</table>
-						</div>
-						
-						<div class="table not-margin-div">
-						<h4>元素爆発</h4>
-						<table>
-							<tr>
-								<th>レベル</th>
-								<td><b>ダメージ</td>
-								<td><b>元素エネルギー</td>
-								<td><b>クールタイム</td>
-								<td><b>付着元素量</b></td>
-							<tr>
-								<th>Lv.1</th>
-								<td></td>
-								<td rowspan="15" style="text-align: center;">0</td>
-								<td rowspan="15" style="text-align: center;">0秒</td>
-								<td rowspan="15" style="text-align: center;">0U</td>
-							</tr>
-							<tr>
-								<th>Lv.2</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.3</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.4</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.5</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.6</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.7</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.8</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.9</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.10</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.11</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.12</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.13</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.14</th>
-								<td></td>
-							</tr>
-							<tr>
-								<th>Lv.15</th>
-								<td></td>
-							</tr>
-						</table>
-					</div>-->
+	<tr>
+		<th>レベル</th>
+		<td>一段ダメージ</td>
+		<td>二段ダメージ</td>
+		<td>三段ダメージ</td>
+		<td>重激ダメージ</td>
+		<td>低空</td>
+		<td>高空</td>
+		<td>落下中ダメージ</td>
+		<td>落下ダメージ</td>
+		<td>重激スタミナ</td>
+		<td>付着元素量</td>
+	</tr>
+	<tr>
+		<th>Lv.1</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td rowspan="10" style="text-align: center:">0</td>
+		<td rowspan="10" style="text-align: center:">0U</td>
+	</tr>
+	<tr>
+		<th>Lv.2</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.3</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.4</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.5</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.6</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.7</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.8</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.9</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.10</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+		<h4>元素スキル</h4>
+		<table>
+	<tr>
+		<th>レベル</th>
+		<td>1段目</td>
+		<td>2段目</td>
+		<td>3段目</td>
+		<td>クールタイム</td>
+		<td>生成粒子量</td>
+		<td>付着元素量</td>
+	</tr>
+	<tr>
+		<th>Lv.1</th>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td rowspan="15" style="text-align: center;">?秒</td>
+		<td rowspan="15" style="text-align: center;">?</td>
+		<td rowspan="15" style="text-align: center;">?U</td>
+	</tr>
+	<tr>
+		<th>Lv.2</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.3</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.4</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.5</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.6</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.7</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.8</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.9</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.10</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.11</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.12</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.13</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.14</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.15</th>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+	<h4>元素爆発</h4>
+		<table>
+	<tr>
+		<th>レベル</th>
+		<td>ダメージ</td>
+		<td>元素エネルギー</td>
+		<td>クールタイム</td>
+		<td>付着元素量</td>
+	</tr>
+	<tr>
+		<th>Lv.1</th>
+		<td></td>
+		<td rowspan="15" style="text-align: center;">?</td>
+		<td rowspan="15" style="text-align: center;">?秒</td>
+		<td rowspan="15" style="text-align: center;">?U</td>
+	</tr>
+	<tr>
+		<th>Lv.2</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.3</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.4</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.5</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.6</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.7</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.8</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.9</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.10</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.11</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.12</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.13</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.14</th>
+		<td></td>
+	</tr>
+	<tr>
+		<th>Lv.15</th>
+		<td></td>
+	</tr>
+</table>-->
+					</div>
 					<h3 id="nurturing">育成素材</h3>
-					<div class="table not-margin-div">
+					<div class="not-margin-div">
 						<table class="timeline-table">
 							<tr>
 								<th>大英雄の経験</th>
@@ -2889,25 +2788,25 @@
 								<td>36個</td>
 							</tr>
 							<tr>
-								<th>宝石・砕屑</th>
+								<th>自由のターコイズ・砕屑</th>
 								<td>1個</td>
 							</tr>
 							<tr>
-								<th>宝石・欠片</th>
+								<th>自由のターコイズ・欠片</th>
 								<td>9個</td>
 							</tr>
 							<tr>
-								<th>宝石・塊</th>
+								<th>自由のターコイズ・塊</th>
 								<td>9個</td>
 							</tr>
 							<tr>
-								<th>宝石</th>
+								<th>自由のターコイズ</th>
 								<td>6個</td>
 							</tr>
 						</table>
 					</div>
 					<h3 id="skill-nurturing">天賦育成素材</h3>
-					<div class="table not-margin-div">
+					<div class="not-margin-div">
 						<table class="timeline-table">
 							<tr>
 								<th>週ボス素材</th>
@@ -2963,72 +2862,85 @@
 					<h2 id="boss">ボス「？？？」</h2>
 					<div class="youtube not-margin-div boss-video">
 						<p>Youtubeを表示できません。</p>
-					<iframe width="1920" height="1080" src="https://www.youtube.com/embed/GtR_JiHlvBM?start=565"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+					<iframe width="1920" height="1080" src="https://www.youtube.com/embed/GtR_JiHlvBM?start=520"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
-					<h3 id="boss-story">秘境・ストーリー</a></li>
-						<h4>秘境名</h4>
-						<blockquote>
-							<p>秘境ストーリー</p>
-						</blockquote>
-					<h3 id="boss-detail">秘境詳細</h3>
-					<blockquote>
-							<p>地脈異常</p>
-					</blockquote>
+					<h3 id="boss-story">秘境・ストーリー</h3>
+					
 					<h3 id="boss-stage1">第1形態: ???</h3>
 						<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024032055.jpg" loading="lazy">
+						<div>	
+							
+						</div>
+						</div>
 						<h3 id="boss-stage2">第2形態: ???</h3>
-						<video controls="false" poster="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024151626.jpg" style="width:100%;background-image:url('https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024151626.jpg');" muted playsinline disablepictureinpicture loop autoplay>
+						<video controls="false" poster="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024151626.jpg" style="width:100%;background-image:url('https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024151626.jpg');" loading="lazy" muted playsinline disablepictureinpicture loop>
 							<source src="https://github.com/giarchive/3.2/raw/main/trim37F37CB0-2E7E-4D5C-BB3F-0DCBE2EA665B.mp4" loading="lazy">
 						</video>
 					<h3 id="boss-drop">ドロップ素材</h3>
 					
 						<h2 id="music">楽曲</h2>
 						<h3 id="ominous-fandango">浮浪人の魂胆 - Ominous Fandango</h3>
-				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto" loading="lazy"></iframe>
+						<div>テーマ曲</span>
+				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto" loading="lazy"></iframe><br>
+				<div class="music-badge">
+					<a href="https://geo.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&amp;itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/ja-jp" alt="Listen on Apple Music" loading="lazy"></a>
+					<a href="https://geo.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&amp;itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221028/20221028013547.png" alt="Listen on Apple Music" loading="lazy"></a>
+				</div>
+				
 				<h3 id="unpredicted-conspiracy">予期せぬ陰謀 - Unpredicted Conspiracy</h3>
 				<div>魔神任務2章3幕 任務「邪眼」ムービー</div>
 				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E4%BA%88%E6%9C%9F%E3%81%9B%E3%81%AC%E9%99%B0%E8%AC%80/1638924783?i=1638925252&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" loading="lazy"></iframe>
+				<div class="music-badge">
+					<a href="https://geo.music.apple.com/jp/album/%E4%BA%88%E6%9C%9F%E3%81%9B%E3%81%AC%E9%99%B0%E8%AC%80/1638924783?i=1638925252&itsct=music_box_link&itscg=30200&ls=1&app=music"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/ja-jp" alt="Listen on Apple Music" loading="lazy"></a>
+					<a href="https://open.spotify.com/track/6XlX8cbltxgAeu7N3knVe9?si=1aea00a12b3443f8"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221028/20221028013547.png" alt="Listen on Spotify" loading="lazy"></a>
+				</div>
 				<h3 id="floating-world-under-the-moonlight">韶光撫月の浮世 - Floating World Under the Moonlight</h3>
 				<div>Ver.2.1公式PV「韶光撫月の浮世」</div>
 				<iframe class="applemusic" src="https://embed.music.apple.com/jp/album/%E9%9F%B6%E5%85%89%E6%92%AB%E6%9C%88%E3%81%AE%E6%B5%AE%E4%B8%96/1641562491?i=1641563163&amp;app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" loading="lazy"></iframe>
-				
+				<div class="music-badge">
+					<a href="https://geo.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&amp;itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/ja-jp" alt="Listen on Apple Music" loading="lazy"></a>
+					<a href="https://open.spotify.com/track/72dcsl6Qby04TM9jJbUMyd?si=e0202ec881314a41"><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221028/20221028013547.png" loading="lazy" alt="Listen on Spotify"></a>
+				</div>
 				<h3 id="music-king-deshret-and-the-three-magi">赤砂の王と三人の巡礼者 - King Deshret and the Three Magi</h3>
 				<div>Ver.3.1公式PV「赤砂の王と三人の巡礼者」</div>
-				<iframe src="//player.bilibili.com/player.html?aid=986950846&bvid=BV1ft4y1u77L&cid=870668862&page=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>
-				
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1345629421&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe>
+			<!--<iframe src="//player.bilibili.com/player.html?aid=986950846&bvid=BV1ft4y1u77L&cid=870668862&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" loading="lazy"> </iframe>-->	
 				<h3 id="music-akasha-pulses-the-kalpa-flame-rises">虚空の鼓動、熾盛の劫火 - Akasha Pulses, the Kalpa Flame Rises</h3>
 				<div>Ver.3.2公式PV「虚空の鼓動、熾盛の劫火」</div>
-				<iframe src="//player.bilibili.com/player.html?aid=944396408&bvid=BV1nW4y1E7a2&cid=870654129&page=1" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>
-				
+				<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1369191118&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"></iframe></div>
+					
+				<!--<iframe src="//player.bilibili.com/player.html?aid=944396408&bvid=BV1nW4y1E7a2&cid=870654129&page=1&t=82" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>-->
 				<h2 id="illustration">公式イラスト</h2>
 			<h3 id="star-illustration">帰らぬ熄星</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221004/20221004145700.jpg" translate="no">
-			<div><a href="https://download1501.mediafire.com/94yiqu9bpopg/84nx2cn46pni6lj/IMG_0104.jpeg" style="font-size: large;" class="button">スマートフォン用壁紙</a></div>
-			<cite>引用: <a href="https://www.pixiv.net/artworks/86221335">Criin(Pixiv)</a>、米游社</cite>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221004/20221004145700.jpg" translate="no" loading="lazy">
+			<div><a href="https://www.pixiv.net/artworks/86221335" style="font-size: large;" class="button" loading="lazy">原画(Pixiv)</a> <a href="https://webstatic-sea.mihoyo.com/upload/static-resource/2021/02/10/02759a2bce8e363338f2d4859df1f781_1422416748542760102.zip" style="font-size: large;" class="button">ダウンロード(原神公式サイト)</a> <a href="https://www.mediafire.com/view/84nx2cn46pni6lj/IMG_0104.jpeg/file" style="font-size: large;" class="button">スマートフォン用壁紙</a></div><br>
+			<cite>引用: <a href="https://genshin.hoyoverse.com/m/ja/news/detail/8641">原神公式サイト</a>、米游社</cite>
 				
 				<h3 id="irodori-illustration">光華容彩祭</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" translate="no">
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220428/20220428131853.png" translate="no" loading="lazy">
+			<a href="https://webstatic-sea.hoyoverse.com/upload/static-resource/2022/04/27/91179c7ed251d8e69331e0ae13122b7c_2065396656243462059.zip" style="font-size: large;" class="button">ダウンロード(原神公式サイト)</a><br>
 			<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/20777">原神公式</a></cite>
 			
 			<h3 id="illustration-king-deshret-and-the-three-magi">赤王の砂と三人の巡礼者</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221021/20221021163905.jpg">
-			<div><a href="https://www.mediafire.com/file/6c701bmw5f7r4w3/IMG_3313.JPG/file" style="font-size: large;" class="button">スマートフォン用壁紙</a></div>
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221021/20221021163905.jpg" loading="lazy">
+			<div><a href="https://www.mediafire.com/file/6c701bmw5f7r4w3/IMG_3313.JPG/file" style="font-size: large;" class="button">スマートフォン用壁紙</a></div><br>
 		<cite>引用:<a href="https://genshin.hoyoverse.com/m/ja/news/detail/23738">原神公式</a></cite><br>
 		
 		<h3 id="akasha-pulses-the-kalpa-flame-rises-illustration">虚空の鼓動、熾盛の劫火</h3>
-			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024005102.jpg" translate="no">
+		<img sec="https://ul.h3z.jp/F7Xr8Uxa.jpeg" translate="no">
+			<img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221024/20221024005102.jpg" translate="no" loading="lazy">
 			<cite>引用:<a href="https://www.hoyolab.com/article/12926539/?lang=ja-jp">HoYoLab</a></cite>		
 		
 			<h2 id="pv">PV</h2>
 			<h3 id="1.1pv">バージョン1.1「迫る客星」</h3>
 			<div class="youtube not-margin-div 11pv-video">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/B07z5cbHjNQ?start=88&loop=1&playlist=B07z5cbHjNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/B07z5cbHjNQ?start=88&loop=1&playlist=B07z5cbHjNQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 									<h3 id="2.1pv">バージョン2.1「千手百目の浮世」</h3>
 			<div class="youtube not-margin-div 21pv-video">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/oGFyKyvVpb8?start=151&loop=1&playlist=oGFyKyvVpb8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/oGFyKyvVpb8?start=151&loop=1&playlist=oGFyKyvVpb8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
 				<blockquote>
 					<p class="21pv-text">
@@ -3038,7 +2950,7 @@
 				<h3 id="3.1pv">バージョン3.1「赤砂の王と三人の巡礼者」</h3>
 			<div class="youtube not-margin-div 31pv-video">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/owxvZ9-0JE0?start=189&loop=1&playlist=owxvZ9-0JE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/owxvZ9-0JE0?start=189&loop=1&playlist=owxvZ9-0JE0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 				</div>
 				</p>
 				<blockquote>
@@ -3053,7 +2965,7 @@
 				<h3 id="3.2pv">バージョン3.2「虚空の鼓動、熾盛の劫火」</h3>
 			<div class="youtube not-margin-div 32pv-video">
 								<p>Youtubeを表示できません。</p>
-							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/gnPNEUfT3b8?start=79&loop=1&playlist=gnPNEUfT3b8"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+							<iframe width="1920" height="1080" src="https://www.youtube.com/embed/gnPNEUfT3b8?start=79&loop=1&playlist=gnPNEUfT3b8"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; modestbranding;" loading="lazy"></iframe>
 				</div>
 				</p>
 				<blockquote>
@@ -3096,7 +3008,11 @@ NPC「ニィロウ、本当にやるつもりか? あいつらのためにこん
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【Ver.3.2最新情報】<br>まもなく10月23日(日)21:00より、Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組が原神公式YouTubeチャンネルにて放送されます！<br>ぜひご期待ください！<br><br>▼視聴はこちらから<a href="https://t.co/YNli4XapSX">https://t.co/YNli4XapSX</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/XYyKmTEBsb">pic.twitter.com/XYyKmTEBsb</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584150140511625217?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.2より、魔神任務第三章第五幕「虚空の鼓動、熾盛の劫火」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/7b5qniZTYV">pic.twitter.com/7b5qniZTYV</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584154169560035328?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【Ver.3.2公式PV】<br>「虚空の鼓動、熾盛の劫火」<br>教令院六大学派の力を結集した極秘プロジェクトは、まもなく最も重要な終盤を迎えようとしている。<br>きっと、何らかの収穫は得られるだろう——これだけの時間と労力を費やしたのだから。<br><br>▼YouTube版（日本語字幕付き）<a href="https://t.co/2AD6P9UtUk">https://t.co/2AD6P9UtUk</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/Kr6fV7loOW">pic.twitter.com/Kr6fV7loOW</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584163981647745024?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
+					
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【キャラクター紹介】<br>放浪者——久世浮傾<br>心ある者が人ならば、彼は人とは呼べぬ者である。<br>心なき者にも悲しみと喜び、苦しみと愉悦があるならば、彼はもっとも人に似た人形である。<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/YsrVvZULLr">pic.twitter.com/YsrVvZULLr</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1587021570475806722?ref_src=twsrc%5Etfw">October 31, 2022</a></blockquote>
+					
 				</div>
+				
 				
 				
 			<div class="tweets not-margin-div dark-oney">
@@ -3112,6 +3028,8 @@ NPC「ニィロウ、本当にやるつもりか? あいつらのためにこん
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【Ver.3.2最新情報】<br>まもなく10月23日(日)21:00より、Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組が原神公式YouTubeチャンネルにて放送されます！<br>ぜひご期待ください！<br><br>▼視聴はこちらから<a href="https://t.co/YNli4XapSX">https://t.co/YNli4XapSX</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/XYyKmTEBsb">pic.twitter.com/XYyKmTEBsb</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584150140511625217?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.2より、魔神任務第三章第五幕「虚空の鼓動、熾盛の劫火」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/7b5qniZTYV">pic.twitter.com/7b5qniZTYV</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584154169560035328?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【Ver.3.2公式PV】<br>「虚空の鼓動、熾盛の劫火」<br>教令院六大学派の力を結集した極秘プロジェクトは、まもなく最も重要な終盤を迎えようとしている。<br>きっと、何らかの収穫は得られるだろう——これだけの時間と労力を費やしたのだから。<br><br>▼YouTube版（日本語字幕付き）<a href="https://t.co/2AD6P9UtUk">https://t.co/2AD6P9UtUk</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://t.co/Kr6fV7loOW">pic.twitter.com/Kr6fV7loOW</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1584163981647745024?ref_src=twsrc%5Etfw">October 23, 2022</a></blockquote>
+						
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【キャラクター紹介】<br>放浪者——久世浮傾<br>心ある者が人ならば、彼は人とは呼べぬ者である。<br>心なき者にも悲しみと喜び、苦しみと愉悦があるならば、彼はもっとも人に似た人形である。<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/YsrVvZULLr">pic.twitter.com/YsrVvZULLr</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1587021570475806722?ref_src=twsrc%5Etfw">October 31, 2022</a></blockquote>
 						</div>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8" loading="lazy"></script>
 										<h2 id="interview">インタビュー</h2>
@@ -3261,7 +3179,7 @@ Liu Wei「砂漠では、旅人は新しい収穫があるのでしょうか?」
 <h3 id="ver3-2-livestream">Ver.3.2「虚空の鼓動、熾盛の劫火」予告番組</h3>
 			<div class="youtube not-margin-div">
 				<p>Youtubeを表示できません。</p>
-				<iframe width="1920" height="1080" src="https://www.youtube.com/embed/GtR_JiHlvBM"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
+				<iframe width="1920" height="1080" src="https://www.youtube.com/embed/GtR_JiHlvBM"  title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" loading="lazy"></iframe>
 						</div>
 						<blockquote>
 							<p>空「じゃあ次は、この巨大な機械人形について見ていこう。」<br>
