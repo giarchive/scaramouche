@@ -325,7 +325,7 @@ main .inazumafont {
 		padding: 0;
 		width: 100%;
 		background-color: var(--white6);
-		height: 7vh;
+		height: 10vh;
 	}
 	.nav_content .nav_content_main {
 		width: 100%;
@@ -344,7 +344,7 @@ main .inazumafont {
   top: 0;
 }
 	article {
-		padding-top: 7vh;
+		padding-top: 10vh;
 	}
 	.top-nav {
 		display: none;
