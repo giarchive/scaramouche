@@ -211,6 +211,12 @@ main .white {
 main .inazumafont {
 	font-family: 'InazumaFont', sans-serif;
 }
+/*ガチャカウンター*/
+.day-gacha {
+	padding: 2em;
+	font-weight: bold;
+	font-size: large;
+}
 /*メニュー*/
 @keyframes hideop {
   0% {
@@ -600,9 +606,9 @@ main h6,nav h6  {
 
 /*ボタン*/
 .button {
-	padding: 0.5rem 0.8rem;
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+	padding: 1.25vh 0.8vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
 	border-radius: 6px;
 	background-color: var(--green);
 	border: solid 1px white;
@@ -864,7 +870,8 @@ main .applemusic {
 .share-nav {
 	font-size: 1.15rem;
 	display: flex;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
 }
 .btn-social-flat { 
   color: var(--black1);
