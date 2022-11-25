@@ -4,7 +4,7 @@ function chinese() {
 	ch = '中文';
 	en = '英语';
 	kr = '韩语';
-	it = '意大利语';
+	sp = '西班牙语';
 	fr = '法语';
 	ru = '俄语';
 	tr = '土耳其语';
@@ -19,7 +19,7 @@ function chinese() {
 	//記事トップ
 	document.getElementsByClassName('title')[0].innerHTML = '散兵相关全收集网站（简体中文测试版）';
 	document.getElementsByClassName('update-version')[0].innerHTML = '3.2版本前瞻特别节目';
-	document.getElementsByClassName('about-this-site')[0].innerHTML = '这是散厨的散兵信息收集网站。没有内鬼。<br>浏览以下内容时，视为同意<a href="../agreement.html" class="black">使用条款（日语）</a>。<br><br>中文是测试版。为了进行准确的翻译和反馈，请通过<a href="https://www.twitter.com/messages/compose?recipient_id=1503015129603981315">推特</a>或<a href="mailto:boogie_county.06@icloud.com">邮件</a>联系。';
+	document.getElementsByClassName('about-this-site')[0].innerHTML = '这是散厨的散兵信息收集网站。没有内鬼。<br>浏览以下内容时，视为同意<a href="../agreement.html" class="black">使用条款（日语）</a>。<br><br>中文是测试版。为了进行翻译和反馈，请通过<a href="https://www.twitter.com/messages/compose?recipient_id=1503015129603981315">推特</a>或<a href="mailto:boogie_county.06@icloud.com">邮件</a>联系。';
 	document.getElementsByClassName('tweet')[0].innerHTML = '分享推特	&#x2009;&#x2009;';
 	document.getElementsByClassName('copy')[0].innerHTML = '复制链接&#x2009;&#x2009;';
 	
@@ -28,19 +28,11 @@ function chinese() {
 	document.getElementsByClassName('from-genshin')[0].innerHTML = '摘自《原神》(©︎上海米哈游網絡科技股份有限公司)';
 	
 	//メニュー
-	document.getElementsByClassName('nav_label_text')[0].innerHTML = '菜单';
-	document.getElementById('search-text').setAttribute('placeholder','搜索');
-	document.getElementsByClassName('story-serch')[0].setAttribute('value','任务');
-	document.getElementsByClassName('artifact-serch')[0].setAttribute('value','圣遗物');
-	document.getElementsByClassName('kunikuzushi-serch')[0].setAttribute('value','国崩');
-	document.getElementsByClassName('cheats-serch')[0].setAttribute('value','攻略');
-	
 	document.getElementsByClassName('update')[0].innerHTML = '更新记录';
 	document.getElementsByClassName('information')[0].innerHTML = '基本信息';
-	
-	document.getElementsByClassName('character-setting')[0].innerHTML = '角色设定'
+	document.getElementsByClassName('visual')[0].innerHTML = '外貌';
 	document.getElementsByClassName('voice-actor')[0].innerHTML = '声优';
-	//document.getElementsByClassName('gacha-Illust')[0].innerHTML = '立绘・抽卡立绘';
+	document.getElementsByClassName('gacha-Illust')[0].innerHTML = '立绘・抽卡立绘';
 	document.getElementsByClassName('model')[0].innerHTML = '3D模型<span style="display: none;">3d</span>';
 	//document.getElementsByClassName('gacha')[0].innerHTML = '抽卡';
 	//document.getElementsByClassName('gacha-3.3')[0].innerHTML = '抽卡名';
@@ -52,7 +44,7 @@ function chinese() {
 	//document.getElementsByClassName('ch')[0].innerHTML = ch;
 	//document.getElementsByClassName('en')[0].innerHTML = en;
 	//document.getElementsByClassName('kr')[0].innerHTML = kr;
-	//document.getElementsByClassName('it')[0].innerHTML = it;
+	//document.getElementsByClassName('sp')[0].innerHTML = sp;
 	//document.getElementsByClassName('fr')[0].innerHTML = fr;
 	//document.getElementsByClassName('ru')[0].innerHTML = ru;
 	//document.getElementsByClassName('tr')[0].innerHTML = tr;
@@ -84,8 +76,6 @@ function chinese() {
 	document.getElementsByClassName('kuronushi-illustration-event')[0].innerHTML = '黑主像';
 	
 	document.getElementsByClassName('a-winter-nights-lazzo')[0].innerHTML = 'PV「冬夜愚戏」<span style="display: none;">(博士，多托雷，队长，卡皮塔诺，任务，故事，至冬、pv、视频)</span>';
-	document.getElementsByClassName('through-mists-of-smoke-and-forests-dark')[0].innerHTML = '穿越烟帷与暗林<span style="display: none;">(魔神任务，故事，虚空，须弥)</span>';
-	document.getElementsByClassName('ever-so-close')[0].innerHTML = '近在咫尺的目标';
 	
 	document.getElementsByClassName('the-morn-a-thousand-roses-brings')[0].innerHTML = '终将到来的花神诞祭<span style="display: none;">(魔神任务，故事，虚空，须弥)</span>';
 	document.getElementsByClassName('unknown-voice-3-2')[0].innerHTML = '未知的声音';
@@ -107,9 +97,7 @@ function chinese() {
 	document.getElementsByClassName('rather-aged-notes')[0].innerHTML = '有相当年头的记事';
 	document.getElementsByClassName('ancient-forging-blueprint')[0].innerHTML = '古老的锻造图谱';
 	
-	document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」<span style="display: none;">BOSS，敌人，攻略</span>';
-	
-	document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」<span style="display: none;">BOSS，敌人，攻略</span>';
+	document.getElementsByClassName('boss')[0].innerHTML = '週本「正机之神」<span style="display: none;">BOSS，敌人，攻略</span>';
 	
 		document.getElementsByClassName('1.1pv')[0].innerHTML = '1.1版本「' + eleven + '」';
 	document.getElementsByClassName('2.1pv')[0].innerHTML = '2.1版本「' + twentyone + '」';
@@ -125,13 +113,15 @@ function chinese() {
 	
 	document.getElementsByClassName('floating-world-under-the-moonlight')[0].innerHTML = '推特热门';	
 	
+	document.getElementsByClassName('menu-statutes')[0].innerHTML = '使用条款（日语）'
+	
 	//タイトル
 	document.getElementById('update').innerHTML = '更新记录';
 	document.getElementById('information').innerHTML = '基本信息';
-	
-	document.getElementById('character-setting').innerHTML = '角色设定'
+	document.getElementById('visual').innerHTML = '外貌';
+	document.getElementById('character-setting').innerHTML = '角色情况'
 	document.getElementById('voice-actor').innerHTML = '声优';
-	//document.getElementById('gacha-Illust')[0].innerHTML = '立绘・抽卡立绘';
+	document.getElementById('gacha-Illust').innerHTML = '立绘・抽卡立绘';
 	document.getElementById('model').innerHTML = '3D模型<span style="display: none;">3d</span>';
 	//document.getElementById('gacha')[0].innerHTML = '抽卡';
 	//document.getElementById('gacha-3.3')[0].innerHTML = '抽卡名';
@@ -143,10 +133,9 @@ function chinese() {
 	document.getElementById('ch').innerHTML = ch;
 	document.getElementById('en').innerHTML = en;
 	document.getElementById('kr').innerHTML = kr;
-	document.getElementById('it').innerHTML = it;
+	document.getElementById('sp').innerHTML = sp;
 	document.getElementById('fr').innerHTML = fr;
 	document.getElementById('ru').innerHTML = ru;
-	document.getElementById('tr').innerHTML = tr;
 	document.getElementById('list').innerHTML = '一览';
 	
 	document.getElementById('story-text').innerHTML = '任务文本';
@@ -173,9 +162,6 @@ function chinese() {
 	document.getElementById('kuronushi-illustration-event').innerHTML = '黑主像';
 	document.getElementById('a-winter-nights-lazzo').innerHTML = 'PV「冬夜愚戏」';
 	
-	document.getElementById('through-mists-of-smoke-and-forests-dark').innerHTML = '穿越烟帷与暗林';
-	document.getElementById('ever-so-close').innerHTML = '近在咫尺的目标';
-	
 	document.getElementById('the-morn-a-thousand-roses-brings').innerHTML = '千朵玫瑰带来的黎明';
 	document.getElementById('unknown-voice-3-2').innerHTML = '未知的声音';
 	document.getElementById('the-coming-of-the-sabzeruz-festival').innerHTML = '终将到来的花神诞祭';
@@ -192,6 +178,9 @@ function chinese() {
 	document.getElementById('akasha-pulses-the-kalpa-flame-rises').innerHTML = '虚空鼓动，劫火高扬';
 	//document.getElementById('truth-amongst-the-pages-of-purana').innerHTML = '虚空劫灰往世书';
 	
+	document.getElementsByClassName('stamp-link')[0].innerHTML = '表情包';
+	document.getElementsByClassName('official-tweet-link')[0].innerHTML = '官方推特';
+	
 	
 	document.getElementById('pale-flame').innerHTML = '苍白之火';
 	document.getElementById('goblet-of-eonothem-surpassing-cup').innerHTML = '超越之盏';
@@ -206,11 +195,11 @@ function chinese() {
 	document.getElementById('rather-aged-notes').innerHTML = '有相当年头的记事';
 	document.getElementById('ancient-forging-blueprint').innerHTML = '古老的锻造图谱';
 	
-	document.getElementById('boss').innerHTML = '週本「？？？」';
+	document.getElementById('boss').innerHTML = '週本「正机之神」';
 	document.getElementById('boss-story').innerHTML = '秘境・故事';
 	document.getElementById('boss-detail').innerHTML = '秘境详情';
-	document.getElementById('boss-stage1').innerHTML = '第一形态: ？？？';
-	document.getElementById('boss-stage2').innerHTML = '第ニ形态: ？？？';
+	document.getElementById('boss-stage1').innerHTML = '第一形态';
+	document.getElementById('boss-stage2').innerHTML = '第ニ形态';
 	document.getElementById('boss-drop').innerHTML = '素材';
 	
 	document.getElementById('1.1pv').innerHTML = '1.1版本「' + eleven + '」';
@@ -220,9 +209,9 @@ function chinese() {
 	
 	//タブ
 	document.getElementsByClassName('top-tab-scaramouche')[0].innerHTML = '「散兵」';
-	document.getElementsByClassName('top-tab-kuronushi')[0].innerHTML = '黑主';
 	document.getElementsByClassName('top-tab-old-style')[0].innerHTML = '以前的样子';
 	document.getElementsByClassName('top-tab-boss')[0].innerHTML = '週本';
+	document.getElementsByClassName('top-tab-card')[0].innerHTML = '立绘';
 
 	//更新履歴
 	document.getElementsByClassName('update-10')[0].innerHTML = '<span class="ver-num">1.0版本</span>每日委托「等量交换」';
@@ -239,35 +228,36 @@ function chinese() {
 	document.getElementsByClassName('update-30')[0].innerHTML = '<span class="ver-num">3.0版本</span>第三章第一幕「穿越烟帷与暗林」，第三章第二幕「千朵玫瑰带来的黎明」';
 	document.getElementsByClassName('update-31')[0].innerHTML = '<span class="ver-num">3.1版本</span>第三章第三幕「迷梦与空幻与欺骗」，第三章第四幕「赤土之王与三朝圣者」';
 	document.getElementsByClassName('update-221004')[0].innerHTML = '<span class="ver-num">PV「『神』意」上网';
-	document.getElementsByClassName('update-32')[0].innerHTML = '<span class="ver-num">3.2版本</span>第三章第五幕<!--「迷梦与空幻与欺骗」-->，新週本「？？？」';
+	document.getElementsByClassName('update-32')[0].innerHTML = '<span class="ver-num">3.2版本</span>第三章第五幕 「迷梦与空幻与欺骗」，新週本「正机之神」';
 	
 	//基本情報
 		document.getElementsByClassName('name-fatui-no6')[0].innerHTML = '愚人众执行官第六席「散兵」斯卡拉姆齐';
 		document.getElementsByClassName('name-kunikuzushi')[0].innerHTML = '国崩';
-		document.getElementsByClassName('gods')[0].innerHTML = '？？？';
+		//document.getElementsByClassName('gods')[0].innerHTML = '正机之神';
 		document.getElementsByClassName('release-boss-version')[0].innerHTML = '週本: 3.2版本';
-		document.getElementsByClassName('release-playable-version')[0].innerHTML = '进卡池: 3.3版本以降';
+		document.getElementsByClassName('release-playable-version')[0].innerHTML = '进卡池: 3.3版本';
 		
 		document.getElementsByClassName('elemental')[0].innerHTML = '元素';
 		document.getElementsByClassName('elemental-breakdown')[0].innerHTML = '雷';
 		document.getElementsByClassName('elemental-robot')[0].innerHTML = '元素（机器）';
 		document.getElementsByClassName('elemental-robot-reakdown')[0].innerHTML = '雷、风、水、火、冰';
 		document.getElementsByClassName('vision')[0].innerHTML = '神之眼';
-		document.getElementsByClassName('vision-breakdown')[0].innerHTML = '?';
+		document.getElementsByClassName('vision-breakdown')[0] = '风（须弥）';
 		document.getElementsByClassName('age')[0].innerHTML = '年龄';
 		document.getElementsByClassName('age-breakdown')[0].innerHTML = '未满500岁';
 		document.getElementsByClassName('from-country')[0].innerHTML = '出身';
 		document.getElementsByClassName('from-country-breakdown')[0].innerHTML = '稻妻';
+		document.getElementsByClassName('affiliated')[0].innerHTML = '所属';
+		document.getElementsByClassName('affiliated-breakdown')[0].innerHTML = '？';
 		document.getElementsByClassName('ethnicity')[0].innerHTML = '种族';
 		document.getElementsByClassName('ethnicity-breakdown')[0].innerHTML = '人偶';
 		document.getElementsByClassName('constellation')[0].innerHTML = '命之座';
 		document.getElementsByClassName('life-collection')[0].innerHTML = '?';
 		document.getElementsByClassName('birthday')[0].innerHTML = '生日';
-		document.getElementsByClassName('birthday-breakdown')[0].innerHTML = '?';
 		document.getElementsByClassName('character-title')[0].innerHTML = '称号';
 		document.getElementsByClassName('character-title-breakdown')[0].innerHTML = '?';
 		document.getElementsByClassName('god-name')[0].innerHTML = '神名';
-		document.getElementsByClassName('god-name-breakdown')[0].innerHTML = '？？？';
+		document.getElementsByClassName('god-name-breakdown')[0].getElementsByClassName('character-setting-shoukinokami')[0].innerHTML = '正机之神';
 		
 		document.getElementsByClassName('va-jp')[0].innerHTML = jp;
 		document.getElementsByClassName('va-cn')[0].innerHTML = ch;
@@ -282,7 +272,6 @@ function chinese() {
 		
 		//3Dモデル
 		document.getElementById('3dmodel_scaramouche_button').innerHTML = '读取高画质图像';
-		document.getElementsByClassName('cant-load-twitter-photo-link')[0].innerHTML = '查看附件图片(无法访问推特)：<a href="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20220805/20220805040312">散兵模型</a>';
 		
 		//帰らぬ熄星
 		document.getElementsByClassName('event-time-unreconciled-stars')[0].innerHTML = '<p>期间限定活动 <time datetime="2020-11-16 4:00">2020年11月16日</time>~<time datetime="2020-11-30 3:59">2020年11月30日</time>（北京时间）</p>';
@@ -299,9 +288,9 @@ function chinese() {
 		document.getElementsByClassName('battle-fatui-omnipresence-over-mortals-text')[0].innerHTML = '愚人众 : 不要让他们妨碍执行官大人。<br>愚人众 : 别想活着从这里离开！<br>愚人众 : 这家伙，不要命的吗！<br>（「<i>「工厂」的殿中监」愚人众・娜塔希卡</i>来了。）<br>愚人众 : 不要退缩，执行官大人很快就到。';
 		document.getElementById('talk-scaraouche-delusion').innerHTML = '与散兵对话';
 		document.getElementsByClassName('talk-scaraouche-delusion-unknown-star-title')[0].innerHTML = '玩了《未归的熄星》';
-		document.getElementsByClassName('talk-scaraouche-delusion-unknown-star-text')[0].innerHTML = '散兵 : 没想到你们能找到这里来，做得不错嘛。<br>散兵 : 有趣。才见面，就是一副要找我拼命的样子了。<br>旅行者 : 你们把邪眼分发给反抗军…<br>散兵 : 噢，原来是说这件事。<span class="mark">我虽然站在这里，但也只是代为执行计划而已。</span><br>散兵 : <span class="mark">主谋当然另有其人了。</span>不是很能干吗？尽情去找吧！<br>散兵 : 才这点「小事」就被激怒了？你好像变了嘛…变得不堪一击。<br>派蒙 : 你竟然说这是小事…<br>散兵 : 难道不是吗？在这浮世之中，人命如同草芥一般。<br>散兵 : 没有邪眼，他们也一样会死。至少，邪眼还给了他们实现「愿望」的机会。<br>散兵 : 眼狩令的价值，你们真的了解吗？当初促成这件事花了不小的力气，自然是因为它有利于我们。<br>散兵 : 不过现在看来，一切都很值得。制造纷争，为推广邪眼铺路，让力量自行吸引追寻它的弱者…<br>散兵 : 只需要一点点代价，就能得到掌握世界的感觉。用性命换取无上之力，挺划算的不是吗？<br>派蒙 : 眼狩令是你们促成的？难道说，你们从一开始就…<br>散兵 : 稻妻的外侧看起来十分稳固，但内侧…充满了留给我们的机会。稍加力气，就能从内部攻破。<br>散兵 : 永恒可以把时间拉得很长，然而，其间每一个节点都会变得无比脆弱。<br>散兵 : 就像你在反抗军的朋友一样，无论怎么努力，都不过是徒劳。<br>散兵 : 如同水中泡影，绚烂的同时，便会迎来毁灭。<br>散兵 : 越是失去就越想得到，越是无能就越要挣扎！哈哈哈，这种闹剧真让人开心啊。<br>旅行者 : 哲平他…<br>派蒙 : 喂！旅行者，快冷静下来——<br>(散兵和八重神子接触)<br>(旅行者失去意识)';
+		document.getElementsByClassName('talk-scaraouche-delusion-unknown-star-text')[0].innerHTML = '散兵 : 没想到你们能找到这里来，做得不错嘛。<br>散兵 : 有趣。才见面，就是一副要找我拼命的样子了。<br>旅行者 : 你们把邪眼分发给反抗军…<br>散兵 : 噢，原来是说这件事。<span class="mark">我虽然站在这里，但也只是代为执行计划而已。</span><br>散兵 : <span class="mark">主谋当然另有其人了。</span>不是很能干吗？尽情去找吧！<br>散兵 : 才这点「小事」就被激怒了？你好像变了嘛…变得不堪一击。<br>派蒙 : 你竟然说这是小事…<br>散兵 : 难道不是吗？在这浮世之中，人命如同草芥一般。<br>散兵 : 没有邪眼，他们也一样会死。至少，邪眼还给了他们实现「愿望」的机会。<br>散兵 : 眼狩令的价值，你们真的了解吗？当初促成这件事花了不小的力气，自然是因为它有利于我们。<br>散兵 : 不过现在看来，一切都很值得。制造纷争，为推广邪眼铺路，让力量自行吸引追寻它的弱者…<br>散兵 : 只需要一点点代价，就能得到掌握世界的感觉。用性命换取无上之力，挺划算的不是吗？<br>派蒙 : 眼狩令是你们促成的？难道说，你们从一开始就…<br>散兵 : 稻妻的外侧看起来十分稳固，但内侧…充满了留给我们的机会。稍加力气，就能从内部攻破。<br>散兵 : 永恒可以把时间拉得很长，然而，其间每一个节点都会变得无比脆弱。<br>散兵 : 就像你在反抗军的朋友一样，无论怎么努力，都不过是徒劳。<br>散兵 : 如同水中泡影，绚烂的同时，便会迎来毁灭。<br>散兵 : 越是失去就越想得到，越是无能就越要挣扎！哈哈哈，这种闹剧真让人开心啊。<br>旅行者 : 哲平他…<br>派蒙 : 喂！旅行者，快冷静下来——<br>派蒙：啊…可悪<br>(旅行者很痛苦)<br>散兵：哈哈哈…<br>散兵：没错，就是这样！<br>散兵：愤怒吧，愤怒吧…<br>散兵：惯怒对这座工厂里的魔神怨念来说，可是最好的食粮…<br>派蒙：啊，你怎么了，快起来啊…<br>(散兵和八重神子接触)<br>(旅行者失去意识)';
 		document.getElementsByClassName('talk-scaraouche-delusion-title')[0].innerHTML = '不玩《未归的熄星》';
-		document.getElementsByClassName('talk-scaraouche-delusion-text')[0].innerHTML = '散兵 : 没想到你们能找到这里来，做得不错嘛。<br>派蒙 : 你是愚人众的执行官…跟「女士」「公子」他们一样吗？<br>散兵 : 「女士」？「公子」？哦…没想到你已经见过我们最不可靠的两位同事了。<br>散兵 : 愚人众执行官第六席，「散兵」。很高兴见到你，大名鼎鼎的旅行者。<br>	<b><i>愚人众十一执行官　第六席 「散兵」Scaramouche</i></b><br>散兵 : 这么狼狈地过来找我，有何贵干？<br>旅行者 : 你们把邪眼分发给反抗军…<br>散兵 : 噢，原来是说这件事啊。<br>散兵 : 你们似乎搞错了一点。<span class="mark">我虽然站在这里，但也只是代为执行计划而已。</span><br>散兵 : <span class="mark">主谋当然另有其人了。</span>不是很能干吗？尽情去找吧！<br>散兵 : 才这点「小事」就被激怒了？没想到你这么不堪一击啊。<br>派蒙 : 你竟然说这是小事…<br>散兵 : 难道不是吗？在这浮世之中，人命如同草芥一般。<br>散兵 : 没有邪眼，他们也一样会死。至少，邪眼还给了他们实现「愿望」的机会。<br>散兵 : 眼狩令的价值，你们真的了解吗？当初促成这件事花了不小的力气，自然是因为它有利于我们。<br>散兵 : 不过现在看来，一切都很值得。制造纷争，为推广邪眼铺路，让力量自行吸引追寻它的弱者…<br>散兵 : 只需要一点点代价，就能得到掌握世界的感觉。用性命换取无上之力，挺划算的不是吗？<br>派蒙 : 眼狩令是你们促成的？难道说，你们从一开始就…<br>散兵 : 稻妻的外侧看起来十分稳固，但内侧…充满了留给我们的机会。稍加力气，就能从内部攻破。<br>散兵 : 永恒可以把时间拉得很长，然而，其间每一个节点都会变得无比脆弱。<br>散兵 : 就像你在反抗军的朋友一样，无论怎么努力，都不过是徒劳。<br>散兵 : 如同水中泡影，绚烂的同时，便会迎来毁灭。<br>散兵 : 越是失去就越想得到，越是无能就越要挣扎！哈哈哈，这种闹剧真让人开心啊。<br>旅行者 : 哲平他…<br>派蒙 : 喂！旅行者，快冷静下来——<br>(散兵和八重神子接触)<br>(旅行者失去意识)';
+		document.getElementsByClassName('talk-scaraouche-delusion-text')[0].innerHTML = '散兵 : 没想到你们能找到这里来，做得不错嘛。<br>派蒙 : 你是愚人众的执行官…跟「女士」「公子」他们一样吗？<br>散兵 : 「女士」？「公子」？哦…没想到你已经见过我们最不可靠的两位同事了。<br>散兵 : 愚人众执行官第六席，「散兵」。很高兴见到你，大名鼎鼎的旅行者。<br>	<b><i>愚人众十一执行官　第六席 「散兵」Scaramouche</i></b><br>散兵 : 这么狼狈地过来找我，有何贵干？<br>旅行者 : 你们把邪眼分发给反抗军…<br>散兵 : 噢，原来是说这件事啊。<br>散兵 : 你们似乎搞错了一点。<span class="mark">我虽然站在这里，但也只是代为执行计划而已。</span><br>散兵 : <span class="mark">主谋当然另有其人了。</span>不是很能干吗？尽情去找吧！<br>散兵 : 才这点「小事」就被激怒了？没想到你这么不堪一击啊。<br>派蒙 : 你竟然说这是小事…<br>散兵 : 难道不是吗？在这浮世之中，人命如同草芥一般。<br>散兵 : 没有邪眼，他们也一样会死。至少，邪眼还给了他们实现「愿望」的机会。<br>散兵 : 眼狩令的价值，你们真的了解吗？当初促成这件事花了不小的力气，自然是因为它有利于我们。<br>散兵 : 不过现在看来，一切都很值得。制造纷争，为推广邪眼铺路，让力量自行吸引追寻它的弱者…<br>散兵 : 只需要一点点代价，就能得到掌握世界的感觉。用性命换取无上之力，挺划算的不是吗？<br>派蒙 : 眼狩令是你们促成的？难道说，你们从一开始就…<br>散兵 : 稻妻的外侧看起来十分稳固，但内侧…充满了留给我们的机会。稍加力气，就能从内部攻破。<br>散兵 : 永恒可以把时间拉得很长，然而，其间每一个节点都会变得无比脆弱。<br>散兵 : 就像你在反抗军的朋友一样，无论怎么努力，都不过是徒劳。<br>散兵 : 如同水中泡影，绚烂的同时，便会迎来毁灭。<br>散兵 : 越是失去就越想得到，越是无能就越要挣扎！哈哈哈，这种闹剧真让人开心啊。<br>旅行者 : 哲平他…<br>派蒙 : 喂！旅行者，快冷静下来——<br>派蒙：啊…可悪<br>(旅行者很痛苦)<br>散兵：哈哈哈…<br>散兵：没错，就是这样！<br>散兵：愤怒吧，愤怒吧…<br>散兵：惯怒对这座工厂里的魔神怨念来说，可是最好的食粮…<br>派蒙：啊，你怎么了，快起来啊…<br>(散兵和八重神子接触)<br>(旅行者失去意识)';
 		
 		talkscaraouchedelusionlogtext = '你愤怒地冲向「散兵」，但他似乎早有埋伏，没等你动手，陷阱发动，你便晕了过去…'
 		document.getElementsByClassName('talk-scaraouche-delusion-log-unknown-star')[0].innerHTML = talkscaraouchedelusionlogtext;
@@ -344,7 +333,7 @@ function chinese() {
 		document.getElementsByClassName('the-gaze-from-a-certain-god-text2')[0].innerHTML = '派蒙 : 这是…！<br>旅行者 : 并非是大慈树王的意识…<br>派蒙 : 我们看到的，是「散兵」的过去吗！？很多信息都重合上了！<br>派蒙 : 可是海芭夏口中的神明又怎么跟「散兵」联系在一起的？<br>海芭夏 : 看到了吧，感受到了吧，崇高的神明，崇高的意志，崇高的情感！<br>海芭夏 : 唉…可惜啊，可惜…<br>海芭夏 : 可惜我的胸腔里跳动的，却是一颗肮脏的、人类的心…神明大人啊，可否宽恕我，可否救赎我呢…<br>纳西妲 : 看出来了吗，这可不是什么「寂静圆满期」，恐怕她是…<br>旅行者 : 你清醒一点，海芭夏！<br>海芭夏 : 啊…！<br>海芭夏 : 你…你为什么对我这么凶呢？为什么那些人都在躲着我呢？<br>海芭夏 : 我找到了神明的智慧啊，我应该被夸奖才对啊，我成为了那个在黑暗里探索又找到了光明的人啊！<br>派蒙 : 海芭夏…<br>海芭夏 : 明明应该是这样啊…<br>海芭夏 : …等等…<br>海芭夏 : 难道说…是我已经疯了吗？<br>旅行者 : ……<br>纳西妲 : 等一下，周围不对劲！<br><br>派蒙：纳西妲！<br>（纳西妲控制的凯瑟琳被镀金旅团刺伤）<br>（发生意识交换，旅行者的意识转移到净善宫的纳西妲。）<br><br><b><i class="i-see-you"></i>「我看到你了」</b>';
 		
 		//聖遺物
-		document.getElementsByClassName('pale-flame')[0].innerHTML = '苍白之火';
+		document.getElementsByClassName('pale-flame-link')[0].innerHTML = '苍白之火';
 		document.getElementsByClassName('goblet-of-eonothem-surpassing-cup')[0].innerHTML = '超越之盏';
 		document.getElementsByClassName('husk-of-opulent-dreams')[0].innerHTML = '华馆梦醒形骸记';
 		document.getElementsByClassName('bloom-times')[0].innerHTML = '荣花之期';
@@ -384,12 +373,11 @@ function chinese() {
 		document.getElementsByClassName('ancient-forging-blueprint-text')[0].innerHTML = '一卷古老的锻造图谱，将军曾命令枫原家依照它锻造御神刀。<br>经过浸泡后，图谱上有一些文字变得模糊了——有人通过篡改它，导致了锻刀失败，并引发了后续的一系列惨剧…';
 		document.getElementsByClassName('ancient-forging-blueprint-text-translation')[0].innerHTML = '<p><font size="4"><span class="inazumafont">tanzo sekveizu</span><b>&thinsp;锻造设计図</b></font><br><span class="inazumafont">kixsaki</span>&thinsp;切先<br><span class="inazumafont">abiay</span>&thinsp;刃<br><span class="inazumafont">hira</span>&thinsp;平<br><span class="inazumafont">shinogichi</span>&thinsp;镐地</p><p><font size="4"><span class="inazumafont">zairyou</span><b>&thinsp;材料</b></font><br><span class="inazumafont">hakutetsy</span>&thinsp;白铁块<br><span class="inazumafont">shoukakotsuzui</span>&thinsp;晶化骨髓<br><span class="mark"><span class="inazumafont">kesekika</span>&thinsp;血斛<br><span class="inazumafont">murasakisuisho</span>&thinsp;紫晶</span></ul></p><cite>翻訳引用: <a href="https://ngabbs.com/read.php?tid=31458467">NGA</a></cite>';
 	//ボス
-document.getElementsByClassName('boss-video')[0].innerHTML = '<p>无法读取视频。</p><iframe src="//player.bilibili.com/player.html?aid=859296635&bvid=BV1sV4y1576g&cid=869759578&t=709&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>';
-document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」';
+document.getElementsByClassName('boss')[0].innerHTML = '週本「正机之神」';
 	document.getElementsByClassName('boss-story')[0].innerHTML = '秘境・故事';
 	document.getElementsByClassName('boss-detail')[0].innerHTML = '秘境详情';
-	document.getElementsByClassName('boss-stage1')[0].innerHTML = '第一形态: ？？？';
-	document.getElementsByClassName('boss-stage2')[0].innerHTML = '第ニ形态: ？？？';
+	document.getElementsByClassName('boss-stage1')[0].innerHTML = '第一形态';
+	document.getElementsByClassName('boss-stage2')[0].innerHTML = '第ニ形态';
 	document.getElementsByClassName('boss-drop')[0].innerHTML = '素材';
 	
 	//PV
@@ -402,4 +390,7 @@ document.getElementsByClassName('boss')[0].innerHTML = '週本「？？？」';
 		
 		document.getElementsByClassName('32pv-video')[0].innerHTML = '<iframe src="//player.bilibili.com/player.html?aid=901868956&bvid=BV1QP4y1U7D2&cid=869665626&page=1&t=84" scrolling="no" border="0" frameborder="no" framespacing="0"> </iframe>';
 		document.getElementsByClassName('32pv-text')[0].innerHTML = '散兵：所以，你们觉得事情结束了？<br>纳西妲：…等等，不对…不…这样不对。<br>博士：那是被世界树所藏匿起来的，有关整个世界「真相」的 秘密。<br>派蒙：已经完全成为了神明的…「散兵」<br>散兵（BOSS）：司掌智慧的神，怪不得就连你的人民都会将你背弃。<br>散兵（BOSS）：你也将…无处立足！<br>散兵（BOSS）：轮转百劫！<br>阿扎尔：在这里「牺牲」掉旅行者，难道不是你们的计划？<br>MOB：妮露，你真打算那么干？为了他们而冒这种风险。<br>妮露：…我…必须承认，我有一点害怕。<br>妮露：但为了小吉祥草王大人，我愿意尝试。<br>赛诺：艾尔海森的计划比想的还狠。<br>镀金旅团：兄弟们！让他们知道镀金旅团不是好惹的！<br>艾尔海森：阿扎尔，你是背叛了整个须弥，背叛了神明的家伙。<br>阿扎尔：创造神明…我们可是在以人类的智慧创造神明<br>散兵（BOSS）：此刻，重现魔神战争的一角。<br>散兵（BOSS）：来为我作为神明的诞生而「正名」吧。';
+		
+		//スタンプ
+		document.getElementsByClassName('rather-aged-notes-text1')[0].innerHTML = '（似乎是最近被搜刮的愚人众翻出来的记事。因为年岁，大部分文本已经无法辨识了。）';
 	}

@@ -30,6 +30,9 @@
 	--brown: rgb(162,132,94);
 	--shere-button-size: 2em;
 	--content-width: 85vw;
+	
+	--scara-1: #3B5EB8;
+	--scara-2: #7AB7D4;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -59,6 +62,9 @@
 	--purple: rgb(191,90,242);
 	--pink: rgb(255,55,95);
 	--brown: rgb(172,142,104);
+	
+	--scara-1: #DB2517;
+	--scara-2: #DB2517;
 }
 }
 @media screen and (max-width: 680px) {
@@ -246,6 +252,24 @@ main .inazumafont {
 	font-weight: bold;
 	text-decoration: none;
 }
+
+/*メニュー読み込み中*/
+.sp-circle {
+  border: 4px rgba(red,0.25) solid;
+  border-top: 4px rgba(red,1) solid;
+  border-radius: 50%;
+  -webkit-animation: spCircRot .6s infinite linear;
+  animation: spCircRot .6s infinite linear;
+}
+@-webkit-keyframes spCircRot {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(359deg); }
+}
+@keyframes spCircRot {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
   display: flex;
@@ -523,7 +547,7 @@ ul.list ul li ul li a {
 	margin: 0.5rem;
 }
 .tab-switch:checked+.tab-label {
-    background: var(--orange);
+    background: var(--scara-1);
 }
 .tab-switch:checked+.tab-label+.tab-content {
      display: block;
@@ -531,24 +555,7 @@ ul.list ul li ul li a {
 .tab-switch {
     display: none;
 }
-/*言語タブ*/
-.lang-tab-wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-.lang-tab-label {
-	font-weight: bold;
-    color: var(--white);
-    background: var(--black2);
-	border-radius: 4px;
-    margin-right: 5px;
-    padding: 3px 12px;
-    order: -1;
-	margin: 0.2rem;
-}
-.lang-tab-switch:checked+.lang-tab-label {
-    background: var(--cyan);
-}
+
 /*見出し*/
 main h2,nav h2 {
     padding: 0.5vh 2vw;
@@ -559,7 +566,7 @@ main h2,nav h2 {
 }
 main h3,nav h3 {
     padding: 0.5vh 1vw;
-	border-bottom: solid 3px var(--black1);
+	border-bottom: solid 2px var(--scara-2);
     font-weight: bold;
     line-height: 1;
 	margin: 2vh 0vw;
@@ -593,7 +600,6 @@ main h6,nav h6  {
         letter-spacing: 1px;
     }
     main h3 {
-		border-bottom: solid 3px;
         font-size: 16px;
         letter-spacing: 0;
     }
@@ -610,15 +616,17 @@ main h6,nav h6  {
 }
 
 /*ボタン*/
-.button {
-	padding: 1.25vh 0.8vw;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
-	border-radius: 6px;
-	background-color: var(--green);
-	border: solid 1px white;
-	color: white!important;
-	font-weight: 600;
+.button,.button:link, .button:visited, .button:hover, .button:active {
+	position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: var(--white)!important;
+  background: var(--scara-1);/*色*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+  font-weight: bold;
+  border: solid 2px var(--scara-1);/*線色*/
 }
 /*フッダー*/
 footer a {
@@ -640,6 +648,14 @@ img,video {
 img.card-illustration {
 	width: 45%;
 	vertical-align: top;
+}
+.half-image {
+	width: 50%;
+}
+@media screen and (max-width: 680px) {
+	.half-image {
+		width: 100%;
+	}
 }
 /*引用*/
 blockquote:not(.twitter-tweet) {
@@ -685,9 +701,10 @@ blockquote .travel-log {
 	}
 }
 /*表*/
-main table {
+main table:not(.character-setting-about-name-card table) {
 	border-collapse: collapse;
 	border-spacing: 0;
+	width: 100%;
 	max-width: var(--content-width);
 	margin-bottom: 0.5em;
 	white-space: nowrap;
@@ -695,7 +712,6 @@ main table {
   overflow-x: scroll;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
-  table-layout: auto;
 }
 main table tr {
 	white-space: nowrap;
@@ -762,12 +778,12 @@ main td {
 	float:left;
 }
 .gacha-Illust-text-about {
-	padding: 0 2.5rem;
+	padding: 0 1rem;
 }
 .character-name-gacha-Illust {
 	font-size: x-large;
 	font-weight: bold;
-	padding: 0 2rem;
+	padding: 0 1rem;
 }
 .gacha-picture-box blockquote {
 	margin: 0px 1em!important;
@@ -938,13 +954,13 @@ main .applemusic {
 	vertical-align: top;
 }
 .picture-box img {
-	width: calc(50% - 2vw)!important;
+	width: calc(49%)!important;
 	height: auto;
 	vertical-align: top;
 }
 @media screen and (max-width: 680px) {
 	.picture-box img {
-		width: calc(100% - 2vw)!important;
+		width: 99%!important;
 		height: auto;
 		vertical-align: top;
 	}
@@ -998,4 +1014,8 @@ main .applemusic {
 	width: calc(90% - 2vw)!important;
 	padding: 1vw 1vw;
 	}
+}
+
+footer {
+  border-top: 1px var(--scara-2) solid;
 }

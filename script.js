@@ -1,22 +1,3 @@
-
-//検索
-$(function () {
-  searchWord = function(){
-    var searchText = $(this).val(),
-        targetText;
-
-    $('.target-area li').each(function() {
-      targetText = $(this).text();
-      if (targetText.indexOf(searchText) != -1) {
-        $(this).removeClass('hidden');
-      } else {
-        $(this).addClass('hidden');
-      }
-    });
-  };
-  $('#search-text').on('input', searchWord);
-});
-
 function showDiffDate( tYear, tMonth, tDay) {
     // 現在日時を数値に変換
    var nowDate = new Date();
@@ -48,7 +29,7 @@ var box;
 function load3DModelScraamouche() {
 	box = document.getElementById("3dmodel_scaramouche");
 	
-	box.insertAdjacentHTML('beforeend', '<cite>引用: <a href="https://twitter.com/lumie_lumie/status/1347651428668633088">Lumie</a></cite>');	
+	box.insertAdjacentHTML('beforeend', '<cite>引用: <a target="_blank" href="https://twitter.com/lumie_lumie/status/1347651428668633088">Lumie</a></cite>、<a target="_blank" href="https://twitter.com/genshinBLANK/status/1587859890596450313">BLANK</a></cite>');	
 	box.style.display = "display";
 	button = document.getElementById("3dmodel_scaramouche_button");
 	button.style.visibility = "hidden";
@@ -58,4 +39,7 @@ function load3DModelScraamouche() {
 
 	moucheimgNoHat = document.getElementById("3dmodel_scaramouche_nohat");
     moucheimgNoHat.src = "https://github.com/giarchive/giarchive.github.io/blob/main/F24E47B5-BA39-478A-B347-D741D4EB69CB.png?raw=true";
+	
+	wanderer = document.getElementById("3dmodel_wanderer");
+    wanderer.src = "https://github.com/giarchive/3.2/blob/main/Img/27585D7D-0B3D-4522-B18B-3319792F2E28.png?raw=true";
 }
