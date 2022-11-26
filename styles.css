@@ -802,12 +802,21 @@ main td {
 }
 /*Twitter*/
 .tweets {
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: masonry;
 }
 .twitter-tweet {
-	width: calc(50% - 2vw)!important;
-	margin: 1vh 1vw!important;
+margin: 0.5vw!important;
+padding: 0!important;
+max-width: calc(100% - 2vw)!important;
+align-self: start!important;
+}
+@media screen and (max-width: 680px) {
+	.tweets {
+	grid-template-columns: 1fr;
+}
 }
 @media (prefers-color-scheme: light) {
 .dark-oney {
@@ -818,12 +827,6 @@ main td {
 .light-oney {
   display: none!important;
 }
-}
-@media screen and (max-width: 680px) {
-	.twitter-tweet {
-	width: calc(100% - 1vw)!important;
-	margin: 1vw 1vw!important;
-	}
 }
 /*YouTube*/
 .youtube {
