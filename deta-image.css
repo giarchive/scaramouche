@@ -1,5 +1,5 @@
 /*ロゴ*/
-#goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before,#from-raiden-mention::before,#from-yae-mention::before,#from-tartaglia-mention::before,.life-collection::before,#ancient-forging-blueprint::before,.i-see-you::before,.vision-breakdown::before,.shouki-no-kami-icon:before,#from-nahida-mention:before,.puppet-strings:before,.character-icon:before,.skill-icon:before,.burst-icon:before,.nomal-atack:before,.shimi-chazuke:before,.constellation-one:before,.constellation-two:before,.constellation-four:before,.constellation-six:before,.elemental-breakdown::before,.dakas-bell::before,.mirror-of-mushin::before {
+#goblet-of-eonothem-surpassing-cup::before,#bloom-times::before,#plume-of-luxury::before,#song-of-life::before,#calabash-of-awakening::before,#skeletal-hat::before,#katsuragikiri-nagamasa::before,#kaguras-verity::before,#kagotsurube-isshin::before,#from-raiden-mention::before,#from-yae-mention::before,#from-tartaglia-mention::before,.life-collection::before,#ancient-forging-blueprint::before,.i-see-you::before,.vision-breakdown::before,.shouki-no-kami-icon:before,#from-nahida-mention:before,.puppet-strings:before,.character-icon:before,.skill-icon:before,.burst-icon:before,.nomal-atack:before,.shimi-chazuke:before,.constellation-one:before,.constellation-two:before,.constellation-four:before,.constellation-six:before,.elemental-breakdown::before,.dakas-bell::before,.mirror-of-mushin::before,.life-collection-old::before {
 	content: '';
   display: inline-block;
   width: 3em;
@@ -84,9 +84,16 @@ https://web-toolbox.dev/tools/base64-encode-image
 }
 /*神の目、命の星座など*/
 .life-collection::before {
+	background-image: url("icon/collection-new.png");
+	height: 2em;
+	width: 2em;
+	background-size: 100%;
+}
+.life-collection-old::before {
 	background-image: url("icon/collection-old.png");
 	height: 2em;
 	width: 1.5em;
+	background-size: 90%;
 }
 .elemental-breakdown::before {
 	background-image: url("icon/electro.png");
@@ -161,7 +168,7 @@ https://web-toolbox.dev/tools/base64-encode-image
 	}
 }
 @media (prefers-color-scheme: dark) {
-	.life-collection::before,.i-see-you::before {
+	.life-collection::before,.i-see-you::before,.life-collection-old::before {
 		filter: invert(100%);
 	}
 }
