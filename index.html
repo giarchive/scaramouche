@@ -2,18 +2,17 @@
 	<html lang="ja">
 		<head>
 			<meta charset="UTF-8">
-			<title>スカラマシュ・放浪者の全情報書き写し</title>
+			<title>放浪者(スカラマシュ)の全情報書き写し</title>
 			<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 			<meta name="format-detection" content="telephone=no">
 			<link rel="stylesheet" href="styles.css">
-			<link rel="stylesheet" href="deta-image.css" loading="lazy">
 			
 			<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@COD_HEART" />
 <meta property="og:url" content="https://giarchive.github.io/scaramouche/" />
-<meta property="og:title" content="スカラマシュの全情報書き写し" />
+<meta property="og:title" content="放浪者の全情報書き写し" />
 <meta property="og:description" content="ストーリ/遺跡物/インタビュー/その他関連項目を40000字のテキストに起こしました。" />
-<meta property="og:image" content="https://giarchive.github.io/scaramouche/E3F2C60A-F7F4-4E6D-8813-282392D6BA92.jpeg" />
+<meta property="og:image" content="https://giarchive.github.io/scaramouche/81CDF5C3-0FED-4543-A643-F36276FECEEA.jpeg" />
 			
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="language" content="Japanese" />
@@ -30,7 +29,7 @@
 		
 		<body lang="ja">
 			<header>
-				<h1 class="title">スカラマシュの全情報書き写し</h1>
+				<h1 class="title">放浪者の全情報書き写し</h1>
 							<div class="nav">
 				
         	<input id="drawer_input" class="drawer_hidden" type="checkbox">
@@ -130,6 +129,11 @@
 					</li>
 				</li></ul>
 				
+				<li><a href="#movie" class="movie-link" onclick="document.getElementById('drawer_input').checked = false;">ムービー</a>
+					<ul><li><a href="#ep-video" class="ep-video-link" onclick="document.getElementById('drawer_input').checked = false;">エピソード 放浪者「灰燼」</span></a></li></ul>
+					<ul><li><a href="#demo-video" class="demo-video-link" onclick="document.getElementById('drawer_input').checked = false;">キャラクター実戦紹介　放浪者「今昔孤独」</span></a></li></ul>
+				</li>
+				
 				 <li><a href="motion" onclick="document.getElementById('drawer_input').checked = false;">モーション</a>
 					<!--<ul>
 						<li class="motion-atack"><a href="#motion-atack" onclick="document.getElementById('drawer_input').checked = false;">攻撃モーション</a></li>
@@ -137,13 +141,25 @@
 					</ul>-->
 				</li>
 				
-				<!-- <li><a href="voice-line" onclick="document.getElementById('drawer_input').checked = false;">ボイス・キャラストーリー</a>
+				<li><a href="voice-line" onclick="document.getElementById('drawer_input').checked = false;">ボイス・キャラストーリー</a>
 					<ul>
 						<li><a href="#character-voice" class="character-voice-link" onclick="document.getElementById('drawer_input').checked = false;">キャラクターボイス</a></li>
 						<li><a heef="#character-story" class="character-story-link" onclick="document.getElementById('drawer_input').checked = false;">キャラクターストーリー</a></li>
 					</ul>
-				</li>-->
+				</li>
 				
+				<li><a href="related-item" class="related-item-link" onclick="document.getElementById('drawer_input').checked = false;">キャラクター関連アイテム</a>
+					<ul>
+						<li><a href="#original-food-shimi-chazuke" class="original-food-shimi-chazuke-link" onclick="document.getElementById('drawer_input').checked = false;">オリジナル料理</a></li>
+						<li class="name-card-item"><a heef="#name-card-item" onclick="document.getElementById('drawer_input').checked = false;">名刺</a></li>
+						<li><a heef="#name-card-item" class="name-card-item-link"onclick="document.getElementById('drawer_input').checked = false;">名刺</a></li>
+					</ul>
+				</li>
+				<li><a href="skin" class="skin-link" onclick="document.getElementById('drawer_input').checked = false;">スキン</a>
+					<ul>
+						<li><a heef="#a-void-of-wrathful-emptiness" class="a-void-of-wrathful-emptiness-link" onclick="document.getElementById('drawer_input').checked = false;">寂忿空相</a></li>
+					</ul>
+				</li>
 				<li class="atrifacts"><a href="#atrifacts" class="atrifacts" onclick="document.getElementById('drawer_input').checked = false;">聖遺物</a>
 					<ul>
 						<li><a href="#pale-flame" onclick="document.getElementById('drawer_input').checked = false;" class="pale-flame-link">蒼白の炎<span style="display: none;">(聖遺物、ファデュイ、過去、国崩)</span></a></a>
@@ -163,16 +179,17 @@
 				</li>
 				<li class="weapons"><a href="#weapons" onclick="document.getElementById('drawer_input').checked = false;">武器</a>
 					<ul>
-						<li><a href="#katsuragikiri-nagamasa" onclick="document.getElementById('drawer_input').checked = false;">桂木斬長正<span style="display: none;">(丹羽桂木、御輿長正、国崩)</span></a></a></li>
+						<li><a href="#katsuragikiri-nagamasa" onclick="document.getElementById('drawer_input').checked = false;">桂木斬長正<span style="display: none;">(丹羽、桂木、御輿長正、国崩)</span></a></a></li>
 						<li><a href="#kaguras-verity" onclick="document.getElementById('drawer_input').checked = false;">神楽の真意<span style="display: none;">(八重神子)</span></a></a></li>
 						<li><a href="#kagotsurube-isshin" onclick="document.getElementById('drawer_input').checked = false;">籠釣瓶一心</a></li>
 					</ul>
 				</li>
 				<li><a href="#item" class="item" onclick="document.getElementById('drawer_input').checked = false;">アイテム・掲示物</a>
 					<ul>
-						<li><a href="#rather-aged-notes" class="rather-aged-notes" onclick="document.getElementById('drawer_input').checked = false;">古い手帳<span style="display: none;">(古い手紙、丹羽桂木、御輿長正、国崩)</span></a></li>
-						<li><a href="#ancient-forging-blueprint" class="ancient-forging-blueprint" onclick="document.getElementById('drawer_input').checked = false;">古代の鍛造図<span style="display: none;">(楓原万葉)</span></a></a></li>
 						<li><a href="#boss-drop" class="boss-drop" onclick="document.getElementById('drawer_input').checked = false;">ボスドロップ素材</a></li>
+						<li><a href="#rather-aged-notes" class="rather-aged-notes" onclick="document.getElementById('drawer_input').checked = false;">古い手帳<span style="display: none;">(古い手紙、丹羽、桂木、御輿長正、国崩)</span></a></li>
+						<li><a href="#ancient-forging-blueprint" class="ancient-forging-blueprint" onclick="document.getElementById('drawer_input').checked = false;">古代の鍛造図<span style="display: none;">(楓原万葉)</span></a></a></li>
+						<li><a href="#the-isle-of-darkling-clouds" class="the-isle-of-darkling-clouds-link" onclick="document.getElementById('drawer_input').checked = false;">黯雲の島</a></li>
 					</ul>
 				</li>
 				<li class="domain"><a href="#domain" onclick="document.getElementById('drawer_input').checked = false;">秘境</a>
@@ -215,12 +232,10 @@
 				<li class="combat"><a href="#combat" onclick="document.getElementById('drawer_input').checked = false;">戦闘・育成<span style="display: none;">攻略</span></a>
 						<ul>
 							<li><a href="#atack-skill" onclick="document.getElementById('drawer_input').checked = false;">攻撃<span style="display: none;">攻略</span</a></li>
-							<!--<li><a href="#talent" onclick="document.getElementById('drawer_input').checked = false;">天賦<span style="display: none;">攻略</span</a></li>-->
-							<!--<li><a href="#collection" onclick="document.getElementById('drawer_input').checked = false;">命の星座<span style="display: none;">攻略</span</a></li>
-							<li><a heef="#skill-details" onclick="document.getElementById('drawer_input').checked = false;">スキル詳細<span style="display: none;">攻略</span</a></li>
-												-->
-							<!--<li><a href="#nurturing" onclick="document.getElementById('drawer_input').checked = false;">育成素材<span style="display: none;">攻略</span></a></li>
-							<li><a href="#skill-nurturing" onclick="document.getElementById('drawer_input').checked = false;">天賦育成素材<span style="display: none;">攻略</span></a></li>-->
+							<li><a href="#talent" onclick="document.getElementById('drawer_input').checked = false;">天賦<span style="display: none;">攻略</span</a></li>-->
+							<li><a href="#collection" onclick="document.getElementById('drawer_input').checked = false;">命の星座<span style="display: none;">攻略</span</a></li>
+							<li><a href="#nurturing" onclick="document.getElementById('drawer_input').checked = false;">育成素材<span style="display: none;">攻略</span></a></li>
+							<li><a href="#skill-nurturing" onclick="document.getElementById('drawer_input').checked = false;">天賦育成素材<span style="display: none;">攻略</span></a></li>
 						</ul>
 					</li>
 					<li class="weapons-atack"><a href="#combat" onclick="document.getElementById('drawer_input').checked = false;">武器・聖遺物<span style="display: none;">攻略</span></a>
@@ -247,6 +262,9 @@
 					<li><a href="#akasha-pulses-the-kalpa-flame-rises-illustration" onclick="document.getElementById('drawer_input').checked = false;">虚空の鼓動、熾盛の劫火<span style="display: none;">(壁紙、キービジュアル、pv、3.2)</span></a></a></li>
 					
 					<li><a href="#all-senses-clear-all-existence-void-illustration" onclick="document.getElementById('drawer_input').checked = false;">六処解悟、諸相空無<span style="display: none;">(壁紙、キービジュアル、pv、3.3)</span></a></a></li>
+					
+					<li><a href="#fluttering-footsteps-in-the-fields-illustration" onclick="document.getElementById('drawer_input').checked = false;">芝生を飄然と進みて<span style="display: none;">(壁紙、キービジュアル、pv、3.3)</span></a></a></li>
+					
 					<li><a href="#live-stream-chibi" onclick="document.getElementById('drawer_input').checked = false;">生放送ちびキャラ<span style="display: none;">(pv、3.3)</span></a></a></li>
 				</ul>
 			</li>
@@ -318,8 +336,8 @@
 			</header>
 			<article>
 				<aside class="top-text notprint">
-						<p><b class="update-version">Ver3.3生放送</b><br>
-						<span class="about-this-site">本サイトはスカラマシュ(放浪者)に関する情報をまとめた有志サイトです。リーク情報は扱いません。<br>
+						<p><b class="update-version">Ver3.3</b><br>
+						<span class="about-this-site">本サイトは放浪者(スカラマシュ)に関する情報をまとめた有志サイトです。リーク情報は扱いません。<br>
 						以下の内容を閲覧するにあたり、<a target="_blank" class="black" href="../agreement.html">利用規約</a>に同意したものとみなします。</p>
 				</aside>
 				
@@ -351,7 +369,7 @@
 			</div>
 			<div>
 				<p class="not-official">本サイトは株式会社COGNOSPHERE及び上海米哈游網絡科技股份有限公司が提供/認定するものではありません。</p>
-				<cite class="from-genshin">別途記載がある部分を除き、「原神」(©︎COGNOSPHERE)より引用。</cite>
+				<cite class="from-genshin">別途記載がある部分を除き、引用部分は「原神」(©︎COGNOSPHERE)より引用。</cite>
 			</div>
 			<main class="main">
 				<article>
@@ -374,6 +392,7 @@
 								<li><span class="update-221004"><span class="ver-num">2022/10/4</span>ストーリームービー「『神』意」YouTube公開</span></li>
 								<li><span class="update-32"><span class="ver-num">Ver3.2</span>魔神任務3章5幕「虚空の鼓動、熾盛の劫火」、新ボス「正機の神」、ナヒーダが言及</span></li>
 								<li><span class="update-221031"><span class="ver-num">2022/10/31</span>キャラクター紹介</span></li>
+								<li><span class="update-221204"><span class="ver-num">2022/12/04</span>エピソード 放浪者「灰燼」、プロフィール紹介</span></li>
 								<li><span class="update-32"><span class="ver-num">Ver3.3</span><b>プレイアブル</b>、魔神任務間章「伽藍に落ちて」</li>
 							</ul>
 						</div>
@@ -384,7 +403,7 @@
     <div class="tab-content not-margin-div">
         <img src="https://giarchive.github.io/3.2/Img/C2ECB176-6400-4952-99D7-15DEDEF29369.jpeg" loading="lazy" alt="邪眼工場にいる散兵の画像">
     </div>
-    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label not-margin-div" for="TAB-02"><span class="top-tab-old-style">過去</span></label>
+    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label not-margin-div" for="TAB-02"><span class="top-tab-old-style">傾奇者</span></label>
     <div class="tab-content">
         <img src="https://cdn-ak.f.st-hatena.com/images/fotolife/n/neutron-star/20221005/20221005101226.jpg" loading="lazy" alt="過去のスカラマシュの画像">
 		<cite>引用:<a target="_blank" href="https://www.youtube.com/watch?v=SrysQ0zXrC8">【原神】ストーリームービー「『神』意」　- YouTube</a></cite>
@@ -396,6 +415,13 @@
 	</div>
 	<input id="TAB-04" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-04"><span class="top-tab-card">放浪者</span></label>
     <div class="tab-content not-margin-div">
+		<img src="https://giarchive.github.io/3.2/Img/10141CA3-017E-4EC0-8BD9-D6DB0800EC17.png" loading="lazy" alt="原画"><br>
+		<cite>画像引用:<a target="_blank" href="https://www.hoyolab.com/article/13254885">HoYoLAB</a>
+		<div class="picture-box not-margin-div">
+		 	<img src="https://giarchive.github.io/3.2/Img/10141CA3-017E-4EC0-8BD9-D6DB0800EC17.png" loading="lazy" alt="原画">
+			<img src="https://giarchive.github.io/3.2/Img/sub1.png" loading="lazy" alt="原画">
+			</div>
+						<cite>画像引用:<a target="_blank" href="https://wiki.hoyolab.com/m/genshin/entry/2968">HoYoWiki</a>、<a target="_blank" href="https://prtimes.jp/main/html/rd/p/000000042.000096124.html">PR TIMES</a></cite>
 	</div>
 	<input id="TAB-05" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-05"><span class="top-tab-card">黒主</span></label>
     <div class="tab-content not-margin-div">
@@ -406,10 +432,12 @@
 							<p><span class="release-boss-version">ボス実装: Ver3.2</span><br>
 								<span class="release-playable-version">プレイアブル: Ver3.3</span></p>
 							<p>
-								<b class="character-name-all"><span class="name-fatui-no6">ファトゥス第6位「散兵」スカラマシュ</span>/<span class="name-kunikuzushi">国崩</span>/<span class="name-gods">「正機の神」七葉寂照秘密主<span>/<span class="name-playable">放浪者</span></b><br>
+								<b class="character-name-all">
+								<span class="name-puppet">人形</span>/<span class="name-kabukimono">傾奇者</span>/<span class="name-fatui-no6">ファトゥス第6位「散兵」スカラマシュ</span>/<span class="name-kunikuzushi">国崩</span>/<span class="name-gods">「正機の神」七葉寂照秘密主</span>/<span class="name-playable">放浪者</span></b>
+								<br>
 							</p>
 						</div>
-						<div><p>正体が謎に包まれた放浪者。修験者のような身なりをしているが、それらしき言動は見られない。</p></div>
+						<div><p class="description">正体が謎に包まれた放浪者。修験者のような身なりをしているが、それらしき言動は見られない。</p></div>
 						<h3 id="character-setting">キャラクター詳細</h3>
 						<div class="not-margin-div">
 							<table>
@@ -431,8 +459,8 @@
 										<td class="age-breakdown">500歳未満</td>
 									</tr>
 									<tr>
-										<th class="from-country">出身</th>
-										<td class="from-country-breakdown">稲妻</td>
+										<th class="from-country">出身地</th>
+										<td class="from-country-breakdown">借景ノ館</td>
 									</tr>
 									<tr>
 										<th class="ethnicity">種族</th>
@@ -440,7 +468,7 @@
 									</tr>
 									<tr>
 										<th class="affiliated">所属</th>
-										<td class="affiliated-breakdown"></td>
+										<td class="affiliated-breakdown">なし</td>
 									</tr>
 									<tr>
 										<th class="constellation">命の星座</th>
@@ -448,7 +476,7 @@
 									</tr>
 									<tr>
 										<th class="birthday">誕生日</th>
-										<td class="birthday-breakdown"></td>
+										<td class="birthday-breakdown">1月3日</td>
 									</tr>
 									<tr>
 										<th class="character-title">称号</th>
@@ -460,11 +488,15 @@
 									</tr>
 									<tr>
 										<th class="playable-name">プレイアブル名</th>
-										<td class="playable-name-breakdown">放浪者</td>
+										<td class="playable-name-breakdown">(任務で設定した名前)</td>
 									</tr>
+									<tr>
+										<th class="character-icon-box">アイコン</th>
+										<td class="god-name-breakdown"><img style="width: 15vw;margin-top: 0.25rem;" src="https://ul.h3z.jp/iUZlCJq2.png"></td>
+										</tr>
 								</tbody>
 							</table>
-							引用：<cite>命の星座:<a href="https://act.hoyoverse.com/ys/event/e20221126prev-18kfmk/index.html">原神公式サイト</a>、命の星座(旧):<a href=""></a></cite>
+							<cite>引用：命の星座:<a href="https://act.hoyoverse.com/ys/event/e20221126prev-18kfmk/index.html">原神公式サイト</a>、命の星座(旧):<a href="https://www.miyoushe.com/ys/article/2494569">米遊社</a></cite>
 						<h3 id="voice-actor">声優</h3>
 							<table>
 								<tbody>
@@ -493,7 +525,7 @@
 						</div>
 						<h3 id="gacha-Illust">立ち絵・説明文</h3>
 						<div class="gacha-picture-box not-margin-div">
-							<img src="https://giarchive.github.io/3.2/2F71F8A7-1A8C-47F1-979D-BB576C9F2B98.jpeg" alt="スカラマシュの立ち絵" class="gacha-box-contents">
+							<img src="https://giarchive.github.io/3.2/2F71F8A7-1A8C-47F1-979D-BB576C9F2B98.jpeg" alt="スカラマシュの立ち絵" class="gacha-box-contents" loading="lazy">
 							<span class="character-name-gacha-Illust">放浪者</span><br>
 							<span class="gacha-Illust-text-about"><b>一処より心を知りて、一切処の心を悟らん</b></span>
 							<span class="gacha-box-contents"><blockquote><p class="gacha-Illust-text-twitter">心ある者が人ならば、彼は人とは呼べぬ者である。<br>
@@ -519,7 +551,11 @@
 </p></blockquote></div></span>
 						</div>
 						<h3 id="model">3Dモデル</h3>
-						<div id="3dmodel_scaramouche" display="none">
+						<div class="picture-box not-margin-div img-border">
+							<img src="https://giarchive.github.io/3.2/Img/イメージ.png" loading="lazy">
+							<img src="https://giarchive.github.io/3.2/Img/C5E7C06A-F120-4468-9C77-5C4337CBD3A2.png" loading="lazy">
+						</div>
+						<!--<div id="3dmodel_scaramouche" display="none">
 							<img id="3dmodel_scaramouche_hat" src=""/>
 							<img id="3dmodel_scaramouche_nohat" src=""/>
 							<img id="3dmodel_wanderer" src=""/>
@@ -528,175 +564,36 @@
 					<div class="tweets not-margin-div light-oney">
 							<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">okay so like i&#39;ve had a LOT of people ask me for reference pics of scaramouche, and idk if someone has made one already, but here&#39;s a reference sheet for scara, i tried to include everything i could think of but if there&#39;s anything else i should add pls lmk！<a target="_blank" href="https://twitter.com/hashtag/genshinimpact?src=hash&amp;ref_src=twsrc%5Etfw">#genshinimpact</a> <a target="_blank" href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a target="_blank" href="https://t.co/fSklftMnSe">pic.twitter.com/fSklftMnSe</a></p>&mdash; ♡ caite ♡ (@izevrente) <a target="_blank" href="https://twitter.com/izevrente/status/1357777079404793857?ref_src=twsrc%5Etfw">February 5, 2021</a></blockquote>
 							<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">Shouki no Kami (Scara) | Model Reference Sheet<br><br>Higher Quality: <a target="_blank" href="https://t.co/enIEghekgM">https://t.co/enIEghekgM</a><br> <a target="_blank" href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a target="_blank" href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a target="_blank" href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a target="_blank" href="https://t.co/igbnZ2fiUt">pic.twitter.com/igbnZ2fiUt</a></p>&mdash; BLANK  (@genshinBLANK) <a target="_blank" href="https://twitter.com/genshinBLANK/status/1575769934948622336?ref_src=twsrc%5Etfw">September 30, 2022</a></blockquote>
-						</div>
-						<div class="tweets not-margin-div dark-oney">
-							<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">okay so like i&#39;ve had a LOT of people ask me for reference pics of scaramouche, and idk if someone has made one already, but here&#39;s a reference sheet for scara, i tried to include everything i could think of but if there&#39;s anything else i should add pls lmk！<a target="_blank" href="https://twitter.com/hashtag/genshinimpact?src=hash&amp;ref_src=twsrc%5Etfw">#genshinimpact</a> <a target="_blank" href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a target="_blank" href="https://t.co/fSklftMnSe">pic.twitter.com/fSklftMnSe</a></p>&mdash; ♡ caite ♡ (@izevrente) <a target="_blank" href="https://twitter.com/izevrente/status/1357777079404793857?ref_src=twsrc%5Etfw">February 5, 2021</a></blockquote>
-							<blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Shouki no Kami (Scara) | Model Reference Sheet<br><br>Higher Quality: <a target="_blank" href="https://t.co/enIEghekgM">https://t.co/enIEghekgM</a><br> <a target="_blank" href="https://twitter.com/hashtag/GenshinImpact?src=hash&amp;ref_src=twsrc%5Etfw">#GenshinImpact</a> <a target="_blank" href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a target="_blank" href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a target="_blank" href="https://t.co/igbnZ2fiUt">pic.twitter.com/igbnZ2fiUt</a></p>&mdash; BLANK  (@genshinBLANK) <a target="_blank" href="https://twitter.com/genshinBLANK/status/1575769934948622336?ref_src=twsrc%5Etfw">September 30, 2022</a></blockquote>
-						 </div>	
-						<h2 id="timeline">時系列</h2>
+							
+							<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">The Wanderer | Catalyst | Anemo<br><br>(So cute, OMG！！！)<a target="_blank" href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a target="_blank" href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a target="_blank" href="https://twitter.com/hashtag/Genshinlmpact?src=hash&amp;ref_src=twsrc%5Etfw">#Genshinlmpact</a> <a target="_blank" href="https://t.co/hnqVNT8lLH">pic.twitter.com/hnqVNT8lLH</a></p>&mdash; BLANK  (@genshinBLANK) <a target="_blank" href="https://twitter.com/genshinBLANK/status/1587859887039676416?ref_src=twsrc%5Etfw">November 2, 2022</a></blockquote>
+						</div>-->
+						
+						<!--<h2 id="timeline">時系列</h2>
 					<div class="not-margin-div">
-						<table class="timeline-table">
-	<tr>
-		<th>時間</th>
-		<td>状況</td>
-		<td>場所</td>
-	</tr>
-	<tr>
-		<th>~500年前</th>
-		<td>誕生</td>
-		<td>稲妻</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>封印</td>
-		<td>借景ノ館</td>
-	</tr>
-	<tr>
-		<th>数百年前</th>
-		<td>エラーにより目覚める</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>「桂木」が見つけ保護</td>
-		<td>名椎の浜</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>刀工たちと生活</td>
-		<td>たたら砂</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>刀工たちに身分がバレ殺されかける</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>戦争に乗じ、桂木が彼を逃す</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>刀工が桂木を斬り殺す</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>子供と生活する</td>
-		<td>稲妻</td>
-	<tr>
-		<th></th>
-		<td>八重神子と会話する</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>雷電将軍を訪ねる</td>
-		<td>稲妻城・天守</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>子供が死ぬ</td>
-		<td>稲妻</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>全てを諦める</td>
-		<td>テイワット</td>
-	<tr>
-		<th></th>
-		<td>スネージナヤに向かう</td>
-		<td>稲妻</td>
-	</tr>
-	<tr>
-		<th>300~400年前</th>
-		<td>ファデュイに加入</td>
-		<td>スネージナヤ</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>刀工への復讐(雷電五箇伝を滅ぼす)</td>
-		<td>鳴神島</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>「国崩」と名乗る</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>流浪を続ける</td>
-		<td>稲妻</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>心を欲しがる</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>魔神任務1章3幕後</th>
-		<td>隕石調査へと向かう</td>
-		<td>モンド</td>
-	</tr>
-	<tr>
-		<th>魔神任務2章3幕</th>
-		<td>任務の代理人を務める</td>
-		<td>邪眼工場</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>神の心を手に入れる</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>ファデュイから離反する</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>魔神任務3章3幕前</th>
-		<td>神の叡智を征服する</td>
-		<td>スメール</td>
-	</tr>
-	<tr>
-		<th>魔神任務3章3幕</th>
-		<td>「博士」と教令院により神として構築される</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>魔神任務3章5幕</th>
-		<td>完全な「神」になる</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>旅人に倒され、ナヒーダに雷神の心を回収される。</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>意識を失う</td>
-		<td></td>
-	</tr>
-	<tr>
-		<th>近い将来</th>
-		<td>風神の目を手に入れる</td>
-		<td>スメール</td>
-	</tr>
-	<tr>
-		<th>未来</th>
-		<td>人間の間で語られる物語「華館夢醒形骸記」に記される</td>
-		<td>浮世</td>
-	</tr>
-	<tr>
-		<th></th>
-		<td>地脈の記憶になる</td>
-		<td>世界樹</td>
-	</tr>
-	</table>
-</div>
-				
+						<h3 class="timeline-births">誕生</h3>
+						<div>
+							<b>500年ほど前：稲妻城</b>
+							<p>
+							雷電眞(バアル)の死後、雷電影(バアルゼブル)が自身の代行者を作るため、カーンルイアの技術をもとに人形を作る。<br>
+							その試作品として造られたあるひとつの人形は、雷神の心を持って誕生した。涙を流した彼は失敗作と判断されるが、憐れんだ影によって彼が破壊されることはなく、身分を証明する羽根と共に借景ノ館に安置された。
+						</p>
+						</div>
+						<h3 class="timeline-withhuman">人間との生活</h3>
+						<div>
+							<b>400年以上前：たたら砂</b>
+							<p>
+								借景ノ館で目を覚まし、その中に幽閉されていたところ、偶然たどり着いた桂木が彼をたたら砂に連れ帰る。<br>
+								服装や羽根から彼の身分を悟った桂木は彼に身分を隠すため、彼を名椎の浜で見つけたとごまかし、彼に羽根の意味を教えた。
+							</p>
+							<p>
+								たたら砂では「傾奇者」と呼ばれ、桂木、御輿長正、丹羽、宮崎、望などの刀工と暮らし、人間としての常識や鍛造技術を学んだ。彼らは傾奇者を友人として接し、また彼もそれを気に入っていた。<br>
+								彼らは「大たたら長正」を鍛造し、それが完成したある晩、皆でその完成を祝って剣舞を踊った。望は刀の美しさに惚れ込み、そのために絵を描いた。
+							</p>
+							<p>
+								ある日、たたら砂にフォンテーヌのエンジニア「エッシャー」が現れ、御影炉心を建築する。<br>
+								最初は歓迎されたものの、次第に祟りによる病死者が増加し、丹羽は彼を疑いはじめる。そしてある日、エッシャーにその事を話すと、誤魔化しきれなくなった彼は本当の身分__ファデュイの「博士」である事を明かす。<br>
+							</p>
+					</div>-->
 					<h2 id="world-name">各言語名</h2>
 					
 											<div id="lang-tab" class="tab-wrap not-margin-div">
@@ -704,13 +601,20 @@
     <div class="tab-content not-margin-div">
 							<p translate="no" lang="jp">
 								<b>
+									<ruby>
+								<rb>傾奇者</rb>
+								<rp>(</rp>
+								<rt>かぶきもの</rt>
+								<rp>)</rp>
+							</ruby>
+							&#x20;/&#x20;
 								<ruby>
 								<rb>散兵</rb>
 								<rp>(</rp>
 								<rt>ざんひょう</rt>
 								<rp>)</rp>
 								</ruby>
-								/&#x20;スカラマシュ&#x20;/
+								&#x20;/&#x20;スカラマシュ&#x20;/
 								<ruby>
 								<rb>国崩</rb>
 								<rp>(</rp>
@@ -783,6 +687,7 @@
 							<img src="https://giarchive.github.io/3.2/Img/79BBBB72-6476-4FB7-B0AD-AB42465614D0.jpeg" alt="Scaramouche" translate="no" loading="lazy">
 							<img src="https://giarchive.github.io/3.2/Img/D76CD4FD-182A-43AD-AB93-F0EC6B004400.jpeg" alt="Shouki no Kami" translate="no" loading="lazy">
 							<img src="https://giarchive.github.io/3.2/Img/B6BB781C-B19C-4FDA-890D-BEE857D17C06.jpeg" alt="Wanderer" translate="no" loading="lazy">
+							<img src="https://giarchive.github.io/3.2/Img/53C97EEA-43D9-4340-A3EB-DC7B09FBA6A8.jpeg" alt="Wanderer-va" translate="no" loading="lazy">
 						</div>
 						</div>
 					    <input id="TAB-lang-04" type="radio" name="TAB-lang" class="tab-switch lang-tab-switch"/><label class="tab-label lang-tab-label" for="TAB-lang-04"><span id="kr">韓国語</span></label>
@@ -2156,12 +2061,13 @@
 <br>七葉寂照秘密主「君も知っているはずだ、知恵がすべての問題を解決できるわけではないと。そう、いま君が僕と戦う選択しか選べないのと同じようにね。」
 <br>ナヒーダ「……」
 <br>七葉寂照秘密主「かかって来い…」
-<br>七葉寂照秘密主「今ここに、魔神戦争の一角を再現し、僕の神としての誕生を「証明」しよう。 」
+<br>七葉寂照秘密主「今ここに、魔神戦争の一角を再現し、僕の神としての誕生を「証明」しよう。 」<br>
+(正機の神、第1フェーズ＋ダメージ無効の第2フェーズ)
 </p>
 	<p>
 七葉寂照秘密主「神々の戦いであるはずが、凡人の背に隠れるか。その上いまさら人間のため犠牲になろうと大仰な立ち回り…」<br>
 七葉寂照秘密主「よほど自己陶酔の好きな神だな、「ブエル」！ 」<br>
-（七葉寂照秘密主がブエルの神の心を取ろうとするが、そこに神の心はなかった)
+（七葉寂照秘密主がブエルの神の心を取ろうとするが、そこに神の心はなかった)<br>
 ナヒーダ「データはだいぶ集まったわ。あなたが私から神の心を奪おうとしたのが、これで何回目か分かる？さっきので168回目よ。」<br>
 ナヒーダ「知っているかしら？スメールの民はあなたを創造するために、同じ回数の花神誕祭を過ごし 、同じ回数の輪廻を強いられた。」<br>
 七葉寂照秘密主「夢境の力…  一体いつから始まっていた…」<br>
@@ -2191,7 +2097,15 @@
 みんなはすでに夢のなかで百六十八回の輪廻を経験していたと、ナヒーダは教えてくれた。この百六十八回も輪廻した戦闘経験は彼女によって記録され、缶詰知識の方法であなたへと渡った。同時に、ナヒーダはここで起こったすべてを「知識」としてアーカーシャからスメールの民衆全員へと伝え、彼らにあなたのためにあの「偽りの神」を撃破する方法を探し出すようにお願いしていた。<br>
 今、スメールのすべての知恵があなたの力となる。知恵の神「ブエル」の「一人目の賢者」として、あなたは正機の神と本当の対決を始めた。
 </p>
-<p class="travel-log">
+					</blockquote>
+					
+					<div class="youtube not-margin-div">
+	<p>ビリビリ動画を表示できません。</p>
+								
+								<iframe src="https://player.bilibili.com/player.html?aid=944737446&bvid=BV1eW4y177g8&cid=877565170&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+							</div>
+							<blockquote>
+								<p class="travel-log">
 	ナヒーダの力を借りて、あなたはようやく正機の神を倒した。ナヒーダは前へと進み、散兵の体内にある神の心を取り除いた。執心する神の心を失い、絶望した散兵は巨大な機械の体から脱け出して、地面へと堕ちた。
 </p>
 <p>
@@ -2200,14 +2114,8 @@
 スカラマシュ「待て！ それだけは…神の心だけは…！」<br>
 スカラマシュ「それは僕のだぞ！させるものか…！」<br>
 スカラマシュ「絶対に… 絶対に戻るものか！」<br>
-						</p>
-					</blockquote>
-					
-					<div class="youtube not-margin-div">
-	<p>ビリビリ動画を表示できません。</p>
-								
-								<iframe src="https://player.bilibili.com/player.html?aid=944737446&bvid=BV1eW4y177g8&cid=877565170&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-							</div>
+</p>
+							</blockquote>
 							<blockquote>
 						<p>(中略)</p>
 						<p>ナヒーダ「教令院にいたのなら、どうして今になってやっと現れたの？あなたには私たちを阻止し、あの「偽りの神」を手伝う力があったというのに。」<br>
@@ -2275,31 +2183,1284 @@
 ナヒーダ「これから先のことは、彼の運次第ね。」
 						</p>
 					</blockquote>
-					
+
 					<h3 id="">魔神任務間章 伽藍に落ちて</h3>
-					<!--<h4 id="">???</h4>
+					<h4 id="the-night-bird-falls-at-the-curtains-call">夜を飛ぶ鳥は三段へと落ちる</h4>
 					<blockquote>
 						<p>
+							アカバ「しかし、あなたの意見に合わせると、この物語はサスペンスになってしまうぞ！私が書きたいのは論文だ。論文とは何かわかるか？厳密さが求められるんだ。」</br>
+澤田「では君の言葉を借りて…厳密さを求めるのであれば、最初から「たたら砂の疑惑」などというテーマにはするべきじゃない。決めつけられない事なんだから、考証として書くことしかできないだろう。」</br>
+アカバ「ううむ…課題は確かに恩師から受け継いだものだ。だが、こういう話というのは、どうしたって興味をそそられてしまうだろ？不可思議な場所、知られざるその細部、謎の人物…」</br>
+アカバ「好奇心からそうした論文を書きたいと思い立ったんだ、だからあなたに頼んでいるのではないか！澤田先生！」</br>
+澤田「アカバさん…僕にお願いしに来た以上は、もっと僕の意見にも耳を傾けてもらわないと！ドラマ性というのは小説の核心、こればかりは仕方のないことなんだ。」</br>
+アカバ「うーむ…いや、それは…」</br>
+パイモン「あそこの二人、たたら砂の話をしてないか？でもあれは稲妻の地名だよな？」</br>
+パイモン「スメール人が稲妻の謎の事件を研究してて、そのために論文まで…うーん…周りの人はおかしいとも思ってない様子だし、スメールの学術的雰囲気ってやつは本当に自由だな。」</br>
+旅人「近づいて聞いてみよう。」</br>
+パイモン「おう、ちょうどあいつらが話してる「たたら砂の疑惑」がなんなのか、確認してみようぜ！」
+</p>
+<p>
+アカバ「では、初稿は私の考証をもとに、澤田先生に編集してもらう方向で進めよう。今回の文章においては、きっとあの失踪した「傾奇者」が論説の肝となるだろう。」</br>
+アカバ「はぁ、あの名高い旅人が見つかればいいのだが。彼は見識が広いという話だ、何か知っているかもしれない。」</br>
+旅人「俺を探してる？」</br>
+澤田「おおっ、こちらが旅人さんか？うーん…」</br>
+パイモン「おい、その顔はなんだよ、オイラたちを疑ってるのか？」</br>
+旅人「信じてくれないなら、もう行く。」</br>
+澤田「いやいやいや！もちろんそういうことではない。旅人さんのご尊名は稲妻にいた頃から耳にしている。」</br>
+澤田「初めて君とその…謎の白い仲間を目にしたもので、好奇心からつい観察してしまった。職業病というやつだ…すまん。」</br>
+アカバ「澤田先生ときたら、まったく！ハハハ、すまないな。私たちはどちらも家に長くこもる性分ゆえ、少々社会性に問題があるんだ…」</br>
+アカバ「旅人さん、あなたはみんなをたくさん手伝い、いろんなところへ行ったと聞いている。そこでひとつ、たたら砂の話をしてくれないだろうか？」</br>
+パイモン「けど、オイラたちもあそこについてはよくわからないんだ……おまえたちが話しているのを聞いて、興味があったから来たんだ。」</br>
+アカバ「あぁ…やはりそうなのか。」</br>
+旅人「ごめん、力になれなくて。」</br>
+アカバ「前に恩師も、この課題を選んだのは難易度が高くて、挑戦のしがいがあるからだと言っていた。稲妻の現地の人でさえ、たたら砂の昔の出来事はあまり知らないからと。ただ…」</br>
+澤田「もし良ければの話だが、皆さんに僕のたたら砂事件に関する創作の方向性を見てもらいたい。」</br>
+アカバ「ちょっと待った、澤田先生。最初からそれだとわかりづらいのでは？」</br>
+澤田「それもそうだな。じゃあ、まずアカバさんの論文の初稿を見てもらおう。」</br>
+アカバ「うん、紹介しよう。まず、たたら砂地区でとある資料を見つけた人がいたんだが、その中では御輿長正という人がよい刀を打ち出したことに言及されていた。」</br>
+アカバ「しかし、彼は最後にこの刀を火に投げ入れて熔かしてしまったらしい。その上、桂木という手下を殺してしまったというんだ。理由については…誰にもわからない。」</br>
+アカバ「ただ、この長正とその手下、そして物語を記録した人物以外に、資料の中にはとある「傾奇者」についての言及があった。稲妻において、この単語は特異な恰好、あるいは行動をする奇妙な人を指すようだ。」</br>
+澤田「そうだ。アカバさんの恩師もそれなりに本土で調査をしていて、どうやらこのかぶき者はたたら砂でしばらく生活した後、姿を消したらしい。その後に、先ほど言っていた変な事件が起きた。」</br>
+パイモン「一人の変人がいて、そいつがいなくなったあとに殺人事件が起こった…どう考えてもおかしいぞ！」</br>
+澤田「だろう？僕もそう思ったのだ！だから、当時たたら砂で起こった事件に関する細かいところを聞きまわったのさ。そしたらなんと！」</br>
+パイモン「いきなりでかい声を出すなよ！」</br>
+澤田「大事なところだから、ちょっと強調してみたんだ。」</br>
+澤田「そしたらなんと、僕のとある友人が幕府の資料室で働いていて、関連を探る手伝いをしてくれたのだ。さきほど出てきた人々は、皆四百年前の稲妻で生活していたことがはっきりした。」</br>
+澤田「当時のたたら砂は、すでに稲妻における製錬工業の中心地だった。そこの最高責任者は丹羽という官僚だったのだが、面白いことに、彼もまた最終的には行方不明となっていた。」</br>
+旅人「（……！まさか…）」</br>
+パイモン「失踪したやつがもう一人！？」</br>
+澤田「まさにその通り！しかも丹羽という名字、これが只者じゃない。稲妻の製錬鋳造の名門を知っているか？」</br>
+パイモン「えっと、製錬鋳造といえば…それって、一心伝とかか？」</br>
+澤田「おや、よく知っているな。なら話は早い。この丹羽というのが、あの一心伝最後の後継者である楓原家の遠戚だったのだ。」</br>
+澤田「その楓原家も、のちに事件があって落ちぶれたという…詳細な経緯はよく知らないが、これだけ要因が重なっていると、どうも色々と想像してしまうな。」</br>
+パイモン「…楓原家…」</br>
+アカバ「澤田先生、一番大事なところを忘れているぞ！」</br>
+旅人「まさか、もっと重要な手がかりが？」</br>
+澤田「おっと！僕の記憶としたことが、ここ一番を忘れていた。皆さん、ここからが本当に大事なところだ。信じてもらえないかもしれないが、これは僕の生涯の中でも前代未聞の…」</br>
+アカバ「もったいぶらないで、早く！」</br>
+澤田「——アカバさんの恩師の資料によれば、件の傾奇者は人間ではなく、「人形」だったというんだ…！」</br>
+旅人「……！」</br>
+パイモン「人形！？」</br>
+旅人「（雷神が作った人形の代行者「将軍」は今、彼女と一緒に稲妻を統治している…しかし、これは絶対に彼女じゃない。）」</br>
+旅人「（間違いない、この傾奇者は「散兵」だ。ただ…彼が四百年前にたたら砂にいた？何のために？）」</br>
+アカバ「おや！お二人の表情から察するに、関係ある話を聞いたことが？」</br>
+パイモン「えっ…えっと…」</br>
+旅人「（パイモンに目配せする）」</br>
+パイモン「あっ、いやいや！ただ人形なんてものが物語に出てくるのが、変だなあと思って…！おまえの言い方のせいで、怪談みたいになっちゃったじゃないか！」</br>
+澤田「そう、僕もそう思った。しかし稲妻には確かに人間でない種族がいることを考えると、人形が出てくる事件があってもおかしくはない。だからこの作品を書いたんだ——というわけで、ひとつお目通しを！」</br>
+<a href="#the-isle-of-darkling-clouds" target="_blank"><i class="fa-solid fa-play"></i>『黯雲の島』(タップして内容を確認)</a><br>
+アカバ「あっ、ぜひ私の論文の初稿も一緒に！」</br>
+<a href="#" target="_blank"><i class="fa-solid fa-play"></i>『稲妻のたたら砂エリアに存在しうる重大な歴史事件についての簡単な分析』(タップして内容を確認)</a><br>
+アカバ「澤田先生は、私の論文を彼の創作の方向性に合わせて欲しいと思っているようだ。だが、私は論文とはもっと現実に即したものであるべきだと思っている。細かいところを、全て不思議な力で片づけてしまうべきではない。」</br>
+アカバ「うーん、澤田先生のお話の中ではっきりと言えない部分を、すべて政治的要素に結び付けるのはどうだろう？例えば、この事件の本質はいくつかの勢力の縄張り争いだった…とか。」</br>
+パイモン「論文って、そんな適当にでっち上げていいものなのか？オイラ、てっきりおまえが書いてるほうが小説なのかと思ったぜ。」</br>
+旅人「確かに小説とほぼ変わらない…」</br>
+澤田「アカバさん、君の恩師があれだけ時間をかけて積み重ねた調査と、僕の人脈を以ってしても、たったこれだけの資料しかなかったんだ。もうこれ以上は深入りできない！」</br>
+澤田「しかも本当に君の言う通り、この件が極めて重大で、よその勢力闘争にまで関係しているのなら、なおさら真相を知る伝手なんてないだろう？」</br>
+アカバ「…はぁ、それもそうだな。もう少し考えてみるよ…少し時間をくれ。新しい切り口を考え直す。」</br>
+旅人「じゃあ、邪魔しないでおく。」</br>
+パイモン「まだ用事があるから、先に行くぞ！論文、頑張ってくれよ！」</br>
+アカバ「ああ、ありがとう。もしこの件に関する情報があれば、ぜひ私に教えてくれ！頼んだぞ！」</br>
+パイモン「おい、さっき言ってた件だけど…「散兵」と関係があるんだろ？」</br>
+旅人「うん。」</br>
+パイモン「うう…じゃあもし何か分かったとしても、参考として教えてあげられることなんてないよな…」</br>
+パイモン「だって、「散兵」のやつはオイラたちに倒されて、囚人になったんだぞ。普通、こういうやつの情報って、ぜーんぶ極秘情報ってやつになるだろ？」</br>
+パイモン「オイラに言わせれば、アカバは課題を変えた方がいいと思うぞ。課題なんてものは世界中の大樹くらい、いーっぱいあるんだ。別に…」</br>
+パイモン「うわぁ！？」</br>
+旅人「一体何が！？」</br>
+パイモン「おい、さっきの人影を見たか？いきなり通り過ぎてったあれ、あっちに行ったけど…あれは…」</br>
+パイモン「「散兵」！？そんなはずないぞ。だって、あいつは閉じ込められてたはずじゃ…早く追いかけてみようぜ！」
+</p>
+<p>
+	ナヒーダ「旅人にパイモン、来たのね。」</br>
+パイモン「ナヒーダ！さっき外で「散兵」が堂々と歩いてたのを見たぞ！」</br>
+パイモン「あいつは閉じ込められて…って、わぁ！いる！」</br>
+スカラマシュ「ふん。やはり来たんだね。」</br>
+パイモン「おい、なんでおまえがスラサタンナ聖処にいるんだ！閉じ込められてたんじゃないのかよ？」</br>
+ナヒーダ「あなたたちが気にするのもよくわかるわ。このわけは、私から説明させて。」</br>
+ナヒーダ「「散兵」の釈放は私の意思によるもの。私たちの間にとある取引があって、彼は私に代わって世界樹内での調査をしてくれているの。」</br>
+パイモン「取引？どうしてあんなやつを信じるんだよ？」</br>
+スカラマシュ「ふふっ…スメールがどうして僕を生かしたと思う？考えもしなかったかい？…それとも、僕に死んでいてほしかった？」</br>
+スカラマシュ「なら、なぜあのときトドメを刺さなかった？」</br>
+パイモン「自惚れすぎだぞ！な、ナヒーダがお前にはまだ謎があるって！」</br>
+スカラマシュ「じゃあその謎がなくなったら、さっぱり手を下せると？おぉ、それは成長したね、ついに優柔不断を捨て去ることができたんだ。」</br>
+旅人「……」</br>
+ナヒーダ「あら、もう喧嘩を始めてしまったの。困ったわね…少し冷静になってもらえる？」</br>
+パイモン「オイラたちは心配してるんだぞ！ナヒーダ、こいつに騙されちゃだめだ！」</br>
+スカラマシュ「ハハハッ、君みたいなやつはなかなかいないよ。あろうことか、知恵の神の知恵を疑うなんてね。実に面白い。」</br>
+パイモン「おい、仲違いさせようとしてもムダだぞ！」</br>
+ナヒーダ「合理的な条件の取引であれば、相手が「散兵」であっても、私は問題ないと思うわ。」</br>
+スカラマシュ「もちろん、君はあの「博士」とさえ取引したほどだ、その誠意は信じるよ。」</br>
+ナヒーダ「ええ、彼の手から価値のある情報を交換できた。この点については、いずれもっと知ることになるでしょう。」</br>
+ナヒーダ「この前の一戦で、「散兵」の力はほぼ消耗した。今の彼は、私たちにとって戦略的な脅威となることはないわ。むしろ、微妙な状況に身を置いているの。」</br>
+ナヒーダ「それに、彼はファデュイ執行官第六位だったこともあって、多くの秘密を知っているはずよ。そんな彼がスメールに閉じ込められている状況だから、ファデュイの態度は気になるけれど。」</br>
+パイモン「ちょっと待てよ、だったってことは…もう執行官じゃないのか？」</br>
+ナヒーダ「できれば、私もそう言いたくはないのだけれど。でも、「博士」は敗者を連れて帰るつもりはないみたい、つまり…」</br>
+旅人「…「散兵」は捨て駒となった。」</br>
+スカラマシュ「世間の大半は、利用するものとされるものの関係にある。これこそが、一番安定した人間の関係なんだ。ファデュイと僕、あとは彼ら同士の間さえそうであるようにね。」</br>
+スカラマシュ「価値さえあれば、誰も捨てられない。だけどこの件が終わって、僕が一部からの信用を失ったことは…認めざるを得ないようだ。」</br>
+旅人「そう？それは残念だったね。」</br>
+スカラマシュ「…ふん、ファデュイ内部は僕の用途を再評価しようとするだろう。僕も、自分のために退路を残しておかないとね。」</br>
+ナヒーダ「このあいだ話し合ったように、私は命を傷つけることが嫌い。あなたも守ってくれる場所が必要、なら他の勢力に身を寄せるのはどう？」</br>
+スカラマシュ「見ての通り、目の前の二人はもう反対を表明している。違うかい？そして君は彼らの友人だから、自然と彼らの側に立つ。」</br>
+パイモン「当たり前だろ！ナヒーダ、こいつのデタラメを聞いちゃだめだ！」</br>
+ナヒーダ「…では、このことはまた後で話し合うことにしましょう。まだ時間はあるわ。」</br>
+ナヒーダ「とにかく、今日のことは試みのひとつだと思って。協力して、これを今後の判断に活かしましょ。」</br>
+スカラマシュ「分かった。僕は約束通りに動くとするよ。」</br>
+ナヒーダ「行ってきて、連絡は取り続けられるように。」</br>
+パイモン「ナヒーダ、今回決めたこと…本気なのか？」</br>
+ナヒーダ「ええ。」</br>
+ナヒーダ「というより、この決定を下したのは…あなたにも関係があるからなの。」</br>
+旅人「俺？」</br>
+ナヒーダ「そう。私は以前、世界樹にはあなたの血縁者の記録があるって言ったわね。」</br>
+パイモン「あっ、そうだぞ。今日おまえを探しに来たのも、そのことを聞こうと思ったからなんだ。もっと情報はないか？」</br>
+ナヒーダ「ええ。あの時、ファデュイの方ではあなたの血縁者の情報を「降臨者」の範疇に含めなかった、と言っていたことは覚えているはずよ。これが重要なの。」</br>
+ナヒーダ「もしかしたら、ファデュイは私すら知らない情報を把握しているのかもしれない。ファデュイの一員だった「散兵」なら、こういった情報の把握は私より正確かもしれないわ。」</br>
+ナヒーダ「もう少しで新たな「神」になれた彼は権能を与えられ、世界樹と繋がることができるようになった。神の心を失った今でさえ、彼の体内にはまだ少し繋がる能力が残っているの。」</br>
+ナヒーダ「世界樹内部の情報量はあまりにも膨大で、私でさえすべてを事細かに網羅するのは時間がかかる。」</br>
+ナヒーダ「だからこの方面に詳しい「散兵」に、私の代わりとなって世界樹で「降臨者」に関するすべての内容を探すように言ったの。」</br>
+旅人「もし彼に騙されたら？」</br>
+パイモン「そうだぞ！とにかく…とにかくオイラは、あんなやつ信じないぞ。あいつには散々邪魔されてきたからな。」</br>
+ナヒーダ「分かっているわ。ただ、時には「立場」がすべての前提となる。」</br>
+ナヒーダ「未来の事は、彼がどんな情報を持ち帰るのかによって決まる。それに旅人、私はずっと、あなたが願っていることを知っていた。」</br>
+ナヒーダ「私たちは何度も意識を繋いだから、あなたの心のどこかに強い思いが隠れていることを…ね。あの感覚は、闇夜のなかで唯一つの灯火を探しているようだった。」</br>
+ナヒーダ「「散兵」に用心することは、私がスメールの神としてすべきことでもある。でも、私はあなたを友達だと思っているから、ずっとあなたのために何をできるのかを考えていた。」</br>
+ナヒーダ「あなたが昼夜問わずに思い続けているその答えを手に入れられるのであれば、「散兵」との取引も喜んでやるわ。」</br>
+旅人「…ナヒーダ、ありがとう。」</br>
+ナヒーダ「そう遠慮しないで、あなたはスメールの英雄だもの。これはそれに相応しい報酬よ。」</br>
+パイモン「でも…やっぱり安心はできないぞ。何かオイラたちにできることはないか？」</br>
+ナヒーダ「あなたたちに連絡しようと思ってたの。でも、その前にあなたたちが私のところまで来た…これは一種のテレパシーといえるわね。」</br>
+ナヒーダ「実際、あなたに依頼するつもりだったわ。私の代わりに「散兵」を監視するように。」</br>
+ナヒーダ「力がほぼ失われたとしても、「散兵」は執行官。あなたが彼と一緒に行動してくれると、私も安心できるわ。」</br>
+ナヒーダ「もちろん、あなたたちが世界樹を進むためのガイドができるよう、外からではあるけど、ナビゲーションの形であなたたちのそばにいるから。」</br>
+旅人「わかった。」</br>
+ナヒーダ「うん、ではお願いね。」</br>
+ナヒーダ「準備をして、もうすぐ世界樹へ送るわ。」
+</p>
+<p>
+	(世界樹に入る)<br>
+						スカラマシュ「なんだ。君たち、もっとのんびりしてくるのかと思ったよ。僕が一足先に世界樹に入ったのが心配で、お友達との世間話さえ惜しんだんだね。」</br>
+旅人「ナヒーダの代わりに見張ってやる。」</br>
+パイモン「こいつ、囚人のくせに、なんだってそんな偉そうな口のきき方なんだ！」</br>
+スカラマシュ「囚人が看守に付きまとわれること自体は、至って普通だ。だけど、今は僕の獄外運動の時間だってこと、きちんと認識してもらわないと困るなあ。」</br>
+ナヒーダ「うまく合流できたようね。」</br>
+ナヒーダ「注意しておきたい事が一つあるわ——じきにあなたたちは世界樹の内部に入ることになるけれど、そこはその特殊さ故に、ずっとスメールで最も重要な存在とみなされてきたの。」</br>
+ナヒーダ「通常エリアと違って、世界樹の内部には情報やデータで構成された奔流しか存在しないの。世界樹内部での行動は常に最大限に警戒する必要があり、必要のない行動は厳に慎むべきよ。」</br>
+ナヒーダ「あなたたちの間に積もりに積もった恨みがあることは百も承知だけど、世界樹に入ってからは、内輪もめは絶対に禁止よ。これはあなたたちの安全のためでもあると思ってちょうだい。」</br>
+旅人「…わかった。」</br>
+パイモン「わかったよ。これから大事なことをするのに免じて、しばらくはあいつと平和に共存してやる…」</br>
+スカラマシュ「気まずいのはナシにしよう。後で一緒に行動するんだからね。」</br>
+スカラマシュ「クラクサナリデビとの約束通り、僕が先陣を切る。経路探索、危険の排除などは僕に任せて。君たちは大人しく、お目目を大きくして待っていてくれればいいよ。」</br>
+パイモン「ふん！オイラたちより冒険の心得があるように聞こえるぜ、ずいぶんな自信じゃないか！」</br>
+スカラマシュ「他の用事がないなら、さっさと出発するべきだ。」</br>
+スカラマシュ「それとも、まだ心の準備ができてない？もうちょっと時間が必要かな？」</br>
+パイモン「あーもう！こいつの口のきき方嫌だぞ、しつこい！」</br>
+旅人「挑発しても無駄。」</br>
+スカラマシュ「…ふん。」</br>
+スカラマシュ「始めていいよ。」</br>
+ナヒーダ「世界樹へのアクセスを許可、アクセスプロセス起動…」</br>
+パイモン「これって…小さな苗木か？」</br>
+パイモン「もう、こいつ！オイラたちもすぐ追いかけようぜ！」</p>
+<p>パイモン「うわあ…これが世界樹の内部か…」</br>
+旅人「思っていたのと違う…」</br>
+パイモン「か、変わったところだな、それになんか、穢すことが許されないって感じがするぞ…」</br>
+スカラマシュ「世界樹はテイワット大陸全体と密接に関係していて、その内部に流れるすべての情報に意味がある。」</br>
+スカラマシュ「驚いてばかりで時間を無駄にしないでよね、出発するよ。」</br>
+パイモン「なんでかわからないけど、あいつの言うことに素直に従いたくないんだよな…」</br>
+スカラマシュ「……」</br>
+スカラマシュ「クラクサナリデビ、これから世界樹の中心に向かう。」</br>
+ナヒーダ「中心の場所は、まだ感知できるわよね。」</br>
+スカラマシュ「ああ、情報の検索だけど、あそこでやるのはどうだい？」</br>
+ナヒーダ「許可するわ。行って来てちょうだい。」</br>
+スカラマシュ「行こう、しっかりついてくるんだね。勝手に走るなよ。」</br>
+パイモン「お、おい、その…ここで勝手に走って、道に迷ったらどうなるんだ？」</br>
+スカラマシュ「……」</br>
+パイモン「な、なに笑ってるんだよ？」</br>
+スカラマシュ「想像していただけさ。君が迷子になった時、果たして旅人がどんな表情をするのかをね。」</br>
+スカラマシュ「ここで何も起こらないと保証できる人なんて誰もいないんだ。安全のため、僕にしっかりついてくる方がいい。」</p>
+<p>スカラマシュ「ついたよ。」</br>
+パイモン「でっかい木だな…」</br>
+旅人「（これが世界樹の中心。そこに流れているのは…世界中のありとあらゆるすべての情報。）」</br>
+スカラマシュ「クラクサナリデビ。」</br>
+ナヒーダ「あの場所についたはずね。準備はどう？」</br>
+スカラマシュ「いつ始めてもいいよ。」</br>
+ナヒーダ「じゃあ、準備してちょうだい。意識の奔流へのアクセス準備開始、アンカーを設置…」</br>
+パイモン「スカラマシュのやつ、まさか本当にナヒーダのために働いているなんて…あんなやつでも死ぬのは怖いんだな。」</br>
+旅人「（しかも、彼はこの件に一切の抵抗を示さなかった。前線での作業にも慣れているらしい…もしかして、ファデュイにいた時もこういうことに慣れていたのかも？）」</br>
+旅人「（アカバと澤田が話していた物語を考えると…怪しすぎる、彼のような人が…）」</br>
+ナヒーダ「後のことは頼んだわ。新しい発見があれば、ぜひ私たちに教えてちょうだい。」</br>
+スカラマシュ「ああ。」</br>
+パイモン「うぅ、オイラたちは逆にやることのない暇人になっちゃったぞ…」</br>
+ナヒーダ「（旅人、パイモン、少しお話しない？）」</br>
+旅人「（ナヒーダ？これは意識での会話？）」</br>
+ナヒーダ「（そうよ、パイモンも誘ったわ。）」</br>
+パイモン「（え？え、えっと…頭の中で直接会話ができるのか？）」</br>
+旅人「（スカラマシュのことを邪魔してほしくないんだね。）」</br>
+ナヒーダ「（ふふ、そういう風に理解してもらってもかまわないわ。それに私たちはもうお互いを知ってる友達でしょう。たまにはこういう風にお喋りするのも悪くないわよね。）」</br>
+パイモン「（おう、新鮮だな！悪くないぞ！）」</br>
+パイモン「（そうだ、さっきから聞きたかったんだけど、スカラマシュってなんか矛盾してると思わないか？話すときはいつも挑発的なのに、仕事をしてるときは妙に真面目なんだよな…）」</br>
+旅人「（うん、こういう使い走りのような仕事にもかなり慣れてる…）」</br>
+ナヒーダ「（言ったはずよ、彼にはまだ謎が残っていると。そういう事情は私の視点だからはっきりと見えているけれど、彼自身はまったく理解していないみたい。）」</br>
+ナヒーダ「（もしかすると…彼は今日、答えを見つけるかもしれないわね。）」</br>
+旅人「（彼の過去と関係がある？いわゆる、「裏切り」や稲妻で起こった昔話について。）」</br>
+ナヒーダ「（さすがの思考ね、緻密で賢いわ。）」</br>
+旅人「（実は、パルディスディアイでハイパシアに触れた時、一瞬だけ何かを見たことがある…）」</br>
+パルディスディアイにいた時に「散兵」の意識で見た情報を、ナヒーダとパイモンに教えた…」</br>
+ナヒーダ「（彼の心のあの部分に触れたなんてね…確かに、「裏切り」こそが今の彼を作り上げたと言っても過言ではないわ。）」</br>
+パイモン「（オイラてっきり、ああいうやつは恐いものなんて何もないのかと思ってたぜ！結局、大したことないじゃないか。）」</br>
+ナヒーダ「（人は皆、大なり小なり自分だけの過去を持つのよ、パイモン。「散兵」がたとえ、雷神によって作られた人形だとしてもね。）」</br>
+パイモン「（人形と言えば今日、教令院の前で論文について議論しているやつらを見たぞ。あいつらのお題はなんと、たたら砂の事件だって…ナヒーダ、そのことは知ってるか？）」</br>
+ナヒーダ「（たたら砂で起きたあの謎の事件や、それに傾奇者のことなら…知ってるわよ。）」</br>
+パイモン「（本当か？あいつらから聞いた話だと、たたら砂の歴史には色んな疑わしいところがあって、今ある情報はすべて想像から補足したものらしいぜ…）」</br>
+アカバと澤田の文章に書いてあった物語をナヒーダに教えた…」</br>
+ナヒーダ「（…あら？面白いわね。その二人、想像力だけでこんなに有力な情報を推理できたなんて。）」</br>
+パイモン「（まさかあいつら、結構当たってたのか？）」</br>
+ナヒーダ「（少なくとも、「たたら砂がかつて何かによって被害を受けた」という点においては当たっているわ。）」</br>
+スカラマシュ「魂が三つも集まって世間話かい、賑やかだねえ。いつだって、僕が参加できない話題ほど魅力的じゃないものはない。」</br>
+パイモン「ひえっ！お、おまえ、なんで急に喋ったんだよ！」</br>
+スカラマシュ「わざわざ僕を避けてお話してるんだ、きっと僕について議論してるに違いないと思ってね。」</br>
+旅人「元々君に知らせる義務はない。」</br>
+スカラマシュ「それもそうだ。囚人が歓迎されないのは至って普通なことだよね。」</br>
+パイモン「そ、それで、おまえは何か見つけたのかよ？」</br>
+スカラマシュ「まだ探ってる…でも、過大な期待はしない方がいい。君と君の血縁者は、世界の外から来たんだ。世界樹にまったく記録されていなかったとしても不思議じゃない。」</br>
+パイモン「…待てよ？おまえ、ずっとそのことを知ってたのか？それともナヒーダが教えてやったのか？」</br>
+スカラマシュ「僕たちは何度も会ったじゃないか？君は有名人なんだし、君に関連のある事を知っていてもおかしくないと思うけど。」</br>
+旅人「君の態度は予想よりいい。」</br>
+スカラマシュ「今の君と僕の間に必要なのは、平和さ。自ら求めて不快な目に遭う趣味もないから、平常心で会話することくらいはできるよ。」</br>
+スカラマシュ「…うん？待て…」</br>
+パイモン「この光…苗木のように見えるけど？一体なんなんだろう？」</br>
+スカラマシュ「…無名のデータ？」</br>
+パイモン「おい！約束を忘れるなよな、オイラたちにも教えろよ！」</br>
+スカラマシュ「しつこいな、おとなしく待っていなよ。」</br>
+エッシャー「…丹羽様、本当に危険を冒してまで行くつもりですか？たたら砂の核心熔炉にも関わっています、軽率な行動はおそらく…」</br>
+丹羽「炉心に入るうえで、拙者よりよい人選はおらぬ。」</br>
+エッシャー「そうですか…あなた様がそう決めたのであれば…」</br>
+スカラマシュ「…！？これは…」</br>
+旅人「（丹羽様…この名は確か、たたら砂の管理者では？となると、彼はあの一心伝の親族ということに…）」</br>
+パイモン「うわ——！」</p>
+<p>エッシャー「たたら砂に辿り着いてからもうだいぶ経ちますが、あなた様といい、御輿長正様といい…ここにいる皆様の親切、寛大さには言葉もありません。」</br>
+エッシャー「あなた様のいるたたら砂は、暖かい集落のようで、巨大な村のようです。人々は充実した有意義な生活を送り、熱意を抱きながら暮らしています。」</br>
+エッシャー「私の知る限り、将軍様は長年にわたり、稲妻の大地に猛威を振るう邪悪な妖魔を退治してきました。たたら砂という場所も、当初は晶化骨髄を消費するために設立されたと存じております。」</br>
+エッシャー「晶化骨髄を消費するために鍛造業が盛んになり、代々続く刀の職人が生まれました。世に名を馳せた者もいれば、黙々と一生を過ごした者もいました…伝承は、このようにして継がれてきたのです。」</br>
+エッシャー「技術、血筋、夢…この工業に魅せられたすべての職人たちは、刀と鋼の中で自我を求め続けてきました。あなた様が私や赤目さんの提案を受け入れたのも、そのためなのでしょう。」</br>
+丹羽「エッシャー殿、赤目殿が言っていたでござる。お主が稲妻を訪ねてきて、偶然に彼と友情を築き、共に技術を研究しておらねば…こうも早く、鍛造技法を改善するすべを思いつくことはなかったであろう、と。」</br>
+丹羽「お主は共に研究した技術を赤目殿に譲り、その後、彼は技術を拙者に売ってくれた。今や、たたら砂の炉心で回る鉱石のすべては新技術によって製錬されたものでござる。」</br>
+丹羽「それだけでなく、お主もたたら砂の顧問の一人としてここに滞在し、我らに付き合ってくれた。お主の到来は、我らの生産や鍛造の様式を変えてくれたのでござる。」</br>
+エッシャー「過分なお言葉恐れ入ります。もともと、稲妻の鍛造業を鑑賞できることは実に喜ばしいと思っておりましたが、あなた様方と友になれたのも、私にとって光栄なことです。」</br>
+丹羽「…しかし、エッシャー殿、本当にそれだけであろうか？」</br>
+エッシャー「と言いますと？」</br>
+丹羽「…今日まで、物事のすべてを繋げて考えたことはなかった。それは、このように邪推することも、そうせざるをえないほど事態が悪化していると信ずることも、いずれもしたくはなかったからでござる。」</br>
+丹羽「新技術の実用化を受け入れたことで、我らは何を得た？怪しい黒煙、滞留する問題…職人の体力の損耗や死傷の比率は上がり、それらが発生する間隔は日毎に縮まってきておる。」</br>
+丹羽「知っての通り、最近まで炉心内では怪しい穢れのせいで死人が出ていた。情報を抑えて外部の人間には真実を公表していなかったが…そのあたりは拙者よりも詳しいはずであろう、エッシャー？」</br>
+丹羽「…外へ助けを求めに行った者は誰一人として帰らなんだ。おのれや拙者の友である傾奇者も、あの金色の羽根を持って鳴神島の将軍様へ謁見しに行った。これは我らの最後の希望と言ってもよいであろう。」</br>
+丹羽「斯様な状況になっても、エッシャー、おのれは何も恐れていないのであろうな。でなければ…どうしてその顔にまだ微笑みが張り付いているのか、説明がつかぬ。」</br>
+エッシャー「これはただ、驚いているだけです。あなた様から、このような本心からの言葉を聞けるとは思っていませんでしたから。この「推測」は、あなた様の心の中に長くあったものなのでしょうね。」</br>
+丹羽「……」</br>
+丹羽「御輿長正様も、恐らくはこの一連の事件の裏にある共通点に気付いたのであろう…つまりおのれのことだ、エッシャー。ただ、御輿様は剛直なお方ゆえ、行いも拙者より用心深い。」</br>
+エッシャー「噂によりますと、御輿様は将軍に斬り伏せられた妖女虎千代の養子であり、家族の汚名を晴らすために健闘してきたと聞いています。行いが用心深いのも、当然のことです。」</br>
+丹羽「…そこまで内情を知る者が、遠路はるばるフォンテーヌからきた一介の機械職人というのは…少々、役不足ではなかろうか？」</br>
+エッシャー「丹羽様がおっしゃっているのは…私に公方の職でも見繕って頂けるということですかな？しかし残念ながら、私は技術にこの身を捧げるつもりでして…」</br>
+丹羽「もうよいであろう、エッシャー。」</br>
+丹羽「拙者がここに立っているのは、炉心内部で邪悪な力が猛威を振るっているため。それを解決するためには、おのれのよこした邪祟を吸収できる装置を持ち、危険区域に入る人間が一人必要なのだ。」</br>
+丹羽「…拙者はここの責任者ゆえ、その責を負い、勇気をもって死へと赴こう。だが…エッシャー、おのれは何を待っているのだ？」</br>
+エッシャー「その目を見れば、私を深く疑っていることは明白ですね。」</br>
+丹羽「今更その芝居を続ける必要もなかろう。おのれが誰であれ、たたら砂を破壊する計画はうまくいったようであるからな。」</br>
+丹羽「ただ…知りたいのだ。事ここに及んで、一体何を待っている？ここにまだ、おのれの好奇心に対する答えがあるというのか？」</br>
+エッシャー「丹羽様、私はこの時を待っていたのですよ。」</br>
+エッシャー「——このようにあなた様の話を聞き終えてから、決して炉心へ入れぬよう「阻止」する時をね。」</br>
+丹羽「うっ！お、おのれは…！」</br>
+エッシャー「…ふふ、私の予想より少しは賢かったようですね。」</br>
+エッシャー「少なくともここについた当初は、うまく偽装できていたと思ったんですがね。まさか、当時から既に私の情報を探り始めていたとは思いませんでした。」</br>
+エッシャー「稲妻とフォンテーヌは遠いですからね。あなた様の配下が、エッシャーという名前は偽名であり、フォンテーヌから来てなどいないと確認するまで、かなり時間が掛かったはずですが…」</br>
+エッシャー「それでも、それでもなお…あなた様は私の正体も、このたたら砂の何がまだ私を惹きつけているのかも、想像だにできなかった…お前如きにこの私が仕掛けた罠が見破れると、まさか本気で思っていたのか？」</br>
+丹羽「…ゴホッ…拙者を殺めてしまえば、炉心に入る人間がいなくなるぞ…この地を…滅ぼすつもりか？」</br>
+博士「いやいや、まだもう一人いるはずだ。人間だとは思われていないかもしれないが…彼にそうだと告げたのは他でもないお前だったな——「お主は人形などではない、人間なのだ。違いと言えば、心が一つ少ないだけではないか」と。」</br>
+丹羽「……！！」</br>
+丹羽「おのれの背後にまだ他の勢力がいることは、遅かれ早かれ露呈することになる。しかし、どうしてもわからぬ…これらの事にあたって、何を意図している…？本来であればより徹底的にやれたはず、違うか？」</br>
+博士「それは無論、鑑賞と実験のために決まっている。何せ、私は尋常でないほど辛抱強いからな。」</br>
+博士「もちろん…もし気になるなら、本当の名を教えてやることもやぶさかではない。私のことは、ファトゥス——「博士」と呼ぶがいい。」</br>
+丹羽「…ファ…デュイ、だと？なにを…するつもりだ…」</br>
+博士「お前たちの国に少しだけ…本当に些細なトラブルを起こしに来ただけだ。」</br>
+丹羽「ゆえにおのれは…技術を改善し、晶化骨髄に含まれる邪祟の力を…最大限に発揮できるようにさせた…」</br>
+博士「ふふ、お前のように身分のある人間も、死に際にはそんな凶暴な顔を見せるんだな。」</br>
+博士「私が作った装置は本物だ。外の人間に悟られずこの災難を解決するには、あれが必ず必要となる。ただ、あの装置が、お前のために用意されたものではなかったというだけだ。」</br>
+博士「憎しみを持つほど、人間はより簡単に邪祟に取り憑かれる。だから思い切って怒ってくれていいぞ。この心臓が人形に入ったとき、どんな効果をもたらすのか見てみたいからな。」</br>
+博士「どうせお前がいなくなれば、遅かれ早かれあの純潔な人形を利用したがる輩が現れる。人間と、そうではないものが友達になる理由なんて…他にないからな？」</br>
+丹羽「…はは…は…ゴホッ！」</br>
+丹羽「拙者の心臓を…彼に渡すのであれば…彼に伝えてくれ。長正さまも…拙者も…みな、彼のことを…仲間だと…思っていると。」</br>
+丹羽「彼が…自らを証明するために、何かをする必要はない…人と人の間は…利害だけではないのだ。そうなるのは…博士とやら、おのれのようなやつだけだ…」</br>
+博士「なんと美しい理想か、この私でさえ少々の罪悪感を覚えざるをえない。そうだな…お前を尊重して、私自身の定義を変えてやろう。」</br>
+博士「お前さえよければ、私のことを化け物、あるいは鬼魅とでも見るがいい。お前が死んだとしても、それは愚かさの故に殺されたのではなく、超越できないものに負けただけなのだ。」</br>
+博士「「丹羽様」よ、楽しみに待とうじゃないか。果たしてお前の友達の人形は、人間になれるかな？いいや、もちろん不可能だ。」</br>
+博士「…ん？…丹羽…おっと、もうこと切れたか。実に残念だ。」</br>
+博士「…さて。」</br>
+博士「「道化」よ、これでお前から預かった任務は完了だ。ギャップを作り、稲妻の動きに嵌め込む…ふふ、実に面白かった。」</br>
+博士「では、一人の人形を紹介しよう。もし彼に使い道があれば、私たちの同志になってもらう、そうでなければ…塵になってもらうまでだ。</p> 
+
+<p>スカラマシュ「……」</br>
+パイモン「おい…おまえ、どうしたんだよ？」</br>
+スカラマシュ「…ドットーレ？ハハハっ…ドットーレ！！」</br>
+スカラマシュ「……」</br>
+スカラマシュ「いいね、実にいいよ…」</br>
+パイモン「さっきのは「博士」？あ、あいつ…フォンテーヌの職人になりすましてたってことか…？」</br>
+スカラマシュ「たたら砂事件の黒幕は彼」</br>
+パイモン「でも、どうしてオイラたちが見たのは、あいつ視点のものだったんだ…？」</br>
+ナヒーダ「「博士」に触れ、「断片」をすべて取り除いたかを確認した時、彼の心の中からこの記憶を読み取ったの。あなたにとって、これは真相と言えるものでしょ。」</br>
+スカラマシュ「こんなものは…全く無意味だ。」</br>
+ナヒーダ「そうかしら？けれど、記憶の中の丹羽はあなたを裏切らなかったわ。あの時たたら砂で、あなたが装置を炉心に持ち込むよう仕向けたのは、彼ではなかった。」</br>
+ナヒーダ「その意味は、私よりもあなたの方がよく分かっているはずでしょう。」</br>
+スカラマシュ「……」</br>
+旅人「（つまり…この裏切りは数百年も続く虚言だった。それも「博士」の欲していた実験なのだろうか？）」</br>
+旅人「（存在なき裏切り…虚幻の悪。結局のところ、彼は何を得たのだろう？）」</br>
+パイモン「お、オイラたち、場所を変えようぜ。あいつ、なんだかすっごく怒ってるみたいだし、近づくのが怖いぞ…」</br>
+旅人「わかった、あそこに行こう。」</br>
+ナヒーダ「（彼に、感情を消化する時間を与えてあげたほうがいいわ。）」</br>
+パイモン「（オイラ、たたら砂のことはまだはっきりしてないけど、あれが「博士」の仕業だったってことはわかるぞ。どうしてあいつはそんなにムキになってるんだ？）」</br>
+ナヒーダ「（今までそんな風にパイモンを騙した人はいなかったから、理解できないのも無理はないわ。おそらく遅かれ早かれ、彼はこの情報を知らなければならなかったわ。）」</br>
+ナヒーダ「（これ以前のことはあなたたちも知ってるはずよ——傾奇者は桂木に拾われ、たたら砂の人々と共に暮らした。その後、「博士」がフォンテーヌの職人に変装し…一連の騒動を引き起こしたの。）」</br>
+ナヒーダ「（全ては「博士」が意図的に仕組んだ恐ろしい実験…それは未来の稲妻に発芽させる、災いの種を埋めるためだけに行われた。）」</br>
+ナヒーダ「（そして「散兵」も、「博士」の実験に巻き込まれ、実験対象として大いに注目を浴びることになったのよ。）」</br>
+ナヒーダ「（その記憶の後、真相はこうなるの——「博士」は丹羽の心臓を装置に組み込み、それを「散兵」に渡して炉心の中心部に入らせ、熔錬による穢れをすべて吸収させたの。）」</br>
+ナヒーダ「（予想をはるかに超える負荷だったけど、「散兵」は生き延びた…彼は疲弊して炉心から離れる時、職人に問い質した——「この装置が自分を守ってくれたようだ。中身は何だ？」と。）」</br>
+ナヒーダ「（そして職人は答えた——「丹羽様は罪を恐れて出奔されましたが、あなたへ贈り物を残されました。罪なき従者から奪った、あなたにとって念願のものであるとのことでした」と。）」</br>
+ナヒーダ「（そう言って職人は、枯れた心臓を装置から取り出した。）」</br>
+ナヒーダ「（「散兵」は想像もしなかった。自分が渇望していたものが、このような残酷な形で目の前に現れることを。他人を殺して奪った心臓は確かに不吉なものだけれど、それが穢れから身を守ってくれたなどということを…）」</br>
+ナヒーダ「（彼は、自分が丹羽に完全に裏切られただけでなく、その裏切りによって生き延びてしまったと思い込んでいる。怒りと悲しみがこみ上げた「散兵」は心臓を強く地面に叩きつけて、断固としてたたら砂を去ったの。）」</br>
+パイモン「（そうだったのか…つまり、「博士」は罪のない人を殺しただけじゃなく、それを死んだ人のせいにしたってことだよな？うぅ、なんてひどいんだ…）」</br>
+旅人「（大切な友人に裏切られ、見捨てられた。確かに激しい憎悪を抱いてもおかしくない…約百年前、彼が雷電五箇伝に復讐を始めたのも…今見れば、その影響を受けたせいといえるかも。）」</br>
+旅人「（しかし、だからといって彼の復讐が正しいというわけではない…）」</br>
+ナヒーダ「（そうね。それを理解してこそ、彼は初めて進むべき未来への道を選べるわ。）</p>
+<p>スカラマシュ「…ドットーレ、よくもこんなことを…！丹羽は端から罪を恐れて逃げたわけじゃなかった、お前が彼を殺したんだ！」</br>
+	しばらく待った後…<br>
+パイモン「そ…そろそろ、あいつに様子を聞きに行こうぜ。」</br>
+パイモン「おい、大丈夫か？」</br>
+スカラマシュ「……」</br>
+パイモン「お、おい、物騒な顔してるな…」</br>
+スカラマシュ「僕を心配してくれているのか？僕たちの間にあんなことがなければ、危く僕も…君たちのお友達になれるかもしれないと思ってしまうところだ。」</br>
+旅人「ただ、想定外のことに遭遇したくないだけ。」</br>
+スカラマシュ「もちろん。約束は守るよ。」</br>
+スカラマシュ「……」</br>
+パイモン「おい、まさかおまえ…オイラたちの知りたいことを調べてくれたのか？」</br>
+スカラマシュ「僕たちはそのためにここにいる、違うかい？」</br>
+スカラマシュ「ただ残念ながら、世界樹に降臨者についての記録がないことは確かだ。」</br>
+ナヒーダ「あなたがそういうのなら、どうやら本当に世界樹は降臨者を記録しないようね。世界の外から訪れし者が、テイワットに属することはないんだわ。」</br>
+パイモン「要するに、収穫なしか…」</br>
+旅人「……」</br>
+旅人「想定内だね。でも…ありがとう。」</br>
+スカラマシュ「そう焦らないでよ。」</br>
+スカラマシュ「なんだい、その落ち込んだ顔は…ふん、個人的に少し情報をあげるよ。」</br>
+パイモン「えっ？おまえ、なにか知ってるのか？」</br>
+スカラマシュ「君の妹が世界樹に記録されていたのは、カーンルイアと関わりがあったからかもしれない。噂によると、彼女が初めてこの世界に降臨した場所こそ、まさにカーンルイアだったという。」</br>
+スカラマシュ「そして、彼女がこの世に降臨した原因は、「天空」が召喚に応じたからだと。」</br>
+パイモン「「天空」が…召喚に応じた…？」</br>
+スカラマシュ「これは「道化」の口から聞いた言葉だ、間違いはない。彼はかつてカーンルイアの宮廷魔術師を務めていて、君の妹と一緒に過ごしていたことがある。」</br>
+旅人「ファデュイ執行官「道化」…」</br>
+スカラマシュ「詳しいことは僕も分からない。信じるかどうかは君の自由だ…僕が言いたいのは、こんなことで君を騙したりはないってことさ。」</br>
+スカラマシュ「クラクサナリデビ、君も聞こえただろ？」</br>
+ナヒーダ「ええ。驚くべき情報ね。」</br>
+スカラマシュ「世界樹からの情報じゃないけど、僕の収穫と言えるかな？価値はあるかい？」</br>
+ナヒーダ「とても価値があるわ。」</br>
+スカラマシュ「そうか、なら…次はプライベートな時間だ。」</br>
+パイモン「え？おまえ、なにをやったんだ？」</br>
+スカラマシュ「クラクサナリデビの言う通り、僕の力は残りわずかだ。残存する神の力を尽くしても、この障壁を維持できるのはほんの少しの間だけだろう。」</br>
+スカラマシュ「君に教えた秘密は、感謝を受けるに値するはずだ。見返りとして、今、僕の質問に答えて欲しい。」</br>
+旅人「何が聞きたい？」</br>
+スカラマシュ「僕の手を取って。」</br>
+旅人「……！」</br>
+スカラマシュ「（…こうやって会話するのかな、聞こえるかい？）」</br>
+旅人「君、まさか俺の意識に侵入を？）」</br>
+スカラマシュ「（いや、それはもう無理だ。君と少し言葉を交わす程度が限界だろう。）」</br>
+スカラマシュ「（教えてくれ。この世界で、「歴史」が変わったことはあるかい？）」</br>
+旅人「（！！）」</br>
+旅人「（待って、どうしてそんなことを…？）」</br>
+スカラマシュ「これでいい。」</br>
+パイモン「な…なにがあったんだ？おまえら、一瞬手を掴んでたのが見えたけど…」</br>
+スカラマシュ「いや、ただ助けてくれたお礼をしただけさ。」</br>
+旅人「（この表情…俺が躊躇っていたことが見破られた？俺はマハールッカデヴァータのことを知っている、だから…）」</br>
+旅人「（まずい。その場ですぐ否定できなかったこと自体を、彼は答えだと受け取ったかもしれない！）」</br>
+スカラマシュ「じゃあね。君たちも早くここから離れたほうがいい。」</br>
+パイモン「どこへ行くんだ？おい、待てよ！好き勝手走るなって言ったのはおまえだろ！？」</br>
+旅人「いけない！スカラマシュ！」</br>
+スカラマシュ「相変わらず勘がいいね。だけど僕たちは…もう会うことはないだろう。」</br>
+スカラマシュ「「散兵」、それに「傾奇者」…この二つの名前は存在なきものとなる。」</br>
+スカラマシュ「…たたら砂で死んでいった、僕と関わりのあった者たちは…別の人生を歩むべきだ。」</br>
+パイモン「おい、スカラマシュ！おまえ、なにかバカなことをしようとしてないか！？」</br>
+スカラマシュ「そう言えば、僕は虫が嫌いだ。小さくて数が多く、群れをなして生きる…そういうものを取り除くと、気分がよくなるんだ。」</br>
+スカラマシュ「そして今、虫は誤ったところに足を踏み入れた…幸い、それらはすべて正すことができる。僕は、清く正しい答えを出して見せるよ。」</br>
+パイモン「スカラマシュ！スカラマシュ——！」</br>
+パイモン「ダメだ、本当に消えたぞ。なにかあいつを探す方法はないかな…</p>
+<p>パイモン「まずい、本当に消えたぞ…」</br>
+ナヒーダ「…どう？私の声が聞こえる？」</br>
+パイモン「ナヒーダ！」</br>
+ナヒーダ「旅人にパイモン、そして「散兵」は…先ほど何が起こったの？私は急に、何らかの力に遮られてしまって…」</br>
+パイモン「スカラマシュの仕業だ！あいつが…おまえを締め出したんだ！」</br>
+先程の出来事をナヒーダに伝えた…」</br>
+ナヒーダ「…想定外だわ。彼にはほとんど力が残っていないというのに、まだそんなことができたなんてね。」</br>
+ナヒーダ「もしかして、敗れた時に力の一部をこっそり隠していたの？それとも…彼は全力を尽くして、本来到達できない境地まで登ったのかしら…」</br>
+パイモン「あいつ、どこへ行ったんだろ…ごめん、ナヒーダ…オイラたちが見張ってたのに…」</br>
+ナヒーダ「大丈夫よ、あなたたちが悪いわけじゃないわ。この先どうなるのか、私も完全に把握できているわけじゃないけど…私に任せて。」</br>
+ナヒーダ「そろそろ時間よ、私の導きに従って。一刻も早く世界樹の内部から離れましょう。」</p>
+<p>
+パイモン「出られたな！ここって…宿か？」</br>
+ナヒーダ「事態は急を要するけど…まずはここで休んでいてちょうだい。宿泊の手配はもうしてあるから、誰にも邪魔されないはずよ。」</br>
+旅人「そんな、手伝うよ！」</br>
+ナヒーダ「ごめんなさい、今はまだあなたに来てもらう必要はないの。私がやるわ。」</br>
+パイモン「ナヒーダ…そんなに深刻な状況なのかよ？おまえは…大丈夫なんだよな？」</br>
+ナヒーダ「あまり心配しないで。私の判断が正しければ、多少の波があれど大きな災いにはならない。無事の知らせが届くまで、気力と体力を回復していてちょうだい。」</br>
+パイモン「…声が消えた。」</br>
+パイモン「なんかとんでもないことになったみたいだぞ。スカラマシュの言ったこと、どういう意味だったんだ？それにさっき、なんであいつはおまえの手を掴んだんだよ？」</br>
+旅人「（パイモンはもうマハールッカデヴァータのことを覚えてない…スカラマシュの質問も少し特殊だったし、いま説明するのは難しい。何より、ショックを与えてしまう可能性もある…）」</br>
+旅人「（やっぱりマハールッカデヴァータのことは置いておいて、スカラマシュのことだけ話そう。）」</br>
+「散兵」のさっきの質問、それに「散兵」がしようとしているかもしれないことをパイモンに話した…」</br>
+パイモン「歴史を変えたい…？でも、そんなことできるわけないだろ？」</br>
+旅人「簡単にはできない。」</br>
+パイモン「そうだろ。どうやったら歴史が変わるんだよ？すでに本当に起こったことなのに！」</br>
+パイモン「例えば…オイラがこの宿にある水をぜんぶ飲んだとして…それを証明できる人が誰もいなくたって、オイラは自分が水を飲んだっていうことを忘れないぞ。」</br>
+旅人「うん、そうだね。」</br>
+パイモン「うぅ、でもなんだか心配だ…なんか、スカラマシュがすごく恐ろしいことをしようとしてる気がするぞ…」</br>
+パイモン「うぅう…わけがわからない…」</br>
+旅人「彼は歴史上から自分を消そうとしているかも。」</br>
+パイモン「えっ！？——うわっ！」</br>
+旅人「パイモン！大丈夫？」</br>
+パイモン「ご、ごめん、うっかりしてたぜ…うぅ、スカラマシュが変なこと言うからだ！」</br>
+パイモン「でも自分を消すなんてことは、どう考えてもありえないよな。もしかして…世界樹の中だったらそれができるのか？」</br>
+旅人「絶対じゃないけど…ありえる。」</br>
+パイモン「…うぅ…だめだ、頭がパンクしそうだぞ…あいつがなにを考えてるのかまったくわからない！」</br>
+パイモン「ああもう——！やなやつだな！いつもオイラたちに迷惑ばっかかけて！」</br>
+パイモン「でもまさか、そんなこと成功したりしないよな？そしたら…あいつと関りのあった人とかにも、影響が出ちゃうのか？」</br>
+旅人「（確かに、もしスカラマシュが本当に世界樹から自分を消したとしたら、稲妻の多くの人にも影響が出る…そんなことは想像もできない。）」</br>
+旅人「（最悪の場合…雷電五箇伝と関係のある人、楓原万葉、神里綾華、神里綾人——みんな影響されて…どうなってしまう！？）」</br>
+パイモン「オイラたち、本当になにもできないのかな…なあ、これからどうすればいいと思う？」</br>
+旅人「……」</br>
+パイモン「寝るしかないのかな…でもオイラ怖くて、眠れないぞ…」</br>
+旅人「俺もだよ。」</br>
+パイモン「いっそ、美味しいもんの名前をあげて、気を逸らそうぜ…これでも効果がなかったら、オイラ…ここで怯え死ぬかも…」</br>
+パイモン「うぅ、じゃあ、オイラからな。一つ目は…モンド風焼き魚！それから、鳥肉と野生キノコの串焼き、午後のパンケーキ、ホワイトソースポトフ、松茸のバター焼き…」</br>
+パイモン「それと、椒椒鶏、杏仁豆腐、満足サラダ…」</br>
+パイモン「あとあと、仙跳牆、エビのポテト包み揚げ、璃月三糸、ハスの実入り茶碗蒸し…」</br>
+パイモン「うーん…うぅ…」</br>
+パイモン「…ん？うーん…」</br>
+旅人「パイモン？どうしたの？」</br>
+パイモン「あれ？オイラ…今なにしてたんだっけ？」</br>
+パイモン「オイラ…なんか言ってたような…でも、急に内容を忘れちゃったんだ。なんだったっけ？」</br>
+旅人「「散兵」…スカラマシュのことを心配して…」</br>
+パイモン「えっ？すからましゅ…？」</br>
+パイモン「それも料理の名前か？うーん…変な名前だな…」</br>
+旅人「（…！？）」</br>
+旅人「（パイモンがスカラマシュを忘れた？この感覚、まさか…本当に成功してしまった？）」</br>
+旅人「（でも、本当に可能なんだろうか…？何かがおかしいような…）」</br>
+パイモン「どうしたんだよ？さっきから目を見開いて…オイラ、なんか変なことでも言ったのか？」</br>
+旅人「いや、なんでもない。」</br>
+パイモン「その…「散兵」って誰かの名前なのか？聞いた感じ、あだ名みたいだけど。」</br>
+旅人「（……）」</br>
+旅人「（もし本当にそうなら、重要なことを確かめに行かないと。）」</br>
+旅人「パイモン、一緒に来て。」</br>
+パイモン「えっ？おう、いいぜ。どこに行くんだ？」</br>
+旅人「一回稲妻に戻りたい。」</br>
+パイモン「ん？いいけど、その表情…なにか急な用事でもあるのか？」<br>
+旅人「まだ説明する時じゃない…」
+</p>
+					</blockquote>
+					
+					<h4 id="a-dance-of-destruction">乱世輪舞</h4>
+					<blockquote>
+						<p>(前略)</p>
+						<p>
+						グザヴィエ「もちろん、俺はここ一帯の炉心を研究したことがある。」</br>
+グザヴィエ「何が聞きたいんだ？遠慮せず聞いてくれ！」</br>
+旅人「ここの歴史には詳しい？」</br>
+グザヴィエ「当然さ！俺はこの近くを数え切れないほど歩いてきたからな。」</br>
+グザヴィエ「それに他の場所でも、かつてたたら砂に住んでいた人の子孫に会ったことがある。彼らの口から語られるのは、どれもすべて真実の歴史さ。」</br>
+旅人「ぜひその歴史を教えて。」</br>
+グザヴィエ「ふむ？急にそう言われてもな、二言三言で説明しきれるもんじゃないんだぞ。知ってるだろ？たたら砂は歴史深い場所なんだ。」</br>
+グザヴィエ「俺の知る限り、たたら砂は鍛造製錬業の中心地区の一つとして、数千年にも及ぶ歴史を持ってるんだ。ただ、炉心には二回ほど問題が発生していてな。」</br>
+パイモン「二回？どの二回だ？」</br>
+グザヴィエ「ここ数年の一回、何百年か前にもう一回だ。そういえば稲妻の人に聞いたんだが、たたら砂では以前にもフォンテーヌの職人が来たことがあるらしいな。」</br>
+グザヴィエ「どうやら、この二国の技術交流も歴史が深いものなのかもな。聞けばそのフォンテーヌの職人というのも、当時のたたら砂の重要な客人だったようだ。」</br>
+旅人「（「博士」のことだ。どうやら「博士」が意図的に炉心を壊して、動乱を引き起こした歴史には影響がないみたいだ…）」</br>
+パイモン「なあ、たたら砂に来て聞きたかったこと、グザヴィエに聞いてみたらどうだ？」</br>
+旅人「もう聞いてるよ。」</br>
+グザヴィエ「おお、二人は歴史を研究しているんだな。」</br>
+パイモン「そうなんだよ。こいつ、今日はどうしたのか知らないけど、ずっと歴史について聞き回ってるんだ…」</br>
+グザヴィエ「ん？急に歴史について興味を持ち始めたのか？」</br>
+旅人「うん。だから、もう一つ質問がしたい。」</br>
+グザヴィエ「いいぞ、話してみろ。」</br>
+旅人「たたら砂の「傾奇者」について聞いたことはある？」</br>
+グザヴィエ「傾奇者？ふむ…聞いたことはないな。」</br>
+グザヴィエ「その言葉が稲妻では一般的に、特異な行動を取るとか、ユニークな服装をする人とかを指すのは知っている…俺もこの言葉に相応しい人に会ってみたいとは思っていたが…」</br>
+グザヴィエ「残念ながら、そのような人に会ったことはないし、たたら砂に関係のある話でそのような噂を聞いたこともない。」</br>
+旅人「（傾奇者がいない…まさかスカラマシュは世界樹で何かをして、自分に関する記録を消した？）」</br>
+旅人「（もしそうだったら、彼は世界を変えて、すべてを原点に戻そうとしたのだろう。でも今のところ、影響があるのは彼自身についてだけ…？）」</br>
+旅人「ありがとう、グザヴィエ。」</br>
+グザヴィエ「なあに、どうってことないさ。」</br>
+パイモン「もう行くのか？それじゃあな、グザヴィエ！」</br>
+グザヴィエ「おう！気にするな、役に立ててよかったよ。」</br>
+グザヴィエ「じゃあな。」</br>
+パイモン「どうやら、知りたかったことは聞けたみたいだな。」</br>
+旅人「戻ってナヒーダに会おう。」</br>
+パイモン「おう。でもおまえ…今日は本当にどうしたんだ？…なんか悩んでるみたいだけど。」</br>
+パイモン「元気出せよな！なにがあっても、オイラがそばにいるぜ。」</br>
+旅人「うん。
+パイモン「元気だせよ！どうしてもダメなら、なにか食べればいいんだ！お腹が減ったら戦はできないぞ！」</br>
+パイモン「じゃあ、ナヒーダに会いに行こうぜ！ 	
 						</p>
 					</blockquote>
 					
-					<h4 id="">???</h4>
+					<h4 id="the-kabukimonos-finale">幕切——傾奇の末</h4>
 					<blockquote>
-						<p>
+						<p>アカバ「おや！あなたたちは！」</br>
+パイモン「アカバに澤田！おまえたち、まだここにいたのか？」</br>
+旅人「まだ作品について話してるの？」</br>
+澤田「ああ。もし時間があったら、ぜひまた僕たちの話に参加してくれ。」</br>
+パイモン「いいけど、なにを話せばいいんだ？」</br>
+澤田「もちろん…この前の話題さ。」</br>
+パイモン「たたら砂について、まだ聞きたいことがあるんだよな？へへっ、オイラたちも話に混ざろうぜ？」</br>
+旅人「（ちょうど、この二人もたたら砂に関する事件について研究している。彼らの話を聞いてみよう。）」</br>
+アカバ「とはいえ、進展はいまいちでな…」</br>
+旅人「前回の文書は凄かった。」</br>
+アカバ「ん？ああ、もちろん。」</br>
+澤田「僕のもいるかい？どうぞ。」</br>
+旅人「（……）」</br>
+旅人「（内容が前回と違っている。やっぱり世界樹内の情報が改ざんされたことによる現象だ。）」</br>
+旅人「（スカラマシュはあの二つの名前を消すと言っていた…彼は心の中で願ったことを全力で成し遂げたのか？でも…）」</br>
+アカバ「どうだ？」</br>
+旅人「素晴らしい！」</br>
+パイモン「そうだ！この前アカバたちは、もっと情報があったら教えてくれって言ってたよな。実はオイラたち、ちょうど稲妻から帰ってきたばかりなんだ。旅人、オイラたちの知ってることをこいつらに話してもいいか？」</br>
+旅人「いいよ。」</br>
+アカバ「まさか、重要な情報か？」</br>
+パイモン「話すと長くなるんだけど…実はオイラたち、稲妻に友達がいて…」</br>
+先ほど聞いた「雷電五箇伝」と「たたら砂の歴史」に関する情報を二人に伝えた…」</br>
+アカバ「おお！こんな話が聞けるなんてな、かたじけない！」</br>
+澤田「なるほど、すべての根源は復讐だったというわけか…天目の末裔が言うのなら、それで間違いないだろう。」</br>
+澤田「はぁ…結局、お化けじゃなかったか。」</br>
+アカバ「これらの情報は、私の言説をさらに補強したといえる。見たか！当時の人にとって、刀工がそれほど重要だったということだ。彼らを傷つけることは、権力者への復讐と同義とさえ言われていたからな…」</br>
+澤田「わかったわかった、君の言う通りだ。だがそうだとしても、僕が小説を書いちゃダメってことにはならないだろう？」</br>
+パイモン「また議論を始めちゃったぞ。本当に熱心だな。」</br>
+旅人「用事があるから、これで失礼。」</br>
+アカバ「おっと、すまない。自分たちだけで盛り上がってしまったな。情報、助かったよ。」</br>
+パイモン「いいってことよ、またな！」</br>
+澤田「また何か情報があったら、ぜひ教えてくれ！」</br>
+パイモン「おう！」
 						</p>
+						<p>
+						パイモン「ナヒーダ、オイラたちだ。」</br>
+ナヒーダ「旅人、パイモン。最近はどうかしら？」</br>
+パイモン「うぅ、全然休めなかったぜ…あの日の夜にこいつと話をして、気づいたらもう朝になってて…しかもその後すぐ、こいつが稲妻に行くって言い出したんだ。」</br>
+旅人「「散兵」に関することを調査しに行ってた。」</br>
+ナヒーダ「「散兵」…？聞いた感じでは、何かのコードネームみたいね。」</br>
+旅人「（…やっぱり…）」</br>
+ナヒーダ「表情が暗いけれど、何か言いたいことでもあるの？」</br>
+旅人「（ナヒーダさえ覚えてないなんて。あの時みたいに、世界樹が改ざんされると、彼女も影響を受けるんだ。）」</br>
+旅人「（俺の推測が正しければ、スカラマシュはナヒーダに阻止される前に自分を消すことに成功した…）」</br>
+旅人「（つまり、そのことを覚えてるのはもう俺だけ。俺は…また記録する者になってしまった。）」</br>
+ナヒーダ「旅人？」</br>
+パイモン「おい、どうしたんだよ…顔色がよくないぞ。」</br>
+旅人「…このことは、俺しか覚えていない。」</br>
+旅人「今は、真実を君たちにも伝えるべき。」</br>
+沈んだ気持ちを抱えながら、長きにわたり散り散りになるも、今ようやく紡ぎ合わせた物語を話し始めた——」</br>
+この世にはかつて「散兵」という個体があった。彼は雷神の造物であり、人形の身で世に流落した。」</br>
+たたら砂の様々な出来事のあと、三度裏切りに遭ったと思い込んだ「散兵」は稲妻を離れ、放浪を始めた。」</br>
+彼は人間をまったく信じず、神を徹底的に憎んだ。幾百年も恨みを抱え、己を鍛錬し稲妻へ戻り復讐を成し遂げようとした。彼は神の心を頼みに神の座に登ろうとしたが、最後の一歩で阻まれた。」</br>
+その後、彼は世界樹の内部に入り、自らが裏切られたことについての真実を知った。彼のすべてを作り上げたのは欺瞞だった。そして最後に、彼はこの不幸な悲劇を消し去るため、最も狂気的な行動を取った…」</br>
+ナヒーダ「…そうだったの。」</br>
+ナヒーダ「つまり、その「散兵」という名の人形は、世界樹で自らを消し…過去を変えようとしたのね。」</br>
+パイモン「でも、どうしてそいつはそんなことができたんだ？」</br>
+ナヒーダ「旅人の話によれば、彼はもう少しでスメールの神になっていた。それは私の記憶と噛み合わないわ…私の記憶では、私たちが打ち負かした機体の中には誰もいなかったもの。」</br>
+ナヒーダ「でも辻褄は合うわ…もし誰かが世界樹で自分の存在を徹底的に抹消したら、世界もそれに伴って変わるでしょう。」</br>
+パイモン「つまり、本当にそんな人が存在してたけど、そいつが世界を変えちゃったせいで、オイラたちも忘れたってことか？」</br>
+ナヒーダ「ええ。理論上にしか存在しない挙動だし、そんなことをする度胸のある者がいるかさえ不確かだけど…」</br>
+ナヒーダ「旅人はテイワットの外の世界から来たから、世界樹に彼についての情報はなかった。よって、世界樹に対する改ざんも、自ずと彼には影響しない…」</br>
+ナヒーダ「もしこの世において、このような形で改ざんされた「過去」を記録できる人がいたとしたら…それはあなたしかいないわ。本当に、不思議な感覚ね。」</br>
+旅人「…うん。」</br>
+パイモン「でも、その「散兵」ってやつは、なんでそんなことをしたんだよ？」</br>
+ナヒーダ「私も今ある情報からしか推測することはできないわ。彼が具体的にどんな人だったのか…今はあなたしか覚えていないから。」</br>
+旅人「俺にも…分からない。」</br>
+旅人「（俺とスカラマシュはずっと敵同士だった。彼がどんな立場でそんなことをしたのか、どうしてそんなに非情になれるのか…俺には分からない。）」</br>
+旅人「（一からやり直したかった？誰かを救いたかった？それとも徹底的に自分を否定したかった？）」</br>
+旅人「（「誤りは正すことができる。清く正しい答えを出してみせる」、結局はただそれだけだった。）」</br>
+旅人「（彼が行動する前の最後の質問を、俺はまだ覚えてる。あれは…俺に向けられたものだ。そして俺の躊躇が、彼に答えをあげてしまった。）」</br>
+旅人「（俺が躊躇した理由は、この目でマハールッカデヴァータが自らの存在を消すのを見たから。でもこのことは、ナヒーダには言えない。）」</br>
+旅人「（とにかく、スカラマシュが毅然として行動するに至った理由については…言ってはならない。）」</br>
+ナヒーダ「何か言えないことでもあるの？」</br>
+旅人「ただ…虚しいと思って。」</br>
+ナヒーダ「…すでに死んだ人の歴史を変えることはできなかった。そうね？」</br>
+旅人「うん。」</br>
+ナヒーダ「「散兵」は自分が裏切られたわけではなかったと知って、物語にあった、かつてたたら砂で暮らしていた人を友と見なしたのかもしれないわ。」</br>
+ナヒーダ「そうして人間を憎む理由をなくした彼なら、かつての友を救おうとするのもおかしくはないわね。」</br>
+ナヒーダ「…とても合理的で、どの点においても辻褄が合っている。」</br>
+ナヒーダ「「散兵」は「博士」の手伝いにより神になりかけた。だからこそ、彼は世界樹と繋がる権能を得たわけだけど…」</br>
+ナヒーダ「その権能のおかげで、力が残り少ない状況であっても世界樹の中の記録を書き換えることに成功し、自らを消した。」</br>
+パイモン「たしかに筋は通ってるけど…その人たちのおかげでいい結果になったわけでもないし…」</br>
+パイモン「オイラ…この感じ、なんかいやだぞ…全力でなにかやったのに、結局なにも得られなかったなんて。」</br>
+旅人「（そうだ。世界すら変えたとしても、死んだ人はやり直すことができないし、不幸な人生も取り返しがつかないんだ。）」</br>
+旅人「（彼が抗おうとしたのはなんだったのだろう？裏切られる運命？あるいは、存在自体が一種の誤りだったとでも？）」</br>
+ナヒーダ「少し待ってちょうだい。確認したい情報があるの。」</br>
+ナヒーダ「……」</br>
+ナヒーダ「見つけた、おそらくこれね。」</br>
+ナヒーダ「やっぱり…私のほうでも尋常じゃない状況が起こっているわ。彼の話を裏付けるには十分ね。」</br>
+パイモン「なんなんだ？」</br>
+ナヒーダ「私自身が保存したすべての情報の中に、片隅に置かれた記録を見つけたの。」</br>
+ナヒーダ「あなたたちも見てちょうだい。」</br>
+パイモン「童話？誰が書いたんだ？」</br>
+旅人「この内容、俺の話とも辻褄が合う。」</br>
+ナヒーダ「この記録を作ったのは、私自身よ。」</br>
+パイモン「えっ？ナヒーダの書いた童話が、その「散兵」と関係してるのか？」</br>
+ナヒーダ「旅人の話と合わせれば、私の残した物語はすべて、ある特定の内容を指していることがわかるわ。」</br>
+パイモン「待てよ、もしかしてその記録って、事前に残してたものなのか…」</br>
+ナヒーダ「そう。たとえ他の記録にある「散兵」と「傾奇者」についての内容が変更されても、私の手によって書き起こした物語に影響はないの。」</br>
+ナヒーダ「世界樹内の情報を変えることは、テイワットを書き換えるのと同じ。」</br>
+ナヒーダ「でも世界樹は、事前にわざと隠された情報を変えることはできないの。この記録はきっと、「散兵」が世界樹に入る前の私が残したバックアップね。」</br>
+パイモン「すごい方法だな！さすがナヒーダだぜ！」</br>
+ナヒーダ「旅人を「散兵」と一緒に世界樹に入らせたのも、その時の私が考えたもう一つの保険だったのでしょう。彼なら、すべてを覚えていられるから。」</br>
+ナヒーダ「世界樹に今ある情報と、この記録で暗に語られている物語は、互いに結びつきを持っているわ。」</br>
+ナヒーダ「それらにおけるすべての異なる場所を繋ぎ合わせれば、彼の言う…「散兵」が消した一生に辿り着くわ。」	
+						</p>
+						
+						
+						
+						
+						<!--猫イラスト-->
+						
+						
+						<p>
+							ナヒーダ「野狐の皮を被った猛獣が、狐の群れに紛れていた。彼らは昼夜を共にし、互いを友と呼び合い、仲睦まじくしていた。」</br>
+ナヒーダ「偶に、猛獣は夜になると狐の皮を脱ぎ、水中の自分に向かって嘆く。自分はこれほど不自然な存在なのに、彼らは愚かでそれを見抜けない。実に残念だ、と。」</br>
+ナヒーダ「しかし猛獣はすぐにその考えをやめた。なぜなら狐の群れにいる異類は彼だけではなかったのだ。もう一匹、白い樹から彫り出され、人に見捨てられた子猫がいた。」</br>
+ナヒーダ「子猫は狐になりたかった。だけど子猫の尻尾は細くて短く、色鮮やかな毛並みを生やすこともできない。他の狐はそれを見ると、こう慰めた——だとしても、君は僕たちの仲間だ。」</br>
+ナヒーダ「猛獣はそんな馴れ合いを嫌い、山の中で火をつけた。動物たちはひどく怯えた。大きな火を消すには、犠牲を払う必要があるからだ。」</br>
+ナヒーダ「一匹の灰色の狐が前に出て、猛獣と話をした。曰く——君は頭がいいから、きっと僕たちを救う方法を思いつくはずだ。」</br>
+ナヒーダ「猛獣は微笑みながら灰色の狐を火のそばに連れ、殺した。灰色の狐の心は、透明で美しい無垢な雫に作り上げられた。」</br>
+ナヒーダ「猛獣はその雫を子猫に渡し、こう伝えた——みんなお前を犠牲にしようとしている。これを持って、お前の狐の仲間たちのために、死にに行くといい。」</br>
+ナヒーダ「火は消された。子猫はそこを離れ、翼の折れた小鳥と共に暮らした。」</br>
+ナヒーダ「彼らは互いに寄り添うことを約束した。しかし小鳥の寿命はあまりにも短く、すぐに息を引き取った。子猫は小鳥を埋葬し、その山を離れた。」</br>
+ナヒーダ「…それから子猫は、山におけるすべての葉っぱも、すべての動物も愛すことはなかった。彼はいくつもの夜を彷徨い、月に向かって牙を研いだ。」</br>
+ナヒーダ「子猫は月を食らい、すべての月光を噛み砕きたかった。すべてが暗黒に戻れば、彼は快楽と安心を感じられる。」</br>
+ナヒーダ「「僕は新たな月となり、みんなにとって唯一の存在となる。そうすれば、この世に鳥や狐、猫がいたことを知る者はいなくなる。その違いを知る者さえ。」」</br>
+パイモン「解けた！」</br>
+ナヒーダ「……」</br>
+ナヒーダ「すべて思い出したわ。私が全力で残したバックアップは、「散兵」自身の記憶だった。」</br>
+ナヒーダ「神になるため、彼は大量の実験と改造を受け入れた。人形だったからこそ、あのような過酷な過程を耐えてこられたのね。」</br>
+ナヒーダ「この記憶は、当時の学者たちが彼から抽出したものよ。「散兵」を警戒していたから、これを残したのかもしれないわ。」</br>
+ナヒーダ「神を創造するのは第一歩に過ぎず、あまつさえ神を操ろうとする者もいた。だからいつか使う時に備えて、彼の記憶のバックアップを取ったのでしょう。」</br>
+ナヒーダ「私はそれらを自らの深い夢の中に保存した。そして書き起こした物語でさらに外部を包むことで、改ざんされるのを防いだの。」</br>
+パイモン「本当にそんな人がいたのか…そ、そいつはオイラたちと何回も会ってて、いつもオイラたちと敵対してたのか…」</br>
+パイモン「それなのに、オイラは完全にそいつを忘れてた…まるで煙が消えるみたいに、最初から存在してなかったみたいに…」</br>
+ナヒーダ「「散兵」は降臨者に関する情報を探すのを手伝ってくれると約束したわ。それについての収穫はなかったけど、あなたの役に立つことはできたみたい。」</br>
+ナヒーダ「消失する前、彼は最も重要な手がかり——あなたの血縁者がかつて、カーンルイアに降臨したという情報を残してくれたわよね。」</br>
+ナヒーダ「ただ、世界樹にある情報の変化が、ファデュイの上層部にどれだけの影響を与えるかはまだ不明ね…彼らは、組織内にかつてそのような執行官がいたことを覚えていないかもしれないわ。」</br>
+旅人「初めて思い知らされた… 命の重みが羽よりも軽いことを。」</br>
+パイモン「その話だと、オイラはそいつのことが好きじゃなかったみたいだけど…だからってそんな結末も、オイラは好きじゃないぞ…」</br>
+ナヒーダ「それこそが、知恵がすべての問題に答えられるわけではないことの証明よ。私たちは仰視し、認知し、理解してもなお、問題に囚われる。」</br>
+ナヒーダ「答えは一つだけではないの…この世の生命が求めているのは、真実を追いかけ、困難を解決すること。」</br>
+ナヒーダ「真実をその人に返すのは、運命の選択権を渡すのと同じ。」</br>
+ナヒーダ「傍から見れば無駄なことだったかもしれないけれど、こうして自分が思う通りに消えることができたのは、彼にとって、きっとそれだけの意義があることだったのよ。」</br>
+ナヒーダ「忘れないで。たとえ暗黒の雲の下を歩んでいても、どれだけ道が困難でも、知恵の灯火が私たちを良き結果へと導いてくれるわ。」</br>
+ナヒーダ「そしてこれは、あなたがずっとやってきたことでもある。」</br>
+パイモン「おう、ナヒーダの言う通りだ。元気出せよな！この暗い話を続ける前に、今からなにか食べに行ってもいいと思うぜ！」</br>
+ナヒーダ「良い考えね。パイモン、彼を気晴らしに外に連れて行ってあげてくれないかしら？」</br>
+パイモン「オイラに任せろ！ほらほら、複雑な気持ちなのはオイラもわかってるから、今はちょっと外を歩こうぜ。」
+</p>
+<p>
+	パイモン「着いたぞ、なにが食べたい？」</br>
+旅人「（…何かおかしい…？この感覚…俺も何か重要なことを忘れているような気が…）」</br>
+パイモン「おい、オイラの話を聞いてるのか！」</br>
+旅人「ごめん、考え事してた。」</br>
+パイモン「うぅ、しょうがないな…じゃあちょっと待っててやるから、考え事が終わったら食べ物を買いに行くぞ。」</br>
+旅人「（なんだろう？急に脳裏から消えたような重要な手がかり…世界樹、自己削除…）」</br>
+旅人「（マハールッカデヴァータ、禁忌の知識…ナヒーダ…）」</br>
+パイモン「どうだ、終わったか？」</br>
+旅人「（……！）」</br>
+旅人「（思い出した。「彼女」——マハールッカデヴァータは言っていた、どんな個体も、自分で自分の存在を削除することはできないと！）」</br>
+旅人「（じゃないと、マハールッカデヴァータが自分の「輪廻」——クラクサナリデビを創造して、彼女に世界樹から自分を消してもらった意味がなくなる。）」</br>
+パイモン「ど、どうしたんだよ、急に飛び上がって！」</br>
+旅人「（いや、パイモンに言っちゃだめだ。パイモンはマハールッカデヴァータのことを知らない。）」</br>
+旅人「（ただ、これはとても重要なことでもある。スカラマシュは自分の力で自分を消すことはできない、そうだとして…完全に消しきることができなかった場合、どうなる？）」</br>
+放浪者「すみません、先ほどの帳簿に少し問題があったようなので見てもらえませんか…」</br>
+旅人「（！？！？）」</br>
+商人「おいっ！ちょっと待てって——！」</br>
+放浪者「ん？僕を呼びましたか？」</br>
+商人「お前のことじゃなくて、あのガキのことだ！見てなかったのか？あいつ、店にある最後の二つの新鮮な夕暮れの実を取って、そのまま逃げちまったぞ！」</br>
+商人「ったくお前…働かせてもらってる身分で、またボーっとしてたのか？よっぽどこの仕事が退屈か？それとも町のあれこれがそんなに気になるのか？」</br>
+放浪者「…僕の不注意です、すみません。」</br>
+放浪者「あなたの言う通り、もしかしたら町で起きることがあまりにも興味深かったせいで、つい気が逸れてしまったのかもしれません。」</br>
+パイモン「すごく気になってるみたいだけど…あいつ、誰なんだ？」</br>
+旅人「あの人が…「散兵」。」</br>
+パイモン「ええっ！？」</br>
+商人「お前さん、本当に変わってるな。俺んとこに働きに来たくせに金はいらないと言ったのもそうだが…何をやらせても、色んなものに好奇心が向いて埒が明かねぇ…」</br>
+商人「別にこっちも利用しようなんて気はないし、払うべき賃金はきちんと払うが…いつまでもそんな感じじゃ、こっちも清算に困るんだよ…」</br>
+放浪者「いえ、お金はいりません。よそから来た僕を働かせてくださり、ありがとうございます。」</br>
+商人「そんな言い方をされてもな…ほら、夕暮れの実だってなくなっちまっただろ…夕方には町にいるご夫人に、詰め合わせを届けなくちゃならないのに。」</br>
+放浪者「欠けた品は、僕が探してきます。ここでしばらく待っていてください。」</br>
+商人「…待て。」</br>
+商人「この際だからはっきり言おう。金を欲しがらない労働者に会ったのはこれが初めてだし、確かにちょっと得しようという気はなくもなかった…だが見てると、お前さんは本当に何も欲しがらないじゃないか。」</br>
+商人「金もいらない、休みもいらない。時間ができたら辺りをほっつき歩き、見て回る…お前さん、放浪でもしてるのか？」</br>
+放浪者「いかにも。その通りです。」</br>
+放浪者「僕のことは後にしましょう。今は品物のほうが先です。夕暮れの実でしたね、任せてください。」</br>
+パイモン「おい！どうするんだ？」</br>
+旅人「あの人について行こう！」</br>
+パイモン「おう、こっそり近づこうぜ。気づかれるなよ！」
+</p>
+<p>
+	放浪者「…うん、これでいいでしょう。」</br>
+パイモン「あれが「散兵」だってのはわかったけど…オイラたち、どうするんだ？…あいつから夕暮れの実を奪う…とかか？それはちょっとひどくないか？」</br>
+旅人「シーッ。」</br>
+パイモン「うぅ、わかったよ…」</br>
+放浪者「数に問題はありませんね。うーん…洗ったほうがいいでしょうか…」</br>
+旅人「（…この目で見てなかったら、にわかには信じられない。）」</br>
+放浪者「……」</br>
+放浪者「そこの二人、僕の後をついてきて、何か用事でもあるんですか？」</br>
+パイモン「うぇっ！？気づかれたぞ！」</br>
+放浪者「町からここまでずっといたでしょう、気づかない方が難しい。」</br>
+旅人「…確かに後をつけてた。」</br>
+放浪者「もしかして、どこかで会ったことありますか？」</br>
+放浪者「いや…その目、僕のことを知っているんですね？」</br>
+旅人「うん。」</br>
+放浪者「しかし、僕にはさっぱり覚えがありませんが…」</br>
+旅人「理由は複雑だけど、とにかく君を知ってる。」</br>
+パイモン「本当に知ってたんだな…」</br>
+放浪者「すみませんが、そのような話を信じることはできません。」</br>
+旅人「証明できる。」</br>
+旅人「君は…人形。そうでしょ？」</br>
+パイモン「人形？そんなふうには見えないけど…」</br>
+放浪者「……！」</br>
+パイモン「えっ！？その表情…おまえ、本当に人形だったのか？」</br>
+放浪者「どうやら、僕を知っているのは確かなようですね。僕がほとんど他人には言わないことまで知っているようだ…」</br>
+放浪者「…僕はただの放浪者に過ぎません。ただその様子からして、僕に会いに来たのには何か重要な訳があるのでしょう。」</br>
+旅人「連れて行きたい所がある。」</br>
+放浪者「いいですよ。ただ、まずはこの品物を届けに戻ってもいいでしょうか。」</br>
+パイモン「本当にあの店長の使い走りになってるのか？金はいらないって言ってたけど、本当か？」</br>
+放浪者「はい。辺りをさまよっていた時、野外であの方に出会って、荷車で雨宿りをしてもいいと言われました。その礼として彼を手伝っているのです。」</br>
+パイモン「意外といいやつだったんだな…」</br>
+放浪者「品を届け終えたら、あなたと一緒に行きます。それでいいですね？」</br>
+旅人「…分かった。」</br>
+パイモン「じゃあ、まずは町に戻ろうぜ。」
+</p>
+<p>
+	放浪者「すみません、ここに置いておきます。」</br>
+商人「本当に取りに行ったのか…ん？この二人は…」</br>
+放浪者「この二人が僕に用があるそうで、少し離れる必要があります。すみませんが、しばらくは店番を休みます。」</br>
+商人「…はぁ。」</br>
+商人「ちょうど賃金を払おうと思ってたところだ。どこへだって行きたい場所に行くといい。俺んとこにずっといる必要はないんだ。」</br>
+放浪者「え…？」</br>
+商人「知ってるさ。お前さんが俺の手伝いをしてるのは、雨宿りをさせたことへの礼だってのはな…金も受け取ろうとしねえのはそのせいだろ…」</br>
+商人「そういえば、あの日はあんなに雨が激しかったのに、お前さんはのこのことゆっくり気ままに歩いてたな。雨に濡れるのも気にせず、急いで行くような場所があるようにも見えなかった…」</br>
+商人「おかしいだろ？目的地もないのに、なぜ雨の中を歩く必要がある？急いでるわけでもないのに、なぜ雨に濡れながら外にいるんだ？」</br>
+放浪者「……」</br>
+商人「だが、俺がお前さんを引き取ったのは、ただのついでだ。たいした骨折りでもないし、恩に着られる筋合いもない。自分の時間と生活を大切にするといい。」</br>
+放浪者「…しかし僕には…そんなもの…」</br>
+放浪者「…いえ、あなたの言う通りですね。」</br>
+放浪者「ここでお別れしましょう。町へ連れてきてくれて、ありがとうございました。」</br>
+商人「気にするな。これでもたくさん人を見てきたが、なんてことはない…お前さんが自分の歩む道を見つけられることを祈ってるよ。」</br>
+放浪者「…感謝します。」</br>
+放浪者「さて、待っていてくれてありがとうございました。行きましょう。」
+</p>
+<p>
+	パイモン「ナヒーダ！ナヒーダ——！」</br>
+ナヒーダ「どうしたの？」</br>
+ナヒーダ「あら？あなたは…」</br>
+放浪者「…こんにちは、急に伺ってすみません…」</br>
+パイモン「オイラたち、町でこいつにあったんだけど、なにも覚えてないみたいで…とにかく、色んなことが起こったんだ！」</br>
+グランドバザールで放浪者に会ったことをクラクサナリデビに伝えた…」</br>
+ナヒーダ「つまり、あなたはテイワット各地を放浪しながら修行をしていると…私の知る限り、そういった者は修験者と呼ばれているはずだけれど、どうして自分を放浪者だと呼んでいるのかしら？」</br>
+放浪者「はい、このほうが僕みたいな者には合っているかと思いましたので。まるで、根のない植物のような名前で…」</br>
+放浪者「しかし、この二人は僕を知っているようなのです。しかも、他の者は知らない僕の過去まで。」</br>
+ナヒーダ「過去というより…はぁ、説明するのがとても難しいわ。」</br>
+ナヒーダ「このような言葉を使うのはあまり好きではないのだけど、あなたの状況だと、もしかしたら「前生」と呼んだほうがいいのかもしれないわ。」</br>
+パイモン「前世みたいな感じか？」</br>
+ナヒーダ「ええ。昔というにはずっと距離が遠く、あなた自身にはまったく知りえない状況のことね。」</br>
+放浪者「聞きたいのですが…その前生における僕は、どんな人だったのですか？」</br>
+パイモン「えっと…」</br>
+ナヒーダ「……」</br>
+放浪者「…そうですか、分かりました。」</br>
+放浪者「何か言いたげなのに、それを言うのが忍びない…どうやら前生の僕は、とても褒められたようなものではなかったようですね。」</br>
+旅人「どうやって言ったらいいか考えてただけ…」</br>
+放浪者「言いにくいのは、そのことが今の僕に大きなショックを与えてしまうからなのでしょう。」</br>
+放浪者「けれど、僕は受け入れられます。真実を教えてください。」</br>
+ナヒーダ「そんなに真実が気になるの？」</br>
+放浪者「…はい。」</br>
+ナヒーダ「じゃあ、はっきり言うわね。前生でのあなたは「悪」とされることを数多くしていたわ。」</br>
+ナヒーダ「あなたは他者によって死にかけ…他者もあなたのせいで死んだ。人ならざる者として生まれ、神を憎み、人間を嫌った。」</br>
+ナヒーダ「あなたは終始さまよい、たとえ居場所や身分を手に入れても立ち止まる理由を見つけられなかった。なぜなら、その時のあなたは、自分に「心」が欠けていると思い込んで疑わなかったから。」</br>
+放浪者「……」</br>
+ナヒーダ「…執着という根は時として、茎を伝って苦き果実を実らせる。我執から逃れられない以上、あなたが喜びを感じることはないわ。」</br>
+ナヒーダは放浪者に過去のことを簡単に伝えた…」</br>
+放浪者「すべてを使い果たして…歴史を少し揺さぶっただけ、ですか。」</br>
+ナヒーダ「結果だけ見れば…たしかにそうだと言えるわね。」</br>
+放浪者「……」</br>
+放浪者「今聞いた一切を、単に正しいか間違いかで判断することは、僕にはできません。」</br>
+放浪者「人の行う如何なる選択も、時と場所によって決まる。「因」が「果」をもたらし…「罪」が重なり「業」となる。」</br>
+ナヒーダ「真理とは元よりそういうものよ。正しさもあれば、それ相応の間違いもある。でも万象と万物は生まれながらにして複雑であり、こういった対立的な概念だけではっきりとするようなものじゃないわ。」</br>
+放浪者「前生の僕は、みなから好かれていなかったようですね。」</br>
+パイモン「えっと…別に傷つけようとしてるわけじゃないんだ。ただ、オイラたちにとってはたしかにそうだったってだけで…」</br>
+旅人「俺たちはずっと敵対関係にあった。」</br>
+放浪者「しかし、いま僕のために真実を取り戻してくれたのは、「敵」であったあなた達ではないですか？」</br>
+旅人「……」</br>
+パイモン「ああもう！こいつって、ただ敵とまったく同じ見た目ってだけの知らない人だろ！」</br>
+パイモン「全くの無実じゃないとは思うけど、かといって問い詰めることもできない…すごく変な感覚だぞ…」</br>
+放浪者「クラクサナリデビ様、知恵の神であるあなたが言うのなら、それはすべて真実なのでしょう。」</br>
+ナヒーダ「ええ、すべて真実よ。あなたさえよければ、真実の記憶を見せてもいいわ。」</br>
+放浪者「…はい、この目で直々に見届け、己が罪悪を直接経験したいと思います。」</br>
+ナヒーダ「たとえ今のあなたの精神が、それにより鞭打たれることになっても？」</br>
+放浪者「僕は人形…心も名もないただの人形です。逃れられない因果を除いて…僕を動かし、満たすものは何もありません…」</br>
+ナヒーダ「…なら、あなたの願いを叶えてあげるわ。」</br>
+パイモン「ちょっと待った、オ、オイラたちもついて行くべきじゃないか？グランドバザールからこいつを連れて来たのはオイラたちだし…」</br>
+放浪者「心配はいりません。たとえ危険に遭っても、それは元より僕が受けるべきものです。」</br>
+ナヒーダ「旅人、私の代わりにこの過程を見届けてきてくれるかしら？」</br>
+旅人「…分かった。」</br>
+パイモン「そうだな。おまえは今…えっと、状況が特殊だから…オイラたちが、ナヒーダの代わりに見張っててやるぜ！」</br>
+放浪者「分かりました。」</br>
+ナヒーダ「ありがとう。じゃあ、準備をお願いね。」
+</p>
+		</blockquote>
+		<blockquote>
+			<span class="blockquote-title">NPCとの対話</span>
+			<p>
+				放浪者「そこに何があろうと、できる限り向き合おうと思います。ただ…あなたにまで付き添ってもらうことになるなんて、迷惑をおかけしてごめんなさい。」<br>
+				心の声：放浪者「(すべて…向き合います。)」<br>
+				心の声2：放浪者「(この感覚…まるで二度目の人生を生きているかのようだ。ハハッ。)」
+			</p></blockquote>
+			<blockquote>
+						<p>
+							パイモン「ここって、稲妻みたいだな…」</br>
+ナヒーダ「あなたたちのいる空間は、私が記憶の内容を抽出して再現した夢境よ。」</br>
+ナヒーダ「記憶を見れば真実を知ることができるけど、記憶にある敵の映像を怒らせてしまうこともあるから、安全には気を付けてね。」</br>
+パイモン「まるで本当にその場にいるような感覚だ。オイラたちも来てよかったぜ…」</br>
+放浪者「…僕にそこまでしてくれる必要はありません。僕は守るに値する対象ではないんですから。」</br>
+パイモン「でもオイラたち、途中でやめるようなことはしないんだ。前はおまえが原因で、やるべきことが途中で止まっちゃったからな…」</br>
+旅人「以前の仕事を続けてると思って。」</br>
+放浪者「そうですか、ありがとうございます。」</br>
+ナヒーダ「放浪者、ここは雷神が「散兵」を安置した場所、「借景ノ館」よ。あなたの前生は、ここに大量の記憶を残しているわ。」</br>
+パイモン「それって、ある意味ここがこいつの出身地ってことか？」</br>
+ナヒーダ「そうとも言えるわね。理由は…すぐに分かるわ。」</br>
+放浪者「…足音がするようです。」</br>
+桂木「崩れた岩の後ろにこんな大きな空間があったなんてな…まさか晶化骨髄を採掘していた隊が残したのか？」</br>
+桂木「…いや、違うな。内部のつくりは完璧で、保存状態もいい。普通の人間にできることではない…」</br>
+桂木「…ん？どうしてこんなところに人が倒れてるんだ…」</br>
+スカラマシュ「…君…は…」</br>
+桂木「しゃ、しゃべれるのか！？どうしたんだ、ケガをしてここから出られないのか？」</br>
+桂木「いや、ケガはないな。それにこの身分の高そうな服…いったい何者なんだ…」</br>
+ナヒーダ「この男は桂木と言って、虎千代の養子である御輿長正の助手だったの。彼は借景ノ館に残されていた「散兵」を見つけ、たたら砂に運んだんだわ。」</br>
+パイモン「…それによって、その後のすべてが起こったんだよな…」</br>
+ナヒーダ「改ざんされていない記録の中では、桂木は長正に殺されたわ。」</br>
+桂木「外に連れてってやる。仲間が近くにいるんだ、もう少しだけ耐えてくれ！」</br>
+ナヒーダ「たたら砂事件において、責任者であった丹羽は職人に偽装した「博士」に殺害され、当時傾奇者と称されていた「散兵」は行方不明となった。」</br>
+ナヒーダ「そして御輿長正は二番目の責任者として、責任を負う必要があったの。」</br>
+ナヒーダ「桂木はかつて長正に助けられたことで、長正に忠実を誓っていた。そんな桂木の揺るがない決意により、長正に自分を殺させ、たたら砂事件の幕を閉じさせたの。」</br>
+放浪者「……」
+						</p>
+						<p>
+							パイモン「あれ？戻ってきたぞ？」</br>
+旅人「声がする！」</br>
+子供「わぁ…ここが君の生まれた場所なの？キレイだね！人はいないけど…ゴホッゴホッ。」</br>
+スカラマシュ「君と同じで、僕も捨てられたんだ。当時、僕はここに住んでた…いい場所でもないから、ここに引っ越してくることはないよ。」</br>
+子供「…うん。」</br>
+子供「聞いたんだけど、僕のお父さんとお母さんは二人とも刀を打ってたんだってさ。でも工場の管理人さんが亡くなって、お父さんも病で倒れて…ゴホッゴホッ…」</br>
+子供「お父さんも僕と同じように、いつも咳をしてたらしい。それから、お母さんも同じように咳が止まらなくなって…」</br>
+スカラマシュ「でも、君はそうなってはならない。僕との約束を守ってよ。」</br>
+子供「うん、僕たちはもう家族だから、ずっと一緒だよ！」</br>
+ナヒーダ「この子には名前がない。というより…「散兵」も彼の名前を知らなかった。彼の父親は、彼に名前をつける前に亡くなったの。」</br>
+ナヒーダ「母親が亡くなってから、この子は茅葺の小屋に一人残され、隣人に育てられた。」</br>
+ナヒーダ「そしてたたら砂を離れた「散兵」は、偶然にも自分と同じく名前のない彼に出会い、彼と約束を交わして一緒に暮らした。」</br>
+パイモン「その子供って、最後は…」</br>
+ナヒーダ「幼くして病で亡くなったわ。ある日、「散兵」が家に帰ると、彼が息を引き取っていることに気付いたの。」</br>
+スカラマシュ「…おいっ！い、いったいどうしたんだ…返事をしろ！」</br>
+スカラマシュ「…家族のように、一緒に暮らすと…約束したのに…結局、君も丹羽たちのように僕を裏切るんだね…ハハッ…」</br>
+放浪者「……」</br>
+放浪者「声が途絶えた。どうやら、記憶はここまでのようですね。」</br>
+パイモン「引き続き進もうぜ。」
+						</p>
+						<p>
+							放浪者「とても暗い場所です。」</br>
+パイモン「あっ、ここなら知ってるぞ。稲妻の邪眼工場だな！」</br>
+ナヒーダ「改ざんされていない記録の中では、彼はかつてこの地で「散兵」に会ったわ。」</br>
+パイモン「嫌な感じだ…見覚えがあるぜ…」</br>
+旅人「……」</br>
+旅人「（ここを覚えてる。とても…嫌な感じがする場所だ。）」</br>
+パイモン「おい、あっちを見ろ！」</br>
+スカラマシュ「つまり親愛なる「淑女」さまは、あのアホ共とこの工場を僕に託してくださるということか？」</br>
+淑女「ふん、もうあんたの手下なのよ。蔑んで何かいいことがあるのかしら？認めたくないようだけど、あんたも計画の一環なんだから。」</br>
+淑女「それとも、「アビス」で戦う方が有意義だったかしら？まあもちろん、博士の実験体になるよりつまらないのは認めるわ。」</br>
+スカラマシュ「…ふふっ、本当によく舌が回るようだね。」</br>
+スカラマシュ「もっとも、その口で得をしたことはほとんどないみたいだけど。これからの任務に向けて、少し気持ちの持ちようを変えることをお勧めするよ。」</br>
+淑女「言われなくても、これから何があるかくらい知ってるわよ。」</br>
+スカラマシュ「そうかな、あえてもう一言だけ言っておこう——自分が無敵だなんて思わないことだね、ましてや感情に任せて物事を処理するなんて、もってのほかだ。」</br>
+淑女「あら、私を心配してくれているのかしら？」</br>
+スカラマシュ「まさか、君が僕の足手まといにならないことを願ってるだけさ。君の他人に迷惑をかける能力は、「公子」といい勝負だからね。」</br>
+淑女「私はただ、この混乱した国に火をつけてあげてるだけよ。あんただって…捨てられたものとして、もっとひどいことをしたいと思ってるんじゃない？」</br>
+淑女「覚えてるかしら？稲妻にいたあの時、刀工を何人も殺したんでしょう。雷電五箇伝の末裔も、さぞかし苦しんだんでしょうね？」</br>
+淑女「あらあら、その表情…過去を追想するのはやめたほうがいいわよ。そろそろ、そのかわいそうな舌をしまって、毒を吐くのをやめてちょうだい。」</br>
+淑女「それじゃ、またね。祝賀会でお会いしましょう。」</br>
+スカラマシュ「…かわいそうな舌だって？ハハハッ…体中に火のついた女の分際で、よくも僕にそんなことが言えるな。」</br>
+スカラマシュ「…まあいい。誰かがここを見つけるのも時間の問題だ。その時が来たら、どんな表情で出迎えてあげようか。」</br>
+旅人「……」</br>
+放浪者「……」</br>
+ナヒーダ「陰謀は事ここに至っても、まだ断ち切られていないわ。引き続き次の話を体験するけど、放浪者、まだ耐えられるかしら？」</br>
+放浪者「…はい、心配はいりません。」
+</p>
+<p>
+	パイモン「スメールに着いたみたいだ！」</br>
+パイモン「ん…あれって…」</br>
+教令院学者「生論派の賢者ナフィスが本計画への加入を断ったことにより、私が彼に代わってこの実験に参加することになりました。」</br>
+博士「歓迎しよう。良い協力関係を築けることを願っているぞ。」</br>
+スカラマシュ「…ふんっ。」</br>
+スカラマシュ「いつから始めるんだ？」</br>
+博士「もう待ち遠しくて仕方がないようだな？先に言っておくが、神になるというのは、決して容易なことではない。」</br>
+アザール「生体改造には時間がかかる、私も早めに開始することをお勧めしよう。それに、連結に成功した後、彼の体は機体と完全に紐付けされ、単独行動ができなくなる。」</br>
+スカラマシュ「そんなことはこれまでにも十分経験してきた。そうだろう？「博士」。」</br>
+博士「お前は私がこれまで見てきた中で最もタフな実験対象だ。お前のおかげで、私はより多くの情報を手に入れられる。」</br>
+博士「だがあの日々があってからと言うもの、お前は命令通り、いつ何時もアビスの中に籠るようになってしまった。会う機会が激減したことで、知識の純度を上げるのも難しくなってしまった。」</br>
+スカラマシュ「その真面目ぶった口の利き方、狂った実験にしか興味ないってバレないようにしてるつもりかい？」</br>
+博士「私と話をする時はもっと言葉づかいに気を付けたほうがいい、スカラマシュ。たしかにお前は役に立つが、だからといってお前が不滅だということにはならない。」</br>
+パイモン「…また「博士」だ…いやな感じの場面だぜ…」</br>
+放浪者「あの者からは、とても深い邪悪の気配がします。」</br>
+旅人「彼がすべてを引き起こした「博士」。」</br>
+パイモン「あいつを見たらいやな感じがするのは当然のことだぞ！オイラもだ！」</br>
+放浪者「……」</br>
+ナヒーダ「引き続き進みましょう。」</p>
+<p>
+	放浪者「神様、あなたは僕が悪であると思いますか？」</br>
+ナヒーダ「あれらが「あなた」であると認めるなら、悪であるということになるでしょうね。」</br>
+放浪者「あなたが思うに、人と人形に違いはあるのでしょうか？」</br>
+ナヒーダ「あなたにとっての「前生」や「他生」の自分は、あなたと何か違いはある？もしもないとしたら、人と人形だって何も違いはないと思わないかしら？」</br>
+ナヒーダ「人の世の冷暖に耐え、喜怒哀楽を味わう者は人である。そして生老病死を憎み、愛し、泣き、怒る者も、同じく人よ。」</br>
+放浪者「……」</br>
+放浪者「僕は十分に多くの過去を見ました。もし可能ならば、僕が背負うはずだったあれらの罪を取り戻したいと思います。」</br>
+放浪者「どんな結果になろうと、僕に課せられた非難と制裁から逃れるつもりはありません。これは当然の報い、受けるべきものです。」</br>
+旅人「それってつまり…」</br>
+放浪者「その記憶を、僕に渡してくれませんか？」</br>
+パイモン「えっ？でもそれじゃあ、おまえは…今の身分を失うってことだろ？」</br>
+放浪者「僕は常々、人という生命個体はある法則に従って成ると思っています。それは、過去の経験の集積です。」</br>
+放浪者「僕は人形として世に生まれましたが、同じ法則を背負っています。」</br>
+ナヒーダ「記憶を取り戻すことは、あなたを完全に「前生」の位置に戻すことを意味するわ。あなたによって捨てられた感情も、すべてあなたの体内へと戻る。」</br>
+ナヒーダ「本当にいいのね？」</br>
+放浪者「元より、この胸に空いた穴と共に生きてきました。人形を創造した者は僕を必要としなかった…目覚めた後、僕は放浪を始めました。」</br>
+放浪者「それからあなた達に出会って、気付いたのです。この失われた罪こそ、あるいは僕が「僕」になれるきっかけかもしれないと。」</br>
+旅人「（…これがマハールッカデヴァータの言ったことの真意？自分を消すことはできない。たとえ元のスカラマシュが消えても、この個体が彼に代わって存在し続ける…）」</br>
+旅人「（逃れられない罪悪、これも運命なのか…）」</br>
+放浪者「僕は生まれながらにして他者より願いを抱きやすく、修験者となっても徹底的に悟ることはできませんでした。どうやら、それこそ僕が自らに招いた呪いなのでしょう。」</br>
+放浪者「だから、お願いです…宿命を変える意味を僕に与え、僕の放浪を終わらせてください。」</br>
+ナヒーダ「分かったわ。」</br>
+ナヒーダ「すでに決心したのなら、これらをあなたへ返すわ。」
+</p>
 					</blockquote>
 					
-					<h4 id="">???</h4>
+					
+					<!--ムービー-->
+					<div class="youtube not-margin-div">
+	<p>ビリビリ動画を表示できません。</p>
+								
+	<iframe src="https://player.bilibili.com/player.html?aid=733484877&bvid=BV16D4y1h7hm&cid=915322534&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+							</div>
+					<blockquote>
+						<p class="travel-log">
+							荒れ狂う記憶が放浪者の心へと戻った。「散兵」としての様々な出来事が次々と頭に流れ込み、この強烈な衝撃を受けた彼は言葉にできないほどの苦しみを味わった。あなたとパイモンが心配していると、記憶の深いところに存在し、かつてスメールに巨大な脅威をもたらした偽りの神「正機の神」がここに再び姿を現し、あなたたちに攻撃を仕掛けた。しかし放浪者は記憶に苛まれ、身動きが取れない。そんな危険を前に、あなたは身を挺して「正機の神」と戦うことを選んだものの、「正機の神」の攻撃は執拗で、危機に陥ったあなたはついに攻撃を避けられなかった。しかし、煙が散った後に、そこに立っているあなたは無傷だった。<br>なぜなら、ある人影がそのすべてを受け止めてくれたからだ。記憶を取り戻した放浪者が、「前生」の「散兵」と一つになったのであった。そして彼がその一撃を受け止めるのを助けたのは、なんと「神の目」であった…
+						</p>
+						<p>
+						ナヒーダ「それがあなたの選択なら… 受け取りなさい」</br>
+(苦痛に耐える放浪者に、過去の記憶が流れ込んできた。)</br>
+八重神子「こやつを自由にしてやろう…」</br>
+稲妻人(桂木？)「人形？ どうしてここに…」</br>
+</br>
+放浪者「あぁーっ！これは…」</br>
+</br>
+丹羽「お主も人間だと思うでござるよ」</br>
+エッシャー「お揃いでしたか」</br>
+桂木「いい刀だ！ 本当にうれしく思うよ」</br>
+</br>
+放浪者「これは… 僕の…」</br>
+パイモン「大丈夫なんだよな…」</br>
+(正機の神が動作し、彼らを狙って攻撃する)」</br>
+パイモン「うわぁ！うそだろ！」</br>
+</br>
+(動けない放浪者を守るため、旅人が正機の神の立ち向かう)</br>
+パイモン「おい！ まだなのか？」</br>
+</br>
+(正機の神が3人の隙をついて攻撃した。その瞬間に彼の意識の中では3人の彼が手を繋いでいた。)</br>
+スカラマシュ「価値のないものは残されない…」</br>
+スカラマシュ「だからこそ…」</br>
+スカラマシュ「…ここで終わるわけには …いかないんだ！」</br>
+</br>
+(風が吹き、正機の神の攻撃を防いだ。それと同時にスカラマシュは記憶を取り戻し、風の神の目を獲得した。)</br>
+パイモン「「散兵」！？」</br>
+スカラマシュ「死ね」 	
+					</p>
+				</blockquote>
+				<!--
+				<div><span class="blockquote-title">七葉寂照秘密主戦</span>
+					<p>放浪者のお試しで、HP低下時は回復する。また新型アーカーシャ端末はない。</p></div>
+				<blockquote>
+						<p>
+							
+					</p>
+				</blockquote>-->
+				<blockquote>
+						<p>
+							七葉寂照秘密主「————！！」</br>
+放浪者「愚か者め、僕の視界から消え失せろ！」</br>
+パイモン「…消えた…オイラたちの勝ちか？」</br>
+放浪者「聞くまでもないだろう？僕がそいつに負けるはずがない。」</br>
+パイモン「へへ…言葉づかいが戻ってきたな。自分を取り戻したみたいだ…」</br>
+パイモン「でも、あの中にいたのもおまえだろ！そんなに自慢できることかよ！」</br>
+放浪者「悪いね、僕は他人にも自分にも薄情なのさ。」</br>
+旅人「記憶が戻れば…過去がのしかかってくる」</br>
+放浪者「ハハッ、その言い方、まるで僕を心配してるみたいじゃないか。」</br>
+放浪者「その必要はない。たとえ僕が何かを変えることができなかったとしても、君のおかげで…多くの真実を知ることができた。」</br>
+ナヒーダ「記憶の読み取りはとても順調にいったわね。この夢境も使命を果たせたわ。」</br>
+放浪者「行こう、話は外に出てからだ。」
+					</p>
+				</blockquote>
+					<h4 id="as-though-morning-dew">朝露のように</h4>
 					<blockquote>
 						<p>
+							ナヒーダ「おかえりなさい、旅人、パイモン、そして「散兵」。」</br>
+パイモン「ふぅ！なんだかすっごく長い旅をしたみたいだ…疲れたぜ。」</br>
+放浪者「……」</br>
+ナヒーダ「もしかして、この名前は不満かしら？」</br>
+放浪者「別に。ただ、そろそろ名前を変えなくてはと思ってね。」</br>
+旅人「もう「散兵」と名乗らないの？」</br>
+放浪者「「博士」があれだけのことをしたと知ったいま、引き続き彼と関係のある称号を使うわけがないだろう。」</br>
+放浪者「僕がファデュイのほうに戻ることはないし、そのつもりもない。きっと多くの人がこの件に影響されたから、そもそも第六位が誰だったか覚えてるとも限らないしね。」</br>
+パイモン「つまり、ファデュイを離れるってことか？」</br>
+旅人「形を変えて逃げるってやつだね…」</br>
+放浪者「……」</br>
+放浪者「君の言う通りだ、クラクサナリデビ。すべてが無駄に見えたとしても、意味がないとは限らない。少なくとも、多くの人に僕のことを忘れさせることができた。」</br>
+ナヒーダ「だからといって、あなたの身から過去が消えるわけではないわ。」</br>
+放浪者「それはもちろんさ。」</br>
+ナヒーダ「それから、あなたが全力を尽くして追い求めていたこと、その最も核心的な目的は…まだ達成されていない。その点についても分かってほしいわ。」</br>
+ナヒーダ「世界を変え、過去を変え…他人の運命を変えるのは、そんなに容易なことではないの。」</br>
+ナヒーダ「あなたが渇望した答えは究極の破滅…その本質は虚妄よ。たとえこの世から「散兵」がいなくなっても、世界があなたの意志に従って動くことはないわ。」</br>
+放浪者「ふん…そうだね。ハハハッ、本当に笑えるよ。」</br>
+パイモン「そこまでやって、こんな結果になったこと…後悔してないのか？」</br>
+放浪者「たとえ僕に何の価値がなくても、この世において後悔に値することなんて最初からないのさ。」</br>
+放浪者「クラクサナリデビ、世界樹にあった情報は、君がわざとあそこに残したんだね。」</br>
+ナヒーダ「できる限りあなたが自然に情報を得られるよう、だいぶ工夫したんだから。」</br>
+放浪者「どうしてそこまでするんだ？僕を抱き込むつもりか？」</br>
+ナヒーダ「これは正直に言うべきね。過去の経歴によって、あなたは私にとってもスメールにとっても、有用な個体となったの。あなたを仲間にすることは、確かに私の計画の一部だった。」</br>
+ナヒーダ「でもその前に、私は過去の真実をあなたに教えたかったの。もし利用するだけなら、私は「博士」と何も変わらなくなってしまうから。」</br>
+放浪者「…本当に、冴えているようだ。」</br>
+ナヒーダ「これは、私が持つべき美徳なのかもしれないわね。」</br>
+放浪者「他者にとって有用であること、それが価値というものだ。だからこそ罪人であっても、僕は再び利用される理由を手に入れられたというわけだ。」</br>
+旅人「ナヒーダはそんなこと思ってない。」</br>
+放浪者「ああそうか、危うく忘れるところだったよ…君たちは「正義」の側で、僕とは違っていたんだっけ。」</br>
+放浪者「悪いけど、僕は物事を見る角度が少し違うのさ。まあ、僕も全部が全部打算だとは思ってないよ。君のその知恵が、優れた助っ人を持つことを定めたんだからね。」</br>
+ナヒーダ「そう思ってくれてよかったわ。」</br>
+ナヒーダ「旅人、これから私は、世界樹に深く隠された秘密をより一層研究し、発掘しようと思うの。」</br>
+ナヒーダ「もちろん、世界樹に記録されたあなたの血縁者の旅の始まりもね。その前後に何があるのか、私も知りたいもの。」</br>
+旅人「じゃあ、お願い。」</br>
+ナヒーダ「ええ。」</br>
+放浪者「旅人。」</br>
+旅人「なに？」</br>
+放浪者「僕が世界樹の情報の激流に飛び込んだ後、どうして稲妻に行った？」</br>
+旅人「君が何を変えたのか知りたかったから。」</br>
+放浪者「…だから彼らに、変わった後の運命を尋ねたのか。」</br>
+放浪者「何はともあれ助けてもらったわけだし、この恩は全力を尽くして返そう。」</br>
+旅人「…見返りを求めてやったわけじゃない。」</br>
+放浪者「個体と個体の間には「借り」と、それを「返す」だけの関係しかないんだ。僕たちはいずれ必ず、貸し借りのない関係になる、気にする必要はない。」</br>
+ナヒーダ「そうではないわ。人と人との関係は、決して簡単に白紙に戻せるようなものではないの。」</br>
+ナヒーダ「あなたもきっと感じたことがあるでしょう。あなたの人生に現れた人は、水滴が蒸発するように消えはしない。この世には、本当に「貸し借りのない関係」なんてないのよ。」</br>
+ナヒーダ「取り返しのつかないことや、変えられないことがあるからこそ、人の世には感情が芽吹くの。」</br>
+ナヒーダ「あなたの感じるものはすべて真実であって、あなたの犯した過ちが補われることはない。」</br>
+ナヒーダ「亀裂を背負ったまま生きていくのが、人間というものよ。人間になるかどうかは、あなたが選んでちょうだい。」</br>
+放浪者「……」</br>
+放浪者「心臓のない人間なんていないだろう？それに、僕はとっくに人間になろうなんて考えるのはやめてるんだ。」</br>
+ナヒーダ「あなたは心臓がなくても、苦痛を理解することができる。あなたはただ感情を封じ込めているだけよ。」</br>
+ナヒーダ「過去は揺るぎないけれど、あなたは引き続き歩むことができる。未来という線が十分に長いのであれば、「過去」は相対的にごく短い区間に過ぎないわ。」</br>
+放浪者「どうやら僕をどうするべきか、もう考えてあるようだね。」</br>
+旅人「ナヒーダに協力して欲しい。」</br>
+パイモン「色んなことが混ざって、難しい話になってるけど…一番重要なのは、ナヒーダについて行ったほうがいいってことだな！じゃないと、オイラたちもなんでここまでしたのかわからなくなっちゃうぞ！」</br>
+放浪者「…だったら、君たちと共にいるとしよう。暗闇からの助力としてね。」</br>
+ナヒーダ「私たちの提案を受け入れてくれて嬉しいわ。お祝いとして、自分に新しい名前でも付けてみるのはどう？」</br>
+パイモン「はやくはやく、オイラもおまえにひっどいあだ名をつけてやる！」</br>
+放浪者「なんだって？」</br>
+パイモン「だって…オイラ、まだおまえのことあんまり好きじゃないし！」</br>
+放浪者「ふん。なら、今後はあまり会わないほうがいいかもね。」</br>
+ナヒーダ「「名前は人生で最初の贈り物」——はっきりとは言わなかったけど、あなたがそう考えていることは知っているわ。」</br>
+放浪者「……」</br>
+ナヒーダ「今回は彼とパイモンが色々と手助けしてくれたし、どんな名前にするか決められないのなら、彼らの意見を聞いてみるといいわ。」</br>
+旅人「えっ？俺たちで決めるの？」</br>
+パイモン「だめだ、オイラ、あだ名しかつけられない…まともな名前は無理だぞ…おまえに任せるぜ！」
 						</p>
 					</blockquote>
-					
-					<h4 id="">???</h4>
+					<blockquote>
+						<span class="blockquote-title">名前設定</span>
+						<p>放浪者「思いついたかい？」
+						</p>
+						<p><b>スカラマシュ、国崩など過去の名前を設定：</b><br>
+							放浪者「…ふん。そんな名前、もう使う必要はないさ。」<br>
+						旅人「もう少し考える。」<br>
+						放浪者「いいよ。」</p>
+						<p><b>プレイヤー名：</b><br>
+							放浪者「君と名前を共有するって？それもいい選択かもね。」</p>
+						<p><b>雷電将軍、雷電影など設定：</b><br>
+							放浪者「…そんな提案はするべきじゃないよ。」<br>
+						旅人「もう少し考える。」<br>
+					放浪者「いいよ。」</p>
+					<p><b>ファトゥスのコードネーム：</b><br>
+							放浪者「本気じゃないよね？」<br>
+						旅人「もう少し考える。」<br>
+					放浪者「いいよ。」</p>
+					<p><b>ファトゥスの名前：</b><br>
+							放浪者「まさか、ユーモアのある冗談だとでも思ってるの？」<br>
+						旅人「もう少し考える。」<br>
+					放浪者「いいよ。」</p>
+					<p><b>プレイアブルキャラ名：</b><br>
+							放浪者「合わないんじゃないかな？」<br>
+						旅人「もう少し考える。」<br>
+					放浪者「いいよ。」</p>
+					<p><b>許可される名前：</b><br>
+							放浪者「決まったかい？」<br>
+							旅人「うん、これがいいと思う。」
+							放浪者(設定名)「…君の言う通りにしよう。」
+							</p>
+					</blockquote>
 					<blockquote>
 						<p>
+							ナヒーダ「これで、あなたも名前を持つ人間になったわね。」</br>
+放浪者(設定名)「あだ名は？もう思いついたかい？」</br>
+パイモン「えっと…えっと…まだ考えてるんだ、そう急かすなって…」</br>
+放浪者(設定名)「ゆっくり考えるといいよ。思いつくまでは、僕たちはしばらく会わなくて済む。」</br>
+旅人「これからどうする？」</br>
+放浪者(設定名)「僕を不幸に陥れた者たちには、いつか代価を払ってもらうさ。」</br>
+パイモン「ファデュイのことか？」</br>
+放浪者(設定名)「少なくとも「博士」はね。」</br>
+ナヒーダ「立場が変わったわね。あなたのこれからの道も、それに合わせて変わっていくと思うわ。でも、それは今すぐというわけじゃない…今はまだ、時間をかけて自分自身を整理する必要があると思うわ。」</br>
+放浪者(設定名)「……」</br>
+放浪者(設定名)「もう一つ。」</br>
+放浪者(設定名)「今の稲妻には、まだ雷電五箇伝の末裔が少しいたね。彼らの中には、僕と雷電五箇伝の関係を知っている…いや、知るべきだった人がいるはずだ。」</br>
+放浪者(設定名)「僕はしばらくスメールを離れるつもりはない。もしも君が稲妻で彼らを見かけたら、教えてやるといい…僕こそが、雷電五箇伝を失墜させた元凶だとね。」</br>
+放浪者(設定名)「…たとえこのことが世界から抹消されたとしても、彼らには真実を知る権利がある。」</br>
+ナヒーダ「なるほど…それがあなたの選択なのね。」</br>
+パイモン「えっ？でもそうなったら…」</br>
+放浪者(設定名)「なんてことはないさ。彼らが望むなら、刀で僕の胸を突き刺しても構わない。と言うより…本来そうするべきだったんだ。」</br>
+旅人「……」</br>
+放浪者(設定名)「なんだいその目は？そんな顔をしないでくれ。僕は、自分が何をしているか知ってるよ。」</br>
+放浪者(設定名)「…その日は、いつか来る。」</br>
+放浪者(設定名)「話は終わりだよ。」</br>
+放浪者(設定名)「またね、賢明なる神、そして君たちも。」</br>
+パイモン「行っちゃったな…」</br>
+ナヒーダ「最近の出来事は彼にとって、いきなり一生を過ごしたような気分だったでしょうね。そんなこと、誰でも気持ちの整理には時間がかかるわ。」</br>
+パイモン「おう、そうだな。あいつは相変わらずあいつだけど、態度はちょっと丸くなった感じがするぜ。」</br>
+旅人「何はともあれ、全部終わった。」</br>
+パイモン「これでやっとご飯を食べに行けるよな？オイラ、腹ペコだぞ！」</br>
+ナヒーダ「お疲れ様、落ち着ける場所を探して存分に休みましょう。」
 						</p>
-					</blockquote>-->
+						<p>
+							澤田「思いついた！御輿長正を小説の最後に持ってこよう！」</br>
+アカバ「つまり、物語の他の登場人物はもういないということか？」</br>
+澤田「そうだ。御輿長正は最後まで寿命を全うしたらしいから、最後を飾る叙述者にぴったりだと思ったんだ。」</br>
+澤田「「異様な雰囲気は消え去った。だがこれから先何十年と、この件はまるで暗雲のように、御輿長正の心に纏わりつくのだった。」」</br>
+澤田「「年老いた彼はある日、夢を見た。『大たたら長正』という宝刀が作られたその日の夜、みなは喜びに踊り、絵を描き、舞い、酒を飲んだ。」」</br>
+澤田「「…すべての喜びは炉の中の火に溶け、紅の雲と化し、御輿長正が人生において最後に見た日の出を包んでいった。」」</br>
+澤田「「人生という道は長い。そのことを何か言おうとした時には、すでにどう表現すればいいか、分からなくなっていた。」」</br>
+放浪者(設定名)「…ふん。」
+						</p>
+						<p>
+							パイモン「ふぅ——！やっと休めるぜ！」</br>
+パイモン「一旦落ち着くと、急にお腹が空いて疲れが出てくるな…」</br>
+旅人「「ゆっくり休んで。」」</br>
+パイモン「おお！やったぜ！」</br>
+パイモン「…あれ？この瓶…」</br>
+旅人「…ん？」</br>
+パイモン「誰かが掃除の時に割っちゃったのか？でも、掃除が来るなんて聞いてないけどな…」</br>
+旅人「（あの夜、パイモンが「散兵」のことで驚いて、うっかり机にぶつかってこれを割ってしまった。）」</br>
+旅人「（でも、その後に「散兵」が自分の存在を消したことで、世界は変わったはず？どうしてこの瓶は…まだ砕けたままなんだろう…）」</br>
+天の声「どうやら、戸惑っているようね。」</br>
+旅人「…誰？」</br>
+天の声「気持ちはよく分かるわ。これを知れば、誰だって頭を抱えるはずだもの。」</br>
+パイモン「えっ？誰かがオイラたちの耳元で話してる！？」</br>
+天の声「でも残念ながら、テイワットの運命はそう容易く揺らぐものじゃないわ。神ならばまだ少し可能性があるけど、そうでないなら…難しいわね。」</br>
+天の声「小さな動物が木にぶつかれば、木は揺れる。でも、傾きと位置が変わることは別の物なの、運命もそれと同じね。」</br>
+天の声「まさに瓶が床に落ちるように、猫が割ったものでも、鳥が割ったものでも、割れたという結果に変わりはない。そうでしょう？」</br>
+パイモン「お、おまえ、誰なんだよ！どうしてそんなこと知ってるんだ…」</br>
+天の声「歴史は簡単には変わらないけれど、人々の心は変わる。自分の目を信じて。目に見えるものこそが真実であり、見えないものはすべて虚幻よ。」</br>
+旅人「……」</br>
+パイモン「声が途絶えた…？」</br>
+パイモン「さっきの人、いったい誰だったんだ？急に出てきて怖いこと言って…なんなんだよ…」</br>
+旅人「（目を信じろ？彼女が言ったのは…自分の記憶を最後まで信じろということ？）」</br>
+パイモン「瓶も床で砕けたままだし、誰か呼んで掃除してもらうか？」</br>
+パイモン「…なんか、このまま放っておくのは気持ち悪いんだ。オイラ、ちょっくら行ってくるぜ！」</br>
+旅人「（……）」</br>
+旅人「（この先、何が俺を待ち受けているんだろう？）」
+						</p>
+					</blockquote>
+					<h2 id="movie">ムービー</h2>
+					<h3 id="ep-movie">エピソード 放浪者「灰燼」</h3>
+					
+							<div class="youtube not-margin-div a-winter-nights-lazzo-video">
+								<p>Youtubeを表示できません。</p>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/VY_MIqK7dsE?&loop=1&playlist=VY_MIqK7dsE" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; allowfullscreen;" loading="lazy"></iframe>
+							</div>
+							
+					<blockquote>
+						<p>
+							<i>自己に属さぬものに希望を託せば、絶望に呑み込まれることになるかもしれない。<br>
+							だが——もしも絶望が彼を滅ぼせなければ、新たなものが生まれる。</i>
+						</p>
+					</blockquote>
+							<blockquote>
+						<p>
+						スカラマシュ「僕はまた、心を失った。」<br>
+スカラマシュ「痛い。全身の皮膚が焼けるようだ。」<br>
+スカラマシュ「このまま、灰になるのだろうか。」<br>
+<br>
+(回想)<br>
+子供「つまり、心が欲しいの？」<br>
+子供「じゃあ、この物語は聞いたことあるかな？」<br>
+子供「あるおもちゃの兵士がいた。彼の願いは、踊り子の人形とずっと一緒にいる事。」<br>
+子供「でも、兵士には心がない。なぜこんな感情を抱くのかわからなかった。」<br>
+子供「やがて持ち主が兵士に興味をなくすと、炉に焚べてしまう。」<br>
+子供「兵士は炎の中から、人形を見つめ続けた。翌日、その燃えかすから小さな心が見つかった。」<br>
+？？？(過去の放浪者)「けどそれは、心の形をした灰だ。本物じゃない。」<br>
+子供「でも、もしかしたら、灰の中から心が生まれたのかも。」<br>
+<br>
+？？？(過去の放浪者)「こうもあっさり死んで、僕との約束を破るなんて。」<br>
+？？？「ふん。滑稽だな。」<br>
+？？？「灰の中には何も残っていないじゃないか。」<br>
+<br>
+？？？「僕もあの炎で燃えてなくなれば良かったんだ。」<br>
+？？？「いや、この世に… 生まれ落ちてこなければ…」<br>
+(放浪者が過去に現れる)<br>
+放浪者「はぁ。『この世に生まれ落ちてこなければ』、それが君の願いか？」
+						</p>
+					</blockquote>
+										<h3 id="demo-movie">キャラクター実戦紹介　放浪者「今昔孤独」</h3>
+					
+							<div class="youtube not-margin-div a-winter-nights-lazzo-video">
+								<p>Youtubeを表示できません。</p>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/9rF53o6FvG4?&loop=1&playlist=9rF53o6FvG4" title="YouTube video player" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; allowfullscreen;" loading="lazy"></iframe>
+							</div>
+							
+					<blockquote>
+						<p>
+							<i>探し続けた　数百年の妄執を胸に<br>
+							嘆き続けた　来たる悪風は無意に</i>
+						</p>
+					</blockquote>
+							<blockquote>
+						<p>
+						(ヤマガラが放浪者の笠に乗る。彼は笠を直し、肩に乗るそれを気にせず歩く)<br>
+ファデュイ先遣隊・炎「おい小僧、近くに宿があると聞いたんだが、案内してもらえないか？」<br>
+(放浪者は無視する)<br>
+ファデュイ先遣隊・雷ハンマー「聞いてんのか！」<br>
+放浪者「フン」<br>
+放浪者「名高いファディイが、宿も見つけられないとは。その上道案内しろと？」<br>
+ファデュイ先遣隊・炎「フン、舐めた口を！後悔させてやる！」<br>
+放浪者「やってみるといい」<br>
+<br>
+<b>久世浮傾・放浪者</b><br>
+(実戦紹介)<br>
+ファデュイ先遣隊・雷「貴様には…凄惨な死が待っている…」<br>
+放浪者「それは楽しみだね。でも残念ながら、君では無理なようだ！」<br>
+ファデュイ先遣隊・雷「ングッ」<br>
+放浪者「雑魚が死のうが生きていようが、大差ない。フフッ」<br>
+ファデュイ先遣隊・炎「貴様ッ…！」<br>
+放浪者「先に絡んできたのはそっちだ。恨まないでよ」<br>
+(ヤマガラが彼の前に来る)<br>
+放浪者「ハッ？フン」<br>
+(ヤマガラを手で払う)<br>
+放浪者「さようなら。また会う事があったら、せいぜい足掻くといい。」
+						</p>
+					</blockquote>
 				<h2 id="motion">モーション</h2>
 				<div class="youtube not-margin-div tale-of-the-five-kasen-video">
 								<p>Youtubeを表示できません。</p>
@@ -2312,278 +3473,733 @@
 					<b id="motion-skill-atack">移動</b>
 					<h3 id="motion-skill-wait">待機モーション</h3>-->
 					
-					<!--<h2 id="voice-line">ボイス・キャラストーリー</h2>
+					<h2 id="voice-line">ボイス・キャラストーリー</h2>
 							<h3 id="character-voice">キャラクターボイス</h3>
 							<blockquote id="voice-hello">
 									<span class="blockquote-title">初めまして…</span>
-								<p>(ボイス:初めまして)</p>
+								<p>名を名乗れって？僕はこの世において、様々な名で呼ばれているんだ。まあ、いずれも凡人が呼ぶにはおこがましいものだけど、今やすべて過去のものさ。<br>
+								好きに呼んでくれて構わないよ。ちょうど、君のセンスも確かめられるしね。僕を…がっかりさせないでくれよ。</p>
 							</span>
 						</blockquote>
 						<blockquote id="voice-smalltalkA">
-									<span class="blockquote-title">世間話・A</span>
-								<p>(ボイス:世間話A)</p>
+									<span class="blockquote-title">世間話・風</span>
+								<p class="voice-smalltalkA-text">この世に純粋な自由なんてないのさ。風さえ、いつか止む時が来る。</p>
 							</span>
 						</blockquote>
 						<blockquote id="voice-smalltalkB">
-									<span class="blockquote-title">世間話・B</span>
-								<p>(ボイス:世間話B)</p>
+									<span class="blockquote-title">世間話・話し方</span>
+								<p class="voice-smalltalkB-text">言い方がきついかい？ただ本当のことを言っているだけさ。それを受け入れられない者こそ、もっと自分の問題を反省したほうがいい。</p>
 							</span>
 						</blockquote>
 						<blockquote id="voice-smalltalkC">
-									<span class="blockquote-title">世間話・C</span>
-								<p>(ボイス:世間話C)</p>
+									<span class="blockquote-title">世間話・挨拶</span>
+								<p class="voice-smalltalkC-text">世間話はよそう。話すこともないのに必死に話題を探すなんて、滑稽だからね。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-rainday">
 									<span class="blockquote-title">雨の日…</span>
-								<p>(ボイス:雨の日…)</p>
+								<p class="voice-rainday-text">僕の笠で雨宿りがしたい？ よくもそんな要求ができるね。</p>
 							</span>
 						</blockquote>
 						<blockquote id="voice-thunderday">
 									<span class="blockquote-title">雷の日…</span>
-								<p>(ボイス:雷の日…)</p>
+								<p class="voice-thunderday-text">チッ…煩わしい。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-snowday">
 									<span class="blockquote-title">雪の日…</span>
-								<p>(ボイス:雪の日…)</p>
+								<p class="voice-snowday-text">雨と大差ないはずなのに、人に好かれるのはこっちのほうなんだ…まったく、運命ってのは気まぐれだね。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-sunnyday">
-									<span class="blockquote-title">晴れの日…</span>
-								<p>(ボイス:晴れの日…)</p>
+									<span class="blockquote-title">雨上がり…</span>
+								<p class="voice-sunnyday">少し日差しが見えただけで、そんなにはしゃいじゃってさ…まったく幼稚極まりないね。</p>
 							</span>
 						</blockquote>
 						<blockquote id="voice-goodmorning">
 									<span class="blockquote-title">おはよう…</span>
-								<p>(ボイス:おはよう…)</p>
+								<p class="voice-goodmorning-text">「起きて——もう朝だよ——」…なんて、まさか僕がこんな感じに起こしてあげると思ってないよね？</p>
+							</span>
+						</blockquote>
+						
+						<blockquote id="storms-day">
+									<span class="blockquote-title">暴風の日…</span>
+								<p class="storms-day-text">この程度なら、君にだってできるよね？</p>
+							</span>
+						</blockquote>
+						
+						<blockquote id="voice-goodmorning">
+									<span class="blockquote-title">おはよう…</span>
+								<p class="voice-goodmorning-text">「起きて——もう朝だよ——」…なんて、まさか僕がこんな感じに起こしてあげると思ってないよね？</p>
 							</span>
 						</blockquote>
 						<blockquote id="voice-hi">
 									<span class="blockquote-title">こんにちは…</span>
-								<p>(ボイス:こんにちは…)</p>
+								<p class="voice-hi">僕に食事は必要ない。君は自分と隣のちっこいのについてだけ考えていれば十分だ。そうしてくれれば、僕も手間が省ける。</p>
 							</span>
 						</blockquote>		
 						<blockquote id="voice-goodevening">
 									<span class="blockquote-title">こんばんは…</span>
-								<p>(ボイス:こんばんは…)</p>
+								<p class="voice-goodevening-text">やっと、退屈な一日が終わる。</p>
 							</span>
 						</blockquote>	
 						<blockquote id="voice-goodnight">
 									<span class="blockquote-title">おやすみ…</span>
-								<p>(ボイス:おやすみ…)</p>
+								<p class="voice-goodnight">(ボイス:おやすみ…)</p>
 							</span>
-						</blockquote>	
+						</blockquote>
+						<div><p>以下の「放浪者」はプレイヤーが決定した名前になる</p></div>
 						<blockquote id="voice-myselfA">
-									<span class="blockquote-title">放浪者自身について・A</span>
-								<p>(ボイス:〇〇自身について・A)</p>
+									<span class="blockquote-title">放浪者自身について・人形</span>
+								<p class="voice-myselfA">人形を燃やせば灰が残る。その灰から何が生まれるかについては…</p>
 							</span>
 						</blockquote>	
 						<blockquote id="voice-myselfB">
-									<span class="blockquote-title">放浪者自身について・B</span>
-								<p>(ボイス:〇〇自身について・B)</p>
+									<span class="blockquote-title">放浪者自身について・心</span>
+								<p class="voice-myselfB">あんなのは適当でいいのさ。自分のものでもないものに執着するのは時間の無駄だし、今はもっと大事なことがあるからね。</p>
 							</span>
-						</blockquote>	
-						<blockquote id="voice-aboutA">
-									<span class="blockquote-title">Aについて…</span>
-								<p>(ボイス:A自身について(NPC)…)</p>
+						</blockquote>
+						<blockquote id="voice-battle">
+									<span class="blockquote-title">戦ったことについて…</span>
+								<p class="voice-battle">かつて君と僕が戦ったことが、どうしても忘れられない？ふーん。それで、どうしたいんだい？いいよ、ゆっくり考えても。どうせ、僕もたっぷりと時間があるしね。</p>
 							</span>
-						</blockquote>	
+						</blockquote>
+						<blockquote id="voice-friend">
+									<span class="blockquote-title">仲間について…</span>
+								<p class="voice-friend">僕が「正義」に帰依することはない。でも君からの恩を返すと言ったからには、必ずやり遂げる。<br>
+								それよりも君こそ、僕と接触する際は自分の立場をよく考えたほうがいいんじゃない？万が一誰かに見られて、君が罪人と「悪巧み」してるって言われたとしても、僕は知らないよ。</p>
+							</span>
+						</blockquote>
+						
 						<blockquote id="voice-vision">
 									<span class="blockquote-title">「神の目」について…</span>
-								<p>(ボイス:「神の目」について…)</p>
+								<p class="voice-vision">「神の眼差し」は不快なものだけど、確かに使える力ではある。だからそれについてケチをつけるつもりはない。ん？「風元素」には深い意味がある気がする？ふんっ、どうしてそう思うんだい？神は残忍で理不尽な行いをする、前に君にも見せたはずだろう？</p>
 							</span>
 						</blockquote>
 							
 						<blockquote id="voice-share">
 									<span class="blockquote-title">シェアしたいこと…</span>
-								<p>(ボイス:シェアしたいこと…)</p>
+								<p class="voice-share-text">ないよ。聞きたいことがあるなら何でも聞いてくれ。気分次第で答えてやってもいい。</p>
 							</span>
 							</blockquote>
 						<blockquote id="voice-interested">
 									<span class="blockquote-title">興味のあること…</span>
-								<p>(ボイス:興味のあること…)</p>
+								<p class="voice-interested-text">ほら、見てごらん。鳥は羽を見せびらかし、リスは食料を蓄え、人間は生きるための糧を求めて一日中走り回る…頭が単純な生き物ほど、楽に生きてるよね。</p>
 							</span>
 						</blockquote>
 						
-						<blockquote id="voice-aboutB">
-									<span class="blockquote-title">〇〇について…</span>
-								<p>(ボイス:〇〇について(キャラクター)…)</p>
+						<blockquote id="voice-aboutkusanali">
+									<span class="blockquote-title">クラクサナリデビについて…</span>
+								<p>彼女が僕を消さなかったのは、僕に利用価値があること以外にも、何か他の理由があったからかもね。もしかすると、それは彼女が賢明で、至善の心を持っていたからかもしれないし、あるいは僕の身に孤独の影を垣間見たからかもしれない…ん？悪意に満ちた憶測だって？ハッ、当たり前じゃないか！僕は善人なんかじゃないんだから。</p>
 							</span>
 						</blockquote>
-								
+						<blockquote id="voice-aboutshougun">
+									<span class="blockquote-title">雷電将軍について…</span>
+								<p>自らの創ったものに目を向けようともせず、干渉するのが忍びないとか、そんな言葉で取り繕うなんて…</p>
+							</span>
+						</blockquote>
+						<blockquote id="voice-abouttsaritsa">
+									<span class="blockquote-title">「女皇」について…</span>
+								<p>誰もが彼女の優しさと慈愛を称賛するけど、「愛」も「罪」の一種であることを知る者は誰一人としていない。もしかしたらその愛っていうのは、いわゆる代償行動ってやつなのかもね。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutpierrot">
+									<span class="blockquote-title">「道化」について…</span>
+								<p>「道化」はカーンルイアの遺民さ——それ以外について、僕は彼をほとんど知らないし、彼と親しく交流したこともない。でも、彼は僕に対して何か考えがあったようで、前に重要な任務をいくつもくれた…「アビス」へ向かうことも含めてね。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutcapitano">
+									<span class="blockquote-title">「隊長」について…</span>
+								<p>「剛直で硬骨な『隊長』」、「公正で果敢な『隊長』」、「功績の豊富な『隊長』」…これらファデュイの中で流れている噂は、人形の耳でさえタコができるほど聞いたよ。絶対的な「公正」だなんて、とても危険な脅威だと思わない？ましてや、「隊長」はトップクラスの実力を持っているから、尚更さ。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutdottore">
+									<span class="blockquote-title">「博士」について…</span>
+								<p>実に残念だ。クラクサナリデビが、彼にあんなに多くの断片を消させたことで、僕が彼の断片を一枚ずつ切り刻む楽しみがなくなってしまった。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutcolumbina">
+									<span class="blockquote-title">「少女」について…</span>
+								<p>質問だ。「どんな時も」ぼんやりと間が抜けていて、「どんなことをするにも」鈍くてとろい「少女」に遭遇した時、どのような反応をすればいいと思う？僕は、構わず戦える。でも君は…良心を痛めるだろうから、やっぱり彼女からは離れたほうがいいよ。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutarlecchino">
+									<span class="blockquote-title">「召使」について…</span>
+								<p>道徳家気取りの偽善者さ。彼女が「優雅」と「親切」を見せるのは、人をよりうまく「コントロール」するためだ。彼女の狂った一面を見た者は、もうほとんど…ふぅ～。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutpilcinella">
+									<span class="blockquote-title">「雄鶏」について…</span>
+								<p>「公子」くらいだろうね、「雄鶏」が誠心誠意、見返りもなく彼とその家族を気にかけてくれてるなんて思うのは。あの市長様は確かに実のあることを多くしてきたけど、ちょっとでも頭のいいやつなら分かるはずだよ。それが意味することは——「君の家族を握ってるぞ」、でしょ？</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutsandrone">
+									<span class="blockquote-title">「傀儡」について…</span>
+								<p>彼女は自分の研究以外には興味がないんだ。性格だって、極めて酷いものさ。だけどそこまで極端に振る舞って、でき上がったのは大量の廃品のみ。僕が執行官だった時も、僕より一位下だった。実に哀れだね。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutpantalone">
+									<span class="blockquote-title">「富者」について…</span>
+								<p>あの第九位のことか。彼は「公平な取引」にすごく固執していて、あまつさえ、神と人の間にあってしかるべき不公平さえ覆そうとしている。まあ、凡人はそういうものさ、非現実的な妄想を抱きやすいんだ。別に特別なことなんかじゃないよ、彼の平凡な能力や目利きと同じようにね。——ふんっ、「博士」と密接な協力をとるなんてね…いい結果にはならないさ。</p>
+							</span>
+						</blockquote><blockquote id="voice-abouttartaglia">
+									<span class="blockquote-title">「公子」について…</span>
+								<p>脳筋で、手先も器用なわけじゃない。いくら最下位だとはいえ、あいつが執行官にいるだけで全体のレベルが下がる。幸い、僕はもうそこにいないからいいけど。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutsignora">
+									<span class="blockquote-title">「淑女」について…</span>
+								<p>彼女の灰には何もない。僕は未来を失った者には興味がないんだ。</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutyae">
+									<span class="blockquote-title">八重神子について…</span>
+								<p>心にもないことぺらぺら喋る妖怪さ。神の寵愛を受けるために、人間に関心があるふりをしてるんだろう。でも実際のところ、ただ面白いことが好きなだけなんじゃない？</p>
+							</span>
+						</blockquote><blockquote id="voice-aboutkazuha">
+									<span class="blockquote-title">楓原万葉について…</span>
+								<p>楓原家の末裔？それってつまり…ほう？彼にも風元素の「神の目」が…しかも、雷電将軍の一太刀を受け止めたって？ふふふっ…ハハハハハッ！</p>
+							</span>
+						</blockquote>
 						
 						<blockquote id="voice-moreabout1">
 									<span class="blockquote-title">放浪者を知る・1</span>
-								<p>(ボイス:〇〇を知る・1)</p>
+								<p class="voice-moreabout1">僕を知ろうだなんて、珍しいね。面倒を招くかもよ？</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-moreabout2">
 									<span class="blockquote-title">放浪者を知る・2</span>
-								<p>(ボイス:〇〇を知る・2)</p>
+								<p class="voice-moreabout2">ああ、僕と過去のことについて清算したい人はたくさんいるだろうね。なんだっていいさ、誰でもかかってくるがいい——むしろ、楽しみなくらいだよ。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-moreabout3">
 									<span class="blockquote-title">放浪者を知る・3</span>
-								<p>(ボイス:〇〇を知る・3)</p>
+								<p class="voice-moreabout3">かつて、神になれば無駄な感情を捨てられると思っていたけど、今はそうは思わない。少なくとも「怒り」は、他人のものであれ自分のものであれ、使い勝手のいい道具なのさ。<br>
+								永遠に怒らない人なんていないだろう？まったく想像もできないよ。そういう人って、怒りの神経ってものすらないのかな？</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-moreabout4">
 									<span class="blockquote-title">放浪者を知る・4</span>
-								<p>(ボイス:〇〇を知る・4)</p>
+								<p class="voice-moreabout4">世界樹に入った時、僕の頭の中にこう浮かんだんだ——「最初から、この世に生まれてこなければよかった」ってね。<br>
+								世界樹はその願いに応えてくれたけど、僕が期待した結果はもたらしてくれなかったよ。この土地の運命は、相変わらずその虜囚たちを翻弄するのが得意だね。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-moreabout5">
 									<span class="blockquote-title">放浪者を知る・5</span>
-								<p>(ボイス:〇〇を知る・5)</p>
+								<p class="voice-moreabout5">僕たちはつながり、交差して、そして…いつかは異なる場所へ向かうだろう。でもこれからなにが起こるかなんて、誰にも分からないじゃない？成り行きに任せよう。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-hobbies">
 									<span class="blockquote-title">放浪者の趣味…</span>
-								<p>(ボイス:〇〇の趣味…)</p>
+								<p class="voice-hobbies">趣味？それって、暇人のやることだよね。僕がそんなふうに見えるのかい？</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-troubles">
 									<span class="blockquote-title">放浪者の悩み…</span>
-								<p>(ボイス:〇〇の悩み…)</p>
+								<p class="voice-troubles-text">どうやったら君を撒いて、ひと暴れできるか考えてるんだ。<br>
+								——冗談だよ、もしかして信じちゃった?</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-favoritefood">
 									<span class="blockquote-title">好きな食べ物…</span>
-								<p>(ボイス:好きな食べ物…)</p>
+								<p class="voice-favoritefood">茶はある？苦ければ苦いほどいい。どこまでも後味が広がるからね。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-unfavoritefood">
 									<span class="blockquote-title">嫌いな食べ物…</span>
-								<p>(ボイス:嫌いな食べ物…)</p>
-							</span>
-						</blockquote>
-						
-						<blockquote id="voice-unfavoritefood">
-									<span class="blockquote-title">嫌いな食べ物…</span>
-								<p>(ボイス:嫌いな食べ物…)</p>
+								<p class="voice-unfavoritefood">ベタベタしてて甘いものかな。歯がくっつく感じがするからね。君ひとりで食べてくれ。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-gift1">
 									<span class="blockquote-title">贈り物を受け取る1…</span>
-								<p>(ボイス:贈り物を受け取る1)</p>
+								<p class="voice-gift1">まあまあかな。君の数少ない長所の一つだ。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-gift2">
 									<span class="blockquote-title">贈り物を受け取る2…</span>
-								<p>(ボイス:贈り物を受け取る2)</p>
+								<p class="voice-gift2">悪くはない。少なくとも口には入れられる。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-gift3">
 									<span class="blockquote-title">贈り物を受け取る3…</span>
-								<p>(ボイス:贈り物を受け取る3)</p>
+								<p class="voice-gift3">僕を殺す気か？まさか、僕が凡人じゃないことを忘れたとでも？</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-berthday">
 									<span class="blockquote-title">誕生日…</span>
-								<p>(ボイス:誕生日…)</p>
+								<p class="voice-berthday">僕の手を取って。…ふふっ、身構えなくていい、高いところに連れてってあげるだけだから。<br>
+								いいでしょ？絶景が見られるよ。このくらいのことで礼なんていい、そんなのまどろっこしいからね。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-ascension1">
 									<span class="blockquote-title">突破した感想・起</span>
-								<p>(ボイス:突破した感想・起)</p>
+								<p class="voice-ascension1">…うん、尽力したのが分かるよ。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-ascension2">
 									<span class="blockquote-title">突破した感想・承</span>
-								<p>(ボイス:突破した感想・承)</p>
+								<p class="voice-ascension2">風が吹いてきたね…何をしたんだい？</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-ascension3">
 									<span class="blockquote-title">突破した感想・転</span>
-								<p>(ボイス:突破した感想・転)</p>
+								<p class="voice-ascension3">僕に力をくれるなんて…どうなるか心配じゃないの？…そう。</p>
 							</span>
 						</blockquote>
 						
 						<blockquote id="voice-ascension4">
 									<span class="blockquote-title">突破した感想・結</span>
-								<p>(ボイス:突破した感想・結)</p>
+								<p class="voice-ascension4">確かに僕は君の力になれるけど、僕を仲間として見るのは危険なことなんだ。自分が直面しているのが何なのか、きちんと理解したほうがいい。それでも怖くないのなら、僕の背中を預けるよ。</p>
 							</span>
 						</blockquote>
 						<h3 id="character-story">キャラクターストーリー</h3>
 							<blockquote id="character-story-about">
 									<span class="blockquote-title">キャラクター詳細</span>
-								<p>(キャラクター詳細)</p>
+								<p class="character-story-about-text">自己紹介など必要ない、なぜなら常人が彼のことを知る機会などないから。<br>
+人の世に踏み入る必要はない、なぜなら彼はとうに無駄な感情を捨てたと自認しているから。<br>
+幾度もの浮き沈みを経て、今の彼は自分のためだけに生きている。<br>
+「放浪者」は、彼が自身の立場を表現するのにもっとも適した言葉だ——故郷はなく、親族もおらず、目的地もない。<br>
+澄んだ風のようにこの世を生きて、俗世を歩むのだ。</p>
 								</span>
 							</blockquote>
 							<blockquote id="character-story1">
 									<span class="blockquote-title">キャラクターストーリー1</span>
-								<p>(キャラクターストーリー1)</p>
+								<p class="character-story1">遥か昔のこと、彼の名はまだ放浪者ではなかった。彼にはいくつもの名があり、それぞれが特定の時期における身分を指していた。今となっては、それら数多の過去は人々に忘れ去られている。<br>
+人形、傾奇者、ファトゥス第六位「散兵」…<br>
+それぞれの名が運命の糸となり、人形の関節を縛っている。<br>
+思い返せば、それは数百年前のこと——生まれた時より涙を零せた人形は最後まで名を与えられず、証として小さな金の羽根だけを渡された。<br>
+彼は借景ノ館に保管され、日々虚しくも美しい景色を目に映しながら呆然と過ごした。紅い楓、精巧な花模様の連子…この華美な牢獄の中で彼は感覚を失った。<br>
+だが、桂木という名のお人好しの武士が仕事中にうっかり館に立ち入ったことで彼は救出された。桂木は彼をたたら砂まで連れて行き、そこの住民たちに彼のことを紹介した。<br>
+当時の彼は赤子のように無垢で、人々に対して好意や感謝の気持ちばかりを抱いていたという。桂木は一般人が身に付けるはずのない金の羽根を見て、彼が自分の出自を口にしないのにはそれなりの事情が必ずあるのだと察した。ゆえに意図的に借景ノ館のことは伏せ、名椎の浜を見回りしている途中でこの子を拾ったと嘘をついた。これについて、食い違いが生じないために口裏を合わせるよう桂木は彼に頼んだ。<br>
+多忙で賑やかなたたら砂での暮らしは、彼の生涯でもっとも幸せな記憶である。そこで彼はしばし人間となり、一般人となったのだ。<br>
+桂木、御輿長正、丹羽、宮崎を含め…他にも覚えられないほど多くのたたら砂の住民たちが彼に読み書きを教え、料理を教え、鍛造の技を教えた。そして、友として彼と接したのだ。<br>
+中にはこのような質問をする人さえいた——「名前が欲しくないか？ここの皆がお前のことを傾奇者と呼んでいるだろう？」<br>
+ただ、彼はその呼び方が嫌いではなかった。<br>
+なぜなら傾奇者とは派手な服を着て、奇抜な行動を取る者を指すことが多いが、どんなに奇抜であってもそれは人であり、たたら砂の一員であることの証明になるからだ。<br>
+しかし、彼がこの名をどれほど気に入っていても、最後はそれを失うことを強いられた。彼が人間になるのを忌避した瞬間から、この名はその意味をなくしたのだ。<br>
+彼はそこを離れ、遠いスネージナヤへと渡ると、執行官たちの狂宴に参加した。そして、たゆまぬ努力により彼は第六位の地位を手に入れた。<br>
+女皇が彼に授けた新しい名、それは——「散兵」。力、権力、紛争への欲望、彼にはそのすべてが揃った。<br>
+戦っている駒が動乱を起こし、舞台上の殺戮者が秩序を破壊する。そのとき彼は確信した——散兵こそが自分の本当の名であることを。
+</p>
 								</span>
 							</blockquote>
 							
 							<blockquote id="character-story2">
 									<span class="blockquote-title">キャラクターストーリー2</span>
-								<p>(キャラクターストーリー2)</p>
+								<p class="character-story2-text">たたら砂がまだ栄えていた時代、放浪者は「傾奇者」の名でそこの住民たちと共に暮らしていた。<br>
+彼の平穏な暮らしに終止符を打った出来事は、稲妻の歴史においてさほど重大な事件ではない。<br>
+たたら砂の災難は、赤目家とフォンテーヌの機械職人であるエッシャーから始まった。鍛造技術をより一層高めるため、赤目はフォンテーヌの新技術を有するエッシャーと密接な協力関係を結び、彼を同じく「一心三作」である丹羽に紹介した。<br>
+エッシャーの到来は一時的にたたら砂の士気を大きく高めた。彼から提供された先端技術を用いて晶化骨髄を処理すると、効率と生産量が共に向上したのだ。<br>
+しかし時間が経つにつれ、たたら砂中央部の大きな炉に異常が生じる。炉の中に大量の黒いガスが溜まり、少しずつその不気味なガスが職人たちの身体状態に影響を与え始めた。本来、精錬や鍛造はたたら砂において生活するための手段であったが、最終的にそれが命を奪う原因となってしまったのだ。<br>
+死者の数は段々と増えていき、その大きな炉の制御はより困難なものとなっていった。中心区域へと近づける人はいなくなり、それを止めることさえもほぼ不可能な状態にまで発展した。<br>
+たたら砂の最高責任者である丹羽はしばらく情報の封鎖を行い、同時に稲妻城に人を送って天守閣に助けを求めるほかなかった。<br>
+しかし、なぜか船で海に出た者は帰ってこなかった——誰一人として。その恐怖はたたら砂で暮らす人々の心の中に蔓延していった。<br>
+今の丹羽には雷電将軍の助けが必要なのだと傾奇者は理解した。だが、当時の雷電将軍が既に自身を材料に完璧な人形を作り出し、統治の職責を「永遠の守護者」に託していたことを彼は知らなかった。小船に乗り、海の雷雨と嵐を乗り越えて、危険を顧みることなく天守閣へと辿り着いた彼は、雷電将軍との面会を求めた。<br>
+しかし、真の雷電将軍はとうに一心浄土に身を置いている。傾奇者の面会は何度も拒否された。切羽詰まった彼は例の金色の羽根を取り出して周りに見せると、代わりに八重神子との面会を求めた。<br>
+永遠の守護者を補佐する仕事に追われていた八重神子は、このことを聞いてすぐに駆けつけたが、酷く焦る傾奇者とはたった一度しか顔を合わせることができなかった。彼女はすぐにでもこの件に取り掛かると約束するも、堪忍袋の緒が切れた傾奇者はそれを無視し、幕府がたたら砂を見捨てたという絶望だけを持ち帰った。<br>
+応援要請により招集された人々は船に乗って海を渡った。しかし援軍がたたら砂に到着した時、そこに広がっていたのは凄惨な光景などではなかった。それどころか、大半の人間は何が起こったのかさえ把握できていなかったという。機械職人のエッシャーによると、最高責任者である丹羽が職務怠慢を自認し、罪を恐れて家族を連れて逃亡したそうだ。その丹羽の代わりに傾奇者が中心区域に入って、大きな炉を止めたらしい。<br>
+逃げた丹羽と傾奇者が友人であることを知った八重は、その気持ちを察して、彼の邪魔をせずにただ羽根を戻すよう命じた。<br>
+その後、傾奇者はたたら砂から姿を消した。住民たちは過去のことを振り返るたび、御輿長正の刀ができたあの日、傾奇者が皆と一緒に踊った祝いの舞をいつも思い出す。<br>
+その踊る姿は軽やかであり、まるで風と共に流れる羽根のようであったという。しかし、彼自身もやがて羽根のように見知らぬ地へ漂い流れてしまうことは、誰も予想できなかった。
+</p>
 								</span>
 							</blockquote>
 							<blockquote id="character-story3">
 									<span class="blockquote-title">キャラクターストーリー3</span>
-								<p>(キャラクターストーリー3)</p>
+								<p class="character-story3">たたら砂から離れた後、傾奇者は稲妻の海辺に建つとある小屋で一人の子供と出会った。<br>
+その幼い男の子は病身であり、たった一人でボロボロの古い家に住んでいた。壊れかけの木戸口の割れ目から、その子の泥にまみれた顔を見た傾奇者はなぜか胸が締め付けられたという。それはまるで、何か古い感覚が蘇ったかのようであった。ゆえに彼はその木小屋に残り、病に苦しむ子の看病をすることにした。その子のために果物や飲み水を探し、顔の汚れを彼は拭ってあげた。<br>
+だが、何日経っても子供の両親は帰ってこなかった。彼の両親がたたら砂の職人であることを、傾奇者は後になってようやく知ることになる。本来であれば、この家族は幸せな生活を送ることができたはずだ。しかし、その夫婦は仕事をする中で奇妙な病にかかり、咳と共に吐血するようになった。帰ってこなかったということは、つまりその二人はどこかで静かにこの世から去ったことを意味しているのかもしれない。<br>
+子供の名は重要ではない。なぜなら、その子にはもう一つの身分ができたからだ——傾奇者の友人、そして家族だ。二人は自身の生まれに関して互いに話し、そのボロボロの小屋で共に暮らすことを約束した。友誼の証として、傾奇者はその子を借景ノ館へと連れて行き、自分がかつて住んでいた部屋を見せた。<br>
+紅い楓、みすぼらしい連子…すべてが昔のままだ。<br>
+二度とこの場所に戻ることはないと思っていたし、子供がたった一夜のうちに病で逝ってしまうなんて考えもしなかった。その一夜という時間は、傾奇者が外で食べ物を探したり、捨てられた家具を手に入れたりするのと同じくらいのものだ。<br>
+かつてあれほどのことを経験しても、その時の彼にとって人の逝去は一瞬で済むものではなく、そしてその「一瞬」は彼に痛みしか残さないものだった。<br>
+そこには驚きだけでなく、これ以上ないほどの憤怒があった——彼はまた一人ぼっちになったのだ。これはつまり捨てられたということではないだろうか？<br>
+そう、またしても…またしてもだ！<br>
+床に横たわるその小さく丸まった体は、まるでたくさんの花びらが集まり、血によってその一角を紅く染め上げているかのようだった。その紅い血は楓のようで…烈火にも酷似していた。<br>
+その夜、海辺に熾烈な炎が上がる。傾奇者は木小屋を焼き払い、部屋の中から麦で編んだ古い帽子を拾って被ると長い旅に出た。<br>
+彼はただ四方を彷徨う、行くあてなどなかった。その道中で多くの人々に出会ったが、彼が仲間として見なす者は誰一人としていなかった。</p>
 								</span>
 							</blockquote>
 							<blockquote id="character-story4">
 									<span class="blockquote-title">キャラクターストーリー4</span>
-								<p>(キャラクターストーリー4)</p>
+								<p class="character-story4">スネージナヤのファトゥス第六位、その称号は「散兵」。<br>
+この名は最初から彼に与えられたものではなく、使われるまでに百年以上の空白があった。<br>
+稲妻から離れた後、彼は「傾奇者」の名を捨て、再び名を持たない状態へと戻った。「道化」が彼を見つけるまで、彼は名を持つことなど望んでいなかった。<br>
+そもそも人形といい、傾奇者といい、どれも人々が彼に付けた称号に過ぎない。人と共に生きていくことをやめた以上、そのような意味のない名を気にする必要はなかった。<br>
+それでも、かの狂宴に興味を抱かせるよう「道化」は彼を説得した。そして、共にスネージナヤまで長旅をし、ファデュイのため尽くすようにしたのだ。<br>
+スネージナヤ本土で、とある見知らぬ人物が彼を招待した。その人物は自身を「博士」と名乗ると、彼の到着に大いなる歓迎の意を示した。同時に自身の実験における重要な参照対象として、彼を偉大な研究に参加するよう誘った。<br>
+「人形」の技術は元を辿ればカーンルイアから生まれたものだ。雷神の造物である彼はその特殊さがより際立っていた。「博士」はこの分野において大層な興味を持っており、彼をモデルに数十年も絶えず研究を重ねることでようやく、「断片」を制作する礎となる技術を手に入れた。<br>
+そして、その見返りとして「博士」は彼の体に隠された封印を解いたのである。それによって、彼の能力は下位のファトゥスと戦えるほどにまで飛躍した。<br>
+だがこの時になっても、彼は依然として名を求めなかった。同僚たちは終始彼のことを人形と呼び、彼も自分をそのように定義して、死を恐れず、消耗し切ることのない人形だと固く信じた。<br>
+女皇の命令のもと彼は部隊を率いてアビスへと向かい、長い年月をかけてそこを探索した。探索中、幾度も負傷しては「博士」に修復され、その負傷の中で強くなり、またより強い敵に遭遇しては負傷をした。<br>
+その後、彼はアビス探索の成果をスネージナヤへと持ち帰り、第六位の座を授かることになる。その使命もアビスの探索から命があったら即座に動けるよう待機するものへと変わり、ファデュイが各国で秘密行動する際の支援を行うものになった。<br>
+その時になってようやく、彼は自分がその名に相応しい存在だと思うようになったのだ、そう即ち——「散兵」であると。</p>
 								</span>
 							</blockquote>
 							<blockquote id="character-story5">
 									<span class="blockquote-title">キャラクターストーリー5</span>
-								<p>(キャラクターストーリー5)</p>
+								<p class="character-story5">その後に起こった様々な出来事は劇的と言えるかもしれない。しかし、この世でそれを覚えていられる人はごく僅かだ。<br>
+見届ける者の心の中で伝説として残ることのみが、世界に忘れられた古い歌のように静かに存在できる方法であった。<br>
+散兵は世界樹の中心で、クラクサナリデビが情報の流れに置いた「真相」に触れた。秘密は元々「博士」のとある心に隠されており、クラクサナリデビ曰く、この第一視点の真相には彼の僅かに残った誠実さがあるという。<br>
+「散兵」は真相から本当の過去を覗いた。彼に人のように生活する方法を教え、一般人として接してきた友人の丹羽は、エッシャーが言ったように罪を恐れてたたら砂から逃亡したわけではなかった。事実、真の犯人はまさにエッシャー…つまり「博士」本人であった。そして「散兵」の胸にある装置に収められた心臓は、丹羽の温かな胸から抉られたものだ。<br>
+丹羽の死はたたら砂の事故として偽装され、エッシャーの詭弁によって、そのすべては当地の責任者が失職したことによるものであると皆は説得された。<br>
+序列的には御輿長正が次の責任者であるため、本来は彼が死をもって罪を償うべきであった。しかし、自ら身代わりとなってすべての罪を背負った忠実な武人の従者により、彼は事なきを得ている。<br>
+その悲惨さは多くを語る必要などないだろう。長正がいかに決断を下したくなくとも、彼は御輿家の罪を晴らす重責を背負っており、ここで倒れるわけにはいかなかった。<br>
+そしてその夜、長正は一番の愛刀「大たたら長正」を取り出し、一太刀で桂木を目の前で斬り伏せた。その刀が体を斬り裂く勢いは、まるで死者を一刀両断するほどのものだったという…<br>
+…彼らは神を信仰していなかったのだろうか？もしそうでなければ、なぜこんな目に遭わなければならなかったというのだろう？<br>
+もしこの世に、最初からその謎の人形である傾奇者がいなければ、エッシャーは当初の予定通り行動していたのだろうか？<br>
+ほんの少しの可能性さえあれば、たたら砂の事件は取り返しのつくものなのだろうか？<br>
+この世の他の地点にいる者からすれば、誰であろうと為す術などないはずだ。だが「散兵」は違う。今その瞬間、彼は悟った。この世で彼にしか試せないことがあるということに。<br>
+彼は自分が勇敢だと思っている、なぜなら彼は死を恐れないからだ。死は人形にとって、ただの些細な脅威に過ぎない。心のある人間のみが恐怖の意味を理解するのだ。<br>
+一方で彼は自分が憶病だとも思っている。そのため、悔やみきれないのだ。もっと今のように他人を信じなければ…友人と思っていた人々は、あのような凄惨な結末を迎えなかったのだろうか？<br>
+裏切者または英雄、神または捨てられし者、様々な身分が奔流へと飛び込んだ瞬間に無となった。<br>
+情報の奔流の内側は極めて静寂なものであった。だが、彼は耳の中で血が煮えたぎるかのように感じて、その脳内では轟音がずっと鳴り響いていた。<br>
+抱きしめて、滅するんだ！<br>
+人形は捨てられた臆病者、傾奇者は人に庇われた無為者、スカラマシュは密謀者——最後は神の意に背いて、世界の奔流へと飛び込んで遡行をする。<br>
+しかし、それがどうしたというのだ？<br>
+この人でない者の手は、かつて灼熱に染まった炉を止めるために十本の指を焼くことさえ厭わなかった。<br>
+今この人でない者の手は、その僅かな可能性を掴んで真実を捻じ曲げてでも、願いを叶えようとしている。<br>
+抱きしめるんだ、無へと帰すこの身体で！<br>
+滅ぼそう、花の如く、羽の如く、朝露の如く無用な人生を！<br>
+さようなら、世界よ。未来がどうであれ、僕は君にお別れを告げよう。
+</p>
 								</span>
 							</blockquote>
 							<blockquote id="character-story-aboutA">
-									<span class="blockquote-title">「A」</span>
-								<p>(キャラクターストーリー「A」)</p>
+									<span class="blockquote-title">小さなおもちゃの人形</span>
+								<p class="character-story-aboutA">スメールに滞在することを決めた放浪者は、時間を見つけてトレジャーストリートへ足を運ぶと、そこでおもちゃの人形の作り方を商人に聞くことにした。<br>
+賑やかな街の一角、とある白髪の親切な老人が隣に座るよう手招きすると、布と糸を使って彼の求める物の作り方を一から教えてくれた。<br>
+放浪者は長い時間を費やしてそれの練習をする。彼の性分からかけ離れたもので少し変な感じがしたが、この感覚は嫌いではないと思った。<br>
+ずっと昔のことだ、彼はよくこのようにコツコツと色んなことを学んでいた。食器の持ち方だったり、服の着方だったり、髪のとかし方だったり…<br>
+細かなことから、少しずつ「人」へとなっていった。<br>
+数日後、彼はその作品——白い服を着た黒い髪の小さな人形を完成させた。その腰には小さな胡蝶結びをあしらった帯を付け、その目じりには滑稽な丸い涙の粒をぶら下がっている。<br>
+昔、ある幼い友人が放浪者のかつての姿を真似て、このようなおもちゃの人形を作ったことがある。しかし、彼が稲妻から旅立つ前、自らの手でその人形を古い家ごと燃やしてしまったのだ。<br>
+長い長い年月を経て、彼は自分でそれを一つ縫ってみた。それを握ると、とても懐かしい感じがした。<br>
+小さくて、柔らかくて、まるで無防備な子供のようだ。袖に忍ばせてもあまり場所を取らず、帽子の中に入れれば旅の友が増えた気分になれた。<br>
+「これからは、僕と一緒に放浪するんだよ。」<br>
+彼はそう囁くと、それを懐にしまった。</p>
 								</span>
 							</blockquote>
 							<blockquote id="character-story-vision">
 									<span class="blockquote-title">神の目</span>
-								<p>(神の目)</p>
+								<p>その瞬間、放浪者は風の音を聞いた。どこから来たものなのかは分からないが、不思議とその風向きは変わって彼を迎えている。<br>
+彼は風の中から懐かしい匂いを嗅いだ——金槌、金属、炉、埃…<br>
+遥か彼方の夢、過ぎ去った幸せ、今思うと実に不思議だ。彼のような個体が、まさかそれほどまでに単純な生活を送っていたことがあるなんて。<br>
+束の間、放浪者は自分の影を見た。それぞれがすべて鮮明であり、そのどれもが本当の彼だった。<br>
+臆病で卑怯な者も、狼狽して苦しんでいる者も、思い上がった滑稽な者も…最後はすべてが一つに繋がった。<br>
+過去を認めることは失敗を認めることになり、自分はただ何も成し遂げたことのない、何も持っていない臆病者だと認めることになる。<br>
+だが彼にとってこれだけが束縛を振り切り、本当に哀れな自分を取り戻す方法であった。<br>
+彼はその時になって理解した——平和で華美な表面はあくまで虚幻であると。本当の彼は一度たりとも死んでおらず、ずっと心の奥底に潜んでいたことを。そして選択する権利がある限り、何度繰り返そうとも彼は同じ道を選ぶ。<br>
+彼が雷霆のように行動した瞬間、煌めく光が七葉寂照秘密主の攻撃を遮った。彼の意志と選択が神の視線を引き寄せたのだ。<br>
+「神の目」が降りてくると、綺羅びやかな光をまとったその装飾品は微笑みを帯びた目をしながら、遠くからこう彼に問いかけてくるかのようであった——これほど強い願望を持った者が、それでも心がないと言えるのだろうか？</p>
 								</span>
 								</blockquote>
 								<h3 id="battle-voice">戦闘ボイス</h3>	
 							<blockquote id="voice-battle-partyA">
 									<span class="blockquote-title">チーム参加A</span>
-								<p>(チーム参加A)</p>
+								<p>そう来たか…僕に何をしてほしいんだい？</p>
 								</span>
 							</blockquote>
 							<blockquote id="voice-battle-partyB">
 									<span class="blockquote-title">チーム参加B</span>
-								<p>(チーム参加B)</p>
+								<p>まさか、用もなく呼んだわけじゃないよね？</p>
 								</span>
 							</blockquote>
 							<blockquote id="voice-battle-partyC">
 									<span class="blockquote-title">チーム参加C</span>
-								<p>(チーム参加C)</p>
+								<p>僕じゃなきゃだめ？…いいだろう、仕方ない…</p>
 								</span>
 								</blockquote>
-							-->
 							
+							<blockquote id="voice-skill-A">
+									<span class="blockquote-title">元素スキルA</span>
+								<p>風よ！</p>
+								</span>
+							</blockquote>
 							
+							<blockquote id="voice-skill-B">
+									<span class="blockquote-title">チーム参加C</span>
+								<p>僕じゃなきゃだめ？…いいだろう、仕方ない…</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-skill-C">
+									<span class="blockquote-title">元素スキルC</span>
+								<p>天へと舞え</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-burst-A">
+									<span class="blockquote-title">元素爆発A</span>
+								<p>礼を弁えぬ虫けらが。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-burst-B">
+									<span class="blockquote-title">元素爆発B</span>
+								<p>雑魚どもが！</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-burst-C">
+									<span class="blockquote-title">元素爆発</span>
+								<p>もっと泣きわめけ！</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-burst-D">
+									<span class="blockquote-title">元素爆発D</span>
+								<p>頭が高いぞ。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-burst-E">
+									<span class="blockquote-title">チーム参加E</span>
+								<p>身の程を知れ。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-burst-F">
+									<span class="blockquote-title">元素爆発F</span>
+								<p>君ごときが、僕を直視する気か？</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dash-A">
+									<span class="blockquote-title">ダッシュ開始A</span>
+								<p>疾風！</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dash-B">
+									<span class="blockquote-title">ダッシュ開始B</span>
+								<p>風が如し！</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dash-C">
+									<span class="blockquote-title">ダッシュ開始C</span>
+								<p>…おそい。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dash-D">
+									<span class="blockquote-title">ダッシュ開始D</span>
+								<p>ついて来いなんて言ってないよ。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-box-A">
+									<span class="blockquote-title">宝箱を開けるA</span>
+								<p>ふん、ゴミか。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-box-B">
+									<span class="blockquote-title">宝箱を開けるB</span>
+								<p>はぁ？こんなものも欲しいの？</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-box-C">
+									<span class="blockquote-title">宝箱を開けるC</span>
+								<p>欲しいなら君にやるよ。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-hp-A">
+									<span class="blockquote-title">HP低下A</span>
+								<p>もう慣れた。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-hp-B">
+									<span class="blockquote-title">HP低下B</span>
+								<p>取るに足らない。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-hp-friend-A">
+									<span class="blockquote-title">仲間HP低下A</span>
+								<p>使えないやつめ！</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-hp-friend-B">
+									<span class="blockquote-title">仲間HP低下B</span>
+								<p>あらら〜へなちょこめ〜</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-die-A">
+									<span class="blockquote-title">戦闘不能A</span>
+								<p>深淵へ…落ちる…</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-die-B">
+									<span class="blockquote-title">戦闘不能B</span>
+								<p>すべて…無駄…</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-die-C">
+									<span class="blockquote-title">戦闘不能C</span>
+								<p>罪の…報いか…</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dmg-A">
+									<span class="blockquote-title">重ダメージを受けるA</span>
+								<p>その程度か。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dmg-B">
+									<span class="blockquote-title">重ダメージを受けるB</span>
+								<p>…笑える。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dmg-C">
+									<span class="blockquote-title">重ダメージを受けるC</span>
+								<p>…死にたいようだね？</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dmg-D">
+									<span class="blockquote-title">重ダメージを受けるD</span>
+								<p>命乞いをすることになるよ。</p>
+								</span>
+							</blockquote>
+							<blockquote id="voice-dmg-E">
+									<span class="blockquote-title">重ダメージを受けるE</span>
+								<p>そろそろ代価を支払ってもらおう。</p>
+								</span>
+							</blockquote>
+							<h2 id="related-item">キャラクター関連アイテム</h2>
+								<h3 id="original-food-shimi-chazuke" class="original-food-shimi-chazuke">オリジナル料理「真味茶漬け」</h3>
+								<div><p>“チーム全員の与える治療効果+25%、継続時間300秒。マルチプレイ中、自分のキャラクターにのみ有効。”</p></div>
+								<blockquote>
+									<p>
+										放浪者のオリジナル料理。ほろ苦いお茶の香りとすっきりと甘い米の風味が絡め合い、一口食べたら止まらない。こんなにすごい料理スキルを、彼は一体どうやって手にしたのだろう？この心の声が聞こえたのか、彼は表情を暗くしてこういった。「何をモタモタしてるんだい？食べ終わったんなら、さっさと皿を洗いに行ってきなよ。」
+							</p>
+						</blockquote>
+								<h3 id="name-card-item" class="name-card-item">名刺「放浪者·憂き世の歌」</h3>
+								<img src="https://giarchive.github.io/3.2/Img/B3D9DBCE-084B-4A58-970B-201C23AEBA99.png" loading="lazy" alt="名刺"><br>
+								<cite>画像引用:<a target="_blank" href="https://genshin-impact.fandom.com/wiki/Wanderer/Media">Fandom</a></cite>
+								<blockquote>
+									<p>
+										名刺の飾り紋。<br>
+										浮世に隠されし昔語り…薄雪を伴って流るる花。
+									</p>
+								</blockquote>
+					<h2 id="skin">スキン</h2>
+							<h3 id="a-void-of-wrathful-emptiness" class="a-void-of-wrathful-emptiness">寂忿空相</h3>
+							<div><p>この「放浪者」はプレイヤーが設定した名前になる。</p></div>
+								<blockquote>
+									<p>
+										放浪者の衣装。修験者の常服。その笠は雨をしのぐ場所を放浪者に与えるが、心の中で轟く風と雷には意味をなさない。
+									</p>
+								</blockquote>
+					<h2 id="serenitea-pot" class="serenitea-pot">塵歌壺</h2>
+						<div><p>放浪者だけの特殊仕様で、設定した名前が表示される。</p></div>
+						<blockquote>
+							<p>
+							放浪者「おや、いたんだね。」<br>
+							放浪者「悪い、危うく勘違いするところだったよ、君が客人を家でほったらかしにする種類の人間だとね。」
+						</p>
+						</blockquote>
+						<blockquote id="talk-pot-goodmorning">
+							<span class="blockquote-title">おはよう</span>
+							<p>
+							放浪者「おはよう。」<br>
+							放浪者「新しい一日に、新しい生活…ふっ。」
+						</p>
+						</blockquote>
+
+						<blockquote id="talk-pot-goodnight">
+							<span class="blockquote-title">おやすみ</span>
+							<p>
+							放浪者「その様子からして、また平凡で退屈な一日を送ったのかい？まあ、それもいいだろう。」<br>
+							放浪者「気遣いご苦労、君は早く寝るといい。」<br>
+							放浪者「僕はまだ、休みたくないんだ。」
+						</p>
+						</blockquote>
+						<blockquote id="talk-pot-do-you-like">
+							<span class="blockquote-title">もうここには慣れた？</span>
+							<p>
+								放浪者「……」<br>
+旅人「ど、どうしたの？」<br>
+放浪者「ここの主は君だろう、何をビクビクしているんだい、みっともない。」<br>
+放浪者「…なんでもないよ。ただ、くだらない問題について考えてただけさ。」<br>
+放浪者「君のこの…住み家、何もない空き地が多いようだけど。」
+</p>
+<p><b><i class="fa-solid fa-play"></i>これで十分、余白の美ってやつ。</b><br>
+放浪者「主の生活様式を勝手に評価するのは、確かに不作法だったね。」<br>
+放浪者「親切心からここへ招いてくれたのは、当然ながら感謝しているさ。」<br>
+放浪者「ここは君の縄張りだろ。君の好きなようにするといい。」<br>
+放浪者「僕は通りすがりの客にすぎないからね。」
+</p>
+<p><b><i class="fa-solid fa-play"></i>俺も本当はもっと置きたいけど仕方ない。</b><br>
+放浪者「ああ、分かるよその気持ち。力が及ばず手が届かないことってあるからね。」<br>
+放浪者「徐々に状況が改善していく時もあれば、現状を維持するしかない時もある。」<br>
+放浪者「ここは君の縄張りだろ。君の好きなようにするといい。」<br>
+放浪者「僕は通りすがりの客にすぎないからね。」
+</p>
+<p>
+	<b></b>
+							</p>
+						</blockquote>
+						<blockquote id="talk-pot-would-you-like">
+							<span class="blockquote-title">一緒にお話ししない？</span>
+							<p>放浪者「客は主に従うべきだ、構わないよ。」</br>
+放浪者「…どうした、僕から話を始めてほしいのかい？だとしたら、待っていても意味はないかもね。」</br>
+放浪者「話すことがないわけじゃないけど、僕の話は…空気を壊してしまうから。」</br>
+旅人「大丈夫、君のことは分かってるから。」</br>
+放浪者「僕のことを理解しているからって、別にすごくもなんともない。今の僕は聞かれたらなんだって答えてしまうからね。」</br>
+放浪者「…まあ、昔はそうじゃなかったけど。」</br>
+放浪者「どうして僕が茶を好んでるか、知っているかい？」</br>
+放浪者「初めて茶を飲んだ時は、ただ苦いとしか思わなかった。最初の一口から飲み終わるまでずっと苦くて、まったく甘みを感じなかったんだ。」</br>
+放浪者「でもあの時の僕は、どうやって人間たちの話に入ればいいのか分からなくてね。それに、彼らの生活習慣も知らなかった。ただ、刀工のそばに座っているだけだったんだよ。」</br>
+放浪者「目の前に茶の入った湯呑を出され、僕は何か反応しなければと必死になって茶を飲んだのさ。一杯、また一杯とね。」</br>
+放浪者「くくッ…今になって考えると、彼らの目には本当に茶が好きなんだと映っていたかもしれない。」</br>
+旅人「じゃあ、今は？」</br>
+放浪者「この世のあらゆる味を味わいつくした今、意外にも苦いのが一番気に入ったのさ。」</br>
+放浪者「退屈を誤魔化すための刺激も、甘みで平淡を飾る必要もない。生活そのものをもっとも体現した味。」</br>
+放浪者「回りくどくならずに、もっと素直であるべきだと僕は思う。」</br>
+放浪者「苦みは何があろうと苦みだ。その前や後の甘みによって変わることはない。」</br>
+放浪者「だから、「苦尽甘来」なんて言葉で繕う必要なんてないのさ。 」</br> </p>
+						</blockquote>
+						<blockquote id="talk-pot-anything-you-want">
+							<span class="blockquote-title">何かやりたいことはある？</span>
+							<p>
+								放浪者「それを聞いた理由って、僕の出した如何なる要求も満たすつもりでいるからかい？」</br>
+放浪者「だったら、ちゃんと考えなきゃね。君が僕のためにどれだけのことができるか測ってみよう…」</br>
+放浪者「——冗談だよ。」</br>
+放浪者「確かに、君の嫌な予感がした時の表情はとてもそそられるものだけど、わざと君を困らせるような嗜好は僕にはない。」</br>
+放浪者「でも、もし本当に暇でやることがないなら、僕のために何か食べる物を用意してよ。」</br>
+旅人「人形でもご飯を食べるの？」</br>
+放浪者「必須ではない、少なくとも僕には必要ない。」</br>
+放浪者「でも食卓って、本当に面白い場所だと思わないかい。」</br>
+放浪者「みんなそれぞれの思惑を抱えているのに、表面上は盃を交わして、挨拶をしあったりする。」</br>
+放浪者「ふふっ、執行官たちの食事会を君にも見せてあげたかったよ。」</br>
+放浪者「彼らは嫌いな任務から逃れるためなら、なんだってするやつらなんだ。」</br>
+放浪者「ただ残念ながら、今は僕と君しかいないから、そんな劇的な場面にはならないだろうね。」</br>
+放浪者「僕にはこれといった好き嫌いはない。君が作ったものなら、食べてやる。」
+</p>
+	<p><b><i class="fa-solid fa-play"></i>何か食べたいものはある？</b><br>
+	放浪者「じゃあ、君のもっとも好きなものにでもしてくれ。」<br>
+	放浪者「万が一、食事中に会話が続かなくて気まずくなっても、少なくとも食事は楽しめるしね。 
+							</p>
+							<p><b><i class="fa-solid fa-play"></i>じゃあ、甘味をいっぱい用意してくる——</b><br>
+	放浪者「…僕が悪かった。」</br>
+旅人「えっ？なんで急に謝るの…」</br>
+放浪者「謝ってない！」</br>
+放浪者「ただ自分の判断ミスを認めただけだ。」</br>
+放浪者「まあ、君にもちょっとばかしふざけたところがあってよかったよ。」</br>
+放浪者「あまりにもお人好しだったら、逆にこっちがやりにくくなる。」</br>
+</p>
+						</blockquote>
+						<h3 id="quiet-times-by-the-riverbank" class="quiet-times-by-the-riverbank">畔の静かなひと時</h3>
+						<blockquote>
+							<p>
+								放浪者「……」</br>
+放浪者「遥か昔、まだ「人」になりたいと願っていた頃、僕は平凡な暮らしに憧れていた。」</br>
+放浪者「成就しなかった願いだからといって、それが貴重なものになるわけではない。けどその挫折のせいで、当時の想いまで疑う必要はない。そうだろう？」
+							</p>
+							</blockquote>
+						<h3 id="chorus-of-desert-and-wood" class="chorus-of-desert-and-wood">森と砂漠の合奏</h3>
+						<blockquote>
+							<p>
+								放浪者「稲妻の森は暗すぎるし、スネージナヤのはすごく冷たい。」</br>
+放浪者「こんな風に暖かくて活気に溢れた環境は、嫌いじゃないよ。」</br>
+放浪者「驚くことはないさ。僕にだって、気分がいい時はある。」
+							</p>
+						</blockquote>
 							<h2 id="atrifacts">聖遺物</h2>
 					<h3 id="pale-flame">蒼白の炎</h3>
 					<h4 id="goblet-of-eonothem-surpassing-cup" class="add-text">超越の盃</h4>
@@ -2679,7 +4295,7 @@
 それからすぐ、世間でもっとも高貴で尊い「証」が、<br>
 置き場所がないために、影向山の大社へと運ばれた。<br>
 <br>
-その後、美しい人形が目を覚まし、流浪を始めた。<br>
+その後、美しい人形が目を覚まし、放浪を始めた。<br>
 彼は、様々な心を見てきた。<br>
 善良なもの、誠実なもの、毅然としたもの、温和なもの…<br>
 人形も、心臓を欲しがった。<br>
@@ -2707,7 +4323,7 @@
 民衆の考えでは、これらは単に時間の流れが招いた必然の結果。<br>
 突如として訪れた衰退に、何か秘密が隠されているなど思いもしなかった。<br>
 <br>
-流浪者は決して認めない、<br>
+放浪者は決して認めない、<br>
 自分が成したことは、刀職人への復讐のためであったと。<br>
 そして当然、これも口にはしないだろう、<br>
 計画も半ばのところで、急に興が乗らなくなってしまったことを。<br>
@@ -2716,7 +4332,7 @@
 <br>
 稲妻の伝統的な芝居には、「国崩」と呼ばれる登場人物がいる。<br>
 彼らは通常、国を盗むことを目的とし、悪事を働く者。<br>
-流浪の果てに、彼は自らの意志でこの名前を選んだ。<br>
+放浪の果てに、彼は自らの意志でこの名前を選んだ。<br>
 そして、それまで使ってきた名は、今はもう自分でさえ覚えていない。<br>
 <br>
 稲妻の伝統的な芝居は、三つの幕の名前を繋げ、それを芝居の題目にすることが多い。<br>
@@ -2724,42 +4340,42 @@
 『菫染山月虎牙鑑』の一つにまとめられる。<br>
 もしかしたら、この形骸が経験してきたことが、<br>
 いつか人間のあいだで語られる物語となり、地脈の遥かな記憶となるのかもしれない。<br>
-ただ今は、彼の第三幕がまだ語られている最中だ。 
+ただ今は、彼の第三幕がまだ語られている最中だ。
 						</p>
 					</blockquote>
 					<h4 id="skeletal-hat" class="add-text">形骸の笠</h4>
-						<div><span class="skeletal-hat-about">“かつて流浪者を日の光や雨から守った笠。後に顔や表情を隠すのに役立つ道具となった。”</span></div>
+						<div><span class="skeletal-hat-about">“かつて放浪者を日の光や雨から守った笠。後に顔や表情を隠すのに役立つ道具となった。”</span></div>
 					<blockquote>
  <p class="skeletal-hat-text">
-「流浪者、流浪者、どこ行くの?」<br>
-流浪の少年は子供の声を聴いて立ち止まった。<br>
+	 「放浪者、放浪者、どこ行くの？」<br>
+放浪する少年は子供の声を聴いて立ち止まった。<br>
 彼はたたら砂の労働者の子供、病気をしていても、澄んだ目をしていた。<br>
 少年は子供に、自分がどうしても稲妻城へ行かなければっと言った。<br>
 「しかし、今は大雨だし、この前出た人たちは誰も戻っていないって彼らが言ってた！」<br>
 少年は口を開き、何か言おうとしたが、結局微笑みしかできなかった。<br>
 彼が再びこの島に足を踏み入れた時、子供の姿はすでに消えた。<br>
 <br>
-「稲妻人、どこへ行く?これはあんたが乗れる船じゃないんだぞ！」<br>
-流浪の少年は港の船夫に止められた。<br>
+「稲妻人、どこへ行く？これはあんたが乗れる船じゃないんだぞ！」<br>
+放浪する少年は港の船夫に止められた。<br>
 ちょうど少年が抜刀する直前、同行する男が彼を抑えた。<br>
 男は船夫に、この異国の少年は自分と同行することを伝えた。<br>
 「閣下の客人ということですね、これは失礼しました。」<br>
 男が防寒の上着を少年に渡したが、少年は首を横に振った。<br>
 彼はただ、今回の旅でどんな面白いことが見られるのかを知りたがっているだけ。<br>
 <br>
-「執行官様、どちらへ行くのですか?」<br>
+「執行官様、どちらへ行くのですか？」<br>
 少年は騒がしい人間が大嫌いのため、部下の顔を殴った。<br>
 しかし、少年は怯えた無力な人間を観察することを何よりも楽しんでいた。<br>
 この愚かな部下が彼のそばにいられるのも、部下の表情の豊かさが原因だろう。<br>
 彼は震えながら地面に跪く人に、今回は東方向のモンドへ行くっと言った。<br>
 「かしこまりました。直属護衛たちに準備をするように！」<br>
 護衛なんて必要はないが、彼はもう馬鹿者と話す気がなかった。<br>
-彼は再び流浪の笠を被り、一人で東へ向かった。<br>
+彼は再び放浪の笠を被り、一人で東へ向かった。<br>
 <br>
-「少年よ、どこへ行くのじゃあ?」<br>
+「少年よ、どこへ行くのじゃあ？」<br>
 帰国の少年は道端で婆に声をかけられた。<br>
 西へ向う準備をしているって婆に伝えた。<br>
-「ヤシオリ島へ行くのか、何しに行くんじゃあ?」<br>
+「ヤシオリ島へ行くのか、何しに行くんじゃあ？」<br>
 婆は深く考えていない、ただ最近はどこも物騒だった。<br>
 少年は、「人との約束があるから」と言って、心からの笑顔で彼女の気遣いに感謝した。<br>
 船はゆっくりと停泊し、岸辺には異国の服装をしている女性が立っている。<br>
@@ -2842,7 +4458,36 @@
 							</p>
 						</blockquote>
 						<h2 id="item">アイテム・掲示物</h2>
+																		<h3 id="boss-drop">ボスドロップ素材</h3>
+					<h4 class="puppet-strings">傀儡の糸</h4>
+					<blockquote>
+						<p class="puppet-strings-text">機械人形の背部に通す導管。その中に流れる色彩は時に暗く、時に明るく…その矛盾に人は恐怖を覚える。<br>
+この管は機械人形にエネルギーを提供するが、同時に人形を操り人形の糸のように束縛する。<br>
+導管の支えがなければ、人形は生まれたての赤ちゃんのようにか弱く、一歩も動けぬ存在と成り果てるのだ。</p>
+					</blockquote>
+					<h4 class="dakas-bell">空行の虚鈴</h4>
+					<blockquote>
+						<p class="dakas-bell-text">
+							鈴のような形をした、機体の腕の球関節を繋ぐためのパーツ。見た目は小さく精巧だが、これが担うエネルギーは想像を超えるものだ。<br>
+腕に繋ぐと、両腕は感覚を失う。<br>
+足に繋ぐと、両足には力がほとんど入らなくなる。<br>
+そして、これを頭に繋ぐと——<br>
+憎しみと苦しみ、狂気と傲慢は、それでも洗い流せないだろう。<br>
+幸いなことに。
+						</p>
+					</blockquote>
+					<h4 class="mirror-of-mushin">無心の淵鏡</h4>
+					<blockquote>
+						<p class="mirror-of-mushin-text">正機の主の胸先にある、外界を遮断するための鏡。その身分と威厳を宣告するため、わざわざ三つ巴模様があしらわれている。<br>
+この模様は雷の主に対する臣服を宣告するものではなく、<br>
+この世界に存在する既存の権威と能力に向けられた刃である。<br>
+また、この鏡は世間の人々の批判的な目を隔てるためのものではなく、<br>
+俗世にあるすべての穢れを仕切るための塀である。<br>
+この大殿を戒め、蒙昧を洗い流し、<br>
+夢想を覆し、煩悩を抉り出し、そして定められた業を今一度書き直す。</p>
+</blockquote>
 						<h3 id="rather-aged-notes">古い手帳</h3>
+						<div><span class="mark">赤</span>で示した部分は、魔神任務間章で削除される</div>
 						<blockquote>
 							<p class="rather-aged-notes-text1">
 								(最近、ファデュイから取り上げた手帳のようだ。時間の経過により、ほとんどの字が読めなくなってる。)</p>
@@ -2922,49 +4567,336 @@
 								<cite>翻訳引用: <a target="_blank" href="https://ngabbs.com/read.php?tid=31458467">NGA</a></cite>
 							</div>
 							</div>
-							
-												<h3 id="boss-drop">ボスドロップ素材</h3>
-					<h4 class="puppet-strings">傀儡の糸</h4>
-					<blockquote>
-						<p class="puppet-strings-text">機械人形の背部に通す導管。その中に流れる色彩は時に暗く、時に明るく…その矛盾に人は恐怖を覚える。<br>
-この管は機械人形にエネルギーを提供するが、同時に人形を操り人形の糸のように束縛する。<br>
-導管の支えがなければ、人形は生まれたての赤ちゃんのようにか弱く、一歩も動けぬ存在と成り果てるのだ。</p>
-					</blockquote>
-					<h4 class="dakas-bell">空行の虚鈴</h4>
-					<blockquote>
-						<p class="dakas-bell-text">
-							鈴のような形をした、機体の腕の球関節を繋ぐためのパーツ。見た目は小さく精巧だが、これが担うエネルギーは想像を超えるものだ。<br>
-腕に繋ぐと、両腕は感覚を失う。<br>
-足に繋ぐと、両足には力がほとんど入らなくなる。<br>
-そして、これを頭に繋ぐと——<br>
-憎しみと苦しみ、狂気と傲慢は、それでも洗い流せないだろう。<br>
-幸いなことに。
-						</p>
-					</blockquote>
-					<h4 class="mirror-of-mushin">無心の淵鏡</h4>
-					<blockquote>
-						<p class="mirror-of-mushin-text">正機の主の胸先にある、外界を遮断するための鏡。その身分と威厳を宣告するため、わざわざ三つ巴模様があしらわれている。<br>
-この模様は雷の主に対する臣服を宣告するものではなく、<br>
-この世界に存在する既存の権威と能力に向けられた刃である。<br>
-また、この鏡は世間の人々の批判的な目を隔てるためのものではなく、<br>
-俗世にあるすべての穢れを仕切るための塀である。<br>
-この大殿を戒め、蒙昧を洗い流し、<br>
-夢想を覆し、煩悩を抉り出し、そして定められた業を今一度書き直す。</p>
+<h3 id="the-isle-of-darkling-clouds">『黯雲の島』</h3>
+						<div class="tab-wrap not-margin-div">
+    <input id="TAB-darkling-clouds-01" type="radio" name="TAB-darkling-clouds" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-darkling-clouds-01"><span class="before-fore-from-mikhail-mention">改変前</span></label>
+    <div class="tab-content not-margin-div">		
+<blockquote>
+	<p>
+		著者：澤田<br>
+<br>
+<br>
+抜粋·其の一<br>
+<br>
+……<br>
+……<br>
+刻は午後の三時ごろ、とある人がたたら砂を訪れた。遠くには労働にいそしむ人々が、山道に沿って工場へと向かう姿が見える。その草鞋が高くそびえる山石を擦るたび、僅かながらも人心を揺るがす音を立てた。その音にはまるで、ここさえ越えて山中の大きな炉に辿り着ければ、燃え盛る炎から価値ある金剛石を取り出せると言わんばかりの勢いがあった。この感覚は、その場にいた人間でなければ理解できないであろう。<br>
+その人は嬉々として挨拶をすると、走って前進する行列に加わった。隣にいた尋常の人より背丈のある筋肉質な男は、彼を見るなり背中を力いっぱい叩いてきたが、その言葉の端々には敬意が見えた：「どちらかと思えば、宮崎殿ではないか！稲妻城からここまでの往路、さぞ難儀だったであろうな。」<br>
+宮崎は口をゆがめ、駆け出しの若者のように笑った。その表情には安堵が浮かんでいた。「桂木さんは何を言っているのやら、稲妻城は将軍様の御膝元だぞ。私はそこから戻るにあたり、最も速い船に乗り、最も速い水路を選んだ。何の危険があるというのだ？」<br>
+「して、朗報はあるのか？」<br>
+「ない…わけがないであろう。」二人は話終えると同時に笑い出し、辺りを囲む職人たちとお互いをぐいぐいと押し合いながら、道の終わりまで歩いていった。<br>
+<br>
+麻布の素朴な服を着て、頭巾を巻いた若い男が炉の前で火加減を見張っていた。<br>
+鋼を精錬するために使う火は他と異なり、その火力の良し悪しが、鋼材や刀の品質にかかわる。その加減を見張っているものも只者ではなく、その指先には一匹のトカゲが止まっており、その顔には笑みがあった。<br>
+空間は広く、大きな炉はもっと深いところにある。普通なら複数の人がここで働いていてもおかしくはないが、彼はたった一人でここに立っていた。桂木や宮崎がどたどたと急いで入ってくるまで、彼は火から目を離さなかった。<br>
+この者こそ、まさしく造兵司正の丹羽久秀、たたら砂の管理者であった。一心伝の丹羽家出身の彼は、兄弟姉妹と競い合うことなく、正真正銘の継承者となった。各勢力の貴人や権力者に認められてこの官職に就いたことは、ある種の証明である。<br>
+宮崎は丁寧に絹織物に包んだ書類を丹羽に手渡し、色を正した。「旦那様の言う通り、城内の親戚は私たちの計画をよく思っていないようでした。しかし、赤目の案は確かに試す価値があります。ですから私は卸売り先を探して、目録に沿って必要なものを仕入れました。」<br>
+丹羽は書類を読み終えると、軽くうなずいた。「楓原の支持があり次第、すぐ我々は新しい鍛造法を試みるべきだ。」<br>
+桂木の方はというと、眉をひそめて嘆いた。「刀を鍛えるとは、もとより技巧を問われる難儀なもの。旦那たちはもうだいぶ勘所をつかんでいるのに、まだまだ精進をやめないとは…まったく恐るべし！長正様が聞かれたら、また難しい顔をなさるであろう。」<br>
+丹羽は微笑むと、「桂木殿、長正様の宝刀の鍛え具合はいかほどか？」と聞いた。<br>
+主人の面子をつぶしたくはない一方、目の前にいる友人たちを騙したくもない桂木は、どう考えてもうまい言い方をひねり出せず、ばつが悪そうに言った。「丹羽様は器用であられる、器用がすぎるゆえ、俺たちのような粗忽者の冗談が通じない。」<br>
+宮崎はすぐに口をふさいでくくくと笑った。丹羽は手にあったトカゲを桂木の手中に置き、何かを言おうとした。その時、遠くから人がやってきた。今回の足音は軽く、聞く限り少年のようだ。入ってきたそのまん丸の頭は火に照らされ、まるで磨かれてつやのある何らかの宝珠のようだった。<br>
+少年は弁当を隣に置くと、軽く会釈してから出て行こうとした。桂木はとっさに彼を呼び止める。「自分の分はどうした？食べないのか？」<br>
+そう聞いた彼はどうすればわからない様子で、少し経ってから「…分かった、試してみるよ。」とだけ答えた。<br>
+「みんな食べているんだ、そう遠慮するな。」丹羽がそう言うと、彼はまた頷き、何か考えている様子で離れていった。<br>
+<br>
+<br>
+抜粋·其の二<br>
+<br>
+……<br>
+……<br>
+傾奇者は海の岸辺にいた。<br>
+日が落ちる頃、空の一切は暗く沈み、一方で雷雲が蠢いていた。まるで暴雨の訪れを見せつけるように。<br>
+海もまた空と共に暗さを増し、薄暮が雲を大地に跪かせるように下へ下へと押しやっている。まさにいま傾奇者自身が海へ向かって跪き、あたかも拝むような姿であるように。<br>
+誰一人ここを通りがかるものはいない。いま、彼が静かに何を待っているのかを知る者もいない。<br>
+どれくらい時間が経っただろうか、空から突然烏羽色の雲が飛び出し、傾奇者を囲むように旋回しながら、悪夢の如く纏わりついた。当初彼は全く気付いていなかったが、目を開いてしばらくのち、やっと状況を理解した。この雲の狙いは、最初から彼であると。<br>
+遠くから漁船が近づいてきた。船首の灯が降り注ぐ雨の中で徐々に揺らいでいく。薄い霧が瞬く間に広がり、船にいた漁師は視界を失ったことで、驚いた様子で叫んだ。「まだ黄昏時だぞ、どうしてこんなに見通しが悪いんだ？誰か航路のわかるやつはいないか！」<br>
+黒雲は再び船底に突っ込むと、船にまとわりついて方向を狂わせ、猛る獣のように海岸へと衝突させた。数歩離れた場所で傾奇者はただ立ちすくみ、首を傾げながら、目の前の巨大な船の残骸へ視線を向けた。<br>
+先ほど叫んでいた者はもう腕の半分しか残っておらず、それは「ぽとり」と傾奇者の足元に落ちてきた。彼はしゃがみ込んでそれを一度、また一度と見る。あたかも口に入れて咀嚼するかのように。<br>
+しかし、彼は最終的にそれを中断した。黒雲は旋回しながら沈んでいき、あの船に残っていたものを全て吞み込んでいく。傾奇者は呆けたようにそれを見ていたが、だいぶ経ってからはっと気がついた。黒雲は散り散りになり、その姿はもう見えない。目の前にある船は…嵐にでも遭ったのだろうか？誰にそれがわかるだろう。傾奇者はそれをはっきりさせようとはしなかった。<br>
+<br>
+<br>
+抜粋·其の三<br>
+<br>
+……<br>
+……<br>
+桂木は慌てた様子で門をくぐると、大きな声で叫んだ。「旦那！大きな炉で問題があったようで…！丹羽様を探し回ったのですが見当たらず、宮崎殿も外に助けを求めに出てずいぶん経ちますが、未だ音沙汰がないとか。これは…」<br>
+御輿長正はゆっくりと振り向いた。葬式にでも参列しているような厳かな顔つきで、彼が口にする言葉にはいずれも重みがあった。「このようなことを言いたくはないが…桂木。宮崎殿はもしや…もう戻らぬかもしれん。」<br>
+桂木はその視線を長正の厚く強張った双肩から、窓の外へとやった——海の上では黒雲が逆巻き、人々を脅かしている。暗黒の夜は妖怪に化けこそせず、自らたたら砂を腹の中へ呑み込めないことを悔しがってはいたものの、それでもこの土地を覆う唯一無二の空模様であった。<br>
+もう十数人が死んだ。そうか、だから…<br>
+桂木は頬を張られたような衝撃と共に、思い出した。そうか、だから彼らは外に助けを求めたのだ！<br>
+最初に船出したのは宮崎だ。彼が発ったときには、あの雲はまだ形を成したばかりだった。たたら砂から稲妻城へ助けを求める、いつもならそう難しい事ではないのに、彼はなかなか帰ってこない。<br>
+やがて二人、三人、四人…そして傾奇者まで。彼はこの天候のなか船に乗ってたたら砂を離れた、それが吉と出るか凶と出るかは分からない。桂木は彼を拾った身であり、彼のことは自分の子供のように思っている。もちろん名残惜しいが、現在のたたら砂の状況は切羽詰まっている。例え幾人もの犠牲を出しても、彼らは城からの庇護を求めなければならなかった。<br>
+<br>
+丹羽は姿を消し、誰も彼の行方はわからない。少しの後、長正は危険を冒しながら一隊の人員を連れて炉心周辺を探したが、なんの収穫も得られなかった。当初皆は丹羽が何か想定外のことに巻き込まれたかと思っていたが、よくよく考えてみれば、彼はここで起きた異質な事故の責任を担えず、罪を恐れて出奔したのかもしれなかった。<br>
+皆は心の中で彼を疑い、長正は不満と怒りを抑えてこそいたが、その顔色は遠くの黒雲と遜色ないものになっていた。<br>
+にわかに人影が通り過ぎた。長正は何の疑いも持たず素早く刀を抜き払ったが、その切っ先は紗の一片を裂いたにすぎなかった。人影は揺らめき、操り人形のように長正の背後を取ると、ひひっと笑った。「だんなは誰をお探しで？丹羽か？」<br>
+長正は怒り叫んだ、「丹羽様をそのように呼ぶなど、許せぬ！」縦に一刀すると、人影は薄い霧のように散ったかと思うと、瞬く間に遠方へ集まって、妖しい鬼の影へと化けた。<br>
+「お前があの方を殺めたのか？」長正は怒鳴って飛び掛かかろうとしたが、桂木に力ずくで引き留められた。足下をしかと見れば、あと一歩で炉に落ちるところであった。<br>
+<br>
+<br>
+（残りの部分はどうやらまだ書き終わっていないようだ…しかしこれはさっきの論文にある情報をもとに想像を巡らせて書かれた、空想に満ちた小説であることが見て取れる。）<br>
+
+	</p>
 </blockquote>
+        
+    </div>
+	
+	    <input id="TAB-darkling-clouds-02" type="radio" name="TAB-darkling-clouds" class="tab-switch"><label class="tab-label" for="TAB-darkling-clouds-02"><span class="after-fore-from-mikhail-mention">改変後</span></label>
+		<div class="tab-content not-margin-div">
+<blockquote>
+	<p>
+		著者：澤田<br>
+<br>
+<br>
+抜粋·其の一<br>
+<br>
+……<br>
+……<br>
+刻は午後の三時ごろ、とある人がたたら砂を訪れた。遠くには労働にいそしむ人々が、山道に沿って工場へと向かう姿が見える。その草鞋が高くそびえる山石を擦るたび、僅かながらも人心を揺るがす音を立てた。その音にはまるで、ここさえ越えて山中の大きな炉に辿り着ければ、燃え盛る炎から価値ある金剛石を取り出せると言わんばかりの勢いがあった。この感覚は、その場にいた人間でなければ理解できないであろう。<br>
+その人は嬉々として挨拶をすると、走って前進する行列に加わった。隣にいた尋常の人より背丈のある筋肉質な男は、彼を見るなり背中を力いっぱい叩いてきたが、その言葉の端々には敬意が見えた：「どちらかと思えば、宮崎殿ではないか！稲妻城からここまでの往路、さぞ難儀だったであろうな。」<br>
+宮崎は口をゆがめ、駆け出しの若者のように笑った。その表情には安堵が浮かんでいた。「桂木さんは何を言っているのやら、稲妻城は将軍様の御膝元だぞ。私はそこから戻るにあたり、最も速い船に乗り、最も速い水路を選んだ。何の危険があるというのだ？」<br>
+「して、朗報はあるのか？」<br>
+「ない…わけがないであろう。」二人は話終えると同時に笑い出し、辺りを囲む職人たちとお互いをぐいぐいと押し合いながら、道の終わりまで歩いていった。<br>
+<br>
+麻布の素朴な服を着て、頭巾を巻いた若い男が炉の前で火加減を見張っていた。<br>
+鋼を精錬するために使う火は他と異なり、その火力の良し悪しが、鋼材や刀の品質にかかわる。その加減を見張っているものも只者ではなく、その指先には一匹のトカゲが止まっており、その顔には笑みがあった。<br>
+空間は広く、大きな炉はもっと深いところにある。普通なら複数の人がここで働いていてもおかしくはないが、彼はたった一人でここに立っていた。桂木や宮崎がどたどたと急いで入ってくるまで、彼は火から目を離さなかった。<br>
+この者こそ、まさしく造兵司正の丹羽久秀、たたら砂の管理者であった。一心伝の丹羽家出身の彼は、兄弟姉妹と競い合うことなく、正真正銘の継承者となった。各勢力の貴人や権力者に認められてこの官職に就いたことは、ある種の証明である。<br>
+宮崎は丁寧に絹織物に包んだ書類を丹羽に手渡し、色を正した。「旦那様の言う通り、城内の親戚は私たちの計画をよく思っていないようでした。しかし、赤目の案は確かに試す価値があります。ですから私は卸売り先を探して、目録に沿って必要なものを仕入れました。」<br>
+丹羽は書類を読み終えると、軽くうなずいた。「楓原の支持があり次第、すぐ我々は新しい鍛造法を試みるべきだ。」<br>
+桂木の方はというと、眉をひそめて嘆いた。「刀を鍛えるとは、もとより技巧を問われる難儀なもの。旦那たちはもうだいぶ勘所をつかんでいるのに、まだまだ精進をやめないとは…まったく恐るべし！長正様が聞かれたら、また難しい顔をなさるであろう。」<br>
+丹羽は微笑むと、「桂木殿、長正様の宝刀の鍛え具合はいかほどか？」と聞いた。<br>
+主人の面子をつぶしたくはない一方、目の前にいる友人たちを騙したくもない桂木は、どう考えてもうまい言い方をひねり出せず、ばつが悪そうに言った。「丹羽様は器用であられる、器用がすぎるゆえ、俺たちのような粗忽者の冗談が通じない。」<br>
+<span class="mark">宮崎はすぐに口をふさいでくくくと笑った。丹羽は手にあったトカゲを桂木の手中に置き、何かを言おうとした。その時、遠くから人がやってきた。今回の足音は少し重みがあり、来客の足取りには自信と落ち着きが感じられた。束の間ののち、まったく異なる異国の顔が門に顔を出した。来客は手にある弁当を置くと、軽く頷いて離れようとした。桂木はとっさに彼を呼び止めた。「旦那、自分の分はどうした？食べないのか？」</span><br>
+<span class="mark">彼はそれを聞くと、笑ってこう言った。「もう済ませました。皆さまも、早くお召し上がりになられた方がよいかと。」</span><br>
+<span class="mark">「我らの客人であるというのに、このような雑務まで手伝ってくれるとは、まことかたじけない。」丹羽は心を込めてそう言った。</span><br>
+<span class="mark">異国の人物は優しそうに笑った。些細なことでも、人のために何かをすることを気にしていないようだ。そしてまた頷くと、離れていった。</span><br>
+<br>
+<br>
+抜粋·其の二<br>
+<br>
+……<br>
+……<br>
+見知らぬ客——異国から来た機械職人は海の岸辺にいた。<br>
+日が落ちる頃、空の一切は暗く沈み、一方で雷雲が蠢いていた。まるで暴雨の訪れを見せつけるように。<br>
+海もまた空と共に暗さを増し、薄暮が雲を大地に跪かせるように下へ下へと押しやっている。だが、この人物はその様子に怯えることなく、却って血に飢えたような目で遠方を見据えた。<br>
+誰一人ここを通りがかるものはいない。いま、彼が静かに何を考えているのかを知る者もいない。<br>
+どれくらい時間が経っただろうか、空から突然烏羽色の雲が飛び出し、機械職人を囲むように旋回しながら、悪夢の如く纏わりついた。しかし、彼はまるでそれが自分の一部であるかのように、漆黒の煙を撫ぜた。<br>
+遠くから漁船が近づいてきた。船首の灯が降り注ぐ雨の中で徐々に揺らいでいく。薄い霧が瞬く間に広がり、船にいた漁師は視界を失ったことで、驚いた様子で叫んだ。「まだ黄昏時だぞ、どうしてこんなに見通しが悪いんだ？誰か航路のわかるやつはいないか！」<br>
+<span class="mark">黒雲は再び船底に突っ込むと、船にまとわりついて方向を狂わせ、猛る獣のように海岸へと衝突させた。数歩離れた場所で機械職人は微笑むと、ゆっくりと目の前にある巨大な船の残骸へ進んだ。</span><br>
+<span class="mark">先ほど叫んでいた者はもう腕の半分しか残っておらず、それは「ぽとり」と機械職人の足元へ落ちた。彼はしゃがみ込んでそれを一度、また一度と見る。あたかも口に入れて咀嚼するかのように。</span><br>
+<span class="mark">しかし、彼は最終的にそれを中断した。黒雲は旋回しながら沈んでいき、あの船に残っていたものを全て吞み込んでいった。</span><br>
+<br>
+<br>
+抜粋·其の三<br>
+<br>
+……<br>
+……<br>
+桂木は慌てた様子で門をくぐると、大きな声で叫んだ。「旦那！大きな炉で問題があったようで…！丹羽様を探し回ったのですが見当たらず、宮崎殿も外に助けを求めに出てずいぶん経ちますが、未だ音沙汰がないとか。これは…」<br>
+御輿長正はゆっくりと振り向いた。葬式にでも参列しているような厳かな顔つきで、彼が口にする言葉にはいずれも重みがあった。「このようなことを言いたくはないが…桂木。宮崎殿はもしや…もう戻らぬかもしれん。」<br>
+桂木はその視線を長正の厚く強張った双肩から、窓の外へとやった——海の上では黒雲が逆巻き、人々を脅かしている。暗黒の夜は妖怪に化けこそせず、自らたたら砂を腹の中へ呑み込めないことを悔しがってはいたものの、それでもこの土地を覆う唯一無二の空模様であった。<br>
+もう十数人が死んだ。そうか、だから…<br>
+桂木は頬を張られたような衝撃と共に、思い出した。そうか、だから彼らは外に助けを求めたのだ！<br>
+最初に船出したのは宮崎だ。彼が発ったときには、あの雲はまだ形を成したばかりだった。たたら砂から稲妻城へ助けを求める、いつもならそう難しい事ではないのに、彼はなかなか帰ってこない。<br>
+<span class="mark">やがて二人、三人、四人と…助けを求めて皆この天候のなか船に乗ってたたら砂を離れた、それが吉と出るか凶と出るかは分からない。本当のところ、もう誰も危険な目に合わせてはいけないはずだが、現在のたたら砂の状況は切羽詰まっている。例え幾人もの犠牲を出しても、彼らは城からの庇護を求めなければならなかった。</span><br>
+<br>
+丹羽は姿を消し、誰も彼の行方はわからない。少しの後、長正は危険を冒しながら一隊の人員を連れて大きな炉周辺を探したが、なんの収穫も得られなかった。当初皆は丹羽が何か想定外のことに巻き込まれたかと思っていたが、よくよく考えてみれば、彼はここで起きた異質な事故の責任を担えず、罪を恐れて出奔したのかもしれなかった。<br>
+皆は心の中で彼を疑い、長正は不満と怒りを抑えてこそいたが、その顔色は遠くの黒雲と遜色ないものになっていた。<br>
+にわかに人影が通り過ぎた。長正は何の疑いも持たず素早く刀を抜き払ったが、人影は揺らめき、悪鬼のように長正の背後を取ると、ひひっと笑った。「だんなは誰をお探しで？丹羽か？」<br>
+長正は怒り叫んだ、「丹羽様をそのように呼ぶなど、許せぬ！」縦に一刀すると、人影は薄い霧のように散ったかと思うと、瞬く間に遠方へ集まって、妖しい鬼の影へと化けた。<br>
+「お前があの方を殺めたのか？」長正は怒鳴って飛び掛かかろうとしたが、桂木に力ずくで引き留められた。足下をしかと見れば、あと一歩で炉に落ちるところであった。<br>
+<br>
+<br>
+（残りの部分はどうやらまだ書き終わっていないようだ…しかしこれはさっきの論文にある情報をもとに想像を巡らせて書かれた、空想に満ちた小説であることが見て取れる。）
+	</p>
+</blockquote>
+</div>
+</div>
+<h3 id="historical-importance-in-the-tatarasuna">『稲妻のたたら砂エリアに存在しうる重大な歴史事件についての簡単な分析』</h3>
+						<div class="tab-wrap not-margin-div">
+    <input id="TAB-importance-tatarasuna-01" type="radio" name="TAB-importance-tatarasuna" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-importance-tatarasuna-01"><span class="before-fore-from-mikhail-mention">改変前</span></label>
+    <div class="tab-content not-margin-div">		
+<blockquote>
+	<p>説明：本論文は因論派の支援プロジェクト『ベールをはずして』に属する作品であり、番号は追加待ちである。<br>
+<br>
+作者：アカバ<br>
+<br>
+要旨：稲妻たたら砂エリアは稲妻の製錬鍛造業の重要な場所の一つと考えられてきた。このエリアでは事故が二回発生している。そのうちの一回目に関する記録はどれも曖昧なものである。たたら砂エリアでの最初の事故の裏には人知れぬ歴史的な要因があるのではないか、と筆者は考えている。本論文は既知の資料をもとに、この事件を分析してみるものである。<br>
+<br>
+<br>
+キーワード：たたら砂エリア、雷電五箇伝、御輿長正、傾奇者<br>
+<br>
+はじめに：本論文は筆者の恩師であるルミ先生のレポート『たたら砂エリアに秘匿された疑いのある人文的故事』を受け継ぎ、展開し、この研究を引き続き進めたいとするものである。資料によると、稲妻の鍛造技法はもともと雷神——雷電将軍から受け継がれたものだそうだ。職人たちは神の技術を受け継ぎ、それを製錬鍛造業に応用した。だが、鍛造製錬業の核であるたたら砂エリアには、雄渾たる鍛造業にふさわしくない不思議な噂がある。御輿家、丹羽家、そして奇妙な人形——この三者が切り口となり、我々はそこからたたら砂の裏に隠された真実を垣間見ることができるようになった。<br>
+<br>
+<br>
+本文<br>
+<br>
+たたら砂エリアにあった奇妙な紙切れに、こんなことが書かれている——<br>
+<br>
+1<br>
+「……僭越ながら小生は、長正様が刀鍛冶をするのは彼の心境に良い影響を与えると考える……」<br>
+「……『御輿』の汚名をそそぐことに執着するのは、実に気力を消耗する……」<br>
+「……それと、桂木様が名椎の浜を見回りしていた時、名無しのかぶき者を見つけた……」<br>
+<br>
+2<br>
+「……目付様は玉鋼錠をいくつか買った……」<br>
+「……造兵司佑様、そして桂木様と夜通し鍛冶の心得を話していた。」<br>
+<br>
+<br>
+3<br>
+「……やっと長巻の一振りを造り出せた。その名は『大たたら長正』……」<br>
+「……目付様も非常に喜んでいる、造兵司佑様と……」<br>
+「……望は『大たたら長正』の美しさに感動し、それのために絵を描いた……」<br>
+「……浮浪のかぶき者と剣舞を舞った……」<br>
+<br>
+<br>
+4<br>
+「……かぶき者の行方も分からない……」<br>
+「……目付様は怒り、桂木を斬った。その切れ筋は、まさに大業物…そして、自ら作った長巻をたたら炉に捨てた……」<br>
+「……望はそれに不満を抱き、燃え溶けた刀を取りに行き……大やけどをした……」<br>
+<br>
+<br>
+5<br>
+「……望はその夜死んだ……桂木様は職責を汚したとはいえ、すべて善意からのものだったと思う……」<br>
+<br>
+6<br>
+「……金次郎は長巻と望の描いた絵を武器庫に隠した……」<br>
+「……長正は厳しいが、白黒をはっきりさせる性分だ。しかしそれは同時に、非情でもあるということ。彼は自らの家名の潔白にこだわっているようだ…私もたたら砂の人たちも、彼の母である千代のことで目を曇らせることなく、長正のことを信じている……」<br>
+「……彼と共に『大たたら長正』を作った喜びを忘れたくない。あの夜に、無名のかぶき者と桂木と剣舞を振舞った喜びを……」<br>
+<br>
+7<br>
+「……撤退する時、武器庫の鍵を三つに分け、一つは目付様に、一つは造兵司正様に、一つはたたら砂に残し、賊の侵入を防ごうとした。」<br>
+「しかしあまりにも慌ただしかったため、目付様と造兵司正様を見つけられず、三つの鍵をすべてたたら砂にある三つの宝箱に隠すしかなかった……」<br>
+<br>
+<br>
+上記の7枚のメッセージはたたら砂エリアに散らばっている。そのうち、6枚は耐久性に優れた紙に記録されており、いずれも非常に古いものと思われるが、最後の1枚だけがやや新しいようだ。筆者は、6枚の紙と最後の1枚は異なる時代のものであると思っており、その年代の差を検証する必要がある。また、6枚の内容は互いに関連しているため、同じ出来事を指しているはずである。<br>
+ルミ先生は『たたら砂エリアに秘匿された疑いのある人文的故事』（以下、『人文的故事』と略称）の中で、スメールの学者が稲妻にたたら砂一帯の人文史を研究しに行っていたということに触れている。ルミ先生が『人文的故事』を書いた当時、たたら砂は一連の事件ですでに衰退した状態だったが、筆者が本文を書いた時分よりはましであった。たたら砂の最も中心的なエリアは、今は全く居住に適しておらず、住む人も確かにいない。住民たちは海辺に移り、水辺に住むようになっていた。スメールの学者たちは、彼らからこのようなことを聞いた——かつてたたら砂はとても繁栄しているところだったと。数百年前、まだ黄金時代と呼べる頃、たたら砂は造兵司正の丹羽、造兵司佑の宮崎、そして目付の御輿長正に管理されていた。同時に、年配の人たちや、より歴史ある家系の人たちは、たたら砂には奇妙な噂があったと繰り返し強調していた。<br>
+噂はほとんど「妖怪」にまつわるものであり、稲妻の特色に溢れていた。しかし、そのうちごく一部の中で、「人形」という単語の言及があったのだ。注意すべきは、人形それ自体は伝統的なものであり、ありふれた稲妻の妖怪ではないことだった。学者たちは疑問を感じ、それについて追及した。そして、次のような情報が得られた。<br>
+-かつてたたら砂に、とある人形が現れた。その見た目は秀麗で、きちんとした身なりをしており、体にある特殊な関節の痕跡を隠すことを知っていた。たまに誰かが口にしなければ、それが人形であることは分かりにくい。それに、人形特有の関節の痕跡は時間が経つにつれて薄くなっていっていたようだ。最後には見えなくなり、完全に人間の姿になるかもしれない。<br>
+-その人形の名前を知る人はほとんどいない。人々はそのような人形がたたら砂に出没していたということを知っているだけだ。中心地でそれを見た人もいれば、浜辺で見た人もいる。伝説では、人形は海辺に佇み、海の向こうの稲妻城を見つめていたようだ。そこに何があるのか、また人形が何を見つめていたのか、誰も知らない。<br>
+<br>
+前述したように、6枚の紙切れのには「名無しの傾奇者」のことが書いてある。傾奇者とは、稲妻において変わった身なりをしたり、常識を逸脱した行動に走る人を指すことが多い。そのため、このような人物が印象に残るのは当然といえば当然といえる。もしたたら砂に本当に人形が存在し、そのうえで恐慌を起こしたりなどしていないなら、妖怪と人間が共生する稲妻の社会形態を考えると、当時人形はたたら砂の地元住民の一人になっていた可能性が高い、と筆者は考える。そして関連記録が少なく、あまり知られていない「傾奇者」とは、人形のもう一つの呼び名かもしれない。服装があまりにも華麗で独特であるなら、人々はその人の他の特徴にあまり目を向けなくなる。この推測にはまだ強力な証拠が必要だが、一つの考え方として残しておくことはできる。<br>
+<br>
+筆者は稲妻の関連資料に基づき、たたら砂と関連があるかもしれない一部の人物を整理した。管理者から順に、記録は以下の通りである——<br>
+<br>
+造兵司正——丹羽<br>
+フルネームは丹羽久秀、一心伝丹羽家の後継者。その一族は赤目、楓原と共に一心三作と呼ばれている。記載によると、丹羽は謙虚で聡明、土地と民生を管理する優れた人材であった。のちに彼は行方不明となっておいり、家族を連れて事故後のたたら砂を離れたと思われる。<br>
+<br>
+造兵司佑——宮崎<br>
+フルネームは宮崎兼雄、丹羽の補佐。出身は不明。主に鍛造及び人員管理において、丹羽をサポートするなどしていた。穏やかで優しい人物であり地元に友人が多く、御輿長正とも親交があった。<br>
+<br>
+目付——御輿長正<br>
+御輿家の後継者、鬼族の武者御輿千代の養子であり、「胤の岩蔵」御輿道啓の養弟である。母の千代が行方不明になった後、養兄の道啓に捨てられた。彼は一人で一族すべての責任を背負い、家族の汚名をそそぐために日々奮闘していた。様々な資料によると、御輿長正はやや頑固な一面はあるが、剛直で品行の正しい人であったとされる。紙切れの記録によると、彼は修身のために刀の鍛造を習い、わざわざ宮崎の教えを受けていた。名刀大たたら長正を鍛え上げた後、彼はあることから部下の桂木を斬った。<br>
+<br>
+部下——桂木<br>
+フルネーム、出身ともに不明。筆者は多くの資料を調べたが、桂木本人に関するさらなる情報を得ることはできなかった。彼は御輿長正の手下であり、忠実な武人だった。御輿長正に救われたため、長正のために水火も辞さないとを誓ったとされる——随従することから、命を捧げるまで。<br>
+<br>
+傾奇者<br>
+フルネーム、出身ともに不明。筆者は多くの資料とルミ先生の見解を合わせ、この人物こそ噂の奇妙な人形であると推測している。伝説によると、傾奇者は見た目が非常に美しく、穏やかで優しい性格の持ち主だという。『人文的故事』によると、彼は桂木によってたたら砂に連れてこられ、地元住民の一人となったそうである。傾奇者がたたら砂に来たばかりのころ、服を洗うことも料理を作ることもできず、細かい仕事は一切できなかった。地元の人たちが丁寧に教えたため、洗濯、舞踊、そして小物を鍛造する方法などを身につけるようになった。紙切れの記録によると、『大たたら長正』が鍛え上げられた時、傾奇者もその場にいた。だが、御輿長正が桂木を斬る直前で傾奇者に関する手がかりは途切れている。筆者は、傾奇者——すなわち人形は、桂木の死と関係している可能性が高いと考える。<br>
+<br>
+<br>
+（残りの部分はどうやらまだ書き終わっていないようだ…でも、これがかなり工夫された論文であることは確かだ。）<br>
+
+	</p>
+</blockquote>
+</div>
+
+    <input id="TAB-importance-tatarasuna-02" type="radio" name="TAB-importance-tatarasuna" class="tab-switch" /><label class="tab-label" for="TAB-importance-tatarasuna-02"><span class="before-fore-from-mikhail-mention">改変後</span></label>
+    <div class="tab-content not-margin-div">		
+<blockquote>
+	<p>
+		説明：本論文は因論派の支援プロジェクト『ベールをはずして』に属する作品であり、番号は追加待ちである。<br>
+<br>
+作者：アカバ<br>
+<br>
+要旨：稲妻たたら砂エリアは稲妻の製錬鍛造業の重要な場所の一つと考えられてきた。このエリアでは事故が二回発生している。そのうちの一回目に関する記録はどれも曖昧なものである。たたら砂エリアでの最初の事故の裏には人知れぬ歴史的な要因があるのではないか、と筆者は考えている。本論文は既知の資料をもとに、この事件を分析してみるものである。<br>
+<br>
+<br>
+キーワード：たたら砂エリア、雷電五箇伝、御輿長正<br>
+<br>
+はじめに：本論文は筆者の恩師であるルミ先生のレポート『たたら砂エリアに秘匿された疑いのある人文的故事』を受け継ぎ、展開し、この研究を引き続き進めたいとするものである。資料によると、稲妻の鍛造技法はもともと雷神——雷電将軍から受け継がれたものだそうだ。職人たちは神の技術を受け継ぎ、それを製錬鍛造業に応用した。だが、鍛造製錬業の核であるたたら砂エリアには、雄渾たる鍛造業にふさわしくない不思議な噂がある。御輿家、丹羽家、そして外国から訪れた奇妙な機械職人——この三者が切り口となり、我々はそこからたたら砂の裏に隠された真実を垣間見ることができるようになった。<br>
+<br>
+<br>
+本文<br>
+<br>
+たたら砂エリアにあった奇妙な紙切れに、こんなことが書かれている——<br>
+<br>
+1<br>
+「……僭越ながら小生は、長正様が刀鍛冶をするのは彼の心境に良い影響を与えると考える……」<br>
+「……『御輿』の汚名をそそぐことに執着するのは、実に気力を消耗する……」<br>
+<br>
+2<br>
+「……目付様は玉鋼錠をいくつか買った……」<br>
+「……造兵司佑様、そして桂木様と夜通し鍛冶の心得を話していた。」<br>
+<br>
+<br>
+3<br>
+「……やっと長巻の一振りを造り出せた。その名は『大たたら長正』……」<br>
+「……目付様も非常に喜んでいる、造兵司佑様と……」<br>
+「……望は『大たたら長正』の美しさに感動し、それのために絵を描いた……」<br>
+<br>
+<br>
+4<br>
+「……目付様は怒り、桂木を斬った。その切れ筋は、まさに大業物…そして、自ら作った長巻をたたら炉に捨てた……」<br>
+「……望はそれに不満を抱き、燃え溶けた刀を取りに行き……大やけどをした……」<br>
+<br>
+<br>
+5<br>
+「……望はその夜死んだ……桂木様は職責を汚したとはいえ、すべて善意からのものだったと思う……」<br>
+<br>
+6<br>
+「……金次郎は長巻と望の描いた絵を武器庫に隠した……」<br>
+「……長正は厳しいが、白黒をはっきりさせる性分だ。しかしそれは同時に、非情でもあるということ。彼は自らの家名の潔白にこだわっているようだ…私もたたら砂の人たちも、彼の母である千代のことで目を曇らせることなく、長正のことを信じている……」<br>
+「……彼と共に『大たたら長正』を作った喜びを忘れたくない……」<br>
+<br>
+7<br>
+「……撤退する時、武器庫の鍵を三つに分け、一つは目付様に、一つは造兵司正様に、一つはたたら砂に残し、賊の侵入を防ごうとした。」<br>
+「しかしあまりにも慌ただしかったため、目付様と造兵司正様を見つけられず、三つの鍵をすべてたたら砂にある三つの宝箱に隠すしかなかった……」<br>
+<br>
+<br>
+上記の7枚のメッセージはたたら砂エリアに散らばっている。そのうち、6枚は耐久性に優れた紙に記録されており、いずれも非常に古いものと思われるが、最後の1枚だけがやや新しいようだ。筆者は、6枚の紙と最後の1枚は異なる時代のものであると思っており、その年代の差を検証する必要がある。また、6枚の内容は互いに関連しているため、同じ出来事を指しているはずである。<br>
+ルミ先生は『たたら砂エリアに秘匿された疑いのある人文的故事』（以下、『人文的故事』と略称）の中で、スメールの学者が稲妻にたたら砂一帯の人文史を研究しに行っていたということに触れている。ルミ先生が『人文的故事』を書いた当時、たたら砂は一連の事件ですでに衰退した状態だったが、筆者が本文を書いた時分よりはましであった。たたら砂の最も中心的なエリアは、今は全く居住に適しておらず、住む人も確かにいない。住民たちは海辺に移り、水辺に住むようになっていた。スメールの学者たちは、彼らからこのようなことを聞いた——かつてたたら砂はとても繁栄しているところだったと。数百年前、まだ黄金時代と呼べる頃、たたら砂は造兵司正の丹羽、造兵司佑の宮崎、そして目付の御輿長正に管理されていた。同時に、年配の人たちや、より歴史ある家系の人たちは、たたら砂には奇妙な噂があったと繰り返し強調していた。<br>
+<span class="mark">噂はほとんど「妖怪」にまつわるものであり、稲妻の特色に溢れていた。しかし、そのうちごく一部の中で、「外来者」という単語の言及があったのだ。注意すべきは、民間の伝説の中に実在と思しき人物が登場するとは、実に怪しむべきことである。その話題をさらに掘り下げると、次のような情報が得られた。</span><br>
+<span class="mark">-かつて、ある外国の機械職人がたたら砂を訪れた。彼は技術交流のためにきたそうで、地元の人たちとも友人になった。だが、その人物には疑わしいところがあったようで、常に中央部や公開されていない場所の近くをうろついていた。誰かが彼を止めようとすると、彼は理解できないようなことを呟いたとされる。</span><br>
+<span class="mark">-機械職人はいつも大きな炉を眺めながら、何か考えごとをしていたようだ。おそらく、炉の状態を観察していたのだろう。そして同様に、人を不快にさせるような視線で地元の住人たちを観察していたようだ。</span><br>
+<br>
+<span class="mark">年代からみれば、たたら砂でこうした技術交換があったことは理に適っている。たたら砂は海沿いのため、船で行くことができる。外国から来た人間が地元で歓迎されるのも、おかしなことではない。だが、技術交流が行われてから間もなく、このエリアが衰退していったのも事実。この二つのことは大いに関係していると思われる。しかし、それは当時の人の妄想にすぎないと考える住人もいる。</span><br>
+<br>
+筆者は稲妻の関連資料に基づき、たたら砂と関連があるかもしれない一部の人物を整理した。管理者から順に、記録は以下の通りである——<br>
+<br>
+造兵司正——丹羽<br>
+フルネームは丹羽久秀、一心伝丹羽家の後継者。その一族は赤目、楓原と共に一心三作と呼ばれている。記載によると、丹羽は謙虚で聡明、土地と民生を管理する優れた人材であった。のちに彼は行方不明となっておいり、家族を連れて事故後のたたら砂を離れたと思われる。<br>
+<br>
+造兵司佑——宮崎<br>
+フルネームは宮崎兼雄、丹羽の補佐。出身は不明。主に鍛造及び人員管理において、丹羽をサポートするなどしていた。穏やかで優しい人物であり地元に友人が多く、御輿長正とも親交があった。<br>
+<br>
+目付——御輿長正<br>
+御輿家の後継者、鬼族の武者御輿千代の養子であり、「胤の岩蔵」御輿道啓の養弟である。母の千代が行方不明になった後、養兄の道啓に捨てられた。彼は一人で一族すべての責任を背負い、家族の汚名をそそぐために日々奮闘していた。様々な資料によると、御輿長正はやや頑固な一面はあるが、剛直で品行の正しい人であったとされる。紙切れの記録によると、彼は修身のために刀の鍛造を習い、わざわざ宮崎の教えを受けていた。名刀大たたら長正を鍛え上げた後、彼はあることから部下の桂木を斬った。<br>
+<br>
+部下——桂木<br>
+フルネーム、出身ともに不明。筆者は多くの資料を調べたが、桂木本人に関するさらなる情報を得ることはできなかった。彼は御輿長正の手下であり、忠実な武人だった。御輿長正に救われたため、長正のために水火も辞さないとを誓ったとされる——随従することから、命を捧げるまで。<br>
+<br>
+<span class="mark">機械職人</span><br>
+<span class="mark">筆者は多くの方面から考察したが、この人物の出所を推し量ることはできなかった。だが、たたら砂で事件が起きて以降、彼に関する噂は少なくなっていったようだ。筆者は、この人物は地元住民たちの想像上の見知らぬ人ではなく、実際に存在していた来訪者であり、たたら砂で起きた事件に関係があったかもしれないと推測している。</span><br>
+<br>
+<br>
+（残りの部分はどうやらまだ書き終わっていないようだ…でも、これがかなり工夫された論文であることは確かだ。）<br>
+
+	</p>
+</blockquote>
+</div>
+</div>
 							<h2 id="domain">秘境</h2>
 					<h3 id="castle-of-scrolls">借景ノ館</h3>
+					<b id="before-castle-of-scrolls">Ver3.2まで</b>
 						<blockquote>
-							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。後日、その中で白紙のように気が狂った傾奇者が見つかった。</p>
+							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。<span class="mark">後日、その中で白紙のように気が狂った傾奇者が見つかった。</span></p>
 						</blockquote>
-						</blockquote>
-						<h4>稽古·御館絵巻</h4>
+						<b id="after-castle-of-scrolls">Ver3.3以降</b>
 						<blockquote>
-							<p>
-								山々の深部には、この世のものとは思えない光景と、それに惹かれる野蛮な者が潜んでいる。
-							</p>
+							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。長き歳月に渡って、知らざる原因によって封印されていた。</p>
 						</blockquote>
-						<div><p><b>報酬</b>：風雅の導き、無常の面、原石、モラ、大英雄の経験、仕上げ用魔鉱<br>
-						<b>敵</b>：野伏・陣刀番 ×2、野伏・火付番 ×2、デットエージェント・炎、ミラーメイデン</p></div>
 						
 						<h3 id="joururi-workshop">淨琉璃工房</h3>
 						<blockquote>
@@ -2982,8 +4914,10 @@
 					<h3 id="from-character-mention">プレイアブルキャラクター</h3>
 					<h4 id="from-raiden-mention">雷電将軍</h4>
 						<blockquote id="raiden-to-kunikuzushi-voice">
-								<span class="blockquote-title">国崩について…</span>
-								<p>あの子は将軍を作る時にできた副産物です。彼を制御しないのは、私の心の中で彼に対して借りを覚えているからでしょう。</p>
+							<span class="blockquote-title">国崩について…</span>
+								<p>
+									<span class="open">魔神任務間章3幕中に削除</span><br>
+								あの子は将軍を作る時にできた副産物です。彼を制御しないのは、私の心の中で彼に対して借りを覚えているからでしょう。</p>
 							</span>
 						</blockquote>
 						<blockquote id="raiden-story-playable">
@@ -3000,14 +4934,16 @@
 						</blockquote>
 					<h4 id="from-yae-mention">八重神子</h4>
 						<blockquote id="yae-to-kunikuzushi-voice">
-								<span class="blockquote-title">国崩について…</span>
-								<p>妾は当時からあれを厄介なやつだと思っておった。じゃがあやつは、自身の創造したものじゃからと手を出したくないと言いおった。こうなると分かっておれば、あやつに黙って処分しておいたというのに。今はもう… ふんっ、まったく厄介な面倒事じゃ。</p>
+							<span class="blockquote-title">国崩について…</span>
+								<p>
+									<span class="open">魔神任務間章3幕中に削除</span><br>妾は当時からあれを厄介なやつだと思っておった。じゃがあやつは、自身の創造したものじゃからと手を出したくないと言いおった。こうなると分かっておれば、あやつに黙って処分しておいたというのに。今はもう… ふんっ、まったく厄介な面倒事じゃ。</p>
 							</span>
 						</blockquote>
 					<h4 id="from-tartaglia-mention">タルタリヤ</h4>
 						<blockquote id="tartaglia-to-balladeer-voice">
 								<span class="blockquote-title">「散兵」について</span>
-								<p>彼は神の心を手に入れた後、俺たちとの連絡を断ってしまってね。だから、その心を取り戻すために行動を開始した。俺はいろんな場所を回るのは別に構わない。もしかすると、偶然どこかで君に会うかもしれないね。</p>
+								<p>
+									<span class="open">魔神任務間章3幕中に削除</span><br>彼は神の心を手に入れた後、俺たちとの連絡を断ってしまってね。だから、その心を取り戻すために行動を開始した。俺はいろんな場所を回るのは別に構わない。もしかすると、偶然どこかで君に会うかもしれないね。</p>
 							</span>
 						</blockquote>
 						
@@ -3019,8 +4955,12 @@
 						</blockquote>
 					<h3 id="from-npc-mention">NPC</h3>
 					<h4 id="from-viktor-mention">ヴィクトル</h4>
+					<div class="tab-wrap not-margin-div">
+    <input id="TAB-viktor-01" type="radio" name="TAB-viktor" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-viktor-01"><span class="before-viktor-mention">改変前</span></label>
+    <div class="tab-content not-margin-div">
 						<blockquote id="equivalent-exchange">
 								<span class="blockquote-title">等量交換</span>
+								
 								<p>旅人「他の執行官について。」<br>
 ヴィクトル「執行官の方々…俺様も噂ぐらいしか聞いたことがないが。」<br>
 ヴィクトル「俺様も他の人から聞いただけだから、あまり本気にするなよ…」<br>
@@ -3035,9 +4975,33 @@
 ヴィクトル「聞いた話だが… ある執行官様の手下に配属されるらしい。だからもう、モンドにいる必要はなくなった。」<br>
 ヴィクトル「まあ、どの執行官様のもとにつくのかは知らないが…『散兵』だけは勘弁だね…」</p>
 						</blockquote>
+					</div>
+					
+					 <input id="TAB-viktor-02" type="radio" name="TAB-viktor" class="tab-switch"><label class="tab-label" for="TAB-viktor-02"><span class="before-viktor-mention">改変後</span></label>
+    <div class="tab-content not-margin-div">
+						<blockquote id="equivalent-exchange">
+								<span class="blockquote-title">等量交換</span>
+								
+								<p>旅人「他の執行官について。」<br>
+ヴィクトル「執行官の方々…俺様も噂ぐらいしか聞いたことがないが。」<br>
+ヴィクトル「俺様も他の人から聞いただけだから、あまり本気にするなよ…」<br>
+ヴィクトル「「公子」様のことは知ってるか？聞いた話によると、あの方はよく遠出するらしい。そして、帰ってくる時には家族にプレゼントを用意するそうだ。」<br>
+ヴィクトル「俺様の知り合いから聞いた話によると、「公子」様の弟や妹たちはあの方のことが大好きなんだとさ。」<br>
+ヴィクトル「だが、俺様は「公子」様のところに異動したくない。あの方に付くことになったら、あちこち駆け回るはめになるかもしれないからな。」<br>
+ヴィクトル「上層部よ、どうか俺様が安心して老後を送れるよう、気候の良い場所へと異動させてくれ…」</p>
+						</blockquote>
+						<blockquote id="return-to-days-of-winter">
+								<span class="blockquote-title">冬への回帰</span>
+								<p>(未確認)</p>
+						</blockquote>
+					</div>
+				</div>
 						<h4 id="from-mikhail-mention">ミハイル&amp;リュドミラ</h4>
+						<div class="tab-wrap not-margin-div">
+    <input id="TAB-mikhail-01" type="radio" name="TAB-mikhail" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-mikhail-01"><span class="before-fore-from-mikhail-mention">改変前</span></label>
+    <div class="tab-content not-margin-div">
 					<blockquote>
-						<p>ミハイル「聞いたか？スメール教令院が大プロジェクトをやっちまったらしい！」<br>
+						<p class="fore-from-mikhail-mention-text">ミハイル「聞いたか？スメール教令院が大プロジェクトをやっちまったらしい！」<br>
 ミハイル「今、六大学派は指導者を失い、力の弱い草神に管理してもらうしかない状態らしいぞ。」<br>
 リュドミラ「えっ！何かよくないことでも起きたってこと？」<br>
 ミハイル「いやいや、よくないどころか、とんでもなくいいニュースだよ！」<br>
@@ -3049,40 +5013,84 @@
 ミハイル「うん… 人事異動はよくあることだから、関係ないんじゃないか？」<br>
 ミハイル「とにかく、「博士」様が女皇様のために成し遂げた大きな成果には影響しないさ！」</p>
 					</blockquote>
+				</div>
+						    <input id="TAB-mikhail-02" type="radio" name="TAB-mikhail" class="tab-switch"><label class="tab-label" for="TAB-mikhail-02"><span class="before-fore-from-mikhail-mention">改変後</span></label>
+    <div class="tab-content not-margin-div">
+					<blockquote>
+						<p class="fore-from-mikhail-mention-text">ミハイル「聞いたか？スメール教令院が大プロジェクトをやっちまったらしい！」<br>
+ミハイル「今、六大学派は指導者を失い、力の弱い草神に管理してもらうしかない状態らしいぞ。」<br>
+リュドミラ「えっ！何かよくないことでも起きたってこと？」<br>
+ミハイル「いやいや、よくないどころか、とんでもなくいいニュースだよ！」<br>
+ミハイル「「博士」様は隙に乗じて、大した手間もかけずに大きな手柄を立てたそうだ！」<br>
+リュドミラ「そうなの…さすがは第二位の執行官様ね…」<br>
+ミハイル「なんだい?その口ぶりだと、あまり嬉しくないように聞こえるんだが。」<br>
+リュドミラ「執行官様の計画が成功したのはもちろんいいことだけど、ただ…「淑女」様が稲麦で任務を遂行した時、最終的にあんな目に遭ったことを思い出すと…」<br>
+ミハイル「おいおい、どんだけ心配性なんだよ。俺が思うに、人数よりもその質のほうがよっぽど重要だと思うぜ。」<br>
+ミハイル「「博士」様のように偉大な方さえいれば、残りの席が空いていても何の問題もない。<br>
+ミハイル「八位はともかく、六位の席は何百年も空いてたんだろ？きっと大した問題じゃないさ。」
+							</p>
+						</blockquote>
+						</div>
+					</div>
 						<h2 id="combat">戦闘・育成</h2>
 						<h3 id="atack-skill">攻撃</h3>
-						<div><p>公式生放送で公開された情報から。一部漢字表記は中国語配信を参照</p></div>
 					<h4 id="nomal-atack" class="nomal-atack">通常攻撃：行幡鳴弦</h4>
 					<blockquote>
 						<p>
-						風刀を放ち遠距離攻撃を行う。
+						<b>通常攻撃</b><br>
+風刃による最大3段の連続攻撃を行い、風元素ダメージを与える。<br>
+<br>
+<b>重撃</b><br>
+一定のスタミナを消費し、短い詠唱をした後、前方に高圧気流を凝集して風元素範囲ダメージを与える。<br>
+
+<b>落下攻撃</b><br>
+空中から風元素の力を凝集しながら落下し、地面に衝撃を与える。経路上の敵を攻撃し、落下時に風元素範囲ダメージを与える。<br>
 						</p>
 					</blockquote>
 					<h4 id="skill-atack" class="skill-icon">元素スキル：羽画・風姿の華詩</h4>
 					<blockquote>
 						<p>
-							周囲の敵に攻撃を行い、持続的に浮遊する。通常攻撃は空居不生断に、重撃は空居風刀界に変化し、攻撃力と範囲が上がりスタミナを消費しなくなる。<br>
-							浮遊中は「空居力」という独自のスタミナが減っていき、使い切ると浮遊が終了する。ダッシュやジャンプも可能で、より多くの空居力を消費する。
+							大気の力を凝集し、その力を借りて大地の束縛を振り払う。周囲に風元素ダメージを与え、空中に飛び上がり「児姿優風」状態に入る。</p>
+<p>
+<b>児姿優風</b><br>
+この状態の時、放浪者は落下攻撃を行うことができない。また、通常攻撃と重撃はそれぞれ空居·不生断と空居·風刀界へと変わり、与えるダメージおよび影響範囲がアップする。これらのダメージは、それぞれ通常攻撃ダメージと重撃ダメージに見なされる。なお、空居·風刀界を行う際にスタミナは消費されない。<br>
+この状態の時、放浪者は空中を浮遊し続け、行動は以下の特性を持つ。<br>
+・持続的に「空居力」を消費し、浮遊状態を維持する。<br>
+・ダッシュすると、追加で空居力を消費して空中を素早く移動する。長押しによるダッシュは持続的に空居力を消費し、高速移動を維持する。この効果はダッシュに取って代わる。<br>
+・ジャンプすると、追加で空居力を消費して浮遊する高度を上げる。長押しによるジャンプは持続的に空居力を消費し、高度を上げ続ける。<br>
+空居力が尽きると、この状態は解除される。<br>
+児姿優風の継続時間中に再び元素スキルを発動すると、この状態は解除される。<br>
+</p>
+<p>
+<i>「浮世傾舞、秘すれば花。」</i>
 						</p>
 					</blockquote>
 					<h4 id="burst-atack" class="burst-icon">元素爆発：狂言・式楽伍番</h4>
 					<blockquote>
 						<p>
-							大気を圧縮して空洞を作り出し、それをゴミどもめがけて踏み付ける(原文ママ)<br>
-							もし空中にいる時に元素爆発を発動したら、発動した瞬間から落ちていく。
+							大気を圧縮し、あらゆる煩悩を塵とする空洞を生み出し風元素範囲ダメージを複数回与える。<br>
+元素スキル「羽画·風姿華歌」の児姿優風状態時、元素爆発を発動した後、児姿優風状態は解除される。
+</p>
+<p><i>「仄仄と 光そそぎし 朝焼けに 萩の風吹き 旧夢は沈みて」</i></p>
 						</p>
 					</blockquote>
 					<h3 id="talent">天賦</h3>
 					<h4 id="burst-atack">拾玉得花</h4>
 					<blockquote>
 						<p>
-							浮遊中に炎/水/氷/雷元素に触れると、空居力上限/攻撃力/会心率アップ、通常攻撃および重撃が敵に当たった際に元素エネルギー回復(どの元素がどの効果なのかは不明。)
+							羽画·風姿華歌を発動時、水元素/炎元素/氷元素/雷元素に触れると、触れた元素を基に現在の児姿優風状態に各種強化効果を与える。<br>
+·水元素：空居力上限+20ポイント。<br>
+·炎元素：攻撃力+30%。<br>
+·氷元素：会心率+20%。<br>
+·雷元素：通常攻撃および重撃が敵に命中した後、元素エネルギーが0.8ポイント回復する。この方式による元素エネルギー回復は、0.2秒毎に1回のみ可能。<br>
+同時に獲得できる元素タイプと対応する強化効果は最大2種類まで。
 						</p>
 					</blockquote>
 				<h4 id="burst-atack">夢跡一風</h4>
 					<blockquote>
 						<p>
-							浮遊中に通常攻撃/重撃が命中すると、一定確率でダッシュに空居力を消費しなくなり、敵を追尾する風の矢を放つ。
+							児姿優風状態時、放浪者の空居·不生断または空居·風刀界が敵に命中すると、16%の確率で「傾落」効果を獲得できる。「傾落」効果：放浪者は現在の児姿優風状態で空中ダッシュをすると空居力を消費せず、代わりに傾落効果を解除する。また同時に風の矢を4本放ち、それぞれ攻撃力の35%に相当する風元素ダメージを与える。<br>
+							空居·不生断および空居·風刀界で傾落効果が発動しなかった場合、次回の発動確率+12%。発動判定は0.1秒毎に1回のみ行われる。
 						</p>
 					</blockquote>
 				<h4 id="burst-atack">廻色雲弦</h4>
@@ -3091,11 +5099,166 @@
 							弓と法器を突破する時、消費するモラ-50%。
 						</p>
 					</blockquote>
-					
-									<h2 id="weapons-atack">武器・聖遺物</h2>
+						<h3 id="constellation-list">命の星座</h3>
+					<h4 id="constellation-one" class="constellation-one">初番・茂風流羽行</h4>
+					<blockquote>
+						<p>
+							児姿優風状態時、放浪者の空居·不生断および空居·風刀界の攻撃速度+10%。<br>
+							また、固有天賦「夢跡一風」により発射された風の矢は追加で攻撃力25%のダメージを与えられる。この効果は固有天賦「夢跡一風」を解放する必要がある。
+						</p>
+					</blockquote>
+					<h4 id="constellation-two" class="constellation-two">弐番・箙島月白浪</h4>
+					<blockquote>
+						<p>
+							児姿優風状態時、空居力の上限値と現在の空居力の差が1あるごとに狂言·式楽伍番の与えるダメージが4%アップする。<br>
+							この方式でアップできる狂言·式楽伍番のダメージは最大200%までとなる。
+						</p>
+					</blockquote>
+					<h4 id="constellation-three" class="constellation-three skill-icon">参番・久世舞夕顔</h4>
+					<blockquote>
+						<p>
+							狂言·式楽伍番のスキルLv.+3。<br>
+							最大Lv.15まで。
+						</p>
+					</blockquote>
+					<h4 id="constellation-four" class="constellation-four">肆番・花月歌浮舟</h4>
+					<blockquote>
+						<p>
+							羽画·風姿華歌発動時、固有天賦「拾玉得花」で元素タイプと対応する強化効果を得ると、今回の発動で未獲得の強化効果をランダムで1つ獲得する。同時に獲得できる元素タイプと対応する強化効果は最大3種類まで。<br>
+							固有天賦「拾玉得花」を解放する必要がある。
+						</p>
+					</blockquote>
+					<h4 id="constellation-five" class="constellation-five burst-icon">末番・今昔渡来殿</h4>
+					<blockquote>
+						<p>
+							羽画·風姿華歌のスキルLv.+3<br>
+							最大Lv.15まで。
+						</p>
+					</blockquote>
+					<h4 id="constellation-six" class="constellation-six">言祝・霞幕傾松風</h4>
+					<blockquote>
+						<p>
+							児姿優風状態時、放浪者が自ら発動した空居·不生断が敵に命中すると、下記の効果を発動する。<br>
+·命中した位置に空居·不生断を追加で1回発動し、本来の40%分のダメージを与える。このダメージは通常攻撃ダメージとみなされる。<br>
+·放浪者の空居力が40ポイント未満の時、空居力を4ポイント回復する。この方式による空居力の回復は、0.2秒毎に1回のみ可能。また、1回の児姿優風の継続時間中に最大5回まで発動可能。
+						</p>
+					</blockquote>
+					<h3 id="nurturing">育成素材</h3>
+					<div class="not-margin-div">
+						<table class="timeline-table">
+							<tr>
+								<th>大英雄の経験</th>
+								<td>413個</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>モラ</th>
+								<td>2,092,530モラ</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>ルッカデヴァータダケ</th>
+								<td>168個</td>
+								<td>スメールの野外で獲得</td>
+							</tr>
+							<tr>
+								<th>永続コア</th>
+								<td>46個</td>
+								<td>兆載永劫ドレイク</td>
+							</tr>
+							<tr>
+								<th>古びた鍔</th>
+								<td>18個</td>
+								<td>野伏衆</td>
+							</tr>
+							<tr>
+								<th>影打の鍔</th>
+								<td>30個</td>
+								<td>野伏衆</td>
+							</tr>
+							<tr>
+								<th>名刀の鍔</th>
+								<td>36個</td>
+								<td>野伏衆</td>
+							</tr>
+							<tr>
+								<th>自由のターコイズ・砕屑</th>
+								<td>1個</td>
+								<td>ボスドロップ・合成</td>
+							</tr>
+							<tr>
+								<th>自由のターコイズ・欠片</th>
+								<td>9個</td>
+								<td>ボスドロップ・合成</td>
+							</tr>
+							<tr>
+								<th>自由のターコイズ・塊</th>
+								<td>9個</td>
+								<td>ボスドロップ・合成</td>
+							</tr>
+							<tr>
+								<th>自由のターコイズ</th>
+								<td>6個</td>
+								<td>ボスドロップ・合成</td>
+							</tr>
+						</table>
+					</div>
+					<h3 id="skill-nurturing">天賦育成素材</h3>
+					<div class="not-margin-div">
+						<table class="timeline-table">
+							<tr>
+								<th>空行の虚鈴</th>
+								<td>18個</td>
+								<td>正機の神</td>
+							</tr>
+							<tr>
+								<th>モラ</th>
+								<td>1,652,500モラ</td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>「篤行」の教え</th>
+								<td>168個</td>
+								<td>水/土/日</td>
+							</tr>
+							<tr>
+								<th>「篤行」の導き</th>
+								<td>63個</td>
+								<td>水/土/日</td>
+							</tr>
+							<tr>
+								<th>「篤行」の哲学</th>
+								<td>114個</td>
+								<td>水/土/日</td>
+							</tr>
+							<tr>
+								<th>古びた鍔</th>
+								<td>18個</td>
+								<td>野伏衆</td>
+							</tr>
+							<tr>
+								<th>影打の鍔</th>
+								<td>66個</td>
+								<td>野伏衆</td>
+							</tr>
+							<tr>
+								<th>名刀の鍔</th>
+								<td>93個</td>
+								<td>野伏衆</td>
+							</tr>
+							<tr>
+								<th>知恵の冠</th>
+								<td>3個</td>
+								<td>イベント等</td>
+							</tr>
+						</table>
+					</div>
+				</table>
+					</div>
+									<h2 id="weapons-atack">モチーフ武器・聖遺物</h2>
 				<h3 id="tulaytullahs-remembrance">トゥライトゥーラの記憶</h3>
-				<div><span>ステータス：会心ダメージ%<br>
-					育成素材：烈日権威の〇〇シリーズ、キノコンの〇菌核シリーズ、キノコンの〇胞子シリーズ</span></div>
+				<div><span>基礎攻撃力:674/会心ダメージ:44.1%<br>
+					育成素材：烈日権威シリーズ、キノコンの菌核シリーズ、キノコンの胞子シリーズ</span></div>
 				<blockquote>
 					<p>
 					<b>埋もれしサファイアの涙(無凸)</b><br>
@@ -3356,14 +5519,14 @@
 </div>
 <h2 id="gacha">祈願</h2>
 					<h3 id="gacha-3.3">Ver3.3 残火変相</h3>
-					<img src="https://giarchive.github.io/3.2/Img/7997C394-958A-4128-97B3-0B32288580CA.jpeg" loading="lazy">
+					<img src="http://giarchive.github.io/3.2/Img/4D4868C8-D97D-4BA7-AA79-ED14BBA3E467.jpeg" loading="lazy">
 					<div>
-						<p>	2022年12月7日 アップデート後〜</p>
+						<p>	2022年12月7日 アップデート後〜2022/12/27 18:59</p>
 						<ul>
-							<li>☆5 放浪者</li>
-							<li>☆4 ファルザン</li>
-							<li>☆4 ???</li>
-							<li>☆4 ???</li>
+							<li>☆5 久世浮傾・放浪者（風）</li>
+							<li>☆4 機求封秘・ファルザン（風）</li>
+							<li>☆4 雄々しき戎犬・ゴロー（岩）</li>
+							<li>☆4 無邪気な知恵・煙緋（炎）</li>
 						</ul>
 					</div>			
 		
@@ -3390,7 +5553,7 @@
 					</p></div>
 						<h2 id="music">楽曲</h2>
 						<h3 id="ominous-fandango">浮浪人の魂胆 - Ominous Fandango</h3>
-						<div>テーマ曲</span>
+						<div>テーマ曲</div>
 				<iframe class="applemusic" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&theme=auto" loading="lazy"></iframe><br>
 				<div class="music-badge">
 					<a target="_blank" href="https://geo.music.apple.com/jp/album/%E6%B5%AE%E6%B5%AA%E4%BA%BA%E3%81%AE%E9%AD%82%E8%83%86/1576302268?i=1576303178&amp;itsct=music_box_badge&amp;itscg=30200&amp;app=music&amp;ls=1"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-music/badge/ja-jp" alt="Listen on Apple Music" loading="lazy"></a>
@@ -3449,6 +5612,13 @@
 					<cite>引用:<a target="_blank" href="https://twitter.com/genshinmains/status/1596131777021882368">Twitter</a></cite>
 			<img src="https://giarchive.github.io/3.2/Img/6C017E49-9391-4F99-A42B-0FC71307ED9E.jpeg" translate="no" loading="lazy">
 			<cite>引用:<a target="_blank" href="https://act.hoyoverse.com/ys/event/e20221126prev-18kfmk/index.html">Ver.3.3「六処解悟、諸相空無」特設ページ</a></cite>
+			<img src="https://giarchive.github.io/3.2/Img/BAFC1EBE-4174-49A5-9684-717335E4F4F6.jpeg" translate="no" loading="lazy">
+			<cite>引用:<a target="_blank" href="https://twitter.com/paimon_genshin7/status/1600316666407272448">Twitter</a></cite>
+			
+			<h3 id="fluttering-footsteps-in-the-fields-illustration">芝生を飄然と進みて</h3>
+			<img src="https://giarchive.github.io/3.2/Img/D59A0E8D-2442-4078-8B78-E754E4A1783B.jpeg" translate="no" loading="lazy">
+			<cite>引用:<a target="_blank" href="https://act.hoyoverse.com/ys/event/e20221202wanderer-dwvz/index.html">芝生を飄然と進みて</a></cite>
+			
 			<h3 id="libe2d">アニメーション画像</h3>
 			<h4 id="live2d-shouki-no-kami">正機の神</h4>
 			<video controls="false" poster="https://giarchive.github.io/3.2/Img/EB3A45E5-FF22-492D-AC05-7DFE0D62D281.jpeg" style="width:100%;background-image:url('https://giarchive.github.io/3.2/Img/EB3A45E5-FF22-492D-AC05-7DFE0D62D281.jpeg');background-size:100%;" loading="lazy" muted playsinline disablepictureinpicture loop>
@@ -3456,7 +5626,7 @@
 							</video>
 				<cite>引用:<a target="_blank" href="https://act.hoyoverse.com/ys/event/e20221024prev/index.html">Ver.3.2「虚空の鼓動、熾盛の劫火」特設ページ</a></cite>
 			<h4 id="live2d-wanderer">放浪者(立ち絵Ver)</h4>
-			<video controls="false" poster="https://giarchive.github.io/3.2/Img/24380DC1-B46A-4306-B14A-124BED540037.jpeg" style="width:100%;height:80vh;background-image:url('https://giarchive.github.io/3.2/Img/24380DC1-B46A-4306-B14A-124BED540037.jpeg');background: center;" loading="lazy" muted playsinline disablepictureinpicture loop>
+			<video controls="false" poster="https://giarchive.github.io/3.2/Img/24380DC1-B46A-4306-B14A-124BED540037.jpeg" style="width:100%;max-height:80vh;background-image:url('https://giarchive.github.io/3.2/Img/24380DC1-B46A-4306-B14A-124BED540037.jpeg');background: center;" loading="lazy" muted playsinline disablepictureinpicture loop>
 							<source src="https://giarchive.github.io/3.2/RPReplay_Final1669449186.mov" loading="lazy">
 							</video>
 			<cite>引用:<a target="_blank" href="https://act.hoyoverse.com/ys/event/e20221126prev-18kfmk/index.html">Ver.3.3「六処解悟、諸相空無」特設ページ</a></cite>			
@@ -3578,7 +5748,14 @@ NPC「ニィロウ、本当にやるつもりか？あいつらのためにこ�
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【Ver.3.3最新情報】<br>公式YouTubeチャンネルにて、Ver.3.3「六処解悟、諸相空無」予告情報番組を配信中！<br><br>▼視聴はこちらから<a href="https://t.co/VITHBjoLyR">https://t.co/VITHBjoLyR</a><br><br>▼出演<br>主人公（空）（CV 堀江瞬）<br>鹿野院平蔵（CV 井口祐一）<br>ナヒーダ（CV 田村ゆかり）<br>放浪者（CV 柿原徹也）<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/03gnjiqGKd">pic.twitter.com/03gnjiqGKd</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596111598237933571?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.3より、魔神任務間章「伽藍に落ちて」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/hGcFxqoi0B">pic.twitter.com/hGcFxqoi0B</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596114553929990144?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【新実装キャラクター紹介】<br>★5 放浪者<br>CV：柿原徹也<br>元素：風<br>武器：法器<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E6%9F%BF%E5%8E%9F%E5%BE%B9%E4%B9%9F?src=hash&amp;ref_src=twsrc%5Etfw">#柿原徹也</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/tT2hTbdiYy">pic.twitter.com/tT2hTbdiYy</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596114742610825216?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【キャラクター紹介 スキル編】<br>久世浮傾　放浪者<br>元素スキル「羽画・風姿華歌」<br>大気の力を凝集し、その力を借りて大地の束縛を振り払う。周囲に風元素ダメージを与え、空中に飛び上がって「児姿優風」状態に入る。<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/ZsEkDk3t3k">pic.twitter.com/ZsEkDk3t3k</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599254205985718272?ref_src=twsrc%5Etfw">December 4, 2022</a></blockquote>
+					
+					
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【久世浮傾・放浪者】<br>「人形を燃やせば灰が残る。その灰から何が生まれるかについては…」<br>正体が謎に包まれた放浪者。修験者のような身なりをしているが、それらしき言動は見られない。<br><br>▼詳細はこちら<a href="https://t.co/8Lt8wkuTJE">https://t.co/8Lt8wkuTJE</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/ydAJQJl8up">pic.twitter.com/ydAJQJl8up</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599254681120915457?ref_src=twsrc%5Etfw">December 4, 2022</a></blockquote>
 					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【Ver.3.3イベント祈願予告】<br>第1期<br>★5「放浪者」イベント祈願「残火変相」<br>★5「荒瀧一斗」イベント祈願「鬼門闘宴」<br><br>イベント祈願「残火変相」及び「鬼門闘宴」において、ファルザンの出現確率が大幅にUP！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/lwx1usT8gg">pic.twitter.com/lwx1usT8gg</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596117070248173568?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【キャラクター実戦紹介】<br>放浪者「今昔孤独」<br><br>探し続けた　数百年の妄執を胸に<br>嘆き続けた　来たる悪風は無意に<br><br>▼YouTube版<a href="https://t.co/DnJw80DnIg">https://t.co/DnJw80DnIg</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/%E6%9F%BF%E5%8E%9F%E5%BE%B9%E4%B9%9F?src=hash&amp;ref_src=twsrc%5Etfw">#柿原徹也</a> <a href="https://t.co/gtUlTl8lG8">pic.twitter.com/gtUlTl8lG8</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599614791257010176?ref_src=twsrc%5Etfw">December 5, 2022</a></blockquote>
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【任務予告】<br>3.3バージョンアップ後、魔神任務 間章・第三幕「伽藍に落ちて」が開放されます！<br><br>▼詳細はこちら <a href="https://t.co/KFVB6Ku76k">https://t.co/KFVB6Ku76k</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/BWQZoQkEKl">pic.twitter.com/BWQZoQkEKl</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599615806547050496?ref_src=twsrc%5Etfw">December 5, 2022</a></blockquote>
+					<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">【イベント紹介】<br>本日12月5日(月)より、新キャラクター・放浪者のWebイベントを開催中です！<br>イベント参加で、原石報酬を獲得できます。<br><br>▼イベントページ<a href="https://t.co/GqDwCJdbDa">https://t.co/GqDwCJdbDa</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/XwOYRCNcAv">pic.twitter.com/XwOYRCNcAv</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599629642650075143?ref_src=twsrc%5Etfw">December 5, 2022</a></blockquote>
 				</div>
 				
 				
@@ -3603,8 +5780,29 @@ NPC「ニィロウ、本当にやるつもりか？あいつらのためにこ�
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【Ver.3.3最新情報】<br>公式YouTubeチャンネルにて、Ver.3.3「六処解悟、諸相空無」予告情報番組を配信中！<br><br>▼視聴はこちらから<a href="https://t.co/VITHBjoLyR">https://t.co/VITHBjoLyR</a><br><br>▼出演<br>主人公（空）（CV 堀江瞬）<br>鹿野院平蔵（CV 井口祐一）<br>ナヒーダ（CV 田村ゆかり）<br>放浪者（CV 柿原徹也）<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/03gnjiqGKd">pic.twitter.com/03gnjiqGKd</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596111598237933571?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新魔神任務】<br>Ver.3.3より、魔神任務間章「伽藍に落ちて」を開放予定！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/hGcFxqoi0B">pic.twitter.com/hGcFxqoi0B</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596114553929990144?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【新実装キャラクター紹介】<br>★5 放浪者<br>CV：柿原徹也<br>元素：風<br>武器：法器<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E6%9F%BF%E5%8E%9F%E5%BE%B9%E4%B9%9F?src=hash&amp;ref_src=twsrc%5Etfw">#柿原徹也</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/tT2hTbdiYy">pic.twitter.com/tT2hTbdiYy</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596114742610825216?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
+						
+						
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【久世浮傾・放浪者】<br>「人形を燃やせば灰が残る。その灰から何が生まれるかについては…」<br>正体が謎に包まれた放浪者。修験者のような身なりをしているが、それらしき言動は見られない。<br><br>▼詳細はこちら<a href="https://t.co/8Lt8wkuTJE">https://t.co/8Lt8wkuTJE</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/ydAJQJl8up">pic.twitter.com/ydAJQJl8up</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599254681120915457?ref_src=twsrc%5Etfw">December 4, 2022</a></blockquote>
 						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【Ver.3.3イベント祈願予告】<br>第1期<br>★5「放浪者」イベント祈願「残火変相」<br>★5「荒瀧一斗」イベント祈願「鬼門闘宴」<br><br>イベント祈願「残火変相」及び「鬼門闘宴」において、ファルザンの出現確率が大幅にUP！<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E%E3%82%A2%E3%83%97%E3%83%87%E6%83%85%E5%A0%B1?src=hash&amp;ref_src=twsrc%5Etfw">#原神アプデ情報</a> <a href="https://t.co/lwx1usT8gg">pic.twitter.com/lwx1usT8gg</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1596117070248173568?ref_src=twsrc%5Etfw">November 25, 2022</a></blockquote>
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【キャラクター実戦紹介】<br>放浪者「今昔孤独」<br><br>探し続けた　数百年の妄執を胸に<br>嘆き続けた　来たる悪風は無意に<br><br>▼YouTube版<a href="https://t.co/DnJw80DnIg">https://t.co/DnJw80DnIg</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/%E6%9F%BF%E5%8E%9F%E5%BE%B9%E4%B9%9F?src=hash&amp;ref_src=twsrc%5Etfw">#柿原徹也</a> <a href="https://t.co/gtUlTl8lG8">pic.twitter.com/gtUlTl8lG8</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599614791257010176?ref_src=twsrc%5Etfw">December 5, 2022</a></blockquote>
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【任務予告】<br>3.3バージョンアップ後、魔神任務 間章・第三幕「伽藍に落ちて」が開放されます！<br><br>▼詳細はこちら <a href="https://t.co/KFVB6Ku76k">https://t.co/KFVB6Ku76k</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/BWQZoQkEKl">pic.twitter.com/BWQZoQkEKl</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599615806547050496?ref_src=twsrc%5Etfw">December 5, 2022</a></blockquote>
+						<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">【イベント紹介】<br>本日12月5日(月)より、新キャラクター・放浪者のWebイベントを開催中です！<br>イベント参加で、原石報酬を獲得できます。<br><br>▼イベントページ<a href="https://t.co/GqDwCJdbDa">https://t.co/GqDwCJdbDa</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> <a href="https://twitter.com/hashtag/Genshin?src=hash&amp;ref_src=twsrc%5Etfw">#Genshin</a> <a href="https://t.co/XwOYRCNcAv">pic.twitter.com/XwOYRCNcAv</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1599629642650075143?ref_src=twsrc%5Etfw">December 5, 2022</a></blockquote>
 					</div>
+					
+					<h2 id="official-video">公式動画</h2>
+					<div>PVや広告を除く公式動画</div>
+							<div class="youtube not-margin-div">
+								<p>Youtubeを表示できません。</p>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/WhQ61vQzLNA?loop=1&playlist=WhQ61vQzLNA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; allowfullscreen;" loading="lazy"></iframe>
+								</div>
+								<div class="youtube not-margin-div">
+								<p>Youtubeを表示できません。</p>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/nClVCpA2wUA?loop=1&playlist=nClVCpA2wUA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; allowfullscreen;" loading="lazy"></iframe>
+							</div>
+							<div class="youtube not-margin-div">
+								<p>Youtubeを表示できません。</p>
+								<iframe width="1920" height="1080" src="https://www.youtube.com/embed/teSOgJDYnBQ?start=32&loop=1&playlist=teSOgJDYnBQ" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; allowfullscreen;" loading="lazy"></iframe>
+							</div>
 					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8" loading="lazy"></script>
 										<h2 id="interview">インタビュー</h2>
 										<div><p>敬称略。赤字は運営による強調。</p></div>
@@ -3869,13 +6067,22 @@ Poonam Basu「The Inazuma outfit style is so awesome！」
 			<h3 id="a-32">Ver3.2広告</h3>
 			<img src="https://raw.githubusercontent.com/giarchive/3.2/main/Img/CFD760EF-091E-4896-B6EE-11E8B8C80A7B.webp" class="half-image" loading="lazy">
 			<br><cite>引用: <a target="_blank" href="https://www.reddit.com/r/Genshin_Impact/comments/yhbw1s/genshin_in_a_malaysian_newspaper/">Reddit</a></cite>
-			
+			<h3 id="a-33">Ver3.3広告</h3>
+			<h4 id="a-tokyo-akihabara-33">東京都 秋葉原中央通り</h4>
+				<img src="https://giarchive.github.io/3.2/Img/4EEBCDCB-078B-4774-B27C-4000968A9756.jpeg" class="half-image" loading="lazy">
+				<br><cite>画像提供：<a target="_blank" href="https://twitter.com/nero_hanken/status/1598239080709763074">大倉ねろたさん(@nero_hanken)</a></cite>
 			<h3 id="a-twitter">Twitter広告</h3>
 			<div class="tweets not-margin-div light-oney">
 				<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">⚡かつて三度も裏切られ、<br>この世は欺瞞に満ちたまやかしにすぎないと知った。⚡</p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a target="_blank" href="https://twitter.com/Genshin_7/status/1592054545877594112?ref_src=twsrc%5Etfw">November 14, 2022</a></blockquote>
+				
+				<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">＼新キャラクター登場／<br><br>🌀放浪者🌀<br>CV:柿原徹也<br><br>▼▼今すぐプレイ▼▼</p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1600331411159797761?ref_src=twsrc%5Etfw">December 7, 2022</a></blockquote>
+				
+				<blockquote class="twitter-tweet" data-theme="light"><p lang="ja" dir="ltr">／<br>✨1日目✨<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> Ver.3.3アプデ<br>直前キャンペーン！<br>＼<br><br>12月6日(火)23:59まで毎日チャレンジ！<br>原神グッズやAmazonギフト10000円分が<br>その場で当たるチャンス！<br><br>✅参加方法<br>①<a href="https://twitter.com/Genshin_7?ref_src=twsrc%5Etfw">@Genshin_7</a>をフォロー<br>②本投稿をRT<br>その場で結果が届く！<br><br>規約▶<a href="https://t.co/1lOouzLODV">https://t.co/1lOouzLODV</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9ECP?src=hash&amp;ref_src=twsrc%5Etfw">#原神CP</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1597606311864115200?ref_src=twsrc%5Etfw">November 29, 2022</a></blockquote>
 			</div>
 			<div class="tweets not-margin-div dark-oney">
 				<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">⚡かつて三度も裏切られ、<br>この世は欺瞞に満ちたまやかしにすぎないと知った。⚡</p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a target="_blank" href="https://twitter.com/Genshin_7/status/1592054545877594112?ref_src=twsrc%5Etfw">November 14, 2022</a></blockquote>
+				<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">＼新キャラクター登場／<br><br>🌀放浪者🌀<br>CV:柿原徹也<br><br>▼▼今すぐプレイ▼▼</p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1600331411159797761?ref_src=twsrc%5Etfw">December 7, 2022</a></blockquote>
+				<blockquote class="twitter-tweet" data-theme="dark"><p lang="ja" dir="ltr">／<br>✨1日目✨<a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9E?src=hash&amp;ref_src=twsrc%5Etfw">#原神</a> Ver.3.3アプデ<br>直前キャンペーン！<br>＼<br><br>12月6日(火)23:59まで毎日チャレンジ！<br>原神グッズやAmazonギフト10000円分が<br>その場で当たるチャンス！<br><br>✅参加方法<br>①<a href="https://twitter.com/Genshin_7?ref_src=twsrc%5Etfw">@Genshin_7</a>をフォロー<br>②本投稿をRT<br>その場で結果が届く！<br><br>規約▶<a href="https://t.co/1lOouzLODV">https://t.co/1lOouzLODV</a><a href="https://twitter.com/hashtag/%E5%8E%9F%E7%A5%9ECP?src=hash&amp;ref_src=twsrc%5Etfw">#原神CP</a></p>&mdash; 原神（Genshin）公式 (@Genshin_7) <a href="https://twitter.com/Genshin_7/status/1597606311864115200?ref_src=twsrc%5Etfw">November 29, 2022</a></blockquote>
 			</div>
 			
 			
@@ -4149,10 +6356,8 @@ Poonam Basu「The Inazuma outfit style is so awesome！」
 </p>
 				<p id="url" style="display: none;">https://giarchive.github.io/scaramouche</small>
 			</footer>
-						<script src="cn.js"></script>
-			<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet" loading="lazy">
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" loading="lazy"></script>
-			<script src="/parts/load.js" loading="lazy"></script>
+						<link rel="stylesheet" href="deta-image.css" loading="lazy">
+			<script src="cn.js"></script>
 							<script>
 					  				window.dataLayer = window.dataLayer || [];
   				function gtag(){dataLayer.push(arguments);}
@@ -4164,7 +6369,7 @@ Poonam Basu「The Inazuma outfit style is so awesome！」
 						navigator.clipboard.writeText(text);
 					}
 				</script>
-				
+							<link href="https://use.fontawesome.com/releases/v6.1.2/css/all.css" rel="stylesheet" loading="lazy">
 			<!-- アクセス解析研究所 -->
 			
 			<script src="//accaii.com/codheart/script.js" async></script><noscript><img src="//accaii.com/codheart/script?guid=on"  loading="lazy"></noscript>
