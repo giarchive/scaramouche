@@ -15,9 +15,9 @@ function chinese() {
 	thirtytwo = '虚空鼓动，劫火高扬';
 	
 	button.style.display = "none";
-	document.title = '散兵相关全收集网站'
+	document.title = '流浪者・散兵相关全收集网站'
 	//記事トップ
-	document.getElementsByClassName('title')[0].innerHTML = '散兵相关全收集网站（简体中文测试版）';
+	document.getElementsByClassName('title')[0].innerHTML = '流浪者・散兵相关全收集网站（简体中文测试版）';
 	document.getElementsByClassName('update-version')[0].innerHTML = '3.2版本前瞻特别节目';
 	document.getElementsByClassName('about-this-site')[0].innerHTML = '这是散厨的散兵信息收集网站。没有内鬼。<br>浏览以下内容时，视为同意<a href="../agreement.html" class="black">使用条款（日语）</a>。<br><br>中文是测试版。为了进行翻译和反馈，请通过<a href="https://www.twitter.com/messages/compose?recipient_id=1503015129603981315">推特</a>或<a href="mailto:boogie_county.06@icloud.com">邮件</a>联系。';
 	document.getElementsByClassName('tweet')[0].innerHTML = '分享推特	&#x2009;&#x2009;';
@@ -32,7 +32,7 @@ function chinese() {
 	document.getElementsByClassName('information')[0].innerHTML = '基本信息';
 	document.getElementsByClassName('visual')[0].innerHTML = '外貌';
 	document.getElementsByClassName('voice-actor')[0].innerHTML = '声优';
-	document.getElementsByClassName('gacha-Illust')[0].innerHTML = '立绘・抽卡立绘';
+	document.getElementsByClassName('gacha-Illust')[0].innerHTML = '立绘';
 	document.getElementsByClassName('model')[0].innerHTML = '3D模型<span style="display: none;">3d</span>';
 	//document.getElementsByClassName('gacha')[0].innerHTML = '抽卡';
 	//document.getElementsByClassName('gacha-3.3')[0].innerHTML = '抽卡名';
@@ -121,7 +121,7 @@ function chinese() {
 	document.getElementById('visual').innerHTML = '外貌';
 	document.getElementById('character-setting').innerHTML = '角色情况'
 	document.getElementById('voice-actor').innerHTML = '声优';
-	document.getElementById('gacha-Illust').innerHTML = '立绘・抽卡立绘';
+	document.getElementById('gacha-Illust').innerHTML = '立绘';
 	document.getElementById('model').innerHTML = '3D模型<span style="display: none;">3d</span>';
 	//document.getElementById('gacha')[0].innerHTML = '抽卡';
 	//document.getElementById('gacha-3.3')[0].innerHTML = '抽卡名';
@@ -217,7 +217,7 @@ function chinese() {
 	document.getElementsByClassName('update-10')[0].innerHTML = '<span class="ver-num">1.0版本</span>每日委托「等量交换」';
 	document.getElementsByClassName('update-11')[0].innerHTML = '<span class="ver-num">1.1版本</span>活动「未归的熄星」';
 	document.getElementsByClassName('update-14')[0].innerHTML = '<span class="ver-num">1.4版本</span>新圣遗物「苍白之火」';
-	document.getElementsByClassName('update-20')[0].innerHTML = '<span class="ver-num">2.0版本</span>「古い手帳」，秘境「借景之馆，武器「桂木斩长正」';
+	document.getElementsByClassName('update-20')[0].innerHTML = '<span class="ver-num">2.0版本</span>「古い手帳」，秘境「借景之馆」，武器「桂木斩长正」';
 	document.getElementsByClassName('update-21')[0].innerHTML = '<span class="ver-num">2.1版本</span>第二章第三幕「千手百眼，天下人间」，提及「雷电将军」';
 	document.getElementsByClassName('update-22')[0].innerHTML = '<span class="ver-num">2.2版本</span>活动「谜境悬兵」，世界任务「门户清理」';
 	document.getElementsByClassName('update-23')[0].innerHTML = '<span class="ver-num">2.3版本</span>新圣遗物「华馆梦醒形骸记」';
@@ -231,11 +231,13 @@ function chinese() {
 	document.getElementsByClassName('update-32')[0].innerHTML = '<span class="ver-num">3.2版本</span>第三章第五幕 「迷梦与空幻与欺骗」，新週本「正机之神」';
 	
 	//基本情報
+			document.getElementsByClassName('release-boss-version')[0].innerHTML = '週本: 3.2版本';
+			document.getElementsByClassName('release-playable-version')[0].innerHTML = '进卡池: 3.3版本';
 		document.getElementsByClassName('name-fatui-no6')[0].innerHTML = '愚人众执行官第六席「散兵」斯卡拉姆齐';
 		document.getElementsByClassName('name-kunikuzushi')[0].innerHTML = '国崩';
-		//document.getElementsByClassName('gods')[0].innerHTML = '正机之神';
-		document.getElementsByClassName('release-boss-version')[0].innerHTML = '週本: 3.2版本';
-		document.getElementsByClassName('release-playable-version')[0].innerHTML = '进卡池: 3.3版本';
+		document.getElementsByClassName('name-gods')[0].innerHTML = '「正机之神」	七叶寂照秘密主';
+		document.getElementsByClassName('name-playable')[0].innerHTML = '流浪者';
+		document.getElementsByClassName('description')[0].innerHTML = '身份成谜的流浪人士。衣着打扮像是修验者，言行却并不是修验者应有的模样。';
 		
 		document.getElementsByClassName('elemental')[0].innerHTML = '元素';
 		document.getElementsByClassName('elemental-breakdown')[0].innerHTML = '雷';
@@ -252,12 +254,14 @@ function chinese() {
 		document.getElementsByClassName('ethnicity')[0].innerHTML = '种族';
 		document.getElementsByClassName('ethnicity-breakdown')[0].innerHTML = '人偶';
 		document.getElementsByClassName('constellation')[0].innerHTML = '命之座';
-		document.getElementsByClassName('life-collection')[0].innerHTML = '?';
+		document.getElementsByClassName('life-collection')[0].innerHTML = '浪客座';
 		document.getElementsByClassName('birthday')[0].innerHTML = '生日';
 		document.getElementsByClassName('character-title')[0].innerHTML = '称号';
-		document.getElementsByClassName('character-title-breakdown')[0].innerHTML = '?';
+		document.getElementsByClassName('character-title-breakdown')[0].innerHTML = '久世浮倾';
 		document.getElementsByClassName('god-name')[0].innerHTML = '神名';
-		document.getElementsByClassName('god-name-breakdown')[0].getElementsByClassName('character-setting-shoukinokami')[0].innerHTML = '正机之神';
+		document.getElementsByClassName('playable-name')[0].innerHTML = '角色名称';
+		document.getElementsByClassName('playable-name-breakdown')[0].innerHTML = '流浪者';
+		document.getElementsByClassName('character-icon-box')[0].innerHTML = '图标';
 		
 		document.getElementsByClassName('va-jp')[0].innerHTML = jp;
 		document.getElementsByClassName('va-cn')[0].innerHTML = ch;

@@ -205,6 +205,10 @@ main .ru {
 main .mark {
 	color: var(--red);
 }
+main .open {
+	color: var(--orange);
+	font-weight: bold;
+}
 main a:not(.not-linkhighright), aside a:not(.black) {
 	color: var(--blue);
 	text-decoration: none;
@@ -651,6 +655,9 @@ img.card-illustration {
 }
 .half-image {
 	width: 50%;
+}
+.img-border img {
+	border: solid 2px var(--black);
 }
 @media screen and (max-width: 680px) {
 	.half-image {

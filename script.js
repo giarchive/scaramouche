@@ -14,7 +14,7 @@ function showDiffDate( tYear, tMonth, tDay) {
  
    // 表示
    if( showDays > 0 ) {
-	   document.getElementsByClassName('day-gacha')[0].innerHTML = "プレイアブルまであと" + showDays + "日";
+	   document.getElementsByClassName('day-gacha')[0].innerHTML = "プレイアブルまであと" + (showDays + 1) + "日";
    } else if( showDays = 0 ) {
 	   document.getElementsByClassName('day-gacha')[0].innerHTML = "本日プレイアブル！";
    }
