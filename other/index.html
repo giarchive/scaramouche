@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+	<html lang="ja">
+		<head>
+			<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow,noarchive" />
+			<title>放浪者(スカラマシュ)の全情報書き写し</title>
+			<script src="https://giarchive.github.io/test/jquery.min.js"></script>
+			<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+			<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="/test/styles.css">
+						<script src="/test/script.js"></script>
+				<link rel="stylesheet" href="/test/deta-image.css" loading="lazy">
+						</head>
+		<body lang="ja">
+<div id="header" class="not-margin-div"></div> 
+<div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <span class="menu-cover"></span>
+	<span id="menu"></span>
+    </div> 
+		<h2 id="stamp">スタンプ</h2>
+				<h3 id="line-stamp-genshin-vol2">LINEスタンプ「原神 スタンプ Vol.2」</h3>
+				<img src="/assets/img/stamp/20/line1.webp" style="max-width: 200px;"><br>
+				<cite>引用: <a target="_blank" href="https://store.line.me/stickershop/product/14369332/ja">LINE STORE</a></cite>
+				<h3 id="stamp-paimon">パイモンの絵 Vol.20</h3>
+				<div class="picture-box">
+				<img src="/assets/img/stamp/20/stamp1.webp" style="max-width: 200px;">
+				<img src="/assets/img/stamp/20/stamp1.webp" style="max-width: 200px;">
+				<img src="/assets/img/stamp/20/stamp1.webp" style="max-width: 200px;">
+				<img src="/assets/img/stamp/20/stamp1.webp" style="max-width: 200px;">
+				</div>
+				<br>
+				<cite>引用: <a target="_blank" href="https://www.hoyolab.com/article/14397019">HoYoLAB</a></cite>
+    <div id="footer" class="not-margin-div"></div>
+<script type="text/javascript">
+window.onload=function() {
+var $replacement = document.getElementsByClassName( "wanderer_name" );
+for (i = 0; i < $replacement.length; i++) {
+if get_cook('cookie1') == "" {
+$replacement[i].innerHTML = "放浪者";
+} else {
+$replacement[i].innerHTML = get_cook('cookie1');
+}
+}
+}
+
+function get_cook(coknam) {
+  coktxt = document.cookie+";";
+  stano = coktxt.indexOf(coknam);
+  if (stano != -1){
+    endno = coktxt.indexOf(";",stano);
+    txt0 = unescape(coktxt.substring(stano+coknam.length+1,endno));
+  }else{
+    txt0 = "";
+  }
+  return txt0;
+}</script>  
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+		</html>

@@ -112,7 +112,7 @@ body,header {
 html{
 	height: -webkit-fill-available;
 }
-body, main {
+body, body {
 	width: var(--content-width);
 }
 body {
@@ -131,7 +131,7 @@ body {
 	min-height: -webkit-fill-available;
 	overflow-wrap: break-word;
 }
-main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,twitter-trend-tag {
+body div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,body cite,twitter-trend-tag {
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
 }
@@ -144,7 +144,7 @@ main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,tw
 		margin-left: 2.5vw;
 		margin-right: 2.5vw;
 	}
-	main {
+	body {
 		width: 100%;
 		margin-left: 0px;
 		margin-right: 0px;
@@ -166,7 +166,7 @@ main div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,main cite,tw
 input{
     -webkit-appearance: none;
 }
-main h2, main h3, main h4, main h5, main h6, blockquote,nav,img,table,th,td,tbody,iframe,cite,video {
+body h2, body h3, body h4, body h5, body h6, blockquote,nav,img,table,th,td,tbody,iframe,cite,video {
 	margin: 0;
 	padding: 0;
 }
@@ -190,39 +190,48 @@ audio {
 }
 
 /* テキスト */
-main .event-time {
-	color: var(--cyan);
-}
-main .info-scaramouche-name {
-	font-weight: bold;
-}
-main .info-kunikuzushi-name {
-	font-weight: bold;
-}
-main .ru {
-	font-family: -apple-system, Arial, Helvetica, Gothic, sans-serif;
-}
-main .mark {
-	color: var(--red);
-}
-main .open {
-	color: var(--orange);
-	font-weight: bold;
-}
-main a:not(.not-linkhighright), aside a:not(.black) {
+body a:not(.not-linkhighright), aside a:not(.black) {
 	color: var(--blue);
 	text-decoration: none;
+}
+h1 a {
+	color: var(--black);
+	text-decoration: none;
+}
+@media screen and (max-width: 680px) {
+h1 {
+        padding: 0px 5px;
+}
+}
+body .event-time {
+	color: var(--cyan);
+}
+body .info-scaramouche-name {
+	font-weight: bold;
+}
+body .info-kunikuzushi-name {
+	font-weight: bold;
+}
+body .ru {
+	font-family: -apple-system, Arial, Helvetica, Gothic, sans-serif;
+}
+body .mark {
+	color: var(--red);
+}
+body .open {
+	color: var(--orange);
+	font-weight: bold;
 }
 article .black {
 	color: var(--black);
 }
-main .black {
+body .black {
 	color: black;
 }
-main .white {
+body .white {
 	color: white;
 }
-main .inazumafont {
+body .inazumafont {
 	font-family: 'InazumaFont', sans-serif;
 }
 /*ガチャカウンター*/
@@ -232,363 +241,118 @@ main .inazumafont {
 	font-size: large;
 }
 /*メニュー*/
-@keyframes hideop {
-  0% {
-    opacity: 0;
-    display:none;
-  }
-
-  100% {
-	opacity: 1;
-    display: inline-block;
-  }
+#menu {	
+height: 100%;
+	width: 350px;
+position: fixed;
+    top: 0;
+    right:0;
+  visibility: hidden;
+  margin: 0;
+  background: var(--white6);
+  border-left: solid var(--black);
+	z-index: 80; 
+	overflow: scroll;
+	padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
 }
-.drawer_hidden {
-  display: none;
+#menu a {
+color: var(--black)!important;
+font-size: x-large;
 }
-.menu { 
-	padding-bottom: env(safe-area-inset-bottom);
-	margin-bottom: 2.5vh;
-}
-.menu-title a,.menu-title a:link,.menu-title a:visited, .menu-title a:hover, .menu-title a:active {
-	font-size: xx-large;
-	color: var(--black1);
-	font-weight: bold;
-	text-decoration: none;
-}
-
-/*メニュー読み込み中*/
-.sp-circle {
-  border: 4px rgba(red,0.25) solid;
-  border-top: 4px rgba(red,1) solid;
-  border-radius: 50%;
-  -webkit-animation: spCircRot .6s infinite linear;
-  animation: spCircRot .6s infinite linear;
-}
-@-webkit-keyframes spCircRot {
-  from { -webkit-transform: rotate(0deg); }
-  to { -webkit-transform: rotate(359deg); }
-}
-@keyframes spCircRot {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(359deg); }
-}
-
-/* ハンバーガーアイコンの設置スペース */
-.drawer_open {
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: 2.5vh;
-  right: 2vw;
-  z-index: 100;
-  cursor: pointer;
-  position: fixed;
-}
-
-/* ハンバーガーメニューのアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
-  background: var(--black2);
-  transition: 0.5s;
-  position: absolute;
-}
-.drawer_open span:before {
-  bottom: 8px;
-}
-.drawer_open span:after {
-  top: 8px;
-}
-#drawer_input:checked ~ .drawer_open span {
-  background: rgba(255, 255, 255, 0);
-}
-#drawer_input:checked ~ .drawer_open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-  transition: all .3s linear;
-}
-
-#drawer_input:checked ~ .drawer_open span::after {
-  top: 0;
-  transform: rotate(-45deg);
-  transition: all .3s linear;
-}
-.nav_content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: -100%;
-  z-index: 98;
-  opacity: 0;
-} 
-.nav_content .nav_content_main {
-  width: 40%;
-  height: 100%;
-  display: inline-block;
-  overflow-y: scroll;
-	background-attachment: fixed;
-	background: var(--white6);
-}
-.nav_contrnt_cover {
-	background-color: black;
-	opacity: 0.5;
-	 display: inline-block;
+.menu-cover {
+	position: fixed;
+	background: rgba(0, 0, 0, .5); 
+	width: 100%; 
 	height: 100%;
-	width: 60%;
-	  position: fixed;
-	  top: 0;
-}
-
-#drawer_input:checked ~ .nav_content,#drawer_input:checked ~ .nav_title {
-	right: 0;
-	animation: hideop 0.25s linear 0s;
-	animation-fill-mode: forwards;
+	top: 0;
+	left: 0;
+	z-index: 70;
+  visibility: hidden;
 }
 @media screen and (max-width: 680px) {
-	header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		background-color: var(--white6);
-		height: 10vh;
-		z-index: 50;
-	}
-	.nav_content .nav_content_main {
-		width: 100%;
-	}
-	.nav_contrnt_cover {
-		width: 0%;
-		}
-	header .title {
-		font-size: 1.25em;
-		position: fixed;
-		top: 0;
-  		margin-left: 0.5em;
-	}
-	.drawer_open {
-		position: fixed;
-  top: 0;
+#menu {
+width:100%;
 }
-	article {
-		padding-top: 10vh;
-	}
-	.top-nav {
-		display: none;
-	}
+.menu-cover {
+display:none;
 }
-/*メニュー本体*/
-.top-nav {
-	margin-top: 5vh;
 }
-.nav .nav_hidden {
-  margin-left: 2.5vw;
-  min-height: auto;
-}
-
-ul.list,
-ul.list ul {
-  margin:0;
-  padding:0;
-  list-style-type: none;
-}
-
-ul.list ul {
-  position:relative;
-  margin-left:10px;     
-}
-
-ul.list ul:before {
-  content:"";
-  display:block;
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  width:0;
-  border-left:1px solid var(--black);
-}
-
-ul.list li  {
-  position:relative;
-  margin:0;
-  padding:3px 12px;
-  color:var(--black);
-  text-decoration: none;
-
-  font-weight:normal;
-  line-height:20px;   
-}
-
-ul.list li a { 
-  position:relative;
-  color:var(--black);
-  text-decoration: none;
-  font-weight:bold;
-  line-height:20px;
-  font-size:1.15rem;
-}
-ul.list ul li a {
-	margin-left: 20px;
-	font-weight: normal;
-}
-ul.list ul li:before {
-  content:"";
-  display:block;
-  position:absolute;
-  top:0.75em;
-  left: 0;
-  width:32px;
-  height:0;
-  border-top:1px solid var(--black);
-}
-ul.list ul li ul li a {
-	font-size: 1em;
-	margin-left: 20px;
-}
-.ver-num {
-	font-weight: bold;
-	margin-right: 0.5em;
-} 
-@media screen and (max-width: 680px) {
-	nav {
-		margin: 0.8rem 0px;
-		font-size: 1rem;
-	}
-	.nav .nav_hidden {
-		margin: 0vw 2vw;
-	}
-}
-/*メニューボタン*/
-.nav-menu label {
-    font-weight: bold;
-    cursor :pointer;
-	display:flex;
-	flex-direction: row;
-}
-
-/*チェックは見えなくする*/
-.nav-menu input#nav_box {
-    display: none;
-}
-
-/*中身を表示にしておく*/
-.nav-menu .nav_hidden {
-    height: auto;
-    opacity: 1;
-}
-.nav-menu h3 {
-    margin: 0vh!important;
-	padding: 0vw!important;
-	width: 100%;
-}
-.nav-menu .nav_label_text {
-	padding: 0vh 1vw;
-}
-.nav-menu i {
-	font-size: 1.25em;
-	float: right;
-	margin: 0vw;
-	padding: 0vw;
-	padding-bottom: 0.3rem;
-}
-.nav-menu .nav_hidden {
-	padding: 10px 0;
-    height: auto;
-    opacity: 1;
-}
-.nav input:checked ~ .nav_hidden {
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    opacity: 0;
-}
-/*@media screen and (max-width: 680px) {
-	.nav-menu {
-		margin-top: 2.5vh;
-	}
-	.nav-menu .nav_hidden {
-    	height: 0;
-    	padding: 0;
-    	overflow: hidden;
-    	opacity: 0;
-	}
-	.nav-menu input:checked ~ .nav_hidden {
-    	height: auto;
-    	opacity: 1;
-	}
-}*/
-/*トップ画像のタブ*/
-.tab-wrap {
+.menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
     display: flex;
-    flex-wrap: wrap;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
 }
-.tab-label {
-	font-weight: bold;
-    color: var(--white);
-    background: var(--black2);
-	border-radius: 4px;
-    margin-right: 5px;
-    padding: 3px 12px;
-    order: -1;
-	margin: 0.2rem;
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: var(--black);
+    position: absolute;
 }
-.tab-content {
-    width: 100%;
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
     display: none;
-	margin: 0.5rem;
 }
-.tab-switch:checked+.tab-label {
-    background: var(--scara-1);
-}
-.tab-switch:checked+.tab-label+.tab-content {
-     display: block;
-}
-.tab-switch {
-    display: none;
+#menu-btn-check:checked ~ #menu,#menu-btn-check:checked ~ .menu-cover {
+  visibility: visible;
 }
 
 /*見出し*/
-main h2,nav h2 {
+body h2,nav h2 {
     padding: 0.5vh 2vw;
     background-color: var(--white5);
     color: var(--black1);
     font-weight: bold;
 	margin: 2vh 0vw;
 }
-main h3,nav h3 {
+body h3,nav h3 {
     padding: 0.5vh 1vw;
 	border-bottom: solid 2px var(--scara-2);
     font-weight: bold;
     line-height: 1;
 	margin: 2vh 0vw;
 }
-main h4,nav h4 {
+body h4,nav h4 {
     padding: 0.5vh 1vw;
     font-weight: bold;
     line-height: 1.4;
 	font-size: 1.2em;
 	margin: 2vh 0vw;
 }
-main h5,nav h5 {
+body h5,nav h5 {
     font-weight: bold;
     line-height: 1.0;
 	padding: 0.25vh 1vw;
 	font-size: 1.15rem;
 }
-main h6,nav h6  {
+body h6,nav h6  {
     font-weight: bold;
     line-height: 1.4;
 	padding: 0.75vh 1vw;
@@ -598,23 +362,24 @@ main h6,nav h6  {
 	padding: 0px;
 }
 @media screen and (max-width: 680px) {
-    main h2 {
+    body h2 {
         padding: 5px 5px 5px 10px;
         font-size: 16px;
         letter-spacing: 1px;
     }
-    main h3 {
+    body h3 {
         font-size: 16px;
         letter-spacing: 0;
+        padding: 0px 5px;
     }
-    main h4 {
+    body h4 {
         font-size: 16px;
 		line-height: 1.3;
     }
-    main h5 {
+    body h5 {
         font-size: 16px;
     }
-    main h6 {
+    body h6 {
         font-size: 16px;
     }
 }
@@ -634,7 +399,8 @@ main h6,nav h6  {
 }
 /*フッダー*/
 footer a {
-	color: var(--yellow);
+	color: var(--yellow)!important;
+	text-decoration: none;
 }
 footer .fa-twitter {
 	color: #00ACEE;
@@ -708,7 +474,7 @@ blockquote .travel-log {
 	}
 }
 /*表*/
-main table:not(.character-setting-about-name-card table) {
+body table:not(.character-setting-about-name-card table) {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
@@ -720,45 +486,45 @@ main table:not(.character-setting-about-name-card table) {
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
-main table tr {
+body table tr {
 	white-space: nowrap;
 	width: 100%;
 }
-main th,main td {
+body th,body td {
 	border: solid 1px var(--white1);
 	padding: 2px 3px;
 	width: 100vw;
 	word-wrap: break-word;
 }
 
-main th {
+body th {
 	font-style: bold;
 	width: 20%;
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: var(--white6);
 }
-main td {
+body td {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 @media screen and (max-width: 680px) {
-	main table {
+	body table {
 	border-spacing: 0;
 	width: 100%;
 	}
-	main th,main td {
+	body th,body td {
 		padding: 2px 3px;
 	}
 
-	main th {
+	body th {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	main table th {
+	body table th {
 		white-space: nowrap;
 	}
-	main td {
+	body td {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -819,6 +585,7 @@ margin: 0.5vw!important;
 padding: 0!important;
 max-width: calc(100% - 2vw)!important;
 align-self: start!important;
+display: inline-block;
 }
 @media screen and (max-width: 680px) {
 	.tweets {
@@ -862,7 +629,7 @@ align-self: start!important;
 	width: auto;
 }
 /*Apple Music*/
-main .applemusic {
+body .applemusic {
 	width: 100%;
 	height: 175px;
 	background:transparent;
@@ -898,12 +665,57 @@ main .applemusic {
 	margin: 1vw 1vw!important;
 	}
 }
+/*タブ*/
+.tab-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin:5px 0;
+}
+.tab-label {
+display: inline-block; 
+  color: white;
+ background-color:var(--white2);
+  text-align: center;
+  padding: .5em 1em;
+  order: -1;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  flex: 1;
+  border-radius: 2px;
+  position: relative;
+  white-space: nowrap;
+}
+.tab-label {
+  margin: 5px;
+}
+.tab-content {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+/* アクティブなタブ */
+.tab-switch:checked+.tab-label {
+ background-color:var(--white5);
+}
+.tab-switch:checked+.tab-label+.tab-content {
+  height: auto;
+  overflow: auto;
+  padding: 15px 0 0 0;
+  opacity: 1;
+  transition: .5s opacity;
+}
+.tab-switch {
+  display: none;
+}
 /*共有ボタン*/
 .share-nav {
 	font-size: 1.15rem;
 	display: flex;
 	padding: 0;
 	margin: 0;
+	color: var(--black;)
 }
 .btn-social-flat { 
   color: var(--black1);
@@ -1002,28 +814,6 @@ main .applemusic {
     padding: 10px 0;
     height: auto;
     opacity: 1;
-}
-/*Twitterトレンド*/
-.twitter-trend {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-}
-.twitter-trend-tag {
-	background-color: var(--white5);
-	padding: 1em 2rem;
-	width: calc(45% - 2rem)!important;
-	margin: 0.2rem 0.2rem!important;
-	display: inline-block;
-	 white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-@media screen and (max-width: 680px) {
-	.twitter-trend-tag {
-	width: calc(90% - 2vw)!important;
-	padding: 1vw 1vw;
-	}
 }
 
 footer {

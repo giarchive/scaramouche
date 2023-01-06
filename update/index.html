@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+	<html lang="ja">
+		<head>
+			<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow,noarchive" />
+			<title>放浪者(スカラマシュ)の全情報書き写し</title>
+			<script src="https://giarchive.github.io/test/jquery.min.js"></script>
+			<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+			<meta name="format-detection" content="telephone=no">
+			
+
+    
+
+			
+
+		<link rel="stylesheet" href="/test/styles.css">
+						<script src="/test/script.js"></script>
+				<link rel="stylesheet" href="/test/deta-image.css" loading="lazy">
+						</head>
+		
+		<body lang="ja">
+<div id="header" class="not-margin-div"></div> 
+<div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <span class="menu-cover"></span>
+	<span id="menu"></span>
+    </div> 
+		<h2 id="update">更新履歴</h2>
+						<div class="updatelog">
+							<ul class="nondot">
+								<li><span class="update-10"><span class="ver-num">Ver1.0</span>デイリー「等々交換」追加</span></li>
+								<li><span class="update-11"><span class="ver-num">Ver1.1</span>イべント「帰らぬ煌星」</span></li>
+								<li><span class="update-14"><span class="ver-num">Ver1.4</span>聖遺物「蒼白の炎」追加</span></li>
+								<li><span class="update-20"><span class="ver-num">Ver2.0</span>「古い手帳」、秘境「借景ノ館」、武器「桂木斬長正」追加</span></li>
+								<li><span class="update-21"><span class="ver-num">Vear2.1</span>魔神任務2章3幕「千手百目の浮世」、「雷電将軍」が言及</span></li>
+								<li><span class="update-22"><span class="ver-num">Ver2.2</span>イベント「秘境一揆」、世界任務「戸口の掃除」追加</span></li>
+								<li><span class="update-23"><span class="ver-num">Ver2.3</span>聖遺物「華館夢醒形骸記」追加</span></li>
+								<li><span class="update-25"><span class="ver-num">Ver2.5</span>「八重神子」が言及</span></li>
+								<li><span class="update-26"><span class="ver-num">Ver2.6</span>イベント「華やぐ紫苑の庭」</span></li>
+								<li><span class="update-220711"><span class="ver-num">2022/7/11</span>PV「冬夜の戯劇」公開</span></li>
+								<li><span class="update-28"><span class="ver-num">Ver2.8</span>「タルタリヤ」が言及、武器「『妖刀』」実装</span></li>
+								<li><span class="update-30"><span class="ver-num">Ver3.0</span>魔神任務3章2幕「黎明を告げる千の薔薇」</span></li>
+								<li><span class="update-31"><span class="ver-num">Ver3.1</span>魔神任務3章3幕「迷夢と虚幻と欺瞞」、魔神任務3章4幕「赤砂の王と三人の巡礼者」</span></li>
+								<li><span class="update-221004"><span class="ver-num">2022/10/4</span>ストーリームービー「『神』意」YouTube公開</span></li>
+								<li><span class="update-32"><span class="ver-num">Ver3.2</span>魔神任務3章5幕「虚空の鼓動、熾盛の劫火」、新ボス「正機の神」、ナヒーダが言及</span></li>
+								<li><span class="update-221031"><span class="ver-num">2022/10/31</span>キャラクター紹介</span></li>
+								<li><span class="update-221204"><span class="ver-num">2022/12/04</span>エピソード 放浪者「灰燼」、プロフィール紹介</span></li>
+								<li><span class="update-32"><span class="ver-num">Ver3.3</span><b>プレイアブル</b>、魔神任務間章「伽藍に落ちて」</li>
+							</ul>
+						</div>
+    <div id="footer" class="not-margin-div"></div>
+<script type="text/javascript">
+window.onload=function() {
+var $replacement = document.getElementsByClassName( "wanderer_name" );
+for (i = 0; i < $replacement.length; i++) {
+if get_cook('cookie1') == "" {
+$replacement[i].innerHTML = "放浪者";
+} else {
+$replacement[i].innerHTML = get_cook('cookie1');
+}
+}
+}
+
+function get_cook(coknam) {
+  coktxt = document.cookie+";";
+  stano = coktxt.indexOf(coknam);
+  if (stano != -1){
+    endno = coktxt.indexOf(";",stano);
+    txt0 = unescape(coktxt.substring(stano+coknam.length+1,endno));
+  }else{
+    txt0 = "";
+  }
+  return txt0;
+}</script>  
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+		</html>

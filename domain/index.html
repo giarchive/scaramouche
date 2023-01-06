@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+	<html lang="ja">
+		<head>
+			<meta charset="UTF-8"><meta name="robots" content="noindex,nofollow,noarchive" />
+			<title>放浪者(スカラマシュ)の全情報書き写し</title>
+			<script src="https://giarchive.github.io/test/jquery.min.js"></script>
+			<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+			<meta name="format-detection" content="telephone=no">
+
+		<link rel="stylesheet" href="/test/styles.css">
+						<script src="/test/script.js"></script>
+				<link rel="stylesheet" href="/test/deta-image.css" loading="lazy">
+						</head>
+		
+		<body lang="ja">
+<div id="header" class="not-margin-div"></div> 
+<div class="hamburger-menu">
+        <input type="checkbox" id="menu-btn-check">
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <span class="menu-cover"></span>
+	<span id="menu"></span>
+    </div> 
+		<h2 id="dobody">秘境</h2>
+					<h3 id="castle-of-scrolls">借景ノ館</h3>
+					<b id="before-castle-of-scrolls">Ver3.2まで</b>
+						<blockquote>
+							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。<span class="mark">後日、その中で白紙のように気が狂った傾奇者が見つかった。</span></p>
+						</blockquote>
+						<b id="after-castle-of-scrolls">Ver3.3以降</b>
+						<blockquote>
+							<p>古代俗世間から離れた武人が、大地の隅に世外の光景で、華麗な邸宅を建てたそうだ。長き歳月に渡って、知らざる原因によって封印されていた。</p>
+						</blockquote>
+						
+						<h3 id="joururi-workshop">淨琉璃工房</h3>
+						<blockquote>
+							<p class="joururi-workshop-text">森の地穴に隠された秘密の工房。激しい衝撃によって出入口が現れた。かつて「超越」の種はその中で一度発芽し、地面を突き破ろうとした…</p>
+						</blockquote>
+						<h4 class="lucent-altar-of-the-everlasting">追憶：七葉中尊琉璃壇</h4>
+						<blockquote>
+							<p class="lucent-altar-of-the-everlasting-text">
+								「神になる」という妄想は泡のようにはじけ、白昼の夢のように消え去った。<br>
+しかし、穴の下にある秘密の工房に足を踏み入れると、「正機の神」との戦闘体験が脳裏に鮮明に蘇ってくる。<br>
+これほど印象に残る記憶、たとえ「アーカーシャ」が授ける知識と経験がなくとも、脳内で再現できるだろう。
+							</p>
+						</blockquote>
+    <div id="footer" class="not-margin-div"></div>
+<script type="text/javascript">
+window.onload=function() {
+var $replacement = document.getElementsByClassName( "wanderer_name" );
+for (i = 0; i < $replacement.length; i++) {
+if get_cook('cookie1') == "" {
+$replacement[i].innerHTML = "放浪者";
+} else {
+$replacement[i].innerHTML = get_cook('cookie1');
+}
+}
+}
+
+function get_cook(coknam) {
+  coktxt = document.cookie+";";
+  stano = coktxt.indexOf(coknam);
+  if (stano != -1){
+    endno = coktxt.indexOf(";",stano);
+    txt0 = unescape(coktxt.substring(stano+coknam.length+1,endno));
+  }else{
+    txt0 = "";
+  }
+  return txt0;
+}</script>  
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+		</html>
