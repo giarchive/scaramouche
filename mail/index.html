@@ -59,7 +59,7 @@
 window.onload=function() {
 var $replacement = document.getElementsByClassName( "wanderer_name" );
 for (i = 0; i < $replacement.length; i++) {
-if get_cook('cookie1') == "" {
+if get_cook('cookie1').length != 0 {
 $replacement[i].innerHTML = "放浪者";
 } else {
 $replacement[i].innerHTML = get_cook('cookie1');
