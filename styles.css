@@ -819,3 +819,21 @@ display: inline-block;
 footer {
   border-top: 1px var(--scara-2) solid;
 }
+/*フォーム*/
+input[type='text'] {
+    font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 8px 0;
+	padding: 0.3em;
+	transition: 0.3s;
+	border: 1px solid var(--black);
+	border-radius: 4px;
+	outline: none;
+	color: var(--black);
+}
+
+input[type='text'] {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--red) inset;
+}
