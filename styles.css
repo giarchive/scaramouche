@@ -195,7 +195,7 @@ body a:not(.not-linkhighright), aside a:not(.black) {
 	text-decoration: none;
 }
 h1 a {
-	color: var(--black);
+	color: var(--black)!important;
 	text-decoration: none;
 }
 @media screen and (max-width: 680px) {
