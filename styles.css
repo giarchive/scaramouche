@@ -834,6 +834,9 @@ input[type='text'] {
 	border-radius: 4px;
 	outline: none;
 	color: var(--black);
+	background-color: var(--white);
+}
+input[type='text']:focos {
 	background-color: var(--white6);
 }
 .setting-button {
