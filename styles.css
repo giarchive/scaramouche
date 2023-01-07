@@ -847,6 +847,6 @@ input[type='text'] {
 }
 
 .setting-button:hover {
-  background: var(--black);
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
 }
