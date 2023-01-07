@@ -112,7 +112,7 @@ body,header {
 html{
 	height: -webkit-fill-available;
 }
-body, body {
+body {
 	width: var(--content-width);
 }
 body {
@@ -131,7 +131,7 @@ body {
 	min-height: -webkit-fill-available;
 	overflow-wrap: break-word;
 }
-body div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,body cite,twitter-trend-tag {
+div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,cite,twitter-trend-tag {
 	margin-left: 2.5vw;
 	margin-right: 2.5vw;
 }
@@ -139,19 +139,19 @@ body div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,body cite,tw
 	display: none;
 }
 @media screen and (max-width: 680px) {
-    body {
+    {
         font-size: 1rem;
 		margin-left: 2.5vw;
 		margin-right: 2.5vw;
 	}
-	body {
+	{
 		width: 100%;
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 }
 @media screen and (max-width: 680px) and (orientation: landscape) {
-	body {
+	{
 		margin-left: env(safe-area-inset-left);
 		margin-right: env(safe-area-inset-right);
 	}
@@ -166,7 +166,7 @@ body div:not(.not-margin-div),.top-text,.share-nav,.nav .nav_hidden,body cite,tw
 input{
     -webkit-appearance: none;
 }
-body h2, body h3, body h4, body h5, body h6, blockquote,nav,img,table,th,td,tbody,iframe,cite,video {
+h2, h3, h4, h5, h6, blockquote,nav,img,table,th,td,tbody,iframe,cite,video {
 	margin: 0;
 	padding: 0;
 }
@@ -190,7 +190,7 @@ audio {
 }
 
 /* テキスト */
-body a:not(.not-linkhighright), aside a:not(.black) {
+a:not(.not-linkhighright), aside a:not(.black) {
 	color: var(--blue);
 	text-decoration: none;
 }
@@ -203,36 +203,39 @@ h1 {
         padding: 0px 5px;
 }
 }
-body .event-time {
+.event-time {
 	color: var(--cyan);
 }
-body .info-scaramouche-name {
+.info-scaramouche-name {
 	font-weight: bold;
 }
-body .info-kunikuzushi-name {
+.info-kunikuzushi-name {
 	font-weight: bold;
 }
-body .ru {
+.ru {
 	font-family: -apple-system, Arial, Helvetica, Gothic, sans-serif;
 }
-body .mark {
+.mark {
 	color: var(--red);
 }
-body .open {
+.open {
 	color: var(--orange);
 	font-weight: bold;
 }
 article .black {
 	color: var(--black);
 }
-body .black {
+.black {
 	color: black;
 }
-body .white {
+.white {
 	color: white;
 }
-body .inazumafont {
+.inazumafont {
 	font-family: 'InazumaFont', sans-serif;
+}
+.yellow {
+color: var(--yellow);
 }
 /*ガチャカウンター*/
 .day-gacha {
@@ -325,34 +328,34 @@ display:none;
 }
 
 /*見出し*/
-body h2,nav h2 {
+h2,nav h2 {
     padding: 0.5vh 2vw;
     background-color: var(--white5);
     color: var(--black1);
     font-weight: bold;
 	margin: 2vh 0vw;
 }
-body h3,nav h3 {
+h3,nav h3 {
     padding: 0.5vh 1vw;
 	border-bottom: solid 2px var(--scara-2);
     font-weight: bold;
     line-height: 1;
 	margin: 2vh 0vw;
 }
-body h4,nav h4 {
+h4,nav h4 {
     padding: 0.5vh 1vw;
     font-weight: bold;
     line-height: 1.4;
 	font-size: 1.2em;
 	margin: 2vh 0vw;
 }
-body h5,nav h5 {
+h5,nav h5 {
     font-weight: bold;
     line-height: 1.0;
 	padding: 0.25vh 1vw;
 	font-size: 1.15rem;
 }
-body h6,nav h6  {
+h6,nav h6  {
     font-weight: bold;
     line-height: 1.4;
 	padding: 0.75vh 1vw;
@@ -362,24 +365,24 @@ body h6,nav h6  {
 	padding: 0px;
 }
 @media screen and (max-width: 680px) {
-    body h2 {
+    h2 {
         padding: 5px 5px 5px 10px;
         font-size: 16px;
         letter-spacing: 1px;
     }
-    body h3 {
+    h3 {
         font-size: 16px;
         letter-spacing: 0;
         padding: 0px 5px;
     }
-    body h4 {
+    h4 {
         font-size: 16px;
 		line-height: 1.3;
     }
-    body h5 {
+    h5 {
         font-size: 16px;
     }
-    body h6 {
+    h6 {
         font-size: 16px;
     }
 }
@@ -474,7 +477,7 @@ blockquote .travel-log {
 	}
 }
 /*表*/
-body table:not(.character-setting-about-name-card table) {
+table:not(.character-setting-about-name-card table) {
 	border-collapse: collapse;
 	border-spacing: 0;
 	width: 100%;
@@ -486,45 +489,45 @@ body table:not(.character-setting-about-name-card table) {
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
-body table tr {
+table tr {
 	white-space: nowrap;
 	width: 100%;
 }
-body th,body td {
+th,td {
 	border: solid 1px var(--white1);
 	padding: 2px 3px;
 	width: 100vw;
 	word-wrap: break-word;
 }
 
-body th {
+th {
 	font-style: bold;
 	width: 20%;
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: var(--white6);
 }
-body td {
+td {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 @media screen and (max-width: 680px) {
-	body table {
+	table {
 	border-spacing: 0;
 	width: 100%;
 	}
-	body th,body td {
+	th,td {
 		padding: 2px 3px;
 	}
 
-	body th {
+	th {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	body table th {
+	table th {
 		white-space: nowrap;
 	}
-	body td {
+	td {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -629,7 +632,7 @@ display: inline-block;
 	width: auto;
 }
 /*Apple Music*/
-body .applemusic {
+.applemusic {
 	width: 100%;
 	height: 175px;
 	background:transparent;
