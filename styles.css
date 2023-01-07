@@ -836,11 +836,6 @@ input[type='text'] {
 	color: var(--black);
 	background-color: var(--white6);
 }
-
-input[type='text']:focus {
-    outline: 0;
-    box-shadow: 0 0 0 2px var(--red) inset;
-}
 .setting-button {
   display: inline-block;
   padding: 0.3em 1em;
@@ -852,6 +847,6 @@ input[type='text']:focus {
 }
 
 .setting-button:hover {
-  background: var(--black5);
+  background: var(--black);
   color: var(--white);
 }
