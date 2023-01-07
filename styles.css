@@ -834,9 +834,24 @@ input[type='text'] {
 	border-radius: 4px;
 	outline: none;
 	color: var(--black);
+	background-color: var(--white6);
 }
 
-input[type='text'] {
+input[type='text']:focus {
     outline: 0;
     box-shadow: 0 0 0 2px var(--red) inset;
+}
+.setting-button {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: var(--black);
+  border: solid 2px var(--black);
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.setting-button:hover {
+  background: var(--black5);
+  color: var(--white);
 }
