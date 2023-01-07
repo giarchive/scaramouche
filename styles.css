@@ -258,7 +258,7 @@ position: fixed;
 }
 #menu a {
 color: var(--black)!important;
-font-size: x-large;
+font-size: large;
 }
 .menu-cover {
 	position: fixed;

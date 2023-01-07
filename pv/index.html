@@ -107,10 +107,10 @@ NPC「ニィロウ、本当にやるつもりか？あいつらのためにこ�
 window.onload=function() {
 var $replacement = document.getElementsByClassName( "wanderer_name" );
 for (i = 0; i < $replacement.length; i++) {
-if get_cook('cookie1').length != 0 {
-$replacement[i].innerHTML = "放浪者";
-} else {
+if (get_cook('cookie1') != 0) {
 $replacement[i].innerHTML = get_cook('cookie1');
+} else {
+$replacement[i].innerHTML = "放浪者";
 }
 }
 }
